@@ -179,5 +179,12 @@
       "old": "<p class=\"book-kicker\">INNECTA OS · ${escape(bookCover.eyebrow)}</p>",
       "new": "<p class=\"book-kicker\">Interny | Your Medical Journey</p>"
     }
+  ],
+  "css/main.css": [
+    {
+      "old": ".brand{display:inline-flex;align-items:center;gap:.45vw;font-size:2.2vw;font-weight:550;letter-spacing:-.11em;line-height:.9}",
+      "new": ".brand{display:inline-flex;align-items:center;gap:.45vw;font-size:2.2vw;font-weight:550;letter-spacing:-.07em;line-height:.9}",
+      "count": 1
+    }
   ]
 }

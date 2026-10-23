@@ -29,3 +29,7 @@ Cores vinho/creme, fontes, CSS, medidas, ordem das dobras, imagens institucionai
 A revisão inclui testes explícitos da nova identidade nas 12 páginas, reversão literal das mudanças de marca para manter as comparações históricas de regressão e verificações de integridade das fontes, controles, renderizadores, fotos e screenshots preservados. Os sete WebPs editoriais foram regenerados a partir do mesmo compositor e receberam hashes novos no manifesto de assets.
 
 A inspeção visual deve conferir a palavra-marca em desktop e celular, capa do livro, rodapé, comunidade e páginas internas. A disponibilidade real de WebGL continua dependente do dispositivo; esta revisão não modifica seu caminho de execução.
+
+## Ajuste de espaçamento da palavra-marca — 23/10/2026
+
+A pedido do responsável pelo projeto, o `letter-spacing` de `.brand` passou de `-.11em` para `-.07em`, dando um pouco mais de espaço entre as letras de **interny**. Fonte Roobert, peso, tamanho, posição, cores e todas as animações permanecem iguais. A regra é compartilhada por desktop e celular.

@@ -1,6 +1,6 @@
 {
   "project": "Interny | Your Medical Journey",
-  "generated_at": "2026-10-23T22:36:32.737857+00:00",
+  "generated_at": "2026-10-23T22:43:24.947513+00:00",
   "scope": "Portable sanitized editable static website, including built dist output. No repository history, hosting credentials, environment secrets or private QA files.",
   "entrypoint": "README.md",
   "context": "CONTEXTO_PROJETO.md",
@@ -9,7 +9,7 @@
   "github_pages_configured": false,
   "validation": {
     "structural_assertions": 513,
-    "automated_tests": 255,
+    "automated_tests": 256,
     "syntax": "pass",
     "static_build": "pass",
     "private_path_identity_and_credential_pattern_scan": "no findings; heuristic, not a guarantee against every possible secret",
@@ -23,7 +23,8 @@
     "Optional globe generator input files bundled with D3 notices",
     "Metadata-only regression baselines adjusted to sanitized notices/manifests",
     "Build status wording made host-independent; source/dist runtime preserved",
-    "23/10/2026: Interny rebrand, seven authored book compositions and identity regressions; preserved original UI/video, external URLs and portable build inputs."
+    "23/10/2026: Interny rebrand, seven authored book compositions and identity regressions; preserved original UI/video, external URLs and portable build inputs.",
+    "23/10/2026: wordmark letter-spacing -.11em to -.07em only; typography geometry otherwise unchanged, with exact scoped regression."
   ],
   "licensing": "Per-file third-party rights apply. Roobert and reference-derived materials require redistribution review; see FONTES_E_LICENCAS.md.",
   "inventory_excludes": "EXPORT_MANIFEST.json itself (avoid recursive hash)",
@@ -75,8 +76,8 @@
     },
     {
       "path": "REBRAND-INTERNY.md",
-      "bytes": 3232,
-      "sha256": "5bf24078eb01d20157e1bc183d1d7652c10206cd7b164ea6fcc96b83acc079f9"
+      "bytes": 3596,
+      "sha256": "491b60c378a7cfa601ea3c39ef4725075aa434c4ea055b285460b1fad3562400"
     },
     {
       "path": "SCIENCE-SOURCES.md",
@@ -511,7 +512,7 @@
     {
       "path": "css/main.css",
       "bytes": 31116,
-      "sha256": "0511e5e25e20d21c6654a41b4075b3a966e152c860269b658b7cb50e8d4ee278"
+      "sha256": "67e2d85054ee21330282a950cda448e217a86f7dd7cd79e22f3ac9c602c058e7"
     },
     {
       "path": "css/medical-experiences.css",
@@ -546,7 +547,7 @@
     {
       "path": "dist/404.html",
       "bytes": 3478,
-      "sha256": "5a836a9ee9d328943830efaef99502c990aad9bf70ef022ad1405373fd8e4f2d"
+      "sha256": "458b5d1350021e3acbdd518100feffa0e0ff39ce9147d6f71269eebb42a07ba3"
     },
     {
       "path": "dist/assets/Roobert-Light.woff2",
@@ -961,12 +962,12 @@
     {
       "path": "dist/build.json",
       "bytes": 425,
-      "sha256": "07b4cd82971b67ee7b24ff731b4317fa784ae6e24a425a263593cb04fd6dc3f4"
+      "sha256": "dbc139c829facc2335384c148e3fc37b28b2231bbc1680a5bae20bec7678dc13"
     },
     {
       "path": "dist/comunidade/index.html",
       "bytes": 13332,
-      "sha256": "eecfeb73e7309a6d79bd092abe87d72682b9a496f613b91b6d076bb10d69b505"
+      "sha256": "47ace09a67f663fc0c181b03ca04ad1211bd6f377d0ac116812fbca9093b8e60"
     },
     {
       "path": "dist/css/book-fallback.css",
@@ -981,7 +982,7 @@
     {
       "path": "dist/css/main.css",
       "bytes": 31116,
-      "sha256": "0511e5e25e20d21c6654a41b4075b3a966e152c860269b658b7cb50e8d4ee278"
+      "sha256": "67e2d85054ee21330282a950cda448e217a86f7dd7cd79e22f3ac9c602c058e7"
     },
     {
       "path": "dist/css/medical-experiences.css",
@@ -1016,7 +1017,7 @@
     {
       "path": "dist/index.html",
       "bytes": 63602,
-      "sha256": "49617d88e41a8732bcfbb8eb29c38693cab7a77a4453369487a8d55aceef47c7"
+      "sha256": "f33d6940b17942d85489980223989739b550e8b2945b70a717d7d9351ec7d7a3"
     },
     {
       "path": "dist/js/app.js",
@@ -1246,47 +1247,47 @@
     {
       "path": "dist/modulos/acervo/index.html",
       "bytes": 7784,
-      "sha256": "95b5f2196d02e71457795e8a37f2532203e043f615c3a5776181b965f4c6a818"
+      "sha256": "ef77234a2c2962d174ee0bf1146e30dfb7c7d0546e528bb8b0b622f243e8456f"
     },
     {
       "path": "dist/modulos/club/index.html",
       "bytes": 8309,
-      "sha256": "8d905bc6b03a3cb03c336c89b7190a75e2d6fba90064697d118cb6f190656827"
+      "sha256": "85542eb8d3cdcd041fa54b95f371fd10c598307df40a79ffd8949ea224eb9c5a"
     },
     {
       "path": "dist/modulos/explorar/index.html",
       "bytes": 8381,
-      "sha256": "2160d374759f644cb032b69265ccd3c52a31effc716867a1ac810c9d9215866d"
+      "sha256": "82c815cf7492b43ab4e8fefb254e5ca22eeb723d4584acdef658c00be79a5e1f"
     },
     {
       "path": "dist/modulos/hoje/index.html",
       "bytes": 7438,
-      "sha256": "28effc0996c67020e2a59ce941389d40a83b656b9e5c0ac334b53363424327a6"
+      "sha256": "5e6d22ed4e859cf5b400f6a06a122783a5b5adb63d9b02a485dd7799cedd814f"
     },
     {
       "path": "dist/modulos/ligas/index.html",
       "bytes": 11043,
-      "sha256": "3d1084cb1683ce5d10dea2f7ff77faea3fba2984d67c72617607184dabac323d"
+      "sha256": "e426753e09ce3345e3e0587a9429eb914bf7d15725a435445aeefe5d63a378c3"
     },
     {
       "path": "dist/modulos/mentor/index.html",
       "bytes": 7771,
-      "sha256": "5b11406e18896c88aa508f71a600273beb4c83e188d56596434a8c65871efa1e"
+      "sha256": "ecbd178ffd82a22bed2b9de224b2e50ef489f772a188588bd845ff0322d8b45d"
     },
     {
       "path": "dist/modulos/pesquisa/index.html",
       "bytes": 12437,
-      "sha256": "cea6b1d451075a16fac0d6ea3f3a7c9fb34ebf61ab272b4402e7590a3632a93a"
+      "sha256": "da9459a5cf9d61159df758753e92d97c97e90a48e45bd344a46e8f18e419051d"
     },
     {
       "path": "dist/modulos/trajetoria/index.html",
       "bytes": 19370,
-      "sha256": "b3806d121aa742cb7cbbd1b7f0cdb18c70fff733076498c6e523dfb843cc8fb5"
+      "sha256": "e4788913813b04dbfb9112e7e9ef306f32d5b1dfa1e6ea6fc9177ca849af3bad"
     },
     {
       "path": "dist/percursos/index.html",
       "bytes": 5799,
-      "sha256": "78b99610767e93507d5a5683d2e1906d456628a7de4dccf97dee0f508fe9dfac"
+      "sha256": "13bb2a19db625e4fa695de8c46157929f406cf97002fa4c7342b1a13a686009a"
     },
     {
       "path": "js/app.js",
@@ -1595,13 +1596,13 @@
     },
     {
       "path": "tests/interny-replacements.json",
-      "bytes": 4512,
-      "sha256": "2fc2d6b048a675d39940a5c5937d5f02f0eb0c721d1bfe1177db2c0fad85ab95"
+      "bytes": 4850,
+      "sha256": "4b251f20e17a3be4f9df2ac768743f895c83e9085f9fe4b7d01cd3531d7f53e1"
     },
     {
       "path": "tests/interny.mjs",
-      "bytes": 3880,
-      "sha256": "939723ba57571ce548748ddcc405a491892c60fb059a72c733b8fc1d2bc4f96a"
+      "bytes": 4476,
+      "sha256": "26077f569b4babe426e6caa7fdbcc2869b1339b802a3d276a05f42944c830216"
     },
     {
       "path": "tests/medical-experiences-baseline.json",

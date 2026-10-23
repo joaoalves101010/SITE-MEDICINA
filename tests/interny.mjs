@@ -36,3 +36,12 @@ test('historical normalization is explicit, reversible and does not conceal layo
  const mutation=html.replace('class="hero"','class="hero unauthorized-layout"');assert.notEqual(restoreInternyHTML(mutation),restored);
  assert.equal(restoreInternySource('js/hero.js','Interny unrelated text'),'Interny unrelated text');
 });
+
+test('wordmark gains only the requested modest letter spacing on desktop and mobile',async()=>{
+ const css=await readFile(new URL('../css/main.css',import.meta.url),'utf8');
+ const oldRule='.brand{display:inline-flex;align-items:center;gap:.45vw;font-size:2.2vw;font-weight:550;letter-spacing:-.11em;line-height:.9}';
+ const newRule=oldRule.replace('letter-spacing:-.11em','letter-spacing:-.07em');
+ assert.equal(css.split(newRule).length-1,1);
+ assert.equal(sha(css.replace(newRule,oldRule)),baseline.protected['css/main.css']);
+ assert.match(css,/\.brand\{font-size:7\.2vw;gap:1\.5vw\}/);
+});
