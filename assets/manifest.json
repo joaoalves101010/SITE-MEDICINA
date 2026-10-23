@@ -1,0 +1,519 @@
+{
+  "provenance": "Product UI images and tour were supplied for the Innecta project. Roobert fonts were retrieved from the public reference URLs for a private visual recreation; redistribution rights remain unverified. Source-brand decorative loops were excluded. Demonstration images do not establish endorsements or live commercial terms.",
+  "files": [
+    {
+      "file": "Roobert-Light.woff2",
+      "bytes": 24552,
+      "sha256": "06f4de7fd4f59eb202ec513918b815eba05dae1bbb1200dbec32bf53be68f6a4",
+      "source": "https://monopo.vn/fonts/WOFF2/Roobert-Light.woff2",
+      "status": "downloaded_for_requested_private_reference_recreation",
+      "license": "Unverified; private-font reuse rights not established."
+    },
+    {
+      "file": "Roobert-LightItalic.woff2",
+      "bytes": 25968,
+      "sha256": "aab3aec0b673fbfaea5775041e0ce596c0c7856d627eb53c126ecc24183b6336",
+      "source": "https://monopo.vn/fonts/WOFF2/Roobert-LightItalic.woff2",
+      "status": "downloaded_for_requested_private_reference_recreation",
+      "license": "Unverified; private-font reuse rights not established."
+    },
+    {
+      "file": "Roobert-Medium.woff2",
+      "bytes": 25808,
+      "sha256": "191375b8b1d24edaf97f22c818493b8837be687e58e82387872902f241f7077d",
+      "source": "https://monopo.vn/fonts/WOFF2/Roobert-Medium.woff2",
+      "status": "downloaded_for_requested_private_reference_recreation",
+      "license": "Unverified; private-font reuse rights not established."
+    },
+    {
+      "file": "Roobert-Regular.woff2",
+      "bytes": 25828,
+      "sha256": "820d8e467fece85a56eb12aae1fdf9b372e0730bc492d30aed19d584b07a8cc0",
+      "source": "https://monopo.vn/fonts/WOFF2/Roobert-Regular.woff2",
+      "status": "downloaded_for_requested_private_reference_recreation",
+      "license": "Unverified; private-font reuse rights not established."
+    },
+    {
+      "file": "Roobert-RegularItalic.woff2",
+      "bytes": 27908,
+      "sha256": "2613bd4ee542b74f16547e338671ca7309b04e82292cabdf4b84cd8e182642f6",
+      "source": "https://monopo.vn/fonts/WOFF2/Roobert-RegularItalic.woff2",
+      "status": "downloaded_for_requested_private_reference_recreation",
+      "license": "Unverified; private-font reuse rights not established."
+    },
+    {
+      "file": "Roobert-SemiBold.woff2",
+      "bytes": 25876,
+      "sha256": "8a2c7401bbd4eda63c8928565d3ce6359486a0198e3ad062efd37a9b36daee7b",
+      "source": "https://monopo.vn/fonts/WOFF2/Roobert-SemiBold.woff2",
+      "status": "downloaded_for_requested_private_reference_recreation",
+      "license": "Unverified; private-font reuse rights not established."
+    },
+    {
+      "file": "acervo.png",
+      "bytes": 993200,
+      "sha256": "f1982516bdd689064227ff4ee76acd973c6eccb8e278eb2fff2dcc457b8e6a78"
+    },
+    {
+      "file": "acompanhamento.png",
+      "bytes": 729059,
+      "sha256": "ddaa10cb03cdbefd760f80705fd222c06880079fc6bb4e1310c43d0536517aec"
+    },
+    {
+      "file": "club-detail.webp",
+      "bytes": 80964,
+      "sha256": "784e0f34291c3cb28fc7cab6dbe7d564d8bdd3c3787b721b3f9c350d20f58ea1"
+    },
+    {
+      "file": "cv-detail.webp",
+      "bytes": 72322,
+      "sha256": "4a3d6421fd97a18ad19970f8ad5ba212f3f28df7793a1e431ce292748e11ba16"
+    },
+    {
+      "file": "cv.webp",
+      "bytes": 122962,
+      "sha256": "a99e086ed07256751914bf8caee255ab150dea2d1e0439d562cbb5f7c710402d"
+    },
+    {
+      "file": "explore-detail.webp",
+      "bytes": 72456,
+      "sha256": "f17b1b19c67a09333a5f4112be39f84d558b39e0f4aa8a364e73a4fcb597a8ca"
+    },
+    {
+      "file": "explore.webp",
+      "bytes": 122152,
+      "sha256": "bead810fb9e65a5ae43c8a88d999cb18b2a29dc46a8dca5d5e25bda0d5597ad9"
+    },
+    {
+      "file": "favicon.svg",
+      "bytes": 215,
+      "sha256": "c168566991e96afe4794688bf12900fef3d5e678c5518e0e95fd7e0094e98876"
+    },
+    {
+      "file": "geist.woff2",
+      "bytes": 63448,
+      "sha256": "89ab9ec2533e2a704676808c89620fea8ec803f3768a85ec89338a720a90f9a7"
+    },
+    {
+      "file": "home-detail.webp",
+      "bytes": 67850,
+      "sha256": "c514059f333a16c45dab8e2ef207877969e501eb61e949fafb598ae8609b0239"
+    },
+    {
+      "file": "home.webp",
+      "bytes": 98840,
+      "sha256": "4bf2558baac07073b51ef96fc4b7918bda0cfc3dc0a6694361d54bbc2fe414c5"
+    },
+    {
+      "file": "innecta-tour.mp4",
+      "bytes": 358687,
+      "sha256": "307c144a567db455ecce884c56919739bbeb2a7ea4143a557101e617243d8041"
+    },
+    {
+      "file": "instituicoes-detail.webp",
+      "bytes": 65848,
+      "sha256": "940bbf3d2b3c6cffdba574c690194933161400d086e22479b29d5d17e5825cdd"
+    },
+    {
+      "file": "internacional-detail.webp",
+      "bytes": 84162,
+      "sha256": "1a3e18568cbeb4377b4ad36a40f41d69691688ff743ca3a3b30bef571288e2e8"
+    },
+    {
+      "file": "ligas-buscar.png",
+      "bytes": 390720,
+      "sha256": "0b3ff5e6c9ba812ca29764b244f232888cf0d4656337387dbb0ea8725989004d"
+    },
+    {
+      "file": "ligas-detail.webp",
+      "bytes": 82664,
+      "sha256": "3484657d359f1241326c8fad7670bb3529e8a024d5e6e1dbd809e1db14b59a8f"
+    },
+    {
+      "file": "ligas-inicio.png",
+      "bytes": 338639,
+      "sha256": "3f7987b93695e509a650e840c0cda3c91cbaf44a95a15cd4610914ec0ee7bccb"
+    },
+    {
+      "file": "ligas-projeto.png",
+      "bytes": 442918,
+      "sha256": "d4082db5b5a942eb9ba7494def87e04baf693a09942b9ed59bdce71726998744"
+    },
+    {
+      "file": "mentor-detail.webp",
+      "bytes": 96692,
+      "sha256": "c133f5b7b5f4ef47f098c704cdd731a0636cecc70a6fec245eb3f03e19e2d620"
+    },
+    {
+      "file": "mentor.webp",
+      "bytes": 134668,
+      "sha256": "2bf8508dadc0bc0213edfb64d7b016c6c32dbdda4d37bdb421c49a16d8a8c044"
+    },
+    {
+      "file": "noto-serif.woff2",
+      "bytes": 34636,
+      "sha256": "e5d7d1b16df908d4fd596a1b32c14b61451e007de7c3801a9c5b125de52d1b87"
+    },
+    {
+      "file": "path-detail.webp",
+      "bytes": 55986,
+      "sha256": "d4b4f10fab723704523fe1f5bc7fb41ca82e77f933593585165107f50b35d7f2"
+    },
+    {
+      "file": "path.webp",
+      "bytes": 94834,
+      "sha256": "06c6d14f03fd3b4eee77f65aed1e983eae58d3b5054269ef8716fb8a634ddb48"
+    },
+    {
+      "file": "pesquisa-ferramentas.png",
+      "bytes": 389357,
+      "sha256": "97e819394014721f50b94e74440e81dde25478f349fbf8893043c419a8b16a42"
+    },
+    {
+      "file": "pesquisa-manual.png",
+      "bytes": 578565,
+      "sha256": "05fb1357f8dbeaa114429a0a4e3a9f797322860112acca0c2d80fd6aff024381"
+    },
+    {
+      "file": "pesquisa-painel.png",
+      "bytes": 385010,
+      "sha256": "6c1eb928a88a1a03f5adf42b9869329276a88238e27cd7b1ee11fb5bcbffbb86"
+    },
+    {
+      "file": "pesquisa-projetos.png",
+      "bytes": 340733,
+      "sha256": "bf9cb7aa88d3281872924ccde5278a4e0fafde2045f30318682ab4b75a71d70a"
+    },
+    {
+      "file": "pesquisa-tendencias.png",
+      "bytes": 363693,
+      "sha256": "c4c5731c3919acd53952ff212f690cb5757456795d163476de72086c2481bc1e"
+    },
+    {
+      "file": "research-detail.webp",
+      "bytes": 85394,
+      "sha256": "0bb111ecce30507eeecdcb0882a8541b2a41efb3a2d87eda536f5fa92207163d"
+    },
+    {
+      "file": "research.webp",
+      "bytes": 123556,
+      "sha256": "e3f31e221fe90b3e13f477f0ee0b9ee350cc84460b8040b97fd93f0f20290032"
+    },
+    {
+      "file": "residencia-detail.webp",
+      "bytes": 108786,
+      "sha256": "5774e2af2c104bb4dd55ff3ded91af96204b3b6fa02a06f5a1deb654fa5ed622"
+    },
+    {
+      "file": "trajetoria-comparar.png",
+      "bytes": 361284,
+      "sha256": "1c2d8737895eeeaa2e2becf7883fb34ae6de966839570cf77be26d5cb3855ad6"
+    },
+    {
+      "file": "vision-detail.webp",
+      "bytes": 66584,
+      "sha256": "6c381e4786173e18c98c8223cacbb9e7275ca0e5818e1beedc88d00bbc2dff69"
+    },
+    {
+      "file": "vision.webp",
+      "bytes": 110106,
+      "sha256": "3e7e868c7a8107394b5f3d7ed8aba751c36c181429ae18b1aa4c085f99334023"
+    },
+    {
+      "file": "book-pages/medical-00-cover.webp",
+      "bytes": 166206,
+      "sha256": "8926ce23b6e17d9859c800c0c66218ba983f408d08fdfa664edfcdd6493aeb20",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "authored_medical_editorial_book_composition"
+    },
+    {
+      "file": "book-pages/medical-01-clareza.webp",
+      "bytes": 225560,
+      "sha256": "bf4fe4547c2534724cad669f933a62272432ed8dc5a73f16edb389d1fef575eb",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "authored_medical_editorial_book_composition"
+    },
+    {
+      "file": "book-pages/medical-02-direcao.webp",
+      "bytes": 215558,
+      "sha256": "d1f2f075ec58bf75d30544323017e7b1096086d0bbf8e6bd0f2aea9b80dc1a45",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "authored_medical_editorial_book_composition"
+    },
+    {
+      "file": "book-pages/medical-03-descoberta.webp",
+      "bytes": 237848,
+      "sha256": "5ddb37d0ecc291e2d01d2a2a279108ec2349b5ce2a728cf1113fd8c411c012fb",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "authored_medical_editorial_book_composition"
+    },
+    {
+      "file": "book-pages/medical-04-metodo.webp",
+      "bytes": 226280,
+      "sha256": "19d1c1c45d38d078876427a846d964c3cc4e962851cc2c8a05798dd566ea71f2",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "authored_medical_editorial_book_composition"
+    },
+    {
+      "file": "book-pages/medical-05-troca.webp",
+      "bytes": 218118,
+      "sha256": "5ac99c0d93709c0639eddcc80bd7cc5e2f9aab22d57e05937fbe17eb11c0b5e1",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "authored_medical_editorial_book_composition"
+    },
+    {
+      "file": "book-pages/medical-06-presenca.webp",
+      "bytes": 237934,
+      "sha256": "8a8c14a05d219b5ea35cd775e5fc4ff6d6dd33f839ffe74664748a1947a0795d",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "authored_medical_editorial_book_composition"
+    },
+    {
+      "file": "book-pages/medical-clareza-art.webp",
+      "bytes": 245588,
+      "sha256": "6064bd306f0d85e430fda2750f7f5854fc9a2752d4aa983522b478a4ad7a7385",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "optimized_medical_alpha_derivative"
+    },
+    {
+      "file": "book-pages/medical-clareza.png",
+      "bytes": 1559295,
+      "sha256": "fc3cb2d3b23efa1b12d3206aef6a7e7043bb5d290b7c04c6133813c7a0d6ca4f",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "original_medical_editorial_illustration_master"
+    },
+    {
+      "file": "book-pages/medical-descoberta-art.webp",
+      "bytes": 253172,
+      "sha256": "0d5a447bb58f07c56aa88964e4589a87a4225fca66fb79d5692fc3641b101228",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "optimized_medical_alpha_derivative"
+    },
+    {
+      "file": "book-pages/medical-descoberta.png",
+      "bytes": 1834007,
+      "sha256": "62b57e6d81894f61e8e06342f2445f0145ea9ec8b8d7a448bc32d9190189e050",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "original_medical_editorial_illustration_master"
+    },
+    {
+      "file": "book-pages/medical-direcao-art.webp",
+      "bytes": 232274,
+      "sha256": "50ff2dc6a954c328f46ff377ee412a12faafbd5e9dc1e1bdf3fd2aec386ada47",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "optimized_medical_alpha_derivative"
+    },
+    {
+      "file": "book-pages/medical-direcao.png",
+      "bytes": 1674346,
+      "sha256": "5e7b9fc21978bf5f818f33080cd84810f5930c44cbd14e03915fc598614709c3",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "original_medical_editorial_illustration_master"
+    },
+    {
+      "file": "book-pages/medical-metodo-art.webp",
+      "bytes": 273700,
+      "sha256": "ff84d99d825523c685220bc49a5c88f3fc0065e93c12f844538fc69f8c8a2725",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "optimized_medical_alpha_derivative"
+    },
+    {
+      "file": "book-pages/medical-metodo.png",
+      "bytes": 1739158,
+      "sha256": "0f170cdfc4a8680e33720e4d762b6f971f9f144613f8eeb3f059bce034b543a4",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "original_medical_editorial_illustration_master"
+    },
+    {
+      "file": "book-pages/medical-presenca-art.webp",
+      "bytes": 275386,
+      "sha256": "0c1cd5d451aab13972957fe14c606765b21e3f3cf7e18a2d9bfcc1b0125fa353",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "optimized_medical_alpha_derivative"
+    },
+    {
+      "file": "book-pages/medical-presenca.png",
+      "bytes": 1903853,
+      "sha256": "3b3f4a52a38609b0f3c05f4ec9c83a51b615e0d6a52254f98946d945b62f6c93",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "original_medical_editorial_illustration_master"
+    },
+    {
+      "file": "book-pages/medical-troca-art.webp",
+      "bytes": 218266,
+      "sha256": "712e5856e3767109b0466d675ea37475d84afb79bc979ff9f45c2ae7e7e1aadb",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "optimized_medical_alpha_derivative"
+    },
+    {
+      "file": "book-pages/medical-troca.png",
+      "bytes": 1594841,
+      "sha256": "d361890e80171bbb69bfef4a65b1a654d41921942a58b948d7ecdaa0f656e31c",
+      "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
+      "status": "original_medical_editorial_illustration_master"
+    },
+    {
+      "file": "experiences/mayo.webp",
+      "bytes": 761758,
+      "sha256": "513f1c32f8fdbe49ed68bc98e70dc93d24db3ed14c58946e23b6ebd1de4184a2",
+      "source": "https://commons.wikimedia.org/wiki/File:Gonda_and_Charlton_Building_Skyways_-_Mayo_Clinic%2C_Rochester%2C_Minnesota_%2838792363545%29.jpg",
+      "photographer": "Tony Webster",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "Redimensionamento proporcional e conversão para WebP; enquadramento por recorte na galeria.",
+      "original_sha256": "f66edb6f70789704779531481f0df8e6d5c33e82e6dd17bc1eaad6c5d27ede15"
+    },
+    {
+      "file": "experiences/cleveland.webp",
+      "bytes": 400112,
+      "sha256": "d40f696507946443a5ec1c98fd19e427233c23346aebd4760f278dd67ca1da92",
+      "source": "https://commons.wikimedia.org/wiki/File:Crile_Building_A6110.jpg",
+      "photographer": "Cleveland Clinic",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Redimensionamento proporcional e conversão para WebP; enquadramento por recorte na galeria.",
+      "original_sha256": "1ff85a5947189502bf8f46ce5ecd554318b3012e1131692ca0b8bf2c6aca8787"
+    },
+    {
+      "file": "experiences/yale.webp",
+      "bytes": 706504,
+      "sha256": "7eb8626f8f2fac6e108c272ec2b07bb897281539515156305bf5fda0e61a98b1",
+      "source": "https://commons.wikimedia.org/wiki/File:Yale_School_of_Medicine_%2854106346034%29.jpg",
+      "photographer": "Ajay Suresh (ajay_suresh)",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "Redimensionamento proporcional e conversão para WebP; enquadramento por recorte na galeria.",
+      "original_sha256": "9f5a26681096beb9d179e798a192696117069951f903f3d8d30402cc8f1f058c"
+    },
+    {
+      "file": "experiences/harvard.webp",
+      "bytes": 503900,
+      "sha256": "f0413c967d9b239adc5b5d4ab6c2833201a8a194a1e99f4aedf70124b0c7436c",
+      "source": "https://commons.wikimedia.org/wiki/File:Hms.jpg",
+      "photographer": "SA / Drsamir",
+      "license": "Public domain dedication",
+      "license_url": null,
+      "changes": "Redimensionamento proporcional e conversão para WebP; enquadramento por recorte na galeria.",
+      "original_sha256": "0d2c1ef5165d735eeefa308e08d8ab8483e31fdbcaf5a2692fd449a9f89f7469"
+    },
+    {
+      "file": "experiences/ucl.webp",
+      "bytes": 640782,
+      "sha256": "e80e32698f0c305e8da8f8567c40f847b3de8f0c29ef22b1206bf567314bb127",
+      "source": "https://commons.wikimedia.org/wiki/File:UCL_2_Wilkins_building_%2832371569506%29.jpg",
+      "photographer": "Tony Hisgett",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "Redimensionamento proporcional e conversão para WebP; enquadramento por recorte na galeria.",
+      "original_sha256": "c426a7d5fa36eefee9f5991496c08e5c92fdfba34917c2f99cbcf40283f2e6d5"
+    },
+    {
+      "file": "experiences/oxford.webp",
+      "bytes": 485608,
+      "sha256": "39c8bdfe5a44bc4264871a348c0abf35c553eaf7ff93c4b6402e53b1db7721f8",
+      "source": "https://commons.wikimedia.org/wiki/File:Radcliffe_Camera_Oxford_2018_02.jpg",
+      "photographer": "Julian Herzog",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Redimensionamento proporcional e conversão para WebP; enquadramento por recorte na galeria.",
+      "original_sha256": "ec6dff5de62d84bc918551f05aebfac161934464ee15ab8c32c6ff129a4e4655"
+    },
+    {
+      "file": "experiences/nus.webp",
+      "bytes": 547792,
+      "sha256": "183ecb6d5308affd99461bede2ace981e32cc2b39d563afac3cbc83a3d67d835",
+      "source": "https://commons.wikimedia.org/wiki/File:Centre_for_Translational_Medicine_%28MD6%29%2C_February_2020.jpg",
+      "photographer": "Joshua Rommel Hayag Vargas",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Redimensionamento proporcional e conversão para WebP; enquadramento por recorte na galeria.",
+      "original_sha256": "6e8e14191fea276f30dddb8a5b7ff9f7f38f363625d505594f69b6be82cd5e99"
+    },
+    {
+      "file": "experiences/queensland.webp",
+      "bytes": 710532,
+      "sha256": "d8250dbf24f9d6e6c5d8d79ed6ea52f0779911f6be1aebb8e73c829f01b9531c",
+      "source": "https://commons.wikimedia.org/wiki/File:Mayne_Medical_School%2C_Herston%2C_Brisbane_01.JPG",
+      "photographer": "Kgbo",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Redimensionamento proporcional e conversão para WebP; enquadramento por recorte na galeria.",
+      "original_sha256": "6bdd81f0c153271f339065a99ebb5d064bf54528961eb59f89729c4f43bee783"
+    },
+    {
+      "file": "experiences/credits.json",
+      "bytes": 11321,
+      "sha256": "3af5c4a2e760c22af2680989a4456957b4b0d36f989cc922649cc6f1753d2cea",
+      "source": "Verified Wikimedia Commons photo records,2026-10-23",
+      "license": "Metadata with per-image licence references"
+    }
+  ],
+  "excluded_reference_media": [
+    {
+      "url": "https://monopo.vn/",
+      "reason": "Rejected after visual inspection: source wordmark fragments. Binary files excluded from deliverable."
+    },
+    {
+      "url": "https://monopo.vn/",
+      "reason": "Rejected after visual inspection: source wordmark fragments. Binary files excluded from deliverable."
+    },
+    {
+      "url": "https://monopo.vn/",
+      "reason": "Rejected after visual inspection: source wordmark fragments. Binary files excluded from deliverable."
+    },
+    {
+      "url": "https://monopo.vn/",
+      "reason": "Rejected after visual inspection: source wordmark fragments. Binary files excluded from deliverable."
+    },
+    {
+      "url": "https://monopo.vn/",
+      "reason": "Rejected after visual inspection: source wordmark fragments. Binary files excluded from deliverable."
+    },
+    {
+      "url": "https://monopo.vn/",
+      "reason": "Rejected after visual inspection: source wordmark fragments. Binary files excluded from deliverable."
+    }
+  ],
+  "science_globe": {
+    "scope": "Second homepage fold and approved shared scroll-driven background; original hero first-screen/intro, globe and Enter project preserved",
+    "geography_source": "Read-only copy/derivation of user project tools/globe-source/countries.json",
+    "rendering": "Canvas2D orthographic rotating globe; precomputed local SVG fallback; no new WebGL context",
+    "visuals": "Cream dotted land and fine geographic wireframe; rose Brazil; one continuous viewport-sized hero field travels across both folds; decorative hero lens exits by the second fold.",
+    "editorial_sources": "../SCIENCE-SOURCES.md",
+    "license_note": "Country dataset inherited from supplied project; upstream provenance not independently established. No institution logos, affiliations or endorsements."
+  },
+  "principle_art": {
+    "rendering": "Authored local inline SVG editorial diagrams; no external imagery, WebGL, decorative bubbles or split-letter monograms",
+    "concepts": [
+      "Currículo / Objetivo / Oportunidades converge into a path",
+      "Pesquisa: Entender / Aplicar / Validar / Entregar",
+      "Mentor IA and Ultra human accompaniment remain explicitly distinct"
+    ],
+    "motion": "Finite line reveals with static readable reduced-motion and no-JS presentation",
+    "homepage_reel": "Removed by user request; local video asset retained for internal/community use"
+  },
+  "book_editorial": {
+    "revision": "medical-academic wine identity; user-approved ROTINA flagship",
+    "chapters": [
+      "ROTINA",
+      "TRAJETÓRIA",
+      "OPORTUNIDADES",
+      "PESQUISA",
+      "LIGAS",
+      "ORIENTAÇÃO"
+    ],
+    "screenshots": "None in book; approved diagonal mosaic unchanged.",
+    "mechanics": "Reversible rounded-leaf book, shared scroll coordinate, mouse drag, CSS3D fallback and accessible controls.",
+    "prompts": "BOOK-ART-PROMPTS.json",
+    "copy": "Book-only js/book-editorial.js shared by illustration captions and semantic HTML.",
+    "superseded_assets": "Only the current medical-editorial art is included."
+  },
+  "international_experiences": {
+    "checked_at": "2026-10-23",
+    "selection": "Editorial, not a demand ranking or institutional partnership",
+    "programme_sources": "MEDICAL-EXPERIENCES-SOURCES.md",
+    "photographs": "Authentic licensed Wikimedia Commons photographs; local resized WebP derivatives retain per-image licences and accessible source credits.",
+    "interaction": "Original scoped code implementing documented circular SDF/liquid behaviour. No overall Morphin component reuse licence is claimed; unlicensed TSX/source shader was not copied wholesale.",
+    "fallback": "Same ring pose via DOM cards; no claim of identical per-pixel liquid deformation without WebGL."
+  }
+}

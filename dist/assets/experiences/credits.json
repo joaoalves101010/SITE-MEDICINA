@@ -1,0 +1,258 @@
+[
+  {
+    "id": "mayo",
+    "institution": "Mayo Clinic",
+    "filename": "mayo-skyways.jpg",
+    "local_path": "originals/mayo-skyways.jpg",
+    "file_title": "Gonda and Charlton Building Skyways - Mayo Clinic, Rochester, Minnesota (38792363545).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gonda_and_Charlton_Building_Skyways_-_Mayo_Clinic%2C_Rochester%2C_Minnesota_%2838792363545%29.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Gonda_and_Charlton_Building_Skyways_-_Mayo_Clinic%2C_Rochester%2C_Minnesota_%2838792363545%29.jpg",
+    "photographer": "Tony Webster",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "depicts": "Gonda and Charlton buildings, Rochester, Minnesota",
+    "photo_date": "2018-01-05",
+    "status": "preferred",
+    "note": "Flickr license reviewed on Commons; embedded older all-rights-reserved metadata is superseded by reviewed CC license.",
+    "license_verified_from_commons": true,
+    "downloaded": true,
+    "dimensions": [
+      5384,
+      3594
+    ],
+    "changes": "Redimensionamento proporcional e conversão para WebP; enquadramento por recorte na galeria.",
+    "served_path": "/assets/experiences/mayo.webp",
+    "served_dimensions": [
+      1800,
+      1202
+    ],
+    "served_bytes": 761758,
+    "sha256": "513f1c32f8fdbe49ed68bc98e70dc93d24db3ed14c58946e23b6ebd1de4184a2",
+    "original_sha256": "f66edb6f70789704779531481f0df8e6d5c33e82e6dd17bc1eaad6c5d27ede15",
+    "focalY": 0.5
+  },
+  {
+    "id": "cleveland",
+    "institution": "Cleveland Clinic",
+    "filename": "cleveland.jpg",
+    "local_path": "originals/cleveland.jpg",
+    "file_title": "Crile Building A6110.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Crile_Building_A6110.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Crile_Building_A6110.jpg",
+    "photographer": "Cleveland Clinic",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "depicts": "Crile Building, Cleveland Clinic main campus, Cleveland, Ohio",
+    "photo_date": "2008-10-09",
+    "status": "preferred",
+    "note": "Official image with Commons VRT permission ticket 2018103110009934. Twilight architectural shot.",
+    "license_verified_from_commons": true,
+    "downloaded": true,
+    "dimensions": [
+      3000,
+      2008
+    ],
+    "changes": "Redimensionamento proporcional e conversão para WebP; enquadramento por recorte na galeria.",
+    "served_path": "/assets/experiences/cleveland.webp",
+    "served_dimensions": [
+      1800,
+      1205
+    ],
+    "served_bytes": 400112,
+    "sha256": "d40f696507946443a5ec1c98fd19e427233c23346aebd4760f278dd67ca1da92",
+    "original_sha256": "1ff85a5947189502bf8f46ce5ecd554318b3012e1131692ca0b8bf2c6aca8787",
+    "focalY": 0.5
+  },
+  {
+    "id": "yale",
+    "institution": "Yale School of Medicine",
+    "filename": "yale-facade.jpg",
+    "local_path": "originals/yale-facade.jpg",
+    "file_title": "Yale School of Medicine (54106346034).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Yale_School_of_Medicine_%2854106346034%29.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Yale_School_of_Medicine_%2854106346034%29.jpg",
+    "photographer": "Ajay Suresh (ajay_suresh)",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "depicts": "Sterling Hall of Medicine, New Haven, Connecticut",
+    "photo_date": "2024-10-29",
+    "status": "preferred",
+    "note": "Flickr license reviewed 2024-11-05; appealing three-quarter facade.",
+    "license_verified_from_commons": true,
+    "downloaded": true,
+    "dimensions": [
+      4689,
+      3517
+    ],
+    "changes": "Redimensionamento proporcional e conversão para WebP; enquadramento por recorte na galeria.",
+    "served_path": "/assets/experiences/yale.webp",
+    "served_dimensions": [
+      1800,
+      1350
+    ],
+    "served_bytes": 706504,
+    "sha256": "7eb8626f8f2fac6e108c272ec2b07bb897281539515156305bf5fda0e61a98b1",
+    "original_sha256": "9f5a26681096beb9d179e798a192696117069951f903f3d8d30402cc8f1f058c",
+    "focalY": 0.5
+  },
+  {
+    "id": "harvard",
+    "institution": "Harvard Medical School",
+    "filename": "harvard.jpg",
+    "local_path": "originals/harvard.jpg",
+    "file_title": "Hms.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hms.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Hms.jpg",
+    "photographer": "SA / Drsamir",
+    "license": "Public domain dedication",
+    "license_url": null,
+    "depicts": "Harvard Medical School Quadrangle, Longwood, Boston, not Cambridge",
+    "photo_date": "2008-11",
+    "status": "preferred",
+    "note": "Public domain by photographer; credit still recommended.",
+    "license_verified_from_commons": true,
+    "downloaded": true,
+    "dimensions": [
+      3906,
+      2602
+    ],
+    "changes": "Redimensionamento proporcional e conversão para WebP; enquadramento por recorte na galeria.",
+    "served_path": "/assets/experiences/harvard.webp",
+    "served_dimensions": [
+      1800,
+      1199
+    ],
+    "served_bytes": 503900,
+    "sha256": "f0413c967d9b239adc5b5d4ab6c2833201a8a194a1e99f4aedf70124b0c7436c",
+    "original_sha256": "0d2c1ef5165d735eeefa308e08d8ab8483e31fdbcaf5a2692fd449a9f89f7469",
+    "focalY": 0.5
+  },
+  {
+    "id": "ucl",
+    "institution": "University College London",
+    "filename": "ucl-day.jpg",
+    "local_path": "originals/ucl-day.jpg",
+    "file_title": "UCL 2 Wilkins building (32371569506).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:UCL_2_Wilkins_building_%2832371569506%29.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/UCL_2_Wilkins_building_%2832371569506%29.jpg",
+    "photographer": "Tony Hisgett",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "depicts": "Wilkins Building, UCL Bloomsbury campus, London",
+    "photo_date": "2017-01-18",
+    "status": "preferred",
+    "note": "Flickr CC license reviewed; campus symbol, not UCLH hospital or guaranteed placement site.",
+    "license_verified_from_commons": true,
+    "downloaded": true,
+    "dimensions": [
+      4812,
+      2849
+    ],
+    "changes": "Redimensionamento proporcional e conversão para WebP; enquadramento por recorte na galeria.",
+    "served_path": "/assets/experiences/ucl.webp",
+    "served_dimensions": [
+      1800,
+      1066
+    ],
+    "served_bytes": 640782,
+    "sha256": "e80e32698f0c305e8da8f8567c40f847b3de8f0c29ef22b1206bf567314bb127",
+    "original_sha256": "c426a7d5fa36eefee9f5991496c08e5c92fdfba34917c2f99cbcf40283f2e6d5",
+    "focalY": 0.5
+  },
+  {
+    "id": "oxford",
+    "institution": "University of Oxford",
+    "filename": "oxford.jpg",
+    "local_path": "originals/oxford.jpg",
+    "file_title": "Radcliffe Camera Oxford 2018 02.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Radcliffe_Camera_Oxford_2018_02.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Radcliffe_Camera_Oxford_2018_02.jpg",
+    "photographer": "Julian Herzog",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "depicts": "Radcliffe Camera and surrounding Oxford university buildings",
+    "photo_date": "2018-03-07",
+    "status": "preferred",
+    "note": "Stunning wide university-campus image; library, NOT a hospital or clinical placement site.",
+    "license_verified_from_commons": true,
+    "downloaded": true,
+    "dimensions": [
+      10598,
+      5901
+    ],
+    "changes": "Redimensionamento proporcional e conversão para WebP; enquadramento por recorte na galeria.",
+    "served_path": "/assets/experiences/oxford.webp",
+    "served_dimensions": [
+      1800,
+      1002
+    ],
+    "served_bytes": 485608,
+    "sha256": "39c8bdfe5a44bc4264871a348c0abf35c553eaf7ff93c4b6402e53b1db7721f8",
+    "original_sha256": "ec6dff5de62d84bc918551f05aebfac161934464ee15ab8c32c6ff129a4e4655",
+    "focalY": 0.5
+  },
+  {
+    "id": "nus",
+    "institution": "NUS Yong Loo Lin School of Medicine",
+    "filename": "nus.jpg",
+    "local_path": "originals/nus.jpg",
+    "file_title": "Centre for Translational Medicine (MD6), February 2020.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Centre_for_Translational_Medicine_%28MD6%29%2C_February_2020.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Centre_for_Translational_Medicine_%28MD6%29%2C_February_2020.jpg",
+    "photographer": "Joshua Rommel Hayag Vargas",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "depicts": "Centre for Translational Medicine MD6, NUS Medicine, Singapore",
+    "photo_date": "2020-02-25",
+    "status": "preferred",
+    "note": "Portrait architecture; landscape cover crop possible but requires crop QA. No AI changes.",
+    "license_verified_from_commons": true,
+    "downloaded": true,
+    "dimensions": [
+      3024,
+      4032
+    ],
+    "changes": "Redimensionamento proporcional e conversão para WebP; enquadramento por recorte na galeria.",
+    "served_path": "/assets/experiences/nus.webp",
+    "served_dimensions": [
+      1350,
+      1800
+    ],
+    "served_bytes": 547792,
+    "sha256": "183ecb6d5308affd99461bede2ace981e32cc2b39d563afac3cbc83a3d67d835",
+    "original_sha256": "6e8e14191fea276f30dddb8a5b7ff9f7f38f363625d505594f69b6be82cd5e99",
+    "focalY": 0.35
+  },
+  {
+    "id": "queensland",
+    "institution": "University of Queensland",
+    "filename": "queensland-facade.jpg",
+    "local_path": "originals/queensland-facade.jpg",
+    "file_title": "Mayne Medical School, Herston, Brisbane 01.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mayne_Medical_School%2C_Herston%2C_Brisbane_01.JPG",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Mayne_Medical_School%2C_Herston%2C_Brisbane_01.JPG",
+    "photographer": "Kgbo",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "depicts": "Mayne Medical School, UQ Herston campus, Brisbane",
+    "photo_date": "2014-11-22",
+    "status": "preferred",
+    "note": "Landscape approach to facade. Historic campus identity, not guaranteed clinical placement hospital.",
+    "license_verified_from_commons": true,
+    "downloaded": true,
+    "dimensions": [
+      3264,
+      2448
+    ],
+    "changes": "Redimensionamento proporcional e conversão para WebP; enquadramento por recorte na galeria.",
+    "served_path": "/assets/experiences/queensland.webp",
+    "served_dimensions": [
+      1800,
+      1350
+    ],
+    "served_bytes": 710532,
+    "sha256": "d8250dbf24f9d6e6c5d8d79ed6ea52f0779911f6be1aebb8e73c829f01b9531c",
+    "original_sha256": "6bdd81f0c153271f339065a99ebb5d064bf54528961eb59f89729c4f43bee783",
+    "focalY": 0.5
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "baseline": "66ad978ff4150f7cbb0007eb0b7292ccfc1417a3",
+  "protected": {
+    "js/book-renderer.js": "13fecc3ce5f0c7671d3e3265bb97ad19b5aea59ab0a6ad5c25ee5676bc06d460",
+    "js/book-controller.js": "3e7417225d0c3e54f3ba06ca8f4a9f0dcc9fdbe0f152df6904d5b399d34857c0",
+    "js/book-fallback.js": "8325f237a8971bdebf1b6b5abe0c1fea0ac40ed9df3996d342d51fc26f1a3766",
+    "css/book.css": "1c255ee477d18f3524e904304874183ea5919375a78b5218b25e3865c54a83f3",
+    "css/book-fallback.css": "ea29ec31eba001b209bdfea3a5a9a22f31f4bdabe29d1ab455a205d17240725e",
+    "js/app.js": "b6e37a4863485faa4a03b2ed9f26bced4127c2afc044c587db8977fe86b12ec8",
+    "js/templates.js": "7b86534ede3645cf25954db29e8b8e1ff39e952d544a1825ac7405677e8f380d",
+    "js/content.js": "0d9b020daf1982960e28dcb22e5aa8cbbcdc3afe1408cd075ba35ab195912f6e",
+    "js/pages.js": "07c61e3f7655f5d2bc0a08460c596297cb794cd74ea17befe52f42b08d739e83",
+    "js/hero.js": "343c98b5e36e9dace96e4c673d98d3aff30536452ec82f47e38e8256f50630ca",
+    "js/hero-copy.js": "7f76e30fef49c276261f5066cf09a8b45b8064b9c63e3cb8f3969a36ba294540",
+    "js/shared-scene.js": "87300f51b4b2939d565e5d16cb36c7f9aef77d704ceee90cf9a17080818d6207",
+    "js/science-globe.js": "669283b8414364a4da1bf8d457148819ba68751818f045d825a95827a0c9b97f",
+    "css/tiles.css": "b3d1336310105c5907fa2c329bf990d86cc72b520a1da79832c607547d5f292a",
+    "js/principle-visuals.js": "69ffb44b1aef132de35108ce146aa15e223e4ad011d353fe869706098385a361",
+    "assets/tiles/hoje.png": "428ed9b8ffb5f6d0d24e73b82f23d7e800b29606649197ee9471e2950572e97c",
+    "assets/tiles/trajetoria.png": "6c0f12e91e2771141857a28f7d6ce75b5393d1ee4b7cb3a9fe8306f0c25674a1",
+    "assets/tiles/explorar.png": "592f6cc2c551df8867a490b5f6c73cd2ac8dc40d78cb352ddb223c687a220396",
+    "assets/tiles/pesquisa.png": "6c1eb928a88a1a03f5adf42b9869329276a88238e27cd7b1ee11fb5bcbffbb86",
+    "assets/tiles/ligas.png": "3f7987b93695e509a650e840c0cda3c91cbaf44a95a15cd4610914ec0ee7bccb",
+    "assets/tiles/mentor.png": "3e6ef1d83d9e70866678b92819c926a648ef0b7325c351addfcd8e903d94a141",
+    "assets/tiles/acervo.png": "f1982516bdd689064227ff4ee76acd973c6eccb8e278eb2fff2dcc457b8e6a78",
+    "assets/tiles/club.png": "7813cc85c2ef3ef59558a8ad892df4bbee61bfafdf4ce9e85f9fa111d3c44590"
+  }
+}

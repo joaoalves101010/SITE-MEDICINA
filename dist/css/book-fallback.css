@@ -1,0 +1,17 @@
+/* CSS3D fallback shares the same front/back art and deterministic hinge pose. */
+.book-css{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;perspective-origin:50% 50%;visibility:hidden}
+.book-css[hidden]{display:none}
+.book-css[data-book-css-ready="true"]{visibility:visible}
+.book-css__world{position:relative;transform-style:preserve-3d;isolation:auto;will-change:transform}
+.book-css__world:before{content:"";position:absolute;inset:1.4% -.12% -.65%;border-radius:var(--book-radius);background:#a79483;box-shadow:0 2px 0 #e8dfd0,0 4px 0 #9e8d7b,0 6px 0 #ddd3c2,0 9px 0 #694452,0 22px 30px #0005;transform:translateZ(-4px);pointer-events:none}
+.book-css__world[data-spread="0"]:before{left:50%;border-radius:0 var(--book-radius) var(--book-radius) 0}
+.book-css__world:after{content:"";position:absolute;left:49.65%;top:.3%;height:99.4%;width:.7%;background:linear-gradient(90deg,#2e142500,#20131b55 45%,#fff7e733 58%,#2e142500);transform:translateZ(4px);pointer-events:none}
+.book-css__face{position:absolute;display:block;width:50%;height:100%;max-width:none;object-fit:fill;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#f3eee6;box-shadow:inset 0 0 0 1px #26111a20}
+.book-css__left{left:0;top:0;border-radius:var(--book-radius) 0 0 var(--book-radius);transform:translateZ(1px)}
+.book-css__right{left:50%;top:0;border-radius:0 var(--book-radius) var(--book-radius) 0;transform:translateZ(1px)}
+.book-css__turn{position:absolute;left:50%;top:0;width:50%;height:100%;transform-origin:0 50%;transform-style:preserve-3d;will-change:transform}
+.book-css__turn:after{content:"";position:absolute;inset:0;border-radius:0 var(--book-radius) var(--book-radius) 0;box-shadow:inset 9px 0 15px rgba(35,17,26,var(--book-turn-shadow,.06));backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:translateZ(.5px);pointer-events:none}
+.book-css__front,.book-css__back{left:0;top:0;width:100%;box-shadow:0 0 0 .7px #ccb8a955,1px 2px 2px #0002}
+.book-css__front{border-radius:0 var(--book-radius) var(--book-radius) 0;transform:translateZ(.4px)}
+.book-css__back{border-radius:var(--book-radius) 0 0 var(--book-radius);transform:rotateY(180deg) translateZ(.4px)}
+@media(prefers-reduced-motion:reduce){.book-css__world,.book-css__turn{will-change:auto}}

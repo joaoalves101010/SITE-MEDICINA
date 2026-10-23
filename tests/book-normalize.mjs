@@ -1,0 +1,6 @@
+import {restoreMedicalExperiences,restoreMedicalExperiencesHTML} from './medical-experiences-normalize.mjs';
+import{readFile}from'node:fs/promises';
+export const bookBaseline=JSON.parse(await readFile(new URL('./book-baseline.json',import.meta.url)));
+export function restoreBookHTML(html){return restoreMedicalExperiencesHTML(html).replace(/<section id="team"[^>]*>[\s\S]*?<\/section>/,bookBaseline.renderedTeam).replace('<link rel="stylesheet" href="/css/book.css">','').replace('<link rel="stylesheet" href="/css/book-fallback.css">','');}
+export function restoreBookTemplate(source){return restoreMedicalExperiences('js/templates.js',source).replace("import { renderBookSection } from './book-section.js';\n",'').replace('${renderBookSection({star,arrow})}',bookBaseline.sourceTeam).replace('<link rel="stylesheet" href="/css/book.css">','').replace('<link rel="stylesheet" href="/css/book-fallback.css">','');}
+export function restoreBookApp(source){return restoreMedicalExperiences('js/app.js',source).replace(/let bookController;[\s\S]*?let scienceController;/,'let scienceController;').replace('sharedScene.update();bookController?.update();','sharedScene.update();').replace('bookController?.setVisible(false);','').replace('bookController?.setVisible(true);','').replace('bookController?.dispose();','');}

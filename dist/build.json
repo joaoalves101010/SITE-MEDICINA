@@ -1,0 +1,18 @@
+{
+  "build": "innecta-monopo-2026-10-23T21-28-53-911Z",
+  "createdAt": "2026-10-23T21:28:53.947Z",
+  "routes": [
+    "/",
+    "/comunidade/",
+    "/percursos/",
+    "/modulos/trajetoria/",
+    "/modulos/hoje/",
+    "/modulos/explorar/",
+    "/modulos/mentor/",
+    "/modulos/acervo/",
+    "/modulos/ligas/",
+    "/modulos/pesquisa/",
+    "/modulos/club/"
+  ],
+  "status": "Static build complete; deployment validation is separate"
+}

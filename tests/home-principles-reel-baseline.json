@@ -1,0 +1,9 @@
+{
+  "commit": "037969091530ec1db06cabb2cd3301fd7c02b3d5",
+  "visuals": [
+    "<div class=\"principle-art art-1\" aria-hidden=\"true\"><div class=\"principle-fallback\"><span class=\"glass-orb orb-main\">in</span><span class=\"glass-orb orb-secondary\">ne</span><span class=\"glass-orb orb-small\">ct</span></div></div>",
+    "<div class=\"principle-art art-2\" aria-hidden=\"true\"><div class=\"principle-fallback\"><span class=\"glass-orb orb-main\">in</span><span class=\"glass-orb orb-secondary\">ne</span><span class=\"glass-orb orb-small\">ct</span></div></div>",
+    "<div class=\"principle-art art-3\" aria-hidden=\"true\"><div class=\"principle-fallback\"><span class=\"glass-orb orb-main\">in</span><span class=\"glass-orb orb-secondary\">ne</span><span class=\"glass-orb orb-small\">ct</span></div></div>"
+  ],
+  "reel": "<section class=\"reel-section\" aria-label=\"Conheça a interface da Innecta\"><div class=\"reel-stage\"><video id=\"product-reel\" playsinline preload=\"metadata\" poster=\"/assets/home-detail.webp\" controls aria-label=\"Tour visual das interfaces da Innecta\"><source src=\"/assets/innecta-tour.mp4\" type=\"video/mp4\">Seu navegador não reproduz o vídeo. Explore os módulos abaixo.</video><button class=\"reel-play\" data-play-video=\"product-reel\" aria-label=\"Reproduzir tour visual da Innecta\"><span>Conheça por dentro</span><svg viewBox=\"0 0 30 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M1 10h26M18 1l9 9-9 9\" stroke=\"currentColor\" stroke-width=\"1.25\"/></svg></button></div><div class=\"reel-caption container\"><span>INNECTA EM PERSPECTIVA</span><span>Interfaces do produto em construção · tour visual sem áudio</span></div><p class=\"interface-notice\">Interface de demonstração da Innecta. Pessoas, números e atividades exibidos nas telas são exemplos, não resultados ou parcerias anunciadas.</p></section>"
+}

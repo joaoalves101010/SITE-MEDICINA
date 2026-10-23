@@ -1,0 +1,11 @@
+{
+  "commit": "9d1b4993af8827ea063c147596c25398fc4de6f0",
+  "scienceContentSHA256": "cf550a698e6f220a418c54f78a44155d507678c8f20815129f50a0d78a602d53",
+  "files": {
+    "js/hero.js": "8e7b93111476a3b12599106796ba99ce70e99b28c1d296c54740989f2140e2d2",
+    "js/hero-copy.js": "7f76e30fef49c276261f5066cf09a8b45b8064b9c63e3cb8f3969a36ba294540",
+    "js/science-globe.js": "669283b8414364a4da1bf8d457148819ba68751818f045d825a95827a0c9b97f",
+    "assets/science-globe/fallback.svg": "93a462d82f56105d7eb9293b2d4d01a6b6534405da3393abf3725007dc0f6ad2",
+    "assets/science-globe/geography.json": "4ac98e6cd8e0ad57160e2bf13154a61fe57ba604645af2f1160117108e69e179"
+  }
+}

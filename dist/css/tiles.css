@@ -1,0 +1,6 @@
+/* Full original screenshots; only this existing moving collage is resized. */
+.tiles--rotated .tiles__wrap{width:max-content;height:auto;transform:translate3d(-50%,-50%,0) rotate(45deg)}
+.tiles--rotated .tiles__line{justify-content:center}
+.tiles--rotated .tiles__line-img{width:34vw;height:auto;aspect-ratio:8/5;padding:.3vw;background:#160e12}
+.tiles--rotated .tiles__line-img img{width:100%;height:100%;object-fit:contain;object-position:center;transform:none}
+@media(max-width:1023px){.tiles--rotated .tiles__line-img{width:52vw;padding:.5vw}}

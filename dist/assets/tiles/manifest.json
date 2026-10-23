@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "trajetoria",
+    "file": "assets/tiles/trajetoria.png",
+    "source": "owner-supplied/INNECTA-prints/02-Estudante/02-02_Trajetoria-Visao.png",
+    "width": 2880,
+    "height": 1800,
+    "bytes": 604675,
+    "sha256": "6c0f12e91e2771141857a28f7d6ce75b5393d1ee4b7cb3a9fe8306f0c25674a1",
+    "processing": "Byte-identical original PNG; no crop, resize, recompression or AI upscaling."
+  },
+  {
+    "slug": "hoje",
+    "file": "assets/tiles/hoje.png",
+    "source": "owner-supplied/INNECTA-prints/02-Estudante/02-01_Hoje.png",
+    "width": 2880,
+    "height": 1800,
+    "bytes": 462317,
+    "sha256": "428ed9b8ffb5f6d0d24e73b82f23d7e800b29606649197ee9471e2950572e97c",
+    "processing": "Byte-identical original PNG; no crop, resize, recompression or AI upscaling."
+  },
+  {
+    "slug": "explorar",
+    "file": "assets/tiles/explorar.png",
+    "source": "owner-supplied/INNECTA-prints/02-Estudante/02-10_Explorar-Oportunidades.png",
+    "width": 2880,
+    "height": 1800,
+    "bytes": 632478,
+    "sha256": "592f6cc2c551df8867a490b5f6c73cd2ac8dc40d78cb352ddb223c687a220396",
+    "processing": "Byte-identical original PNG; no crop, resize, recompression or AI upscaling."
+  },
+  {
+    "slug": "mentor",
+    "file": "assets/tiles/mentor.png",
+    "source": "owner-supplied/INNECTA-prints/02-Estudante/02-24_Mentor.png",
+    "width": 2880,
+    "height": 1800,
+    "bytes": 532329,
+    "sha256": "3e6ef1d83d9e70866678b92819c926a648ef0b7325c351addfcd8e903d94a141",
+    "processing": "Byte-identical original PNG; no crop, resize, recompression or AI upscaling."
+  },
+  {
+    "slug": "acervo",
+    "file": "assets/tiles/acervo.png",
+    "source": "owner-supplied/INNECTA-prints/02-Estudante/02-26_Acervo.png",
+    "width": 2880,
+    "height": 1800,
+    "bytes": 993200,
+    "sha256": "f1982516bdd689064227ff4ee76acd973c6eccb8e278eb2fff2dcc457b8e6a78",
+    "processing": "Byte-identical original PNG; no crop, resize, recompression or AI upscaling."
+  },
+  {
+    "slug": "ligas",
+    "file": "assets/tiles/ligas.png",
+    "source": "owner-supplied/INNECTA-prints/02-Estudante/02-20_Ligas-Inicio.png",
+    "width": 2880,
+    "height": 1800,
+    "bytes": 338639,
+    "sha256": "3f7987b93695e509a650e840c0cda3c91cbaf44a95a15cd4610914ec0ee7bccb",
+    "processing": "Byte-identical original PNG; no crop, resize, recompression or AI upscaling."
+  },
+  {
+    "slug": "pesquisa",
+    "file": "assets/tiles/pesquisa.png",
+    "source": "owner-supplied/INNECTA-prints/02-Estudante/02-14_Pesquisa-Painel.png",
+    "width": 2880,
+    "height": 1800,
+    "bytes": 385010,
+    "sha256": "6c1eb928a88a1a03f5adf42b9869329276a88238e27cd7b1ee11fb5bcbffbb86",
+    "processing": "Byte-identical original PNG; no crop, resize, recompression or AI upscaling."
+  },
+  {
+    "slug": "club",
+    "file": "assets/tiles/club.png",
+    "source": "owner-supplied/INNECTA-prints/02-Estudante/02-27_Club.png",
+    "width": 2880,
+    "height": 1800,
+    "bytes": 1092065,
+    "sha256": "7813cc85c2ef3ef59558a8ad892df4bbee61bfafdf4ce9e85f9fa111d3c44590",
+    "processing": "Byte-identical original PNG; no crop, resize, recompression or AI upscaling."
+  }
+]

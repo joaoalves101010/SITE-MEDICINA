@@ -1,0 +1,14 @@
+{
+  "baselineCommit": "da3d2d3e0c46d5675edba79ae83afa566327f189",
+  "sharedOld": "<path d=\"M16 0v32M0 16h32M4.7 4.7l22.6 22.6M4.7 27.3L27.3 4.7\" stroke=\"currentColor\" stroke-width=\"2\"/>",
+  "sharedNew": "<text x=\"16\" y=\"16\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"currentColor\" font-family=\"Roobert,Geist,Arial,sans-serif\" font-size=\"24\" font-weight=\"550\" letter-spacing=\"0\" textLength=\"30\" lengthAdjust=\"spacingAndGlyphs\">OS</text>",
+  "scienceOld": "<path d=\"M16 0v32M0 16h32M4.7 4.7l22.6 22.6M4.7 27.3L27.3 4.7\" stroke=\"currentColor\" stroke-width=\"1.5\"/>",
+  "scienceNew": "<text x=\"16\" y=\"16\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"currentColor\" font-family=\"Roobert,Geist,Arial,sans-serif\" font-size=\"24\" font-weight=\"550\" letter-spacing=\"0\" textLength=\"30\" lengthAdjust=\"spacingAndGlyphs\">OS</text>",
+  "faviconOld": "<g stroke=\"#f3eee6\" stroke-width=\"3\"><path d=\"M32 10v44M10 32h44M16 16l32 32M16 48l32-32\"/></g>",
+  "faviconNew": "<text x=\"32\" y=\"32\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#f3eee6\" font-family=\"Roobert,Geist,Arial,sans-serif\" font-size=\"38\" font-weight=\"550\" letter-spacing=\"0\" textLength=\"48\" lengthAdjust=\"spacingAndGlyphs\">OS</text>",
+  "sourceHashes": {
+    "js/templates.js": "aa46e68eb742edc43a04e063a6d42273f96b5279a8a9c578b81fafb685f68eeb",
+    "js/science-content.js": "05dbea523863ae4e936280a7da9d98970b65d92b1d85edf28197ebcd2ae92477",
+    "assets/favicon.svg": "c168566991e96afe4794688bf12900fef3d5e678c5518e0e95fd7e0094e98876"
+  }
+}

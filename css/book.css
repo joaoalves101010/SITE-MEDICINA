@@ -1,0 +1,75 @@
+/* An authored editorial book, scoped to the existing six-perspectives section. */
+#team.book-section{margin-bottom:10.42vw}
+.book-track{position:relative;margin-top:7vw;width:100vw;margin-left:-12.58vw}
+.book-stage{position:relative;width:100%;padding:0 8vw}
+.book-visual{display:none;position:relative;flex:none;width:min(84vw,calc((100svh - 120px)*1.4),1340px);aspect-ratio:7/5;isolation:isolate}
+.book-canvas{position:absolute;left:0;top:-30%;width:100%;height:160%;opacity:0;pointer-events:none}
+[data-book-render="ready"]>.book-canvas{opacity:1}
+.book-css{position:absolute;inset:0}
+.book-reading{display:grid;gap:5vw;max-width:1220px;margin:0 auto}
+.book-chapter{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4vw;padding:4vw;background:#f3eee6;color:#3a1c28;border-radius:.3vw 3vw 3vw .3vw;box-shadow:0 1vw 3vw #0002}
+.book-chapter:before{content:'';position:absolute;top:0;bottom:0;left:50%;width:3%;transform:translateX(-50%);background:linear-gradient(90deg,transparent,#4c26331c,transparent);pointer-events:none}
+.book-cover-caption{display:block;max-width:570px;min-height:520px;margin:auto;padding:5vw;color:#f3eee6;background:#572335;box-shadow:inset 10px 0 16px #0003,0 2vw 5vw #0004}
+.book-cover-caption:before{left:0;width:18px;transform:none;background:linear-gradient(90deg,#170a1640,transparent)}
+.book-kicker{font-size:10px;line-height:1.4;letter-spacing:.06em;font-weight:500}
+.book-chapter h3{margin:1.8vw 0;font-size:clamp(35px,4vw,70px);line-height:1;letter-spacing:-.055em;font-weight:500}
+.book-summary{font-size:clamp(16px,1.45vw,23px);line-height:1.35;letter-spacing:-.025em}
+.book-body{margin-top:1.5vw;font-size:clamp(13px,1vw,17px);line-height:1.65}
+.book-module-link{display:inline-flex;align-items:center;gap:18px;font-size:13px;line-height:1.5;margin-top:2vw;border-bottom:1px solid #66324766;padding-bottom:5px}
+.book-module-link:hover{color:#9a4a65}
+.book-chapter>img{width:100%;height:auto;object-fit:contain;box-shadow:0 5px 20px #3716221a}
+.book-controls{display:flex;align-items:center;justify-content:center;gap:18px;flex:none}
+.book-controls[hidden],.book-skip[hidden],.book-scroll-hint[hidden]{display:none}
+.book-controls>button{font-size:24px;min-width:38px;min-height:38px;transition:opacity .2s}
+.book-controls>button:disabled{opacity:.23}
+.book-index{display:flex;gap:8px;align-items:center}
+.book-index>button{font-size:10px;min-width:28px;min-height:32px;padding:5px;border-bottom:1px solid transparent;opacity:.5;letter-spacing:.01em}
+.book-index>button[aria-current]{opacity:1;border-bottom-color:#d6a3b5}
+.book-controls button:focus-visible,.book-module-link:focus-visible,.book-skip:focus-visible{outline:2px solid #d7a5b7;outline-offset:5px}
+.book-scroll-hint{font-size:10px;letter-spacing:.015em;opacity:.65;text-align:center}
+.book-skip{font-size:10px;opacity:.75;border-bottom:1px solid #f3eee633;padding-bottom:3px;display:inline-flex;gap:10px;align-items:center}
+.book-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.book-end{text-align:center;padding-top:5vw}
+.book-end:focus{outline:none}
+.book-art-note{font-size:10px;line-height:1.5;opacity:.55}
+#team .book-end .all-paths{margin-top:2vw}
+/* The finite stage is translated by the same native/Locomotive scroll position. */
+.book-section[data-book-state="interactive"] .book-stage{position:absolute;top:0;left:0;height:var(--book-stage-height,100svh);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:28px 3vw;will-change:transform}
+.book-section[data-book-state="interactive"] .book-visual{display:block}
+.book-section[data-book-state="interactive"] .book-reading{display:block;width:min(90vw,920px);margin:0;text-align:center;flex:none}
+.book-section[data-book-state="interactive"] .book-chapter{display:block;max-width:none;min-height:0;margin:0;padding:0;background:none;color:var(--cream);border-radius:0;box-shadow:none}
+.book-section[data-book-state="interactive"] .book-chapter[hidden]{display:none}
+.book-section[data-book-state="interactive"] .book-chapter:before,.book-section[data-book-state="interactive"] .book-chapter>img{display:none}
+.book-section[data-book-state="interactive"] .book-kicker{font-size:9px;opacity:.65;display:none}
+.book-section[data-book-state="interactive"] .book-chapter h3{font-size:20px;line-height:1.05;margin:0 0 5px}
+.book-section[data-book-state="interactive"] .book-chapter h3 br{display:none}
+.book-section[data-book-state="interactive"] .book-summary{font-size:12px;line-height:1.4}
+.book-section[data-book-state="interactive"] .book-body{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);margin:0}
+.book-section[data-book-state="interactive"] .book-module-link{font-size:11px;margin-top:7px;border-color:#f3eee63d;padding-bottom:3px}
+.book-section[data-book-state="interactive"] .book-scroll-hint{margin-top:2px}
+@media(max-width:1023px){
+ #team.book-section{margin-bottom:20vw}.book-track{margin-left:-6.4vw;margin-top:13vw}.book-stage{padding:0 6.4vw}.book-reading{gap:10vw}.book-chapter{grid-template-columns:1fr;gap:7vw;padding:8vw;border-radius:1vw 7vw 7vw 1vw}.book-chapter:before{left:0;width:10px;transform:none}.book-chapter h3{font-size:10vw;margin:6vw 0}.book-cover-caption{min-height:110vw;padding:10vw}.book-body{font-size:14px;line-height:1.65;margin-top:5vw}.book-module-link{margin-top:6vw}.book-end{padding-top:9vw}#team .book-end .all-paths{margin-top:7vw}
+ .book-section[data-book-state="interactive"] .book-stage{gap:13px;padding:28px 4vw}.book-visual{width:min(94vw,calc((100svh - 335px)*1.4))}.book-section[data-book-state="interactive"] .book-reading{width:88vw;max-width:650px}.book-section[data-book-state="interactive"] .book-kicker{display:block;font-size:8px;margin-bottom:7px}.book-section[data-book-state="interactive"] .book-chapter h3{font-size:25px;margin-bottom:8px}.book-section[data-book-state="interactive"] .book-summary{font-size:13px;line-height:1.4}.book-section[data-book-state="interactive"] .book-body{position:static;width:auto;height:auto;clip-path:none;overflow:visible;font-size:11px;line-height:1.5;margin-top:10px}.book-section[data-book-state="interactive"] .book-module-link{font-size:11px;margin-top:10px}.book-index{gap:5px}.book-controls{gap:10px}.book-controls>button{min-width:36px;min-height:36px}.book-index>button{min-width:26px;min-height:32px}.book-scroll-hint,.book-skip{font-size:9px}
+}
+@media(max-height:560px) and (min-width:601px){.book-visual{width:min(65vw,calc((100svh - 140px)*1.4))}.book-section[data-book-state="interactive"] .book-stage{gap:7px;padding:12px}.book-section[data-book-state="interactive"] .book-summary,.book-section[data-book-state="interactive"] .book-kicker,.book-section[data-book-state="interactive"] .book-body,.book-scroll-hint{display:none}.book-section[data-book-state="interactive"] .book-chapter h3{font-size:15px;display:inline;margin-right:14px}.book-section[data-book-state="interactive"] .book-module-link{margin-top:0}.book-section[data-book-state="interactive"] .book-reading{width:90vw}}
+@media(prefers-reduced-motion:reduce){.book-controls>button{transition:none}}
+
+@media(max-width:600px) and (max-height:700px){.book-section[data-book-state="interactive"] .book-stage{gap:9px;padding:20px 4vw}.book-visual{width:min(94vw,calc((100svh - 240px)*1.4))}.book-section[data-book-state="interactive"] .book-body{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;margin:0}.book-section[data-book-state="interactive"] .book-chapter h3{font-size:22px}.book-section[data-book-state="interactive"] .book-summary{font-size:12px}}
+/* Desktop captions are a compact semantic companion, not a second text panel. */
+@media(min-width:1024px){.book-section[data-book-state="interactive"] .book-stage{gap:10px;padding:12px 3vw}.book-section[data-book-state="interactive"] .book-chapter-copy{display:flex;justify-content:center;align-items:center;gap:16px}.book-section[data-book-state="interactive"] .book-chapter h3{font-size:18px;line-height:1.15;margin:0}.book-section[data-book-state="interactive"] .book-summary{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden}.book-section[data-book-state="interactive"] .book-module-link{margin:0;padding-bottom:2px}}
+
+/* Leave real vertical room for the rigid leaf to project toward the reader. */
+@media(min-width:1024px){.book-section[data-book-state="interactive"] .book-scroll-hint{position:absolute;left:3vw;bottom:10px;margin:0}.book-section[data-book-state="interactive"] .book-skip{position:absolute;right:3vw;bottom:10px}}
+/* The white global navigation must not cover a light page while the book is pinned. */
+body.book-reading-active .site-header{opacity:0;pointer-events:none}
+
+/* Semantic no-JS/reduced-motion edition uses the same original full-spread artwork. */
+.book-section:not([data-book-state="interactive"]) .book-chapter{display:flex;flex-direction:column;align-items:stretch;padding:0;gap:0;overflow:hidden;border-radius:12px 38px 38px 12px}
+.book-section:not([data-book-state="interactive"]) .book-chapter-copy{padding:4vw;order:1}
+.book-section:not([data-book-state="interactive"]) .book-chapter>img{width:100%;height:auto;display:block;box-shadow:none}
+.book-section:not([data-book-state="interactive"]) .book-cover-caption{max-width:none;min-height:0}
+@media(max-width:1023px){.book-section:not([data-book-state="interactive"]) .book-chapter-copy{padding:8vw}}
+
+/* Book-only mouse drag affordance; touch/pinch behavior is intentionally untouched. */
+.book-visual[data-book-draggable="true"]{cursor:grab}
+.book-visual[data-book-dragging="true"]{cursor:grabbing;user-select:none;-webkit-user-select:none}

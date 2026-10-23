@@ -1,0 +1,74 @@
+/* Editorial diagrams replace the three perspective/glass decorations only. */
+#strengths .principle-art.principle-diagram {
+  --pv-cream: #f3eee6;
+  --pv-rose: #d7a5b7;
+  --pv-muted: #beabb3;
+  position: relative;
+  flex: 0 0 28vw;
+  width: 28vw;
+  height: auto;
+  aspect-ratio: 6 / 5;
+  margin: 0;
+  padding: 0;
+  perspective: none;
+  transform: none;
+  transform-style: flat;
+  isolation: auto;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  color: var(--pv-cream);
+}
+.principle-diagram > svg { display:block; width:100%; height:auto; overflow:visible; }
+.principle-diagram text {
+  fill: var(--pv-cream);
+  font-family: Roobert, Geist, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -.025em;
+}
+.principle-diagram path { fill:none; vector-effect:non-scaling-stroke; stroke-linecap:round; stroke-linejoin:round; }
+.principle-diagram .pv-rules { stroke:var(--pv-cream); stroke-width:.85; opacity:.38; }
+.principle-diagram .pv-flow { fill:none; stroke:var(--pv-rose); stroke-width:1.15; }
+.principle-diagram .pv-flow--inputs { opacity:.85; }
+.principle-diagram .pv-flow--output { stroke:var(--pv-cream); }
+.principle-diagram .pv-emphasis { font-size:21px; font-weight:500; letter-spacing:-.045em; }
+.principle-diagram .pv-note { fill:var(--pv-muted); font-size:14px; letter-spacing:-.015em; }
+.principle-diagram .pv-caption { fill:var(--pv-muted); font-size:14px; letter-spacing:-.02em; }
+.principle-diagram .pv-register { stroke:var(--pv-rose); stroke-width:.85; }
+.principle-diagram .pv-research-guide { stroke:var(--pv-rose); stroke-width:.65; opacity:.18; }
+.principle-diagram .pv-flow--stair { stroke:var(--pv-rose); stroke-width:1.25; }
+.principle-diagram .pv-step-labels text { font-size:17px; font-weight:500; letter-spacing:-.04em; }
+.principle-diagram .pv-step-ticks { stroke:var(--pv-cream); stroke-width:1; }
+.principle-diagram .pv-lane-title { font-size:25px; font-weight:500; letter-spacing:-.045em; }
+.principle-diagram .pv-lane-title--human { fill:var(--pv-rose); }
+.principle-diagram .pv-lane-description { font-size:16px; letter-spacing:-.025em; fill:var(--pv-muted); }
+.principle-diagram .pv-flow--lane-a { stroke:var(--pv-cream); opacity:.8; }
+.principle-diagram .pv-shared-direction { font-size:20px; font-weight:500; letter-spacing:-.035em; }
+/* The non-enhanced state is fully drawn. No label depends on an animation. */
+.principle-diagram .pv-draw { stroke-dasharray:1; stroke-dashoffset:0; }
+.principle.is-inview .principle-diagram .pv-draw {
+  animation: principle-line-arrive 1.25s cubic-bezier(.22,.61,.36,1) 1 both;
+}
+.principle.is-inview .principle-diagram .pv-draw--b { animation-delay:.12s; }
+.principle.is-inview .principle-diagram .pv-draw--c { animation-delay:.24s; }
+.principle.is-inview .principle-diagram .pv-draw--d { animation-delay:.35s; }
+@keyframes principle-line-arrive { from { stroke-dashoffset:1; } to { stroke-dashoffset:0; } }
+@media(max-width:1023px) {
+  #strengths .principle-art.principle-diagram {
+    flex: 0 0 auto;
+    width: 87.2vw;
+    max-width: 100%;
+    height: auto;
+    align-self: center;
+    margin-top: 10vw;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .principle.is-inview .principle-diagram .pv-draw {
+    animation:none;
+    stroke-dashoffset:0;
+  }
+}
