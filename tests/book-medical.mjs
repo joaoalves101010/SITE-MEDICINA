@@ -1,3 +1,4 @@
+import {restoreInternySource,restoreInternyHTML} from './interny-normalize.mjs';
 import {restoreBookDrag} from './book-drag-normalize.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -8,7 +9,7 @@ import {renderBookSection} from '../js/book-section.js';
 import {bookChapters} from '../js/book-art.js';
 const baseline=JSON.parse(await readFile(new URL('./book-medical-baseline.json',import.meta.url),'utf8'));
 test('accepted animation, stage, app, global content and approved mosaic remain exact outside the isolated drag adapter',async()=>{
- for(const [path,expected] of Object.entries(baseline.protected)){let data=await readFile(new URL('../'+path,import.meta.url));if(['js/book-controller.js','css/book.css','js/app.js','js/templates.js','assets/manifest.json'].includes(path))data=restoreBookDrag(path,data.toString());assert.equal(createHash('sha256').update(data).digest('hex'),expected,path);}
+ for(const [path,expected] of Object.entries(baseline.protected)){let data=restoreInternySource(path,await readFile(new URL('../'+path,import.meta.url)));if(['js/book-controller.js','css/book.css','js/app.js','js/templates.js','assets/manifest.json'].includes(path))data=restoreBookDrag(path,data.toString());assert.equal(createHash('sha256').update(data).digest('hex'),expected,path);}
 });
 test('book-specific medical editorial copy is shared with semantic fallback without changing route identities',()=>{
  assert.equal(bookCover.title,'Sua formação médica, por inteiro.');assert.equal(bookEditorialChapters.length,6);

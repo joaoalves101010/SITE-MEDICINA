@@ -1,4 +1,6 @@
-# Livro editorial médico da Innecta
+# Livro editorial médico da Interny
+
+Identidade atual: **Interny | Your Medical Journey** (23/10/2026). A capa e os rótulos editoriais foram atualizados; ilustrações, camadas e mecânica permanecem preservadas.
 
 O livro substitui a antiga apresentação de seis perfis da home em `#team`. Não contém prints do sistema. O mosaico diagonal de prints é outra seção e deve permanecer separado.
 

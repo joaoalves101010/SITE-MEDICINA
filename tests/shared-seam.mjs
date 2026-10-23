@@ -1,3 +1,4 @@
+import {restoreInternySource,restoreInternyHTML} from './interny-normalize.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
@@ -9,8 +10,8 @@ const hash=v=>createHash('sha256').update(v).digest('hex');
 const baseline=JSON.parse(await readFile(new URL('./shared-seam-baseline.json',import.meta.url)));
 test('approved phrase motion, interactive globe and scientific content are unchanged',async()=>{
   // Only the requested background scroll/lens-exit API may change hero.js.
-  for(const [file,sha] of Object.entries(baseline.files).filter(([file])=>file!=='js/hero.js'))assert.equal(hash(await readFile(new URL('../'+file,import.meta.url))),sha,file);
-  assert.equal(hash(renderScienceSection().replace(motif.scienceNew,motif.scienceOld)),baseline.scienceContentSHA256);
+  for(const [file,sha] of Object.entries(baseline.files).filter(([file])=>file!=='js/hero.js'))assert.equal(hash(restoreInternySource(file,await readFile(new URL('../'+file,import.meta.url)))),sha,file);
+  assert.equal(hash(restoreInternyHTML(renderScienceSection()).replace(motif.scienceNew,motif.scienceOld)),baseline.scienceContentSHA256);
 });
 test('one shared canvas spans both sections; no second scene or join gradient remains',()=>{
   const html=renderHome();

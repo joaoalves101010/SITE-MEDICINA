@@ -1,3 +1,4 @@
+import {restoreInternySource,restoreInternyHTML} from './interny-normalize.mjs';
 import {restoreBookHTML} from './book-normalize.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -25,7 +26,7 @@ test('approved home revisions leave original hero, protected text, later section
       html=html.replace('<section id="partners"><span id="works" class="legacy-anchor" aria-hidden="true"></span>',removedWorks+'<section id="partners">');
       // Normalize only the approved shared-artwork reparenting, not hero copy/layout.
       html=html.replace(/<div class="home-world" data-shared-scene><div class="shared-artwork"[^>]*>(.*?)<\/div><section class="hero" id="home">/s,(_,artwork)=>`<section class="hero" id="home" data-render-mode="pending">${artwork}<div class="hero-gradient"></div>`);
-      html=html.replace(renderScienceSection()+'</div>','').replace('<link rel="stylesheet" href="/css/science-globe.css">','').replace('<style>.shared-artwork .hero-fallback{opacity:1;visibility:visible}.home-world .shared-artwork{height:100%}</style>','');
+      html=html.replace(restoreInternyHTML(renderScienceSection())+'</div>','').replace('<link rel="stylesheet" href="/css/science-globe.css">','').replace('<style>.shared-artwork .hero-fallback{opacity:1;visibility:visible}.home-world .shared-artwork{height:100%}</style>','');
     }
     // Normalize only the user-requested star-to-OS glyph replacement.
     html=html.replaceAll(motif.sharedNew,motif.sharedOld);
@@ -35,7 +36,7 @@ test('approved home revisions leave original hero, protected text, later section
 test('phrase cycle, downstream typography and content are untouched by approved scroll-artwork changes',async()=>{
   // hero.js now intentionally accepts scroll input; its zero-scroll invariants
   // and shader continuity are covered by hero.test.mjs, not a stale whole-file hash.
-  for(const [file,hash] of Object.entries(baseline.sources).filter(([file])=>file!=='js/hero.js'))assert.equal(digest(await readFile(new URL('../'+file,import.meta.url))),hash,file);
+  for(const [file,hash] of Object.entries(baseline.sources).filter(([file])=>file!=='js/hero.js'))assert.equal(digest(restoreInternySource(file,await readFile(new URL('../'+file,import.meta.url)))),hash,file);
 });
 test('globe is the second section; no text or headline is inside sphere artwork',()=>{
   const html=renderDocument({page:'home'});
@@ -52,7 +53,7 @@ test('four primary-source readings are dated; experimental result and independen
   for(const item of scienceReadings){assert.ok(/^https:\/\/(doi\.org|www\.nature\.com|www\.who\.int)\//.test(item.href));assert.ok(html.includes(item.headline));assert.ok(html.includes(item.year));assert.ok(html.includes(item.href));}
   for(const item of scienceInstitutions){assert.ok(html.includes(item.name));assert.ok(html.includes(item.href));}
   assert.ok(html.includes('experimental'));assert.ok(html.includes('estudo inicial'));
-  assert.ok(html.includes('Referências editoriais independentes.'));assert.ok(html.includes('Sem vínculo institucional com a Innecta.'));
+  assert.ok(html.includes('Referências editoriais independentes.'));assert.ok(html.includes('Sem vínculo institucional com a Interny.'));
   assert.equal((html.match(/rel="noopener noreferrer"/g)||[]).length,8);
   assert.ok(html.includes('perspectivas.<br> Conhecimento'));assert.ok(html.includes('<svg class="science-spark"'));assert.ok(!html.includes('✳'));
 });

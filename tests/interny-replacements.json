@@ -1,0 +1,183 @@
+{
+  "js/templates.js": [
+    {
+      "old": "Innecta",
+      "new": "Interny",
+      "count": 15
+    },
+    {
+      "old": "INNECTA",
+      "new": "INTERNY",
+      "count": 2
+    },
+    {
+      "old": "<span>innecta</span>${star}",
+      "new": "<span>interny</span>",
+      "count": 1
+    },
+    {
+      "old": "<span class=\"header-caption\">Um novo olhar<br>para a sua trajetória.</span>",
+      "new": "<span class=\"header-caption\" lang=\"en\">Your Medical<br>Journey</span>",
+      "count": 1
+    },
+    {
+      "old": "Interny — início",
+      "new": "Interny | Your Medical Journey — início",
+      "count": 1
+    },
+    {
+      "old": "'Interny — Sua trajetória, um novo olhar'",
+      "new": "'Interny | Your Medical Journey'",
+      "count": 1
+    },
+    {
+      "old": "`${p.title} — Interny`",
+      "new": "`${p.title} — Interny | Your Medical Journey`",
+      "count": 1
+    },
+    {
+      "old": "Comunidade — Interny'",
+      "new": "Comunidade — Interny | Your Medical Journey'",
+      "count": 1
+    },
+    {
+      "old": "Percursos — Interny'",
+      "new": "Percursos — Interny | Your Medical Journey'",
+      "count": 1
+    },
+    {
+      "old": "Página não encontrada — Interny'",
+      "new": "Página não encontrada — Interny | Your Medical Journey'",
+      "count": 1
+    },
+    {
+      "old": "name=\"innecta-build\"",
+      "new": "name=\"interny-build\"",
+      "count": 1
+    }
+  ],
+  "js/content.js": [
+    {
+      "old": "Innecta",
+      "new": "Interny",
+      "count": 30
+    },
+    {
+      "old": "INNECTA",
+      "new": "INTERNY",
+      "count": 1
+    },
+    {
+      "old": "Interface de demonstração da Interny. Pessoas, números e atividades exibidos nas telas são exemplos, não resultados ou parcerias anunciadas.",
+      "new": "Interface de demonstração da Interny, preservada com a identidade visual anterior do produto. Pessoas, números e atividades exibidos nas telas são exemplos, não resultados ou parcerias anunciadas.",
+      "count": 1
+    }
+  ],
+  "js/pages.js": [
+    {
+      "old": "Innecta",
+      "new": "Interny",
+      "count": 15
+    },
+    {
+      "old": "INNECTA",
+      "new": "INTERNY",
+      "count": 2
+    },
+    {
+      "old": "<p class=\"case-brand\">innecta</p>",
+      "new": "<p class=\"case-brand\">interny</p>",
+      "count": 1
+    },
+    {
+      "old": ">innecta<",
+      "new": ">interny<",
+      "count": 1
+    },
+    {
+      "old": "Interfaces de demonstração da Interny. Pessoas, instituições, números e atividades nas telas são exemplos, não resultados ou parcerias anunciadas.",
+      "new": "Interfaces de demonstração da Interny, preservadas com a identidade visual anterior do produto. Pessoas, instituições, números e atividades nas telas são exemplos, não resultados ou parcerias anunciadas.",
+      "count": 1
+    }
+  ],
+  "js/science-content.js": [
+    {
+      "old": "Innecta",
+      "new": "Interny",
+      "count": 1
+    }
+  ],
+  "js/medical-experiences.js": [
+    {
+      "old": "Innecta",
+      "new": "Interny",
+      "count": 1
+    }
+  ],
+  "js/book-controller.js": [
+    {
+      "old": "Capa do livro Innecta",
+      "new": "Capa do livro Interny",
+      "count": 1
+    }
+  ],
+  "js/app.js": [
+    {
+      "old": "Innecta: native scrolling retained.",
+      "new": "Interny: native scrolling retained.",
+      "count": 1
+    }
+  ],
+  "build.mjs": [
+    {
+      "old": "const build='innecta-monopo-'",
+      "new": "const build='interny-'",
+      "count": 1
+    }
+  ],
+  "package.json": [
+    {
+      "old": "\"name\": \"innecta-experiencia-imersiva\"",
+      "new": "\"name\": \"interny-your-medical-journey\"",
+      "count": 1
+    }
+  ],
+  "js/book-art.js": [
+    {
+      "old": "'INNECTA'",
+      "new": "'INTERNY'"
+    },
+    {
+      "old": "ctx.fillText('OS',1940,100)",
+      "new": "ctx.fillText('',1940,100)"
+    },
+    {
+      "old": "INNECTA OS / ${chapter.module",
+      "new": "INTERNY / ${chapter.module"
+    }
+  ],
+  "js/book-editorial.js": [
+    {
+      "old": "eyebrow:'FORMAÇÃO MÉDICA, COM CONTEXTO'",
+      "new": "eyebrow:'YOUR MEDICAL JOURNEY'"
+    },
+    {
+      "old": "Innecta",
+      "new": "Interny"
+    },
+    {
+      "old": "INNECTA",
+      "new": "INTERNY"
+    }
+  ],
+  "js/book-section.js": [
+    {
+      "old": "Innecta",
+      "new": "Interny"
+    },
+    {
+      "old": "<p class=\"book-kicker\">INNECTA OS · ${escape(bookCover.eyebrow)}</p>",
+      "new": "<p class=\"book-kicker\">Interny | Your Medical Journey</p>"
+    }
+  ]
+}

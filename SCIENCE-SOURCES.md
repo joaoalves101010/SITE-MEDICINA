@@ -18,7 +18,7 @@ The pancreatic cancer item is visibly identified as **experimental** and an **in
 - [Institut Pasteur](https://www.pasteur.fr/en) — France.
 - [Karolinska Institutet](https://ki.se/en) — Sweden.
 
-The section states: “Referências editoriais independentes. Sem vínculo institucional com a Innecta.” Spatial placement around the globe does not assert authorship of adjacent research or a geographical data connection.
+The section states: “Referências editoriais independentes. Sem vínculo institucional com a Interny.” Spatial placement around the globe does not assert authorship of adjacent research or a geographical data connection.
 
 ## Visual/data provenance
 

@@ -27,7 +27,7 @@ function display(ctx,family,word,{x=95,y=855,width=1910,size=610,color='#f3eee6'
 }
 export function containBookImage(image,box){const width=Number(image?.naturalWidth||image?.width)||0,height=Number(image?.naturalHeight||image?.height)||0;if(width<=0||height<=0)return null;const scale=Math.min(box.width/width,box.height/height),w=width*scale,h=height*scale;return{x:box.x+(box.width-w)/2,y:box.y+(box.height-h)/2,width:w,height:h};}
 function paintBackground(ctx,family,index){
- if(index===0){ctx.fillStyle='#4b2434';ctx.fillRect(0,0,W,H);ctx.fillStyle='#542a37';ctx.fillRect(P,0,P,H);display(ctx,family,'INNECTA',{x:1130,y:530,width:857,size:375,color:'#f3eee6',seed:82});}
+ if(index===0){ctx.fillStyle='#4b2434';ctx.fillRect(0,0,W,H);ctx.fillStyle='#542a37';ctx.fillRect(P,0,P,H);display(ctx,family,'INTERNY',{x:1130,y:530,width:857,size:375,color:'#f3eee6',seed:82});}
  else{const chapter=bookChapters[index-1];ctx.fillStyle=chapter.palette.paper;ctx.fillRect(0,0,W,H);display(ctx,family,chapter.displayTitle,{x:60,y:index===6?620:(index===2?695:675),width:1980,color:chapter.palette.light,seed:index,size:index===6?570:650});}
  grain(ctx,index*541+82);
 }
@@ -38,14 +38,14 @@ function paintIllustration(ctx,image,index){
 }
 function paintType(ctx,family,index){
  if(index===0){
-  ctx.fillStyle='#f3eee6';font(ctx,family,25);ctx.fillText(bookCover.eyebrow,1152,100);font(ctx,family,37,600);ctx.fillText('OS',1940,100);
+  ctx.fillStyle='#f3eee6';font(ctx,family,25);ctx.fillText(bookCover.eyebrow,1152,100);font(ctx,family,37,600);ctx.fillText('',1940,100);
   font(ctx,family,39,500);ctx.fillText(bookCover.title,1148,174);
   ctx.fillStyle='#f3eee6';font(ctx,family,27);ctx.fillText(bookCover.backSummary,100,1059);font(ctx,family,20);ctx.fillText(bookCover.status,100,1122);
  }else{
   const chapter=bookChapters[index-1],p=chapter.palette;
   // Text remains anchored and never parallax-shifts with the pictured world.
   ctx.fillStyle=p.caption;paragraph(ctx,family,chapter.summary,1410,846,585,32,40);paragraph(ctx,family,chapter.excerpt,1410,985,585,26,34);
-  font(ctx,family,20,500);ctx.fillText(`INNECTA OS / ${chapter.module.toLocaleUpperCase('pt-BR')}`,1410,1140);ctx.textAlign='right';ctx.fillText(`${String(chapter.index).padStart(2,'0')}`,1995,1140);ctx.textAlign='left';
+  font(ctx,family,20,500);ctx.fillText(`INTERNY / ${chapter.module.toLocaleUpperCase('pt-BR')}`,1410,1140);ctx.textAlign='right';ctx.fillText(`${String(chapter.index).padStart(2,'0')}`,1995,1140);ctx.textAlign='left';
  }
 }
 /**

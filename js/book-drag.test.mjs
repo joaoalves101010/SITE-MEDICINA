@@ -1,3 +1,4 @@
+import {restoreInternySource} from '../tests/interny-normalize.mjs';
 import {restoreMedicalExperiences} from '../tests/medical-experiences-normalize.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -74,7 +75,7 @@ test('normal scroll timing, accepted motion/art and geometry are untouched outsi
 });
 test('all approved medical art/copy, hero/globe, internal content and diagonal screenshot assets match the published release',async()=>{
  const baseline=JSON.parse(await readFile(new URL('../tests/book-drag-baseline.json',import.meta.url),'utf8'));
- for(const[path,expected]of Object.entries(baseline.protected)){let bytes=await readFile(new URL('../'+path,import.meta.url));if(['js/templates.js','js/app.js','assets/manifest.json'].includes(path))bytes=restoreMedicalExperiences(path,bytes.toString());assert.equal(createHash('sha256').update(bytes).digest('hex'),expected,path);}
+ for(const[path,expected]of Object.entries(baseline.protected)){let bytes=restoreInternySource(path,await readFile(new URL('../'+path,import.meta.url)));if(['js/templates.js','js/app.js','assets/manifest.json'].includes(path))bytes=restoreMedicalExperiences(path,bytes.toString());assert.equal(createHash('sha256').update(bytes).digest('hex'),expected,path);}
 });
 test('actual vendored methods avoid the duration-zero NaN and synchronously transform/dispatch finite drag coordinates',async()=>{
  const {runInNewContext}=await import('node:vm');const source=await readFile(new URL('./vendor/motion.js',import.meta.url),'utf8');

@@ -1,6 +1,6 @@
 {
-  "project": "Innecta — experiência imersiva",
-  "generated_at": "2026-10-23T21:29:36.886497+00:00",
+  "project": "Interny | Your Medical Journey",
+  "generated_at": "2026-10-23T22:36:32.737857+00:00",
   "scope": "Portable sanitized editable static website, including built dist output. No repository history, hosting credentials, environment secrets or private QA files.",
   "entrypoint": "README.md",
   "context": "CONTEXTO_PROJETO.md",
@@ -9,11 +9,11 @@
   "github_pages_configured": false,
   "validation": {
     "structural_assertions": 513,
-    "automated_tests": 250,
+    "automated_tests": 255,
     "syntax": "pass",
     "static_build": "pass",
     "private_path_identity_and_credential_pattern_scan": "no findings; heuristic, not a guarantee against every possible secret",
-    "runtime_code_styles_and_shaders": "byte-identical to source release",
+    "runtime_code_styles_and_shaders": "byte-identical to current Interny live release; portable metadata and test fixtures sanitized",
     "globe_regeneration": "self-contained; generated geography and fallback byte-identical",
     "original_checkout": "unchanged"
   },
@@ -22,7 +22,8 @@
     "Private workspace paths replaced with portable provenance labels",
     "Optional globe generator input files bundled with D3 notices",
     "Metadata-only regression baselines adjusted to sanitized notices/manifests",
-    "Build status wording made host-independent; source/dist runtime preserved"
+    "Build status wording made host-independent; source/dist runtime preserved",
+    "23/10/2026: Interny rebrand, seven authored book compositions and identity regressions; preserved original UI/video, external URLs and portable build inputs."
   ],
   "licensing": "Per-file third-party rights apply. Roobert and reference-derived materials require redistribution review; see FONTES_E_LICENCAS.md.",
   "inventory_excludes": "EXPORT_MANIFEST.json itself (avoid recursive hash)",
@@ -44,18 +45,18 @@
     },
     {
       "path": "BOOK-IMPLEMENTATION.md",
-      "bytes": 2573,
-      "sha256": "a4387dda47ba59bc1310b1662b66a7b416c899c8592577de1595bbd99cee7f06"
+      "bytes": 2751,
+      "sha256": "4132d9281f3b2399cdb96b7260ccff71ae1d8c7739f13ed9fa8a9b78b9ef3a33"
     },
     {
       "path": "CONTEXTO_PROJETO.md",
-      "bytes": 34733,
-      "sha256": "5d689465c7f9eeff22a3798f72f70173ef3e0456430085b29e5ef40a13686211"
+      "bytes": 37137,
+      "sha256": "797718446f0a5ddd70dc646aefecfccec735165206cd83cd54b55009f87c3eb8"
     },
     {
       "path": "FONTES_E_LICENCAS.md",
-      "bytes": 4215,
-      "sha256": "68877b5d8f2430e25189b1a80c4132f605ee731e96c5131f077476192f37cdf7"
+      "bytes": 4498,
+      "sha256": "2f0cb5c3a49569ca5c3b75728cfe39a55958819ade2bd9ec9766dfea24cbb6f2"
     },
     {
       "path": "IMPLEMENTATION.md",
@@ -69,13 +70,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 3741,
-      "sha256": "0c1bc055dba7480a3736e04a358c3ab5f7c7144904f71a70a45873822982e85b"
+      "bytes": 5114,
+      "sha256": "372995a04f33fcbe2c525b24eb87410ca4cf7b990260ee44369ec4a174daae55"
+    },
+    {
+      "path": "REBRAND-INTERNY.md",
+      "bytes": 3232,
+      "sha256": "5bf24078eb01d20157e1bc183d1d7652c10206cd7b164ea6fcc96b83acc079f9"
     },
     {
       "path": "SCIENCE-SOURCES.md",
       "bytes": 2871,
-      "sha256": "0a5d4fdc179297a2976e39ed06589bc18c3b848e4c6ed25f0642ecb07d2e2e4d"
+      "sha256": "346b6be0b66c76512f88a9a1131a492f47ff8394c725de2e31560bda8c7ed963"
     },
     {
       "path": "assets/Roobert-Light.woff2",
@@ -119,38 +125,38 @@
     },
     {
       "path": "assets/book-pages/medical-00-cover.webp",
-      "bytes": 166206,
-      "sha256": "8926ce23b6e17d9859c800c0c66218ba983f408d08fdfa664edfcdd6493aeb20"
+      "bytes": 162862,
+      "sha256": "8744a715d34603b18d12f37498f07463acdb185fafdda697d0385bf065ceb869"
     },
     {
       "path": "assets/book-pages/medical-01-clareza.webp",
-      "bytes": 225560,
-      "sha256": "bf4fe4547c2534724cad669f933a62272432ed8dc5a73f16edb389d1fef575eb"
+      "bytes": 225170,
+      "sha256": "e023de51983713ea64691882c9464ab27d5ac30fa463cbb5e01cfd85b2344a98"
     },
     {
       "path": "assets/book-pages/medical-02-direcao.webp",
-      "bytes": 215558,
-      "sha256": "d1f2f075ec58bf75d30544323017e7b1096086d0bbf8e6bd0f2aea9b80dc1a45"
+      "bytes": 215126,
+      "sha256": "bec54ffcb464e50a58dd72f795711410d9c77cdb00537761297d74ca12f93c79"
     },
     {
       "path": "assets/book-pages/medical-03-descoberta.webp",
-      "bytes": 237848,
-      "sha256": "5ddb37d0ecc291e2d01d2a2a279108ec2349b5ce2a728cf1113fd8c411c012fb"
+      "bytes": 237442,
+      "sha256": "fa4bf2f73cfedd615409ae1fb5d84d6d0bf2e9fa906857eb6ee5a30c911a096b"
     },
     {
       "path": "assets/book-pages/medical-04-metodo.webp",
-      "bytes": 226280,
-      "sha256": "19d1c1c45d38d078876427a846d964c3cc4e962851cc2c8a05798dd566ea71f2"
+      "bytes": 228970,
+      "sha256": "8064dd605e7790cdaec52ef60c78178df3284cf0c9d709b0013380d5f547265c"
     },
     {
       "path": "assets/book-pages/medical-05-troca.webp",
-      "bytes": 218118,
-      "sha256": "5ac99c0d93709c0639eddcc80bd7cc5e2f9aab22d57e05937fbe17eb11c0b5e1"
+      "bytes": 217590,
+      "sha256": "047438afe6c40b3a12fd9a6b3957b46ccbcde7fb92aa6c5914792774f548f024"
     },
     {
       "path": "assets/book-pages/medical-06-presenca.webp",
-      "bytes": 237934,
-      "sha256": "8a8c14a05d219b5ea35cd775e5fc4ff6d6dd33f839ffe74664748a1947a0795d"
+      "bytes": 237514,
+      "sha256": "5ba1df5afb58ee3e29b7bedc87feb3604b5e5b8b0e31b5f282b06c4af34dc784"
     },
     {
       "path": "assets/book-pages/medical-clareza-art.webp",
@@ -340,7 +346,7 @@
     {
       "path": "assets/manifest.json",
       "bytes": 26595,
-      "sha256": "1e1ab4c99dbb373ea4aab75bfd772a3de9a46a6371089e35eeb8d420ae2cf5dd"
+      "sha256": "803a586c412816ce150e451d9484bbece67b84d9bbeed8fe83b6ee6a16015e06"
     },
     {
       "path": "assets/mentor-detail.webp",
@@ -489,8 +495,8 @@
     },
     {
       "path": "build.mjs",
-      "bytes": 1269,
-      "sha256": "41571b69c2bd05af5db1bbfc6e002ddf149ffb8a8018dd4a2ded4043ed03b049"
+      "bytes": 1262,
+      "sha256": "b6dce72ea091c4603325843d0e11d1c4e632f9d3e05279826530a3264240e082"
     },
     {
       "path": "css/book-fallback.css",
@@ -539,8 +545,8 @@
     },
     {
       "path": "dist/404.html",
-      "bytes": 3735,
-      "sha256": "f7ae1c1e68aacabe53c5302f367845fe9bf749d68fb3321aa222ae9dc7fccc63"
+      "bytes": 3478,
+      "sha256": "5a836a9ee9d328943830efaef99502c990aad9bf70ef022ad1405373fd8e4f2d"
     },
     {
       "path": "dist/assets/Roobert-Light.woff2",
@@ -584,38 +590,38 @@
     },
     {
       "path": "dist/assets/book-pages/medical-00-cover.webp",
-      "bytes": 166206,
-      "sha256": "8926ce23b6e17d9859c800c0c66218ba983f408d08fdfa664edfcdd6493aeb20"
+      "bytes": 162862,
+      "sha256": "8744a715d34603b18d12f37498f07463acdb185fafdda697d0385bf065ceb869"
     },
     {
       "path": "dist/assets/book-pages/medical-01-clareza.webp",
-      "bytes": 225560,
-      "sha256": "bf4fe4547c2534724cad669f933a62272432ed8dc5a73f16edb389d1fef575eb"
+      "bytes": 225170,
+      "sha256": "e023de51983713ea64691882c9464ab27d5ac30fa463cbb5e01cfd85b2344a98"
     },
     {
       "path": "dist/assets/book-pages/medical-02-direcao.webp",
-      "bytes": 215558,
-      "sha256": "d1f2f075ec58bf75d30544323017e7b1096086d0bbf8e6bd0f2aea9b80dc1a45"
+      "bytes": 215126,
+      "sha256": "bec54ffcb464e50a58dd72f795711410d9c77cdb00537761297d74ca12f93c79"
     },
     {
       "path": "dist/assets/book-pages/medical-03-descoberta.webp",
-      "bytes": 237848,
-      "sha256": "5ddb37d0ecc291e2d01d2a2a279108ec2349b5ce2a728cf1113fd8c411c012fb"
+      "bytes": 237442,
+      "sha256": "fa4bf2f73cfedd615409ae1fb5d84d6d0bf2e9fa906857eb6ee5a30c911a096b"
     },
     {
       "path": "dist/assets/book-pages/medical-04-metodo.webp",
-      "bytes": 226280,
-      "sha256": "19d1c1c45d38d078876427a846d964c3cc4e962851cc2c8a05798dd566ea71f2"
+      "bytes": 228970,
+      "sha256": "8064dd605e7790cdaec52ef60c78178df3284cf0c9d709b0013380d5f547265c"
     },
     {
       "path": "dist/assets/book-pages/medical-05-troca.webp",
-      "bytes": 218118,
-      "sha256": "5ac99c0d93709c0639eddcc80bd7cc5e2f9aab22d57e05937fbe17eb11c0b5e1"
+      "bytes": 217590,
+      "sha256": "047438afe6c40b3a12fd9a6b3957b46ccbcde7fb92aa6c5914792774f548f024"
     },
     {
       "path": "dist/assets/book-pages/medical-06-presenca.webp",
-      "bytes": 237934,
-      "sha256": "8a8c14a05d219b5ea35cd775e5fc4ff6d6dd33f839ffe74664748a1947a0795d"
+      "bytes": 237514,
+      "sha256": "5ba1df5afb58ee3e29b7bedc87feb3604b5e5b8b0e31b5f282b06c4af34dc784"
     },
     {
       "path": "dist/assets/book-pages/medical-clareza-art.webp",
@@ -805,7 +811,7 @@
     {
       "path": "dist/assets/manifest.json",
       "bytes": 26595,
-      "sha256": "1e1ab4c99dbb373ea4aab75bfd772a3de9a46a6371089e35eeb8d420ae2cf5dd"
+      "sha256": "803a586c412816ce150e451d9484bbece67b84d9bbeed8fe83b6ee6a16015e06"
     },
     {
       "path": "dist/assets/mentor-detail.webp",
@@ -954,13 +960,13 @@
     },
     {
       "path": "dist/build.json",
-      "bytes": 432,
-      "sha256": "45e301ad098b7f96e850cd00dfc22fcf3898bb78c96f68fa89a2e13b79f6b52c"
+      "bytes": 425,
+      "sha256": "07b4cd82971b67ee7b24ff731b4317fa784ae6e24a425a263593cb04fd6dc3f4"
     },
     {
       "path": "dist/comunidade/index.html",
-      "bytes": 13532,
-      "sha256": "2fd5719368e529bf5367efcd93e83d4a8aca63094da43916509b57b20a35cf35"
+      "bytes": 13332,
+      "sha256": "eecfeb73e7309a6d79bd092abe87d72682b9a496f613b91b6d076bb10d69b505"
     },
     {
       "path": "dist/css/book-fallback.css",
@@ -1009,18 +1015,18 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 63945,
-      "sha256": "c24c2275d9a1df5bf34962406265bda8d6402a00a0e73584577fc2ea658a03e8"
+      "bytes": 63602,
+      "sha256": "49617d88e41a8732bcfbb8eb29c38693cab7a77a4453369487a8d55aceef47c7"
     },
     {
       "path": "dist/js/app.js",
       "bytes": 18851,
-      "sha256": "62d1b5e8f1cccacc9ec64523d7b174cb51f2fda2bf4b3798203769523628bd9e"
+      "sha256": "7766c6b5b0b89fe463f35f9ffe597ac18165da62d1924d0739ce78d3d3da5ffb"
     },
     {
       "path": "dist/js/book-art.js",
-      "bytes": 10352,
-      "sha256": "370906283374cb72015ee349a5f1d362bc5d04a47d84dcf1bd773b8e893f5c89"
+      "bytes": 10347,
+      "sha256": "1165b77ebc533a7b6adc290e518f207a89118bc337aa50d431c4a62123557173"
     },
     {
       "path": "dist/js/book-art.test.mjs",
@@ -1030,7 +1036,7 @@
     {
       "path": "dist/js/book-controller.js",
       "bytes": 11554,
-      "sha256": "c9f9d0f085534df7173c4907c3bbef0e31983af7509e3002885695dbf9935602"
+      "sha256": "19aea7b4d65fa63b68bbab4080df6fc3e204e4b74ca1715578eb1a8bba3f2f66"
     },
     {
       "path": "dist/js/book-drag.js",
@@ -1039,13 +1045,13 @@
     },
     {
       "path": "dist/js/book-drag.test.mjs",
-      "bytes": 12944,
-      "sha256": "9c20f227609437e560e6cb8a98c2d6d40a14e411ad9ddaa06bfd96a1b47150d7"
+      "bytes": 13040,
+      "sha256": "6b1d42045d3d3738516ca55e229176e75ccd6098c5fce6265df906ee2dd8143d"
     },
     {
       "path": "dist/js/book-editorial.js",
-      "bytes": 4340,
-      "sha256": "8319efaa859dc4c3292cf4fbeab7e0e7355206b35e9903a8455da5577e700b71"
+      "bytes": 4328,
+      "sha256": "8fcff9addc352499af978cdd5389532ddc48522e603ae2f0dbdca09515924b1b"
     },
     {
       "path": "dist/js/book-fallback.js",
@@ -1069,13 +1075,13 @@
     },
     {
       "path": "dist/js/book-section.js",
-      "bytes": 3328,
-      "sha256": "0f2335fa7be43042c65fe0c6dbd6623e9fb7771800ae60e6b8c2c554866f33fc"
+      "bytes": 3316,
+      "sha256": "7406fc1539ae82613d6781acbb6af5914314f7175997afec629cb0e9ca364a03"
     },
     {
       "path": "dist/js/content.js",
-      "bytes": 39011,
-      "sha256": "0d9b020daf1982960e28dcb22e5aa8cbbcdc3afe1408cd075ba35ab195912f6e"
+      "bytes": 39067,
+      "sha256": "70a8583cef7cbe083603f56ad183cd00bed429faf9270e610bce384830874813"
     },
     {
       "path": "dist/js/experience-diagnostic.js",
@@ -1115,12 +1121,12 @@
     {
       "path": "dist/js/medical-experiences.js",
       "bytes": 24212,
-      "sha256": "94a4eb55c38f2c8052927e0475b0ae501026119c8b07fbbac35ac85ebb290097"
+      "sha256": "6ef3605594c0b34143ecc7f34f35da2e78c10ad34753ad8e9908c1ed97c28b09"
     },
     {
       "path": "dist/js/pages.js",
-      "bytes": 17777,
-      "sha256": "07c61e3f7655f5d2bc0a08460c596297cb794cd74ea17befe52f42b08d739e83"
+      "bytes": 17834,
+      "sha256": "53360c0714a24b078582976bc48607b8c504f6f170fed952782544c63133b4e5"
     },
     {
       "path": "dist/js/principle-visuals.js",
@@ -1130,7 +1136,7 @@
     {
       "path": "dist/js/science-content.js",
       "bytes": 5115,
-      "sha256": "4a118f775d01721f2c7f8bc05c5044f92c610951bf7167d8ebfc5db8a75cadfe"
+      "sha256": "f6aa4e3809f9639a7430cb2403101630a558c39c6ba22280b0727e97e6bf6c8d"
     },
     {
       "path": "dist/js/science-globe.js",
@@ -1189,8 +1195,8 @@
     },
     {
       "path": "dist/js/templates.js",
-      "bytes": 11628,
-      "sha256": "0b95e56839543c5a501e56d1afc87ada6fcddeace3c49a6d7f2575e7e68f89f9"
+      "bytes": 11717,
+      "sha256": "873c878b81d364e030a16261ac97bf702c4835c4c15f19478799f6572a73e052"
     },
     {
       "path": "dist/js/vendor/README.md",
@@ -1239,58 +1245,58 @@
     },
     {
       "path": "dist/modulos/acervo/index.html",
-      "bytes": 7695,
-      "sha256": "f169b2f814804aabf1e4c7de562deeb086ee9ad9073375fa5168a22ebb22f2da"
+      "bytes": 7784,
+      "sha256": "95b5f2196d02e71457795e8a37f2532203e043f615c3a5776181b965f4c6a818"
     },
     {
       "path": "dist/modulos/club/index.html",
-      "bytes": 8220,
-      "sha256": "c3d869b2ba9388e5970c7f82cd731234d1ca4877e90b3b0c9b15f10809642b76"
+      "bytes": 8309,
+      "sha256": "8d905bc6b03a3cb03c336c89b7190a75e2d6fba90064697d118cb6f190656827"
     },
     {
       "path": "dist/modulos/explorar/index.html",
-      "bytes": 8292,
-      "sha256": "db7cd98e3532fd770c9e2b5e0bc88d76316d2ccd9766affbe3125ee81b1cd09f"
+      "bytes": 8381,
+      "sha256": "2160d374759f644cb032b69265ccd3c52a31effc716867a1ac810c9d9215866d"
     },
     {
       "path": "dist/modulos/hoje/index.html",
-      "bytes": 7349,
-      "sha256": "da371e287181569bd6b404a249382d3355a711a16afafd1ad931b16a77ff160c"
+      "bytes": 7438,
+      "sha256": "28effc0996c67020e2a59ce941389d40a83b656b9e5c0ac334b53363424327a6"
     },
     {
       "path": "dist/modulos/ligas/index.html",
-      "bytes": 10954,
-      "sha256": "1a4d9ed31acfdfd92f47c5e6ebdb1733b58c5e4c2e56c4402f86d8110d26136d"
+      "bytes": 11043,
+      "sha256": "3d1084cb1683ce5d10dea2f7ff77faea3fba2984d67c72617607184dabac323d"
     },
     {
       "path": "dist/modulos/mentor/index.html",
-      "bytes": 7682,
-      "sha256": "d635ec6a50b67a0dd0b23cb87c6455249cce4786991541cd7a0bba6959699a29"
+      "bytes": 7771,
+      "sha256": "5b11406e18896c88aa508f71a600273beb4c83e188d56596434a8c65871efa1e"
     },
     {
       "path": "dist/modulos/pesquisa/index.html",
-      "bytes": 12348,
-      "sha256": "22d5464ef7b4f38cd5e91fc0946998ad5813952755a08a46d0f4071f8e596c97"
+      "bytes": 12437,
+      "sha256": "cea6b1d451075a16fac0d6ea3f3a7c9fb34ebf61ab272b4402e7590a3632a93a"
     },
     {
       "path": "dist/modulos/trajetoria/index.html",
-      "bytes": 19281,
-      "sha256": "b1cc9d7e26fe417c2b2c4e67f22198ae70750aebd62749ff4ac10c4efa1875e6"
+      "bytes": 19370,
+      "sha256": "b3806d121aa742cb7cbbd1b7f0cdb18c70fff733076498c6e523dfb843cc8fb5"
     },
     {
       "path": "dist/percursos/index.html",
-      "bytes": 5999,
-      "sha256": "92db5b877edad3010b26c9d1799b9ecd7af30bab233c789087f1a2b6f91f072d"
+      "bytes": 5799,
+      "sha256": "78b99610767e93507d5a5683d2e1906d456628a7de4dccf97dee0f508fe9dfac"
     },
     {
       "path": "js/app.js",
       "bytes": 18851,
-      "sha256": "62d1b5e8f1cccacc9ec64523d7b174cb51f2fda2bf4b3798203769523628bd9e"
+      "sha256": "7766c6b5b0b89fe463f35f9ffe597ac18165da62d1924d0739ce78d3d3da5ffb"
     },
     {
       "path": "js/book-art.js",
-      "bytes": 10352,
-      "sha256": "370906283374cb72015ee349a5f1d362bc5d04a47d84dcf1bd773b8e893f5c89"
+      "bytes": 10347,
+      "sha256": "1165b77ebc533a7b6adc290e518f207a89118bc337aa50d431c4a62123557173"
     },
     {
       "path": "js/book-art.test.mjs",
@@ -1300,7 +1306,7 @@
     {
       "path": "js/book-controller.js",
       "bytes": 11554,
-      "sha256": "c9f9d0f085534df7173c4907c3bbef0e31983af7509e3002885695dbf9935602"
+      "sha256": "19aea7b4d65fa63b68bbab4080df6fc3e204e4b74ca1715578eb1a8bba3f2f66"
     },
     {
       "path": "js/book-drag.js",
@@ -1309,13 +1315,13 @@
     },
     {
       "path": "js/book-drag.test.mjs",
-      "bytes": 12944,
-      "sha256": "9c20f227609437e560e6cb8a98c2d6d40a14e411ad9ddaa06bfd96a1b47150d7"
+      "bytes": 13040,
+      "sha256": "6b1d42045d3d3738516ca55e229176e75ccd6098c5fce6265df906ee2dd8143d"
     },
     {
       "path": "js/book-editorial.js",
-      "bytes": 4340,
-      "sha256": "8319efaa859dc4c3292cf4fbeab7e0e7355206b35e9903a8455da5577e700b71"
+      "bytes": 4328,
+      "sha256": "8fcff9addc352499af978cdd5389532ddc48522e603ae2f0dbdca09515924b1b"
     },
     {
       "path": "js/book-fallback.js",
@@ -1339,13 +1345,13 @@
     },
     {
       "path": "js/book-section.js",
-      "bytes": 3328,
-      "sha256": "0f2335fa7be43042c65fe0c6dbd6623e9fb7771800ae60e6b8c2c554866f33fc"
+      "bytes": 3316,
+      "sha256": "7406fc1539ae82613d6781acbb6af5914314f7175997afec629cb0e9ca364a03"
     },
     {
       "path": "js/content.js",
-      "bytes": 39011,
-      "sha256": "0d9b020daf1982960e28dcb22e5aa8cbbcdc3afe1408cd075ba35ab195912f6e"
+      "bytes": 39067,
+      "sha256": "70a8583cef7cbe083603f56ad183cd00bed429faf9270e610bce384830874813"
     },
     {
       "path": "js/experience-diagnostic.js",
@@ -1385,12 +1391,12 @@
     {
       "path": "js/medical-experiences.js",
       "bytes": 24212,
-      "sha256": "94a4eb55c38f2c8052927e0475b0ae501026119c8b07fbbac35ac85ebb290097"
+      "sha256": "6ef3605594c0b34143ecc7f34f35da2e78c10ad34753ad8e9908c1ed97c28b09"
     },
     {
       "path": "js/pages.js",
-      "bytes": 17777,
-      "sha256": "07c61e3f7655f5d2bc0a08460c596297cb794cd74ea17befe52f42b08d739e83"
+      "bytes": 17834,
+      "sha256": "53360c0714a24b078582976bc48607b8c504f6f170fed952782544c63133b4e5"
     },
     {
       "path": "js/principle-visuals.js",
@@ -1400,7 +1406,7 @@
     {
       "path": "js/science-content.js",
       "bytes": 5115,
-      "sha256": "4a118f775d01721f2c7f8bc05c5044f92c610951bf7167d8ebfc5db8a75cadfe"
+      "sha256": "f6aa4e3809f9639a7430cb2403101630a558c39c6ba22280b0727e97e6bf6c8d"
     },
     {
       "path": "js/science-globe.js",
@@ -1459,8 +1465,8 @@
     },
     {
       "path": "js/templates.js",
-      "bytes": 11628,
-      "sha256": "0b95e56839543c5a501e56d1afc87ada6fcddeace3c49a6d7f2575e7e68f89f9"
+      "bytes": 11717,
+      "sha256": "873c878b81d364e030a16261ac97bf702c4835c4c15f19478799f6572a73e052"
     },
     {
       "path": "js/vendor/README.md",
@@ -1509,8 +1515,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 1915,
-      "sha256": "86e307cb0bc5f795fb5ffcaa5be0a147a6e7855337a9fe34112792783a8af9b4"
+      "bytes": 1948,
+      "sha256": "ea3d1b684641cc3ee3d75ac9fe466b5206b62aa7d3fa8f2037adeef00dec5219"
     },
     {
       "path": "scripts/generate-globe.mjs",
@@ -1524,8 +1530,8 @@
     },
     {
       "path": "tests/book-drag-baseline.json",
-      "bytes": 4668,
-      "sha256": "0ffd692959eb042598b16d8d6013e9b0150d2de9d04ea06a7de7af0be6d4f33b"
+      "bytes": 4802,
+      "sha256": "d90078b56c22c6f6b533be0df9a4b541d1ae0add1f1da8df1e6e77105995caba"
     },
     {
       "path": "tests/book-drag-normalize.mjs",
@@ -1539,8 +1545,8 @@
     },
     {
       "path": "tests/book-medical.mjs",
-      "bytes": 2542,
-      "sha256": "1fb6ea923aaa4fa20e1e4bad8552076207b2aea963f3cb8f9cd5a3b6ae078340"
+      "bytes": 2650,
+      "sha256": "5d3679b99a7845a3631aa33cba47571b5b36bdc8dfd99f00b7a52a0850a440e9"
     },
     {
       "path": "tests/book-normalize.mjs",
@@ -1559,8 +1565,8 @@
     },
     {
       "path": "tests/brand-motif.mjs",
-      "bytes": 2974,
-      "sha256": "d9b94c9568a0f6988f14a3fd8c2c730befdf1f8e7cbcd240876cf623c1b6e3f1"
+      "bytes": 3015,
+      "sha256": "6b048bdca6018f1edda48e44b3ce9ad50d38b06bda8c2a83fb3abc6438902e00"
     },
     {
       "path": "tests/experience-diagnostic.mjs",
@@ -1578,24 +1584,44 @@
       "sha256": "8ca3e59eef8bfd62467eab3559e8b0eb81bcfc11a660af2a2fea472d2d516635"
     },
     {
+      "path": "tests/interny-baseline.json",
+      "bytes": 17847,
+      "sha256": "96daa2648087e78c8bfac00abef4fe48aef0c93c4fc84e8202312b2a416c94f0"
+    },
+    {
+      "path": "tests/interny-normalize.mjs",
+      "bytes": 2376,
+      "sha256": "0ea6703008c70ef8e6ba2813b4222097c2045c84da74452fc640aa3c648f40e7"
+    },
+    {
+      "path": "tests/interny-replacements.json",
+      "bytes": 4512,
+      "sha256": "2fc2d6b048a675d39940a5c5937d5f02f0eb0c721d1bfe1177db2c0fad85ab95"
+    },
+    {
+      "path": "tests/interny.mjs",
+      "bytes": 3880,
+      "sha256": "939723ba57571ce548748ddcc405a491892c60fb059a72c733b8fc1d2bc4f96a"
+    },
+    {
       "path": "tests/medical-experiences-baseline.json",
-      "bytes": 62788,
-      "sha256": "14f523df0920d48de6e3c63c711602d7e0e95141e57a093765e25bc2ff81af8f"
+      "bytes": 62922,
+      "sha256": "0b11759acbd98ceeda04ba795065d04636147add8d047c91471488ac2733b66b"
     },
     {
       "path": "tests/medical-experiences-content.mjs",
       "bytes": 5241,
-      "sha256": "e9e614b0a1a132bd93535d4a6e78f310c5e90d1837dc3bf05f8127c915627ad7"
+      "sha256": "fb23bdb868f67a23deba31de70a60f35d552f71a0391834de01004686e6f07cc"
     },
     {
       "path": "tests/medical-experiences-normalize.mjs",
-      "bytes": 1176,
-      "sha256": "c0b100720db14670af43cd6621b7607d47bd6efc8cb0191dde538443ff67cc6b"
+      "bytes": 1320,
+      "sha256": "f0cff3fdb2dd1ed0d81704f9d6ffaad1946736f8aa3c667ef7740d4eba72e88d"
     },
     {
       "path": "tests/medical-experiences.mjs",
-      "bytes": 15318,
-      "sha256": "ae434f372bc1822014301be88cbcd6dde64b29ed6cce5648ac8560371552dd68"
+      "bytes": 15426,
+      "sha256": "d51f346fed40def7b266e9b491f5d37568b2a1761c198875f83a60ce51d3c824"
     },
     {
       "path": "tests/principles.mjs",
@@ -1614,8 +1640,8 @@
     },
     {
       "path": "tests/science.mjs",
-      "bytes": 6783,
-      "sha256": "73ee872ec0706ed9c1e251ae30afd181c94a66d471f004a6e886a5eb797c7bb0"
+      "bytes": 6911,
+      "sha256": "47aa2b32b529e04b595498a2b2db8388ecd496e2b6c0646c8f63fb7124034855"
     },
     {
       "path": "tests/shared-seam-baseline.json",
@@ -1624,8 +1650,8 @@
     },
     {
       "path": "tests/shared-seam.mjs",
-      "bytes": 5262,
-      "sha256": "d9174c7ef4f76832221c2a931c3fcdbe1940c1cbb607b69cf3a56aec5d0659e3"
+      "bytes": 5390,
+      "sha256": "1c124c0e5f61d466a81af76d99774797bf996dce49ec49ba2bfb99f3b9a71b10"
     },
     {
       "path": "tests/tiles-baseline.json",
@@ -1640,7 +1666,7 @@
     {
       "path": "tests/validate.mjs",
       "bytes": 5672,
-      "sha256": "5a0e2b36faed4a14784559fa2926c137cd513531d2909b22d9f2459504df94bd"
+      "sha256": "582c6b5783a0cf85c0b971fe52dd3152e9652f530c5722f60387462c166e99a3"
     },
     {
       "path": "tools/globe-source/countries.json",

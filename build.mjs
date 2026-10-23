@@ -7,7 +7,7 @@ const dist=resolve(root,'dist');
 await rm(dist,{recursive:true,force:true});
 await mkdir(dist,{recursive:true});
 for(const folder of ['css','js','assets'])await cp(resolve(root,folder),resolve(dist,folder),{recursive:true});
-const build='innecta-monopo-'+new Date().toISOString().replace(/[:.]/g,'-');
+const build='interny-'+new Date().toISOString().replace(/[:.]/g,'-');
 const routes=[{path:'',page:'home'},{path:'comunidade',page:'community'},{path:'percursos',page:'directory'},...projects.map(p=>({path:`modulos/${p.slug}`,page:'project',slug:p.slug}))];
 for(const route of routes){const dir=resolve(dist,route.path);await mkdir(dir,{recursive:true});await writeFile(resolve(dir,'index.html'),renderDocument({...route,build}));}
 await writeFile(resolve(dist,'404.html'),renderDocument({page:'404',build}));

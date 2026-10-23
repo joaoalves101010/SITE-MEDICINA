@@ -221,50 +221,50 @@
     },
     {
       "file": "book-pages/medical-00-cover.webp",
-      "bytes": 166206,
-      "sha256": "8926ce23b6e17d9859c800c0c66218ba983f408d08fdfa664edfcdd6493aeb20",
+      "bytes": 162862,
+      "sha256": "8744a715d34603b18d12f37498f07463acdb185fafdda697d0385bf065ceb869",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
       "status": "authored_medical_editorial_book_composition"
     },
     {
       "file": "book-pages/medical-01-clareza.webp",
-      "bytes": 225560,
-      "sha256": "bf4fe4547c2534724cad669f933a62272432ed8dc5a73f16edb389d1fef575eb",
+      "bytes": 225170,
+      "sha256": "e023de51983713ea64691882c9464ab27d5ac30fa463cbb5e01cfd85b2344a98",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
       "status": "authored_medical_editorial_book_composition"
     },
     {
       "file": "book-pages/medical-02-direcao.webp",
-      "bytes": 215558,
-      "sha256": "d1f2f075ec58bf75d30544323017e7b1096086d0bbf8e6bd0f2aea9b80dc1a45",
+      "bytes": 215126,
+      "sha256": "bec54ffcb464e50a58dd72f795711410d9c77cdb00537761297d74ca12f93c79",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
       "status": "authored_medical_editorial_book_composition"
     },
     {
       "file": "book-pages/medical-03-descoberta.webp",
-      "bytes": 237848,
-      "sha256": "5ddb37d0ecc291e2d01d2a2a279108ec2349b5ce2a728cf1113fd8c411c012fb",
+      "bytes": 237442,
+      "sha256": "fa4bf2f73cfedd615409ae1fb5d84d6d0bf2e9fa906857eb6ee5a30c911a096b",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
       "status": "authored_medical_editorial_book_composition"
     },
     {
       "file": "book-pages/medical-04-metodo.webp",
-      "bytes": 226280,
-      "sha256": "19d1c1c45d38d078876427a846d964c3cc4e962851cc2c8a05798dd566ea71f2",
+      "bytes": 228970,
+      "sha256": "8064dd605e7790cdaec52ef60c78178df3284cf0c9d709b0013380d5f547265c",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
       "status": "authored_medical_editorial_book_composition"
     },
     {
       "file": "book-pages/medical-05-troca.webp",
-      "bytes": 218118,
-      "sha256": "5ac99c0d93709c0639eddcc80bd7cc5e2f9aab22d57e05937fbe17eb11c0b5e1",
+      "bytes": 217590,
+      "sha256": "047438afe6c40b3a12fd9a6b3957b46ccbcde7fb92aa6c5914792774f548f024",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
       "status": "authored_medical_editorial_book_composition"
     },
     {
       "file": "book-pages/medical-06-presenca.webp",
-      "bytes": 237934,
-      "sha256": "8a8c14a05d219b5ea35cd775e5fc4ff6d6dd33f839ffe74664748a1947a0795d",
+      "bytes": 237514,
+      "sha256": "5ba1df5afb58ee3e29b7bedc87feb3604b5e5b8b0e31b5f282b06c4af34dc784",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
       "status": "authored_medical_editorial_book_composition"
     },

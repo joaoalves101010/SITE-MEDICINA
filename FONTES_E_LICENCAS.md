@@ -1,5 +1,7 @@
 # Fontes, créditos e direitos de terceiros
 
+Identidade atual: **Interny | Your Medical Journey**, adotada em 23/10/2026. Menções históricas à Innecta registram a origem dos materiais e não significam que o produto externo ou o projeto Enter tenham sido renomeados. A mudança de marca não altera licenças ou créditos.
+
 Este documento registra proveniência; não concede direitos que o projeto não possui. Não foi aplicada licença global ao repositório. Antes de tornar a distribuição pública ou comercial, confirme os direitos dos elementos indicados como pendentes.
 
 ## Bibliotecas

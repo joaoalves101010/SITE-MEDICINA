@@ -1,3 +1,4 @@
+import {restoreInternySource,restoreInternyHTML} from './interny-normalize.mjs';
 import {restoreBookTemplate} from './book-normalize.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -15,7 +16,7 @@ test('only the glyph changes in shared templates, science spark and favicon',asy
     ['js/science-content.js',fixture.scienceOld,fixture.scienceNew],
     ['assets/favicon.svg',fixture.faviconOld,fixture.faviconNew],
   ]){
-    let current=await readFile(new URL('../'+file,import.meta.url),'utf8');
+    let current=restoreInternySource(file,await readFile(new URL('../'+file,import.meta.url),'utf8'));
     if(file==='js/templates.js')current=restoreBookTemplate(current).replace(/<section class="tiles tiles--rotated"[\s\S]*?<\/section>/,tilesBaseline.oldSourceBlock).replace('<link rel="stylesheet" href="/css/tiles.css">','');
     assert.equal(current.split(newGlyph).length-1,1,file);
     assert.equal(hash(current.replace(newGlyph,oldGlyph)),fixture.sourceHashes[file],file);
@@ -29,13 +30,12 @@ test('all rendered brand motifs use literal uppercase OS, with no asterisk path 
     assert.ok(!html.includes('M16 0v32M0 16h32'),route.page);
     if(route.page!=='project'){
       const brand=html.match(/<a class="brand"[\s\S]*?<\/a>/)?.[0];
-      assert.ok(brand?.includes('<span>innecta</span>'),route.page);
-      assert.ok(brand?.includes('>OS</text>'),route.page);
-      assert.ok(brand?.includes('viewBox="0 0 32 32"'),route.page);
+      assert.ok(brand?.includes('<span>interny</span>'),route.page);
+      assert.ok(!brand?.includes('>OS</text>'),route.page);
     }
   }
   const home=renderDocument({page:'home'});
-  assert.equal((home.match(/>OS<\/text>/g)||[]).length,6);
+  assert.equal((home.match(/>OS<\/text>/g)||[]).length,5);
   assert.ok(home.includes('class="science-spark"'));
 });
 test('glyph typography is bounded and neutral; favicon retains its original colored box',async()=>{

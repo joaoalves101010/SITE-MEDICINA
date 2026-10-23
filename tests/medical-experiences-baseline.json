@@ -9,13 +9,13 @@
     "assets/Roobert-SemiBold.woff2": "8a2c7401bbd4eda63c8928565d3ce6359486a0198e3ad062efd37a9b36daee7b",
     "assets/acervo.png": "f1982516bdd689064227ff4ee76acd973c6eccb8e278eb2fff2dcc457b8e6a78",
     "assets/acompanhamento.png": "ddaa10cb03cdbefd760f80705fd222c06880079fc6bb4e1310c43d0536517aec",
-    "assets/book-pages/medical-00-cover.webp": "8926ce23b6e17d9859c800c0c66218ba983f408d08fdfa664edfcdd6493aeb20",
-    "assets/book-pages/medical-01-clareza.webp": "bf4fe4547c2534724cad669f933a62272432ed8dc5a73f16edb389d1fef575eb",
-    "assets/book-pages/medical-02-direcao.webp": "d1f2f075ec58bf75d30544323017e7b1096086d0bbf8e6bd0f2aea9b80dc1a45",
-    "assets/book-pages/medical-03-descoberta.webp": "5ddb37d0ecc291e2d01d2a2a279108ec2349b5ce2a728cf1113fd8c411c012fb",
-    "assets/book-pages/medical-04-metodo.webp": "19d1c1c45d38d078876427a846d964c3cc4e962851cc2c8a05798dd566ea71f2",
-    "assets/book-pages/medical-05-troca.webp": "5ac99c0d93709c0639eddcc80bd7cc5e2f9aab22d57e05937fbe17eb11c0b5e1",
-    "assets/book-pages/medical-06-presenca.webp": "8a8c14a05d219b5ea35cd775e5fc4ff6d6dd33f839ffe74664748a1947a0795d",
+    "assets/book-pages/medical-00-cover.webp": "8744a715d34603b18d12f37498f07463acdb185fafdda697d0385bf065ceb869",
+    "assets/book-pages/medical-01-clareza.webp": "e023de51983713ea64691882c9464ab27d5ac30fa463cbb5e01cfd85b2344a98",
+    "assets/book-pages/medical-02-direcao.webp": "bec54ffcb464e50a58dd72f795711410d9c77cdb00537761297d74ca12f93c79",
+    "assets/book-pages/medical-03-descoberta.webp": "fa4bf2f73cfedd615409ae1fb5d84d6d0bf2e9fa906857eb6ee5a30c911a096b",
+    "assets/book-pages/medical-04-metodo.webp": "8064dd605e7790cdaec52ef60c78178df3284cf0c9d709b0013380d5f547265c",
+    "assets/book-pages/medical-05-troca.webp": "047438afe6c40b3a12fd9a6b3957b46ccbcde7fb92aa6c5914792774f548f024",
+    "assets/book-pages/medical-06-presenca.webp": "5ba1df5afb58ee3e29b7bedc87feb3604b5e5b8b0e31b5f282b06c4af34dc784",
     "assets/book-pages/medical-clareza-art.webp": "6064bd306f0d85e430fda2750f7f5854fc9a2752d4aa983522b478a4ad7a7385",
     "assets/book-pages/medical-clareza.png": "fc3cb2d3b23efa1b12d3206aef6a7e7043bb5d290b7c04c6133813c7a0d6ca4f",
     "assets/book-pages/medical-descoberta-art.webp": "0d5a447bb58f07c56aa88964e4589a87a4225fca66fb79d5692fc3641b101228",
@@ -526,5 +526,6 @@
       "copy": "Book-only js/book-editorial.js shared by illustration captions and semantic HTML.",
       "superseded_assets": "Only the current medical-editorial art is included."
     }
-  }
+  },
+  "rebrandStaticPages": "Seven generated page labels updated to Interny; original illustrations and motion retain the prior hashes."
 }

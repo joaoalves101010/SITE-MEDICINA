@@ -1,3 +1,4 @@
+import {restoreInternySource,restoreInternyHTML} from './interny-normalize.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
@@ -25,7 +26,7 @@ function fixture({top=0,reduced=false,loadEngine}={}){
 test('new section is immediately after capability words and never changes internal routes or prior approved sources',async()=>{
  const home=renderHome();assert.ok(home.indexOf('id="partners"')<home.indexOf('id="medical-experiences"'));assert.ok(home.indexOf('id="medical-experiences"')<home.indexOf('id="manifesto"'));
  for(const page of ['community','directory','404','project'])assert.ok(!renderDocument({page,slug:'trajetoria'}).includes('medical-experiences'));
- for(const[path,expected]of Object.entries(baseline.protected))assert.equal(hash(await readFile(new URL('../'+path,import.meta.url))),expected,path);
+ for(const[path,expected]of Object.entries(baseline.protected))assert.equal(hash(restoreInternySource(path,await readFile(new URL('../'+path,import.meta.url)))),expected,path);
  for(const path of ['js/app.js','js/templates.js'])assert.equal(restoreMedicalExperiences(path,await readFile(new URL('../'+path,import.meta.url),'utf8')),baseline[path==='js/app.js'?'app':'templates']);
  const manifest=JSON.parse(await readFile(new URL('../assets/manifest.json',import.meta.url),'utf8'));assert.deepEqual(JSON.parse(restoreMedicalExperiences('assets/manifest.json',JSON.stringify(manifest))),baseline.manifest);
 });

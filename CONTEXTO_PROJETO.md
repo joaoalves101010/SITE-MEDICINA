@@ -1,27 +1,37 @@
-# Innecta — contexto do projeto Monopo LP
+# Interny | Your Medical Journey — contexto do projeto Monopo LP
 
 > **Documento de continuidade — 23 de outubro de 2026.** Descreve a versão atual da landing page, suas decisões aprovadas, a organização técnica e os limites conhecidos. É um ponto de partida para manter o projeto sem reconstruir decisões antigas ou confundir a apresentação com o produto completo.
 
 ## 1. O que é este projeto
 
-Esta é uma experiência de apresentação da **Innecta**, voltada à trajetória acadêmica e à formação médica. A proposta conecta organização da rotina, currículo, residência, oportunidades, pesquisa, ligas, conhecimento e orientação.
+Esta é uma experiência de apresentação da **Interny | Your Medical Journey**, voltada à trajetória acadêmica e à formação médica. A proposta conecta organização da rotina, currículo, residência, oportunidades, pesquisa, ligas, conhecimento e orientação.
 
-A Innecta está **em pré-lançamento**. Este repositório contém uma **landing page estática com páginas editoriais internas e interações visuais**, não o backend da plataforma. Não implementa autenticação, banco de dados, inscrições em programas externos, checkout ou cobrança. A integração com **Asaas permanece expressamente adiada**.
+A proposta apresentada como Interny está **em pré-lançamento**. Este repositório contém uma **landing page estática com páginas editoriais internas e interações visuais**, não o backend da plataforma. Não implementa autenticação, banco de dados, inscrições em programas externos, checkout ou cobrança. A integração com **Asaas permanece expressamente adiada**.
 
-O projeto nasceu de uma adaptação estrutural e visual do site Monopo e evoluiu por revisões específicas aprovadas: ciência com globo interativo, princípios editoriais, mosaico de interfaces, livro médico ilustrado e galeria de experiências internacionais. Não é um portfólio de clientes da Innecta nem uma cópia do conteúdo comercial da referência.
+O projeto nasceu de uma adaptação estrutural e visual do site Monopo e evoluiu por revisões específicas aprovadas: ciência com globo interativo, princípios editoriais, mosaico de interfaces, livro médico ilustrado e galeria de experiências internacionais. Não é um portfólio de clientes da Interny nem uma cópia do conteúdo comercial da referência.
 
 **Há outro projeto Innecta, inspirado em Enter, que deve permanecer separado e protegido.** Esta landing page não autoriza alterações no código, hospedagem ou configurações daquele projeto. Também não autoriza alterações no produto real só porque um módulo aparece na apresentação.
+
+### Rebranding aprovado — 23/10/2026
+
+A identidade pública desta LP passou de **Innecta** para **Interny | Your Medical Journey**. Foram atualizados os nomes e rótulos editoriais visíveis, sem trocar a fonte Roobert, a paleta vinho/creme/rosa, a organização das seções, a arte médica ou as animações aprovadas. Hero, campo contínuo, lente, globo, galeria, mosaico, livro e seus gestos mantêm os mesmos comportamentos.
+
+No livro, a capa autoral agora traz **INTERNY** e **YOUR MEDICAL JOURNEY**; o título médico “Sua formação médica, por inteiro.” permanece. Os rótulos autorais das sete imagens compostas e o HTML correspondente foram atualizados, preservando as ilustrações originais, a geometria e a mecânica. **OS** saiu da identificação principal da marca e dos rótulos de marca do livro; continua em usos contextuais, como o motivo gráfico e o índice do livro. Não confundir esses usos remanescentes com a assinatura principal.
+
+Os screenshots originais e o vídeo demonstrativo conservam a marca **Innecta** embutida nos pixels. São registros do material original, não evidência de uma nova interface já renomeada. O mosaico não foi redesenhado nem suas telas reeditadas. Os links externos abaixo também foram mantidos. **Não houve renomeação ou migração do backend, da autenticação, dos domínios externos ou do projeto Enter**, que continua original Innecta e separado.
+
+Créditos, prompts, nomes técnicos e registros de procedência podem conter a identidade anterior por razões históricas. Preservar esses fatos e as licenças; uma substituição global de nomes não deve reescrever a origem dos materiais. O escopo desta mudança é a marca da apresentação atual, não a titularidade, a disponibilidade do produto ou a concessão de novos direitos.
 
 ### Destinos públicos usados na navegação
 
 - Produto: [innectaos.vercel.app](https://innectaos.vercel.app/).
 - Apresentação: [innecta.vercel.app](https://innecta.vercel.app/).
 
-Esses links são destinos externos; não significam que o backend esteja incluído aqui. Não acrescentar e-mails, escritórios, depoimentos, parceiros ou resultados sem comprovação.
+Esses links são destinos externos preservados após o rebranding; não significam que o backend esteja incluído aqui ou tenha sido renomeado. Não acrescentar e-mails, escritórios, depoimentos, parceiros ou resultados sem comprovação.
 
 ## 2. Escopo de produto comunicado
 
-O conteúdo apresenta capacidades e propostas da Innecta. A disponibilidade real de cada funcionalidade deve ser validada no produto antes de transformar texto editorial em promessa de lançamento.
+O conteúdo apresenta capacidades e propostas sob a identidade Interny. A disponibilidade real de cada funcionalidade deve ser validada no produto antes de transformar texto editorial em promessa de lançamento.
 
 | Área | Papel na trajetória |
 | --- | --- |
@@ -43,7 +53,7 @@ Esta lista corresponde à montagem atual de `js/templates.js`, e não à primeir
 
 | Ordem | Seção | Conteúdo e decisão aprovada |
 | --- | --- | --- |
-| 1 | **Hero — `#home`** | Frase editorial com alternância, apresentação Innecta, campo procedural vinho/creme, lente e convite à exploração. |
+| 1 | **Hero — `#home`** | Frase editorial com alternância, apresentação Interny, campo procedural vinho/creme, lente e convite à exploração. |
 | 2 | **Ciência — `#science`** | “A ciência avança no mundo. Sua trajetória começa aqui.” Globo interativo, quatro leituras científicas datadas e quatro referências institucionais independentes. Compartilha a mesma cena de fundo do hero. |
 | 3 | **Capacidades — `#partners`** | Lista tipográfica dos caminhos do ecossistema e link para Trajetória. O nome técnico do identificador não significa parceiros comerciais. `#works` permanece como âncora de compatibilidade nesta seção. |
 | 4 | **Experiências médicas — `#medical-experiences`** | Galeria interativa com oito programas/instituições internacionais, fotografias reais, requisitos, fontes e créditos. |
@@ -59,19 +69,19 @@ Esta lista corresponde à montagem atual de `js/templates.js`, e não à primeir
 
 ## 4. Identidade visual e referências
 
-### Direção Innecta
+### Direção Interny
 
 - Vinho predominante, com bases como **`#542a37` e `#572335`**, creme **`#f3eee6`** e rosa **`#d7a5b7`**.
 - Tipografia Roobert, escala editorial, contraste de pesos, espaços amplos e regras finas.
-- A marca auxiliar é literalmente **OS**, não uma estrela de oito pontas.
+- A assinatura principal é **Interny | Your Medical Journey**. **OS** não acompanha mais o nome principal; permanece como motivo contextual nas seções, no favicon e no índice do livro, não como uma estrela de oito pontas.
 - O livro deve continuar **adulto, médico e editorial**. Não voltar à estética de fantasia, personagens infantis, paleta arco-íris ou catálogo de telas de software.
 - Nenhuma fotografia institucional, ilustração ou interface deve sugerir uma parceria inexistente.
 
 ### Referências estudadas
 
-1. **[Monopo Vietnam](https://monopo.vn/):** base de hierarquia, ritmo, proporções, navegação, transições e campo procedural com lente. A implementação usa elementos preservados/adaptados do código público de referência. O conteúdo de clientes, pessoas e escritórios não foi transplantado como se fosse da Innecta.
-2. **[How to Talk to White Kids About Racism](https://howtotalktowhitekidsaboutracism.com/):** referência de livro ilustrado, composição em camadas, páginas com dobradiça e interação. A geometria e as artes Innecta foram produzidas para este projeto; não se reutilizam os personagens, textos, modelos ou ilustrações da história original.
-3. **[Morphin — Viscose Carousel](https://morphin.dev/components/viscose-carousel-interactive-portfolio-gallery):** referência de galeria com entrada, leque, revolução, fusão viscosa e cursor refrativo. O motor e os shaders da galeria Innecta são implementações próprias orientadas pelo comportamento observado; não há inclusão integral do componente, das suas fotografias ou dos seus textos.
+1. **[Monopo Vietnam](https://monopo.vn/):** base de hierarquia, ritmo, proporções, navegação, transições e campo procedural com lente. A implementação usa elementos preservados/adaptados do código público de referência. O conteúdo de clientes, pessoas e escritórios não foi transplantado como se pertencesse a esta marca.
+2. **[How to Talk to White Kids About Racism](https://howtotalktowhitekidsaboutracism.com/):** referência de livro ilustrado, composição em camadas, páginas com dobradiça e interação. A geometria e as artes foram produzidas para este projeto, inicialmente sob o nome Innecta e agora apresentadas com os rótulos Interny; não se reutilizam os personagens, textos, modelos ou ilustrações da história original.
+3. **[Morphin — Viscose Carousel](https://morphin.dev/components/viscose-carousel-interactive-portfolio-gallery):** referência de galeria com entrada, leque, revolução, fusão viscosa e cursor refrativo. O motor e os shaders desta galeria são implementações próprias orientadas pelo comportamento observado; não há inclusão integral do componente, das suas fotografias ou dos seus textos.
 
 ### Direitos e limites de reutilização
 
@@ -108,7 +118,7 @@ As leituras científicas são uma seleção editorial datada, não um feed em te
 
 ### Conteúdo e data de referência
 
-São **oito programas distintos**, com informações registradas em **23/10/2026**. As instituições não são parceiras da Innecta, e a seleção não constitui ranking de procura, garantia de vaga ou serviço de candidatura. Os links levam às fontes oficiais; o site não envia inscrições nem pagamentos.
+São **oito programas distintos**, com informações registradas em **23/10/2026**. As instituições não são parceiras da Interny, e a seleção não constitui ranking de procura, garantia de vaga ou serviço de candidatura. Os links levam às fontes oficiais; o site não envia inscrições nem pagamentos.
 
 | Instituição | Distinções que não podem ser perdidas |
 | --- | --- |
@@ -166,7 +176,7 @@ Para investigar na página real, acrescentar **`?galleryDiagnostic=1`**. O paine
 
 ## 7. Livro médico ilustrado
 
-A versão aprovada tem a capa **“Sua formação médica, por inteiro.”** e seis capítulos:
+A versão aprovada tem a marca **INTERNY**, a assinatura **YOUR MEDICAL JOURNEY**, o título de capa **“Sua formação médica, por inteiro.”** e seis capítulos:
 
 | Título visível | Conteúdo | Identificador interno preservado |
 | --- | --- | --- |
@@ -284,7 +294,7 @@ O diretório público de uma hospedagem estática deve ser **`dist/`**. Publicar
 
 Os caminhos de CSS, JavaScript, imagens e links internos começam em **`/`**. Isso pressupõe publicação na raiz de um domínio/origem. **GitHub Pages ainda não está configurado.** Hospedar em um subdiretório como `usuario.github.io/repositorio/` exige adaptação controlada de base paths ou uso de domínio/raiz apropriado; subir os arquivos ao GitHub não resolve isso automaticamente nem publica o site.
 
-`dist/build.json` e a meta tag `innecta-build` permitem comparar a versão gerada com a servida. O campo de status emitido pelo build não é um relatório automático de QA visual. Publicação, endereço final e funcionamento precisam ser confirmados depois do envio. Não substituir a hospedagem do projeto Enter para colocar esta LP no ar.
+`dist/build.json` e a meta tag `interny-build` permitem comparar a versão gerada com a servida. O marcador foi atualizado junto com a identidade Interny; chaves internas de sessão e histórico permaneceram compatíveis com o comportamento anterior. O campo de status emitido pelo build não é um relatório automático de QA visual. Publicação, endereço final e funcionamento precisam ser confirmados depois do envio. Não substituir a hospedagem do projeto Enter para colocar esta LP no ar.
 
 ## 11. Acessibilidade, desempenho e comportamento de falha
 
@@ -349,4 +359,4 @@ Preservar:
 - `SCIENCE-SOURCES.md`: fontes científicas e referências institucionais da segunda seção.
 - `assets/manifest.json` e `assets/experiences/credits.json`: procedência dos materiais e créditos.
 
-**Resumo para retomar:** manter uma apresentação Innecta completa, médica, vinho/creme e utilizável sem GPU; preservar a animação aprovada do livro e a sequência finita da galeria; comunicar o produto com verdade; alterar apenas o escopo combinado e comprovar o resultado antes de declarar uma correção concluída.
+**Resumo para retomar:** manter uma apresentação Interny completa, médica, vinho/creme e utilizável sem GPU; preservar a animação aprovada do livro e a sequência finita da galeria; comunicar o produto com verdade; alterar apenas o escopo combinado e comprovar o resultado antes de declarar uma correção concluída.

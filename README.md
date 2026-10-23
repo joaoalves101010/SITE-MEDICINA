@@ -1,8 +1,19 @@
-# Innecta — experiência imersiva
+# Interny | Your Medical Journey
 
-Landing page editorial da Innecta para a formação acadêmica e a trajetória de estudantes de medicina. Projeto estático completo, em português, com animações progressivas, páginas de módulos, comunidade e percursos.
+Landing page editorial da **Interny | Your Medical Journey** para a formação acadêmica e a trajetória de estudantes de medicina. Projeto estático completo, em português, com animações progressivas, páginas de módulos, comunidade e percursos.
 
 **Comece por [CONTEXTO_PROJETO.md](CONTEXTO_PROJETO.md)** para entender o objetivo, as decisões aprovadas, a ordem atual das seções, os comportamentos e os cuidados de continuidade.
+
+## Identidade atual — 23/10/2026
+
+A apresentação passou de Innecta para **Interny | Your Medical Journey**. Esta revisão é de identidade, não um redesenho nem uma migração do produto:
+
+- A mesma fonte **Roobert**, a paleta vinho/creme/rosa, a composição e todas as animações foram preservadas.
+- Nome, assinatura e rótulos autorais do livro foram atualizados. O livro conserva suas ilustrações médicas, suas páginas, o arraste e a rolagem aprovados.
+- **OS** deixou de acompanhar o nome principal da marca; permanece como motivo gráfico contextual e no índice do livro, onde já existia.
+- Screenshots originais e vídeo de demonstração ainda podem mostrar **Innecta** dentro da imagem. Não foram adulterados nem apresentados como novas capturas do produto.
+- Os destinos externos continuam sendo [innectaos.vercel.app](https://innectaos.vercel.app/) e [innecta.vercel.app](https://innecta.vercel.app/). Não há migração automática de domínio ou backend.
+- O projeto Enter continua independente e com o nome Innecta. Créditos históricos, origem dos materiais e licenças foram preservados; referências antigas nesses registros não devem ser substituídas cegamente.
 
 ## Executar
 
@@ -39,7 +50,7 @@ Abra o endereço do servidor, não os arquivos por `file://`. O `dist/` já acom
 
 ## Limites importantes
 
-É uma **LP estática independente**, não o sistema autenticado da Innecta. Não inclui backend, banco, login, cobrança, checkout ou integração Asaas. O projeto Enter permanece separado. Os links externos do produto e das instituições são navegação, não integrações ou parcerias.
+É uma **LP estática independente**, não o sistema autenticado originalmente apresentado como Innecta. Não inclui backend, banco, login, cobrança, checkout ou integração Asaas. O projeto Enter permanece separado, com sua identidade original Innecta. O rebranding desta LP não renomeia nem modifica o backend ou esses outros projetos. Os links externos do produto e das instituições são navegação, não integrações ou parcerias.
 
 WebGL é aprimoramento visual, não requisito para ler o conteúdo. Há alternativas DOM/CSS, modo de movimento reduzido e saídas acessíveis da galeria. `?galleryDiagnostic=1` abre um painel local opcional de diagnóstico; não envia telemetria. A aparência real de todos os efeitos na GPU de um dispositivo precisa de validação nesse dispositivo.
 
