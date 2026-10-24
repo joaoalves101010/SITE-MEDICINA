@@ -12,7 +12,7 @@ A gravação recebida demonstrou os problemas da versão anterior; não constitu
 
 ### Apresentação do produto — 24/10/2026
 
-Entre ciência e capacidades, `#product-os` apresenta **the med OS**, com wordmark oficial + OS contextual, três movimentos (Planejar, Construir, Avançar), links aos módulos e CTA para `https://innectaos.vercel.app/`. Mantém fundo vinho/escuro e pré-lançamento explícito. É HTML/CSS em fluxo normal: sem screenshots, pin, parallax, novo JavaScript ou WebGL. Fontes: `js/product-os.js` e `css/product-os.css`.
+Entre ciência e capacidades, `#product-os` apresenta **the med OS**, com wordmark oficial + OS contextual, três movimentos (Planejar, Construir, Avançar), links aos módulos e CTA para `https://themed-os.vercel.app/`. Mantém fundo vinho/escuro e pré-lançamento explícito. É HTML/CSS em fluxo normal: sem screenshots, pin, parallax, novo JavaScript ou WebGL. Fontes: `js/product-os.js` e `css/product-os.css`.
 
 ## 1. O que é este projeto
 

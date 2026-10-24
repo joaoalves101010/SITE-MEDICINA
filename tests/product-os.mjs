@@ -38,7 +38,7 @@ test('official vector plus OS, truthful three-step copy and real native links wo
  const block=renderProductOS();assert.match(block,/<section id="product-os" class="product-os" aria-labelledby="product-os-title">/);assert.match(block,/<h2 id="product-os-title">/);
  assert.ok(block.includes(WORDMARK_PATH));assert.match(block,/role="img" aria-label="the med OS"/);assert.match(block,/>OS<\/span>/);assert.ok(block.includes('EM PRÉ-LANÇAMENTO'));
  assert.doesNotMatch(block,/<(?:img|image|video|iframe|canvas|script|button)\b|\shidden(?:[ >]|=)|\sinert(?:[ >]|=)|onclick=|javascript:/i);
- const external=[...block.matchAll(/<a\b[^>]*href="(https?:[^"]+)"[^>]*>/g)];assert.equal(external.length,1);assert.equal(external[0][1],'https://innectaos.vercel.app/');assert.match(external[0][0],/target="_blank"/);assert.match(external[0][0],/rel="noopener noreferrer"/);assert.match(external[0][0],/aria-label="Conhecer o the med OS — abrir o produto em nova aba"/);
+ const external=[...block.matchAll(/<a\b[^>]*href="(https?:[^"]+)"[^>]*>/g)];assert.equal(external.length,1);assert.equal(external[0][1],'https://themed-os.vercel.app/');assert.match(external[0][0],/target="_blank"/);assert.match(external[0][0],/rel="noopener noreferrer"/);assert.match(external[0][0],/aria-label="Conhecer o the med OS — abrir o produto em nova aba"/);
  assert.equal((block.match(/<li>/g)||[]).length,3);for(const phase of ['Planejar','Construir','Avançar'])assert.ok(block.includes(`<h3>${phase}</h3>`));
  const internal=[...block.matchAll(/href="(\/modulos\/[^\"]+)"/g)];assert.equal(internal.length,8);for(const[,href]of internal)assert.match(href,/^\/modulos\/(?:hoje|trajetoria|pesquisa|ligas|explorar|mentor)\/$/);
  assert.doesNotMatch(block,/garant(?:e|ia)|aprovad[oa] em|parceir[oa] oficial|checkout|pagamento|Asaas/i);
@@ -50,4 +50,14 @@ test('new presentation is scoped normal-flow DOM, keyboard-visible and reduced-m
  assert.doesNotMatch(css,/position\s*:\s*(?:fixed|sticky)|scroll-snap|@keyframes|url\(|@import|animation\s*:/);
  for(const[,selector]of css.replace(/\/\*[^]*?\*\//g,'').matchAll(/(?:^|[{}])\s*([^{}]+)\{/g)){if(selector.startsWith('@media'))continue;for(const part of selector.split(','))assert.match(part.trim(),/^\.product-os(?:[-:. >[]|$)/,part);}
  assert.match(css,/:focus-visible/);assert.match(css,/@media\(max-width:1023px\)/);assert.match(css,/@media\(prefers-reduced-motion:reduce\)/);assert.match(css,/transition:none/);assert.match(css,/grid-template-columns:minmax\(0,1\.15fr\) minmax\(0,\.85fr\)/);assert.match(css,/grid-template-columns:1fr/);
+});
+
+
+test('only the product-fold destination changes; its presentation and all other product links stay intact',async()=>{
+ const source=await readFile(new URL('../js/product-os.js',import.meta.url),'utf8');
+ const destination='https://themed-os.vercel.app/',previous='https://innectaos.vercel.app/';
+ assert.equal(source.split(destination).length-1,1);
+ assert.equal(hash(source.replace(destination,previous)),'7855c167f296945568a80dd0592849fbfaf1db4a7003096c51ab5334db7b9c08');
+ const home=renderDocument({page:'home'}),outside=home.replace(renderProductOS(),'');
+ assert.equal(home.split(destination).length-1,1);assert.ok(outside.includes(previous));assert.ok(!outside.includes(destination));
 });

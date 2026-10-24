@@ -1,6 +1,6 @@
 {
   "project": "the med | Your Medical Journey",
-  "generated_at": "2026-10-24T17:21:23.536681+00:00",
+  "generated_at": "2026-10-24T17:36:42.904968+00:00",
   "scope": "Portable sanitized editable static website, including built dist output. No repository history, hosting credentials, environment secrets or private QA files.",
   "entrypoint": "README.md",
   "context": "CONTEXTO_PROJETO.md",
@@ -8,8 +8,8 @@
   "base_path": "/",
   "github_pages_configured": false,
   "validation": {
-    "structural_assertions": 578,
-    "automated_tests": 393,
+    "structural_assertions": 579,
+    "automated_tests": 394,
     "syntax": "pass",
     "static_build": "pass",
     "private_path_identity_and_credential_pattern_scan": "no findings; heuristic, not a guarantee against every possible secret",
@@ -17,7 +17,7 @@
     "globe_regeneration": "Portable generator and all bundled inputs preserved from the prior public export; no external source checkout required.",
     "original_checkout": "unchanged",
     "brand_assets": "Approved vector wordmark and four symbol09 colour variants; no bitmap or font dependency in SVGs.",
-    "mobile": "Existing approved mobile scrolling and GLSL glass retained. New product introduction is normal-flow HTML/CSS; 390px and desktop composition/width proofs plus automated scope/accessibility checks passed, without claiming a physical-device render of the new fold."
+    "mobile": "No visual or interaction change. Only the product-os CTA destination was updated to https://themed-os.vercel.app/; all other product links retain their prior destinations. Exact component and route regression checks passed."
   },
   "export_adjustments": [
     "README and public handoff/licence/architecture documents",
@@ -31,7 +31,8 @@
     "24/10/2026: mobile-native scrolling, Safari stable book height, every-reload first-paint welcome and bounded Retina gallery quality; desktop physics and approved artwork preserved.",
     "24/10/2026: book replaced by light next-step guide on all screens; touch-first native photo gallery, stable CSS-sticky background and cancellation of pending hash jumps after manual gestures. Desktop gallery physics and unrelated artwork preserved.",
     "24/10/2026: mobile home lens Y and pointer camera frozen without replacing or removing the original GLSL glass/refraction; desktop, shaders, CSS, HTML and assets preserved.",
-    "24/10/2026: added product-os editorial fold between science and capability words, official the med wordmark + contextual OS, three connected phases and exact external product CTA; no new browser JS, GPU, pinning, screenshots or global palette change."
+    "24/10/2026: added product-os editorial fold between science and capability words, official the med wordmark + contextual OS, three connected phases and exact external product CTA; no new browser JS, GPU, pinning, screenshots or global palette change.",
+    "24/10/2026: changed only the product-os CTA destination to https://themed-os.vercel.app/; kept all other URLs, content, styling and behavior intact."
   ],
   "licensing": "Per-file third-party rights apply. Roobert and reference-derived materials require redistribution review; see FONTES_E_LICENCAS.md.",
   "inventory_excludes": "EXPORT_MANIFEST.json itself (avoid recursive hash)",
@@ -59,7 +60,7 @@
     {
       "path": "CONTEXTO_PROJETO.md",
       "bytes": 43589,
-      "sha256": "6669dda420b43e299941b22185e8b5be9a52f1bba1d7bb87ef9f1cd4e39e03ef"
+      "sha256": "81f781a3f649d6570cf4a6cf92b4a3667779d58bb9d2ecc119e582c1aecd038a"
     },
     {
       "path": "FONTES_E_LICENCAS.md",
@@ -644,7 +645,7 @@
     {
       "path": "dist/404.html",
       "bytes": 8871,
-      "sha256": "cb82e42e2f9d924f1441ed2fba4eaefca3f258bb4ebe86649399fe4ca0b28661"
+      "sha256": "e16172483150f1aea3dd2eef36390186489fbbcad31b637ab1b14dee790150d5"
     },
     {
       "path": "dist/assets/Roobert-Light.woff2",
@@ -1069,12 +1070,12 @@
     {
       "path": "dist/build.json",
       "bytes": 425,
-      "sha256": "1e9d55ad45f012f42ef8c366ad889f96f7a11f50461d75b4dc88dfeb84a0de63"
+      "sha256": "5e962a8154f261ce45581b80137348fcadf5f285bd98382e18ac18506470d535"
     },
     {
       "path": "dist/comunidade/index.html",
       "bytes": 30120,
-      "sha256": "ffd9b8d71120466df04bc2e44cb7016ccafaa0fc880a38be22f2c91b31223d3a"
+      "sha256": "bc3dae7eab3d2ccad38000e53aa3e48aa4535aec0f65101f4f9e3e54dc91b37c"
     },
     {
       "path": "dist/css/book-fallback.css",
@@ -1154,7 +1155,7 @@
     {
       "path": "dist/index.html",
       "bytes": 91156,
-      "sha256": "c895b72c9f3524e67d4067cc4203b99bacfc39309c33b6498dd7ce07c5345f58"
+      "sha256": "f82ee08f6f588268ae4b62b5d4a683e0e9e38857231dcb477db30f7c18c5f73b"
     },
     {
       "path": "dist/js/app.js",
@@ -1339,7 +1340,7 @@
     {
       "path": "dist/js/product-os.js",
       "bytes": 2567,
-      "sha256": "7855c167f296945568a80dd0592849fbfaf1db4a7003096c51ab5334db7b9c08"
+      "sha256": "f200e27dbd0f5907cf927dc7d5cb37723b9100e33838cb0a0ee027f6207182b3"
     },
     {
       "path": "dist/js/science-content.js",
@@ -1489,47 +1490,47 @@
     {
       "path": "dist/modulos/acervo/index.html",
       "bytes": 20815,
-      "sha256": "bf76812b6fd0d6f3669f7d8085450a6cfe2cac38abd0a8ad30a0c9e241aa38b0"
+      "sha256": "45df66c70f14c13f743f3727afa8e4d6a85dde84672efcac3e07ac234138c22b"
     },
     {
       "path": "dist/modulos/club/index.html",
       "bytes": 20659,
-      "sha256": "f9a7d5abba18e4e634c75e6fe451391e456ce5206ed22762773286a2371373bd"
+      "sha256": "126dfac3d8a2effb3c8b5eb1c2fa73da155833a81afd1383022352772e619102"
     },
     {
       "path": "dist/modulos/explorar/index.html",
       "bytes": 21905,
-      "sha256": "abccadb47be4097bbd2f15a4d6b9047d5824c58edc3f4cefbb756dbdcdcce86a"
+      "sha256": "e912bfc052e148dccb7e1b3c97af8b3bc5a304e58f09e7dfb3ccba18f5f40b3c"
     },
     {
       "path": "dist/modulos/hoje/index.html",
       "bytes": 20906,
-      "sha256": "923128b79259a9e6886c24c7dc9aaaecb4fbfb05d3036d58f777d493958fefcd"
+      "sha256": "3ef97bfeb40e79d08ed8b8c7abe8cd1fa8633022cb0fc713a5ab502e1210535a"
     },
     {
       "path": "dist/modulos/ligas/index.html",
       "bytes": 20962,
-      "sha256": "ee5539c1b60d497495318ba89ce0fe0065e7517a843d27c109716c9cfe07ffe8"
+      "sha256": "05917f056818d62c546b44926d9b73959ffe74f1fcd3162c6e692028fcaa241c"
     },
     {
       "path": "dist/modulos/mentor/index.html",
       "bytes": 19780,
-      "sha256": "1273effc12a3bcfddd852a768a477bad9ce9e30275dc69f7beaa4d5531846e93"
+      "sha256": "9ef06451eae9830a5d7a38173e2d7bbb4bcc5839113579bdb75cdee4b0443b61"
     },
     {
       "path": "dist/modulos/pesquisa/index.html",
       "bytes": 23303,
-      "sha256": "27bc9a30b9e3870f0edacaaad3ccceaf37825bcb6205d7460cd696d256412cf9"
+      "sha256": "8228788309dbe280052a195f0dcf29958f656ad2b478e6bdba0aec202fe55157"
     },
     {
       "path": "dist/modulos/trajetoria/index.html",
       "bytes": 31912,
-      "sha256": "0b9c961fd660de07c735ea3ea7fc3b4ed9e2d2e939bdc969228f4472acb5ea6d"
+      "sha256": "873300884dbbf2fb874a0740934af56f49b0a9935ab2d7927fcf5544505f10f4"
     },
     {
       "path": "dist/percursos/index.html",
       "bytes": 11192,
-      "sha256": "4337f60bbf36a4117381d56ee182d4e82cad2686df3ad7da0383d52e372aba31"
+      "sha256": "be8cc966df120f2c528518e4117ed6edeb203ce9f7864a89330ab8a30aeebc2b"
     },
     {
       "path": "js/app.js",
@@ -1714,7 +1715,7 @@
     {
       "path": "js/product-os.js",
       "bytes": 2567,
-      "sha256": "7855c167f296945568a80dd0592849fbfaf1db4a7003096c51ab5334db7b9c08"
+      "sha256": "f200e27dbd0f5907cf927dc7d5cb37723b9100e33838cb0a0ee027f6207182b3"
     },
     {
       "path": "js/science-content.js",
@@ -2089,12 +2090,12 @@
     {
       "path": "tests/product-os-replacements.json",
       "bytes": 25002,
-      "sha256": "77391f9b06e346d6e60be667f47523bd8d22484b95eb589e2b639b0258f9f4b8"
+      "sha256": "98e26aff5a02631f01cbaea1b01098210c428409f94778431443e96bdc7d27df"
     },
     {
       "path": "tests/product-os.mjs",
-      "bytes": 5618,
-      "sha256": "ca0477882bd2b83bea67843f8ca7daafb4e60841a1a9e9b618050810bb13e44e"
+      "bytes": 6316,
+      "sha256": "a8f8f4f1298573398c676af24bfe795ff4de8d64b0d81b737328d311dc9033d6"
     },
     {
       "path": "tests/removed-home-works.html",
@@ -2163,8 +2164,8 @@
     },
     {
       "path": "tests/validate.mjs",
-      "bytes": 6844,
-      "sha256": "15cf8b3b2d01feaf60ba35ff0b6d7df232509f398c246345284e579bf8ac98f2"
+      "bytes": 6876,
+      "sha256": "190a65e3541558d52f49669aee1a7917be60348e085f99a0cc16e9722dbeb1cc"
     },
     {
       "path": "tests/wordmark-baseline.json",
