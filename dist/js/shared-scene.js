@@ -9,9 +9,10 @@ export function sharedSceneOffset(top, worldHeight, artworkHeight) {
  * Reads rendered geometry, so native scrolling and transformed smooth scrolling
  * use exactly the same calculation. Never creates a canvas or renderer.
  */
-export function createSharedScene(world) {
+export function createSharedScene(world, options = {}) {
   const win=typeof window==='undefined'?null:window;
   const doc=typeof document==='undefined'?null:document;
+  const nativeSticky=!!options.nativeTouch&&!!win?.CSS?.supports?.('overflow','clip')&&!!win?.CSS?.supports?.('height','100lvh');
   const artwork=world?.querySelector?.('[data-shared-artwork]');
   const hero=world?.querySelector?.('#home');
   const motion=win?.matchMedia?.('(prefers-reduced-motion: reduce)');
@@ -63,7 +64,7 @@ export function createSharedScene(world) {
     const artworkHeight=artwork.clientHeight||win.innerHeight||0;
     const offset=sharedSceneOffset(rect.top,worldHeight,artworkHeight);
     const transform=`translate3d(0,${Math.round(offset*1000)/1000}px,0)`;
-    if(transform!==lastTransform){artwork.style.transform=transform;lastTransform=transform;}
+    if(!nativeSticky&&transform!==lastTransform){artwork.style.transform=transform;lastTransform=transform;}
     // The viewport remains bounded while its field samples a continuous world.
     // At zero scroll every value is the original first-screen presentation.
     const heroHeight=hero?.offsetHeight||artworkHeight||1;

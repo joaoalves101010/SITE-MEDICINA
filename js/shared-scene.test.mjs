@@ -133,3 +133,9 @@ test('reduced motion suppresses field/lens translation but keeps the second fold
   shared.dispose();assert.equal(env.handlers.size,0);
  }finally{env.restore();}
 });
+
+test('touch-first compositor positioning never writes a compensating transform while field/lens offsets remain reversible',()=>{
+ const env=environment({height:3200});window.CSS={supports:()=>true};const offsets=[],hero=renderer();hero.setScrollOffset=(...values)=>offsets.push(values);
+ try{const shared=createSharedScene(env.world,{nativeTouch:true});shared.bindRenderer(hero);for(const top of [0,-120,-800,-1900,-400,0]){env.world.top=top;shared.update();assert.equal(env.artwork.style.transform,undefined);assert.deepEqual(offsets.at(-1),[Math.max(0,Math.min(2400,-top)),800]);}window.innerHeight=650;env.fire('window:resize');assert.equal(env.artwork.style.transform,undefined);assert.equal(env.artwork.clientHeight,800);shared.dispose();}
+ finally{env.restore();}
+});

@@ -66,6 +66,6 @@ test('isolated home enhancement supports lifecycle, static mobile and reduced-mo
   assert.ok(css.includes('.shared-artwork[data-render-mode="pending"]'));assert.ok(css.includes('.shared-artwork[data-render-mode="fallback"]'));assert.ok(css.includes('touch-action:pan-y'));assert.ok(css.includes('[data-globe-dragging="true"]'));
   assert.ok(renderScienceSection().includes('science-globe-hint'));assert.ok(!renderScienceSection().includes('science-background-canvas'));
   assert.equal((renderDocument({page:'home'}).match(/class="hero-canvas"/g)||[]).length,1);
-  assert.ok(!app.includes("import('./science-background.js')"));assert.ok(app.includes('sharedScene.dispose()'));assert.ok(app.includes('sharedScene.setVisible(false)'));assert.ok(app.includes('onScroll(y=window.scrollY){sharedScene.update()'));
+  assert.ok(!app.includes("import('./science-background.js')"));assert.ok(app.includes('sharedScene.dispose()'));assert.ok(app.includes('sharedScene.setVisible(false)'));assert.ok(app.includes('onScroll(y=window.scrollY){if(!nativeTouch){sharedScene.update();experienceController?.update();}'));assert.ok(app.includes('requestAnimationFrame(()=>{scrollFrame=0;if(nativeTouch){sharedScene.update();experienceController?.update();}'));
   for(const {page,slug} of baseline.rendered.filter(r=>r.page!=='home'))assert.ok(!renderDocument({page,slug}).includes('science-section'));
 });

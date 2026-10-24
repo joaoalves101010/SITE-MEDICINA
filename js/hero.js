@@ -33,7 +33,7 @@ export function getHeroScrollState(offsetPx=0, heroHeightPx=1, reducedMotion=fal
 
 /**
  * @param {HTMLCanvasElement} canvas Decorative, aria-hidden canvas.
- * @param {{intro?: boolean, forceFallback?: boolean, pixelRatio?: number, timeoutMs?: number, loadRuntime?: Function, getInitialScrollState?: Function}} options
+ * @param {{intro?: boolean, forceFallback?: boolean, pixelRatio?: number, timeoutMs?: number, loadRuntime?: Function, getInitialScrollState?: Function, stableResize?: boolean}} options
  * @returns {Promise<{mode:string,reason:string,dispose:Function,reveal:Function,setVisible:Function,setScrollOffset:Function}>}
  * intro=true preserves reference 0.35s/4s/5s artwork opening timing. Call reveal()
  * to skip the opening for returning navigation. Reduced motion renders one still.
@@ -302,7 +302,9 @@ export async function initHero(canvas, options = {}) {
     }
     function onResize() {
       if (disposed || mode !== 'webgl') return;
-      ({ width, height } = size());
+      const nextSize=size();
+      if(options.stableResize&&nextSize.width===width&&nextSize.height===height)return;
+      ({ width, height } = nextSize);
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
       renderer.setSize(width, height, false);

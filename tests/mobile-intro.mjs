@@ -1,3 +1,4 @@
+import {restoreJourneyGuideSource,restoreJourneyGuideHTML} from './journey-guide-normalize.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
@@ -15,7 +16,7 @@ test('native-touch and welcome changes preserve every existing asset, shader, ar
  for(const[path,expected]of Object.entries(baseline.protected)){const bytes=await readFile(new URL('../'+path,import.meta.url));assert.equal(hash(restoreMobileIntroSource(path,bytes)),expected,path);}
 });
 test('eleven other documents are exact; home changes only its reviewed first-paint head gate and local stylesheet',()=>{
- for(const row of baseline.routes){const html=renderDocument({...row.route,build:baseline.buildToken});if(row.route.page==='home'){assert.equal(hash(restoreMobileIntroHTML(html)),row.sha256);assert.equal((html.match(/data-home-intro-bootstrap/g)||[]).length,1);assert.ok(html.indexOf('data-home-intro-bootstrap')<html.indexOf('/css/main.css'));assert.ok(patches.html.every(p=>p.old===''&&html.indexOf(p.new)<html.indexOf('</head>')));assert.equal(restoreMobileIntroHTML(html).split('</head>')[1],html.split('</head>')[1],'body content and layout markup are untouched');}else{assert.equal(hash(html),row.sha256,row.route.slug||row.route.page);assert.doesNotMatch(html,/data-home-intro-bootstrap|\/css\/home-intro\.css/);}}
+ for(const row of baseline.routes){const html=renderDocument({...row.route,build:baseline.buildToken});if(row.route.page==='home'){assert.equal(hash(restoreMobileIntroHTML(html)),row.sha256);assert.equal((html.match(/data-home-intro-bootstrap/g)||[]).length,1);assert.ok(html.indexOf('data-home-intro-bootstrap')<html.indexOf('/css/main.css'));assert.ok(patches.html.every(p=>p.old===''&&html.indexOf(p.new)<html.indexOf('</head>')));assert.equal(restoreMobileIntroHTML(html).split('</head>')[1],restoreJourneyGuideHTML(html).split('</head>')[1],'body content and layout markup are untouched');}else{assert.equal(hash(html),row.sha256,row.route.slug||row.route.page);assert.doesNotMatch(html,/data-home-intro-bootstrap|\/css\/home-intro\.css/);}}
 });
 test('exact patch reversal cannot conceal unrelated mutations or duplicate the new integration',async()=>{
  const app=await readFile(new URL('../js/app.js',import.meta.url),'utf8'),home=renderDocument({page:'home'});
@@ -25,7 +26,7 @@ test('exact patch reversal cannot conceal unrelated mutations or duplicate the n
  const patch=patches.source['js/viscose-engine.js'][0];assert.notEqual(restoreMobileIntroSource('js/viscose-engine.js',patch.new+patch.new),patch.old+patch.old);
 });
 test('touch-first native scrolling and fresh home welcome are integrated before the asynchronous motion import',async()=>{
- const app=await readFile(new URL('../js/app.js',import.meta.url),'utf8');assert.match(app,/const nativeTouch=usesNativeTouchScroll\(window\)/);assert.match(app,/if\(!reduce\.matches&&!nativeTouch\)\{scroll=new motion\.LocomotiveScroll/);assert.match(app,/getScrollY:\(\)=>currentScrollY\(\)/);assert.match(app,/nativeTouch\?setNativeScrollImmediate\(window,target\):setBookScrollImmediate\(scroll,target\)/);assert.doesNotMatch(app,/innecta-intro-seen|sessionStorage|localStorage/);assert.ok(app.indexOf('const homeIntro=initHomeIntro')<app.indexOf("await import('./vendor/motion.js')"));assert.match(app,/homeIntro\.dispose\(\)/);assert.match(app,/nativeScrollLock\?\.dispose\(\)/);
+ const app=restoreJourneyGuideSource('js/app.js',await readFile(new URL('../js/app.js',import.meta.url),'utf8'));assert.match(app,/const nativeTouch=usesNativeTouchScroll\(window\)/);assert.match(app,/if\(!reduce\.matches&&!nativeTouch\)\{scroll=new motion\.LocomotiveScroll/);assert.match(app,/getScrollY:\(\)=>currentScrollY\(\)/);assert.match(app,/nativeTouch\?setNativeScrollImmediate\(window,target\):setBookScrollImmediate\(scroll,target\)/);assert.doesNotMatch(app,/innecta-intro-seen|sessionStorage|localStorage/);assert.ok(app.indexOf('const homeIntro=initHomeIntro')<app.indexOf("await import('./vendor/motion.js')"));assert.match(app,/homeIntro\.dispose\(\)/);assert.match(app,/nativeScrollLock\?\.dispose\(\)/);
  const book=await readFile(new URL('../js/book-controller.js',import.meta.url),'utf8');assert.match(book,/const stable=usesNativeTouchScroll\(win\)/);
 });
 test('book reading holds, reversible smoothstep pose and total travel keep the approved geometric formula',()=>{

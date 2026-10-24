@@ -2,6 +2,14 @@
 
 > **Documento de continuidade — atualizado em 24 de outubro de 2026.** Descreve a versão atual da landing page, suas decisões aprovadas, a organização técnica e os limites conhecidos. É um ponto de partida para manter o projeto sem reconstruir decisões antigas ou confundir a apresentação com o produto completo.
 
+## Estado vigente após análise do vídeo mobile — 24/10/2026
+
+**Esta revisão substitui as descrições anteriores do livro como componente ativo.** O livro foi removido da home em todas as telas e substituído pelo guia de próximos passos (`#team`). Não há canvas, páginas, pin ou hooks do livro na página; os arquivos antigos são históricos.
+
+No mobile por toque, a galeria mostra fotos grandes imediatamente, com deslizamento horizontal nativo, botões e detalhes, sem intro líquida, atlas ou GPU. Desktop mantém a apresentação líquida. O fundo hero/ciência usa sticky nativo, altura estável e `overflow:clip`; a atualização de uniforms é agrupada por frame. Um gesto posterior cancela o salto automático de um hash inicial aguardando o término da saudação. A saudação de cada reload permanece.
+
+A gravação recebida demonstrou os problemas da versão anterior; não constitui teste da correção. Testes de código e preservação passam, mas confirmação em Safari/iPhone físico continua necessária. Consulte `MOBILE-SAFARI.md` e `JOURNEY-GUIDE.md`; seções históricas abaixo documentam a evolução, não autorização para reativar o livro.
+
 ## 1. O que é este projeto
 
 Esta é uma experiência de apresentação da **the med | Your Medical Journey**, voltada à trajetória acadêmica e à formação médica. A proposta conecta organização da rotina, currículo, residência, oportunidades, pesquisa, ligas, conhecimento e orientação.

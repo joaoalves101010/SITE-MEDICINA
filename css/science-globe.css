@@ -85,3 +85,12 @@
 .home-content>#partners:before{top:0;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 30%);mask-image:linear-gradient(to bottom,transparent,#000 30%)}
 #partners>#works.legacy-anchor{position:absolute;display:block;top:0;left:0;width:0;height:0;margin:0;padding:0;pointer-events:none}
 @media(max-width:1023px){.home-content>#partners{padding-top:12vw}}
+
+/* Touch-first: native compositor owns position, not a delayed JS scroll transform. */
+@supports(overflow:clip) and (height:100lvh){
+ @media(pointer:coarse),(hover:none) and (pointer:none){
+  body[data-page="home"]>main{overflow:clip}
+  .home-world{overflow:clip}
+  body[data-page="home"] .home-world>.shared-artwork{position:sticky;top:0;height:100lvh;margin-bottom:-100lvh;transform:none!important;will-change:auto}
+ }
+}

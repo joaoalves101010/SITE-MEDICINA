@@ -1,5 +1,5 @@
 import { initHomeIntro } from './home-intro.js';
-import { usesNativeTouchScroll, readScrollPosition, setNativeScrollImmediate, createNativeScrollLock } from './scroll-policy.js';
+import { usesNativeTouchScroll, readScrollPosition, setNativeScrollImmediate, setSmoothScrollImmediate, createNativeScrollLock, createDeferredNavigationGuard } from './scroll-policy.js';
 import { createSharedScene } from './shared-scene.js';
 import { initHero } from './hero.js';
 import { createHeroCopyCycle } from './hero-copy.js';
@@ -23,20 +23,21 @@ const cleanups=[];
 const on=(el,event,handler,options)=>{el?.addEventListener(event,handler,options);cleanups.push(()=>el?.removeEventListener(event,handler,options));};
 // Start the artwork independently: motion/scroll initialization cannot delay its first frame.
 const canvas=$('.hero-canvas');
-const sharedScene=createSharedScene($('[data-shared-scene]'));
+const sharedScene=createSharedScene($('[data-shared-scene]'),{nativeTouch});
 const homeIntro=initHomeIntro({hero:$('#home')});
+const initialNavigation=createDeferredNavigationGuard(document,nativeTouch&&!!homeIntro.initialHash);
 const intro=!!canvas&&document.body.dataset.page==='home'&&homeIntro.intro&&!reduce.matches;
 let pageGone=false;
-if(canvas)initHero(canvas,{intro,getInitialScrollState:sharedScene.getInitialScrollState}).then(controller=>{if(pageGone)controller.dispose();else{heroController=controller;sharedScene.bindRenderer(controller);}}).catch(()=>{
+if(canvas)initHero(canvas,{intro,stableResize:nativeTouch,getInitialScrollState:sharedScene.getInitialScrollState}).then(controller=>{if(pageGone)controller.dispose();else{heroController=controller;sharedScene.bindRenderer(controller);}}).catch(()=>{
   (canvas.closest('[data-shared-artwork]')||canvas.closest('.hero')||canvas.parentElement).dataset.renderMode='fallback';canvas.style.opacity='0';
 });
 // The second-fold globe is isolated from the working hero and loads only on home.
-let bookController;
-const bookRoot=$('[data-book]');
-if(bookRoot)import('./book-controller.js').then(({createBookController,setBookScrollImmediate})=>{if(pageGone)return;bookController=createBookController(bookRoot,{scrollTo,scrollImmediate:target=>nativeTouch?setNativeScrollImmediate(window,target):setBookScrollImmediate(scroll,target),getScrollY:()=>currentScrollY(),onLayout:()=>updateScroll()});}).catch(()=>{bookRoot.dataset.bookState='static';});
+let journeyGuide;
+const journeyRoot=$('[data-journey-guide]');
+if(journeyRoot)import('./journey-guide-controller.js').then(({createJourneyGuide})=>{if(!pageGone)journeyGuide=createJourneyGuide(journeyRoot,{onLayout:()=>updateScroll()});}).catch(()=>{/* All three paths remain readable without enhancement. */});
 let experienceController;
 const experienceRoot=$('[data-experience-section]');
-if(experienceRoot)Promise.all([import('./medical-experiences-controller.js'),import('./book-drag.js')]).then(([{createMedicalExperiences},{setBookScrollImmediate}])=>{if(pageGone)return;experienceController=createMedicalExperiences(experienceRoot,{scrollTo,nativeTouch,scrollImmediate:target=>nativeTouch?setNativeScrollImmediate(window,target):setBookScrollImmediate(scroll,target),getScrollY:()=>currentScrollY(),onLayout:()=>updateScroll()});}).catch(()=>{experienceRoot.dataset.state='static';});
+if(experienceRoot)import('./medical-experiences-controller.js').then(({createMedicalExperiences})=>{if(pageGone)return;experienceController=createMedicalExperiences(experienceRoot,{scrollTo,nativeTouch,scrollImmediate:target=>nativeTouch?setNativeScrollImmediate(window,target):setSmoothScrollImmediate(scroll,target),getScrollY:()=>currentScrollY(),onLayout:()=>updateScroll()});}).catch(()=>{experienceRoot.dataset.state='static';});
 let scienceController;
 const scienceRoot=$('[data-science-globe]');
 if(scienceRoot)import('./science-globe.js').then(({initScienceGlobe})=>initScienceGlobe(scienceRoot)).then(controller=>{if(pageGone)controller?.dispose();else scienceController=controller;}).catch(()=>{scienceRoot.dataset.globeState='fallback';});
@@ -58,7 +59,7 @@ on(document,'click',event=>{const anchor=event.target.closest('a[href]');if(!anc
 const revealElements=$$('.reveal');
 if('IntersectionObserver' in window&&!reduce.matches){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-inview');observer.unobserve(entry.target);}}),{rootMargin:'0px 0px 5% 0px',threshold:.01});revealElements.forEach(el=>{if(el.getBoundingClientRect().top<innerHeight)el.classList.add('is-inview');else observer.observe(el);});document.documentElement.classList.add('motion-ready');cleanups.push(()=>observer.disconnect());}else revealElements.forEach(el=>el.classList.add('is-inview'));
 
-function onScroll(y=window.scrollY){sharedScene.update();bookController?.update();experienceController?.update();const diff=y-lastY;if(Math.abs(diff)>2){document.body.classList.toggle('sc-down',diff>0&&y>100);lastY=y;}if(scrollFrame)return;scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;const h=innerHeight;const footer=$('[data-footer]');document.body.classList.toggle('light-section',!!footer&&footer.getBoundingClientRect().top<h*.65);if(reduce.matches)return;$$('.manifesto-lines>span').forEach(line=>{const rect=line.getBoundingClientRect();const progress=Math.max(0,Math.min(1,(h*.82-rect.top)/(h*.55)));line.style.setProperty('--mask',1-progress);});$$('[data-marquee]').forEach(el=>{const rect=el.parentElement.getBoundingClientRect();el.style.transform=`translate3d(${(h*.5-rect.top)*-.16}px,0,0)`;});$$('[data-tile-row]').forEach((el,i)=>{const rect=el.closest('.tiles').getBoundingClientRect();el.style.transform=`translate3d(${(h*.5-rect.top)*.075*(i%2?1:-1)}px,0,0)`;});if(innerWidth>=1024)$$('[data-parallax]').forEach(el=>{const rect=el.parentElement.getBoundingClientRect();const progress=Math.max(-1,Math.min(1,(h*.5-rect.top-rect.height*.5)/h));el.style.translate=`0 ${progress*Number(el.dataset.parallax)*36}px`;});});}
+function onScroll(y=window.scrollY){if(!nativeTouch){sharedScene.update();experienceController?.update();}const diff=y-lastY;if(Math.abs(diff)>2){document.body.classList.toggle('sc-down',diff>0&&y>100);lastY=y;}if(scrollFrame)return;scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;if(nativeTouch){sharedScene.update();experienceController?.update();}const h=innerHeight;const footer=$('[data-footer]');document.body.classList.toggle('light-section',!!footer&&footer.getBoundingClientRect().top<h*.65);if(reduce.matches)return;$$('.manifesto-lines>span').forEach(line=>{const rect=line.getBoundingClientRect();const progress=Math.max(0,Math.min(1,(h*.82-rect.top)/(h*.55)));line.style.setProperty('--mask',1-progress);});$$('[data-marquee]').forEach(el=>{const rect=el.parentElement.getBoundingClientRect();el.style.transform=`translate3d(${(h*.5-rect.top)*-.16}px,0,0)`;});$$('[data-tile-row]').forEach((el,i)=>{const rect=el.closest('.tiles').getBoundingClientRect();el.style.transform=`translate3d(${(h*.5-rect.top)*.075*(i%2?1:-1)}px,0,0)`;});if(innerWidth>=1024)$$('[data-parallax]').forEach(el=>{const rect=el.parentElement.getBoundingClientRect();const progress=Math.max(-1,Math.min(1,(h*.5-rect.top-rect.height*.5)/h));el.style.translate=`0 ${progress*Number(el.dataset.parallax)*36}px`;});});}
 on(window,'scroll',()=>onScroll(),{passive:true});
 
 // Original local GSAP/Locomotive machinery is progressive enhancement.
@@ -89,7 +90,7 @@ on(dialog,'click',event=>{if(event.target.closest('[data-modal-close]'))closePro
 on(dialog,'cancel',event=>{event.preventDefault();closeProfile();});
 on(dialog,'keydown',event=>{if(event.key==='ArrowRight')renderCarousel(1);if(event.key==='ArrowLeft')renderCarousel(-1);});
 on(window,'popstate',event=>{const profile=profileFromHash();if(profile)openProfile(profile,false);else{dismissProfile();const target=location.hash?document.getElementById(decodeURIComponent(location.hash.slice(1))):null;if(typeof event.state?.innectaScrollY==='number')scrollTo(event.state.innectaScrollY,0);else if(target)scrollTo(target,0);else scrollTo(0,0);}});
-const initialProfileHash=homeIntro.initialHash||location.hash,initialProfile=profileFromHash(initialProfileHash);if(initialProfile){if(homeIntro.intro)homeIntro.whenStarted.then(()=>{if(!pageGone)setTimeout(()=>{if(!pageGone&&location.hash===initialProfileHash)openProfile(initialProfile,false);},homeIntro.remainingMs);});else openProfile(initialProfile,false);}
+const initialProfileHash=homeIntro.initialHash||location.hash,initialProfile=profileFromHash(initialProfileHash);if(initialProfile){if(homeIntro.intro)homeIntro.whenStarted.then(()=>{if(!pageGone)setTimeout(()=>{if(!pageGone&&location.hash===initialProfileHash)initialNavigation.run(()=>openProfile(initialProfile,false));},homeIntro.remainingMs);});else openProfile(initialProfile,false);}
 
 // Unobtrusive demonstration disclaimer; never invent client/people claims.
 const notice=document.createElement('p');notice.className='interface-notice';notice.textContent=imageNotice;
@@ -98,10 +99,10 @@ const noticeTarget=$('.project--details')||$('#directory-grid')||$('.reel-captio
 // Cursor is an addition, not a replacement for the system pointer.
 const cursor=$('.dot-cursor');
 if(cursor&&matchMedia('(pointer:fine)').matches&&!reduce.matches){on(document,'pointermove',event=>{cursor.style.left=`${event.clientX}px`;cursor.style.top=`${event.clientY}px`;cursor.style.opacity='1';const target=event.target.closest('[data-cursor]');cursor.classList.toggle('active',!!target);$('span',cursor).textContent=target?.dataset.cursor||'';},{passive:true});on(document,'pointerleave',()=>cursor.style.opacity='0');}
-const originalHash=homeIntro.initialHash||location.hash;if(originalHash&&!originalHash.startsWith('#percurso/')){const target=document.getElementById(decodeURIComponent(originalHash.slice(1)));if(target)homeIntro.whenStarted.then(()=>{if(!pageGone)setTimeout(()=>{if(!pageGone&&(!location.hash||location.hash===originalHash))scrollTo(target,0);},Math.max(250,homeIntro.remainingMs));});}
+const originalHash=homeIntro.initialHash||location.hash;if(originalHash&&!originalHash.startsWith('#percurso/')){const target=document.getElementById(decodeURIComponent(originalHash.slice(1)));if(target)homeIntro.whenStarted.then(()=>{if(!pageGone)setTimeout(()=>{if(!pageGone&&(!location.hash||location.hash===originalHash))initialNavigation.run(()=>scrollTo(target,0));},Math.max(250,homeIntro.remainingMs));});}
 // Lifecycle cleanup keeps back/forward cache and context recovery predictable.
-on(window,'pagehide',event=>{if(event.persisted){scroll?.stop();heroController?.setVisible(false);scienceController?.setVisible(false);bookController?.setVisible(false);experienceController?.setVisible(false);sharedScene.setVisible(false);return;}pageGone=true;nativeScrollLock?.dispose();homeIntro.dispose();copyCycle.dispose();heroController?.dispose();scienceController?.dispose();bookController?.dispose();experienceController?.dispose();sharedScene.dispose();scroll?.destroy();cleanups.splice(0).forEach(fn=>fn());});
-on(window,'pageshow',event=>{if(event.persisted){navigating=false;gsap?.set([main,$('.site-header')].filter(Boolean),{clearProps:'opacity,transform'});const c=$('.dot-cursor');if(c){c.style.opacity='0';c.classList.remove('active');}scroll?.start();heroController?.setVisible(true);scienceController?.setVisible(true);bookController?.setVisible(true);experienceController?.setVisible(true);sharedScene.setVisible(true);updateScroll();}});
+on(window,'pagehide',event=>{if(nativeTouch)initialNavigation.dispose();if(event.persisted){scroll?.stop();heroController?.setVisible(false);scienceController?.setVisible(false);experienceController?.setVisible(false);sharedScene.setVisible(false);return;}pageGone=true;initialNavigation.dispose();nativeScrollLock?.dispose();homeIntro.dispose();copyCycle.dispose();heroController?.dispose();scienceController?.dispose();journeyGuide?.dispose();experienceController?.dispose();sharedScene.dispose();scroll?.destroy();cleanups.splice(0).forEach(fn=>fn());});
+on(window,'pageshow',event=>{if(event.persisted){navigating=false;gsap?.set([main,$('.site-header')].filter(Boolean),{clearProps:'opacity,transform'});const c=$('.dot-cursor');if(c){c.style.opacity='0';c.classList.remove('active');}scroll?.start();heroController?.setVisible(true);scienceController?.setVisible(true);experienceController?.setVisible(true);sharedScene.setVisible(true);updateScroll();}});
 document.body.dataset.ready='true';updateScroll();
 
 // Source-style route choreography around normal, directly loadable HTML links.

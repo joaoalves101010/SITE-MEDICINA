@@ -137,3 +137,28 @@ body.experience-reading-active .site-header{opacity:0;pointer-events:none}
 .experience-waiting figcaption{font-size:12px;line-height:1.4;letter-spacing:.01em;color:#d5c7c9}
 .medical-experiences[data-entry-waiting="true"] .experience-waiting{opacity:1;visibility:visible;transition:none}
 @media(prefers-reduced-motion:reduce){.experience-waiting{transition:none}}
+
+/* Native touch gallery: large SSR photos at first paint, never the desktop intro seed. */
+@media (pointer:coarse),(hover:none) and (pointer:none){
+.medical-experiences .experience-stage{display:block;position:relative;height:auto;min-height:0;overflow:visible;touch-action:pan-x pan-y pinch-zoom}
+.medical-experiences .experience-ring{position:relative;inset:auto;display:flex;align-items:stretch;gap:4vw;width:100%;height:auto;padding:0 6.4vw 12px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;scroll-padding-inline:6.4vw;overscroll-behavior-x:contain;touch-action:pan-x pan-y pinch-zoom;-webkit-overflow-scrolling:touch;pointer-events:auto;opacity:1;scrollbar-width:thin;scrollbar-color:#d7a5b766 transparent}
+.medical-experiences .experience-card{position:relative;inset:auto;flex:0 0 87.2vw;width:87.2vw;height:auto;aspect-ratio:3/2;border-radius:8px;transform:none;opacity:1;will-change:auto;scroll-snap-align:center;backface-visibility:visible}
+.medical-experiences .experience-card img{width:100%;height:100%;aspect-ratio:3/2;object-fit:cover}
+.medical-experiences .experience-canvas,.medical-experiences .experience-meta,.medical-experiences .experience-entry-title,.medical-experiences .experience-waiting,.medical-experiences .experience-index,.medical-experiences .experience-cursor-tag,.medical-experiences .experience-continue{display:none}
+.medical-experiences .experience-navigation{margin-top:18px;margin-bottom:7vw;align-items:center;gap:16px}
+.medical-experiences .experience-hint{max-width:19em;font-size:11px;line-height:1.5}
+.medical-experiences .experience-arrows button{width:44px;height:44px}
+.medical-experiences .experience-arrows button:disabled{opacity:.35}
+}
+
+.medical-experiences[data-state="native"] .experience-stage{display:block;position:relative;height:auto;min-height:0;overflow:visible;touch-action:pan-x pan-y pinch-zoom}
+.medical-experiences[data-state="native"] .experience-ring{position:relative;inset:auto;display:flex;align-items:stretch;gap:4vw;width:100%;height:auto;padding:0 6.4vw 12px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;scroll-padding-inline:6.4vw;overscroll-behavior-x:contain;touch-action:pan-x pan-y pinch-zoom;-webkit-overflow-scrolling:touch;pointer-events:auto;opacity:1;scrollbar-width:thin;scrollbar-color:#d7a5b766 transparent}
+.medical-experiences[data-state="native"] .experience-card{position:relative;inset:auto;flex:0 0 87.2vw;width:87.2vw;height:auto;aspect-ratio:3/2;border-radius:8px;transform:none;opacity:1;will-change:auto;scroll-snap-align:center;backface-visibility:visible}
+.medical-experiences[data-state="native"] .experience-card img{width:100%;height:100%;aspect-ratio:3/2;object-fit:cover}
+.medical-experiences[data-state="native"] .experience-canvas,.medical-experiences[data-state="native"] .experience-meta,.medical-experiences[data-state="native"] .experience-entry-title,.medical-experiences[data-state="native"] .experience-waiting,.medical-experiences[data-state="native"] .experience-index,.medical-experiences[data-state="native"] .experience-cursor-tag,.medical-experiences[data-state="native"] .experience-continue{display:none}
+.medical-experiences[data-state="native"] .experience-navigation{margin-top:18px;margin-bottom:7vw;align-items:center;gap:16px}
+.medical-experiences[data-state="native"] .experience-hint{max-width:19em;font-size:11px;line-height:1.5}
+.medical-experiences[data-state="native"] .experience-arrows button{width:44px;height:44px}
+.medical-experiences[data-state="native"] .experience-arrows button:disabled{opacity:.35}
+.medical-experiences[data-state="native"] .experience-static-photo{display:none}
+.medical-experiences[data-state="native"] .experience-details{display:block}

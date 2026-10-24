@@ -31,3 +31,24 @@ export function createNativeScrollLock(win=window,doc=win.document){
  }
  return {set,dispose(){set(false);},get position(){return saved?.y;},get locked(){return !!saved;}};
 }
+
+/** Existing desktop vendor immediate path, shared without loading the removed book. */
+export function setSmoothScrollImmediate(scroll,target,win=window){
+ if(!Number.isFinite(target))return;
+ const engine=scroll?.scroll;
+ if(engine?.instance&&typeof engine.stopScrolling==='function'&&typeof engine.checkScroll==='function'&&typeof scroll.setScroll==='function'){
+  const limit=Number.isFinite(engine.instance.limit?.y)?engine.instance.limit.y:target;
+  engine.stopScrolling();engine.animatingScroll=false;
+  scroll.setScroll(engine.instance.scroll.x||0,Math.max(0,Math.min(target,Math.max(0,limit))));
+  engine.checkScroll(true);
+ }else setNativeScrollImmediate(win,target);
+}
+
+/** A delayed reload/deep-link restoration must not override a person's newer gesture. */
+export function createDeferredNavigationGuard(doc=globalThis.document,enabled=false){
+ let interrupted=false,finished=false;const cleanups=[];
+ const cancel=event=>{if(event?.type==='keydown'&&!['ArrowDown','ArrowUp','PageDown','PageUp','Home','End',' ','Spacebar'].includes(event.key))return;interrupted=true;};
+ if(enabled)for(const type of ['touchmove','wheel','keydown']){const listener=event=>cancel({...event,type,key:event.key});const options={passive:true};doc?.addEventListener?.(type,listener,options);cleanups.push(()=>doc?.removeEventListener?.(type,listener,options));}
+ function dispose(){finished=true;cleanups.splice(0).forEach(fn=>fn());}
+ return {run(callback){if(finished)return false;const allowed=!interrupted;dispose();if(allowed)callback();return allowed;},dispose,get interrupted(){return interrupted;}};
+}

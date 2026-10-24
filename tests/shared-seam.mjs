@@ -26,7 +26,7 @@ test('one shared canvas spans both sections; no second scene or join gradient re
 test('shared viewport follows existing scroll before throttled effects and retains original intro',async()=>{
   const app=await readFile(new URL('../js/app.js',import.meta.url),'utf8');
   assert.equal((app.match(/initHero\(canvas/g)||[]).length,1);
-  assert.ok(app.includes('onScroll(y=window.scrollY){sharedScene.update()'));
+  assert.ok(app.includes('onScroll(y=window.scrollY){if(!nativeTouch){sharedScene.update();experienceController?.update();}'));assert.ok(app.includes('requestAnimationFrame(()=>{scrollFrame=0;if(nativeTouch){sharedScene.update();experienceController?.update();}'));
   assert.ok(app.includes("const homeIntro=initHomeIntro({hero:$('#home')});"));
   assert.ok(!app.includes('initScienceBackground'));
   const css=await readFile(new URL('../css/science-globe.css',import.meta.url),'utf8');

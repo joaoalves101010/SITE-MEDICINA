@@ -100,6 +100,10 @@
     {
       "fixture": "mobile-intro-baseline.json",
       "sha256": "988a7f118c5863f66e9c0bc25f3931038047ec0634a8effd8773513bed5ed7f1"
+    },
+    {
+      "fixture": "journey-guide-baseline.json",
+      "sha256": "472396a8c7793bc982952741c2d9a4babcf87b0674968a2c541fdecbe8c1ead2"
     }
   ]
 }

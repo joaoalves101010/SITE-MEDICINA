@@ -1,3 +1,5 @@
+> **Histórico: livro removido da home em 24/10/2026.** A apresentação ativa foi substituída por `JOURNEY-GUIDE.md`. Este documento e seus arquivos preservam somente a implementação anterior; não são carregados pela home.
+
 # Livro editorial médico — the med
 
 Identidade atual: **the med | Your Medical Journey** (24/10/2026), após as etapas Innecta e Interny. A capa e os rótulos autorais usam o **wordmark vetorial 02 em minúsculas**, com os mesmos contornos de `js/wordmark.js` e `assets/the-med-wordmark.svg`. Não é um logo digitado em Roobert. Textos editoriais continuam em Roobert; ilustrações médicas, camadas, paleta e mecânica permanecem preservadas. **OS** continua apenas no motivo/índice contextual, não na marca principal.

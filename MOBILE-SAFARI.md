@@ -1,24 +1,35 @@
-# Rolagem móvel e abertura — 24/10/2026
+# Mobile Safari: rolagem e apresentação
 
-Revisão motivada por um relato de rolagem instável no **iPhone 14 / Safari**. O comportamento de desktop aprovado continua usando o mesmo runtime de rolagem, geometria, física da galeria, arte e gestos do livro.
+## Revisão orientada pelo vídeo — 24/10/2026
 
-## Alterações delimitadas
+Um vídeo de uso real em iPhone 14/Safari mostrou a galeria ainda na fase pequena de sua abertura enquanto a pessoa já avançava pela página. A fotografia ocupava aproximadamente 46–55 CSS pixels entre 14,5 e 16,5 segundos do registro; aos 17 segundos, os detalhes já estavam em vista. Aumentar a resolução do atlas não resolve esse atraso de apresentação. O vídeo não prova flash do novo documento antes da saudação: a página anterior aparece antes do indicador de recarregamento.
 
-- Dispositivos cujo ponteiro principal é de toque usam a rolagem nativa do navegador. Os controladores leem a posição real da janela, não uma posição virtual antiga.
-- No toque, a galeria começa sua introdução quando aparece de forma significativa, sem alinhar compulsoriamente a página nem prender o gesto vertical. O gesto horizontal deliberado e os botões continuam selecionando instituições. No desktop, a introdução e a sequência finita das oito instituições continuam com o controle de scroll aprovado e saídas acessíveis.
-- O percurso do livro mantém uma altura estável durante mudanças da barra de endereço do navegador. Mudanças reais de largura/orientação recalculam a geometria e preservam a posição de leitura quando o livro está em foco.
-- Menu e modal conservam a posição nativa durante a abertura e a restauram ao fechar, sem deixar um bloqueio permanente de rolagem.
-- A saudação da home começa no primeiro paint em cada carregamento completo. Não usa um sinalizador de “já visto”. O gate inicial não depende de GSAP, WebGL ou de fontes carregadas; JavaScript ausente, movimento reduzido e falhas têm saída legível. Um watchdog independente limita a duração do gate.
-- Links com fragmento são respeitados após a abertura, sem mostrar previamente outra seção por restauração automática do navegador.
+A revisão atual, portanto, mantém a saudação de primeiro frame e muda **somente a experiência da galeria para entrada principal por toque**:
 
-## Evidência e limites
+- Fotografias grandes e nítidas desde a apresentação, usando os WebP autênticos existentes diretamente em `img`.
+- Deslizamento horizontal nativo, com snap por proximidade, botões, contador e detalhes da instituição escolhida.
+- Sem intro longa, shader, atlas, contexto WebGL, captura de gesto vertical, pin ou alinhamento automático nessa galeria móvel.
+- A rolagem vertical e o zoom permanecem do navegador; seleção por botões desloca apenas o contêiner horizontal.
+- Critérios de participação, datas, links oficiais e créditos das oito fotografias permanecem.
 
-Antes da revisão, um teste determinístico reproduziu um alinhamento programático da galeria enquanto um toque vertical ainda estava em andamento. Outro mostrou que mudar apenas a altura de viewport alterava o percurso e a página do livro no mesmo deslocamento. Os testes de regressão cobrem essas transições, o modo desktop, cancelamento, visibilidade, teclado, reload e as saídas de falha.
+O desktop conserva a galeria líquida, seu cursor, a abertura e a progressão finita por scroll. O livro foi removido de ambas as versões e substituído pelo guia leve descrito em `JOURNEY-GUIDE.md`.
 
-Testes de código e limites de recursos não substituem uma verificação no aparelho. A validação final de toque, barra de endereço, pinch zoom e nitidez do renderer deve ser repetida no iPhone/Safari e no navegador de desktop usado para aprovação. Esta revisão não altera conteúdo editorial, fotografias, SVGs de marca, backend ou destinos externos.
+## Infraestrutura mantida
 
-## Nitidez da galeria em telas Retina
+Dispositivos com entrada principal por toque usam rolagem nativa em vez de Locomotive. Coordenadas vêm do scroll real da janela. Menus e modais preservam/restauram o offset ao fechar. Desktop com ponteiro fino mantém o motor aprovado. O helper de posicionamento imediato neutraliza temporariamente `scroll-behavior:smooth`, sem deixar um bloqueio global.
 
-A política de qualidade é restrita a dispositivos com entrada principal por toque. O desktop mantém o atlas de 512 × 341 pixels por fotografia e o limite anterior de DPR 1,5. No mobile, o atlas usa células de 768 ou 1024 pixels de largura, respeitando `MAX_TEXTURE_SIZE` e 24 MiB de armazenamento RGBA base. O drawing buffer adapta o DPR até 3, com teto de 1,5 milhão de pixels; em uma área de 390 × 591 CSS pixels, o DPR calculado é aproximadamente 2,55 e o atlas ocupa 13,5 MiB. Esses valores não incluem memória adicional do driver, antialiasing, profundidade, compositor ou imagens decodificadas.
+A saudação da home inicia no head e reaparece em cada recarregamento completo. Não usa flag de sessão, não depende de WebGL e adia hashes até o fim da abertura. JavaScript indisponível, redução de movimento, erro ou watchdog mantêm a página utilizável. O vídeo não justificou uma nova alteração desse mecanismo.
 
-As fotografias autênticas existentes são reaproveitadas, sem ampliação por IA. O atlas e o contexto não são recriados a cada resize; alterações reais da área podem redimensionar apenas o drawing buffer. Os testes verificam limites, preservação da configuração desktop, identidade das imagens e liberação dos recursos. A nitidez percebida e a fluidez no iPhone físico ainda precisam de confirmação no dispositivo.
+## Recursos e limites da validação
+
+O caminho móvel da galeria deixa de alocar atlas/drawing buffer. A política Retina adicionada anteriormente permanece no motor histórico, mas não é executada pela galeria nativa. As imagens mantêm suas dimensões originais de distribuição e licenças; não há ampliação por IA.
+
+Testes cobrem a ausência de importação do motor no mobile, scroll horizontal local, seleção, teclado, resize, descarte, conteúdo sem JS e preservação do caminho desktop. O vídeo recebido foi evidência do problema anterior, não validação da versão corrigida. A aparência, fluidez e comportamento da nova versão ainda precisam ser confirmados em um iPhone físico; testes de código não substituem essa confirmação.
+
+## Continuidade visual e navegação diferida
+
+O vídeo também mostrou bordas retangulares do fundo da própria página durante o deslocamento. No mobile compatível, o fundo compartilhado de hero/ciência agora usa posicionamento sticky nativo, em vez de receber uma translação JavaScript a cada evento. `overflow:clip` nos ancestrais evita criar um contêiner de scroll que quebre o sticky; a altura estável de viewport grande cobre a área enquanto a barra do Safari muda. A margem negativa equivalente preserva a altura do conteúdo. O caminho desktop continua com sua compensação aprovada.
+
+As atualizações móveis de uniforms são agrupadas no RAF, e eventos de resize sem mudança real das dimensões do canvas não realocam o renderer/composer. Os testes verificam ausência de translação de posicionamento móvel, reversibilidade do campo/lente e zero realocações em mudanças apenas da barra, com recalibração em largura/orientação real.
+
+Foi identificado ainda um caminho capaz de sobrescrever um gesto: um hash inicial aguardava 6,8 segundos para deslocar a página após a saudação. A gravação não revela o fragmento da URL, portanto não prova que esse era o caso específico, embora o horário coincida com a descontinuidade observada. No mobile, touchmove, wheel ou tecla de navegação agora cancelam esse deslocamento automático pendente; o fragmento continua na URL. Saída/BFCache também invalida a ação atrasada. Nenhum desses listeners captura ou impede a rolagem.

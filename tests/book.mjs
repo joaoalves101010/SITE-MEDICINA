@@ -1,3 +1,5 @@
+import {renderBookSection} from '../js/book-section.js';
+import {restoreJourneyGuideSource} from './journey-guide-normalize.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
@@ -88,8 +90,8 @@ test('pending GPU allocation is also aborted when the book scrolls beyond the la
  const jobs=[];const env=fakeEnv({gpuFactory:(_canvas,options)=>new Promise(resolve=>{jobs.push(options);options.signal.addEventListener('abort',()=>resolve({mode:'fallback',dispose(){}}),{once:true});})});
  await flush();assert.equal(jobs.length,1);env.setTop(-10000);env.controller.update();assert.equal(jobs[0].signal.aborted,true);env.controller.dispose();await flush();
 });
-test('six original narratives and links survive in semantic HTML with original illustrations and no system screenshots',()=>{
- const home=renderHome();assert.ok(home.includes('data-book'));assert.ok(home.includes('id="team"'));assert.ok(!home.includes('class="members"'));
+test('archived book renderer preserves its six original narratives while the active home no longer renders it',()=>{
+ const home=renderBookSection();assert.ok(!renderHome().includes('data-book'));assert.ok(home.includes('data-book'));assert.ok(home.includes('id="team"'));assert.ok(!home.includes('class="members"'));
  for(const p of profiles){assert.ok(home.includes(p.displayTitle));assert.ok(home.includes(p.body));assert.ok(home.includes(p.href));}
  assert.equal((home.match(/data-book-chapter=/g)||[]).length,7);assert.equal((home.match(/data-book-jump=/g)||[]).length,7);
  const book=home.slice(home.indexOf('<section id="team"'),home.indexOf('<section id="team"')+home.slice(home.indexOf('<section id="team"')).indexOf('</section>'));assert.ok(!book.includes('/assets/tiles/'));assert.ok(!book.includes('Interfaces de demonstração'));assert.equal((book.match(/\/assets\/book-pages\//g)||[]).length,7);assert.ok(home.includes('data-book-skip'));
@@ -98,7 +100,7 @@ test('six original narratives and links survive in semantic HTML with original i
 test('protected homepage and scroll machinery differ only by the bounded book integration',async()=>{
  const templates=await readFile(new URL('../js/templates.js',import.meta.url),'utf8'),app=await readFile(new URL('../js/app.js',import.meta.url),'utf8');
  assert.equal(hash(restoreBookTemplate(templates)),bookBaseline.templatesSHA);assert.equal(restoreBookApp(app),bookBaseline.app);
- assert.ok(app.includes('sharedScene.update();bookController?.update();'));
+ assert.ok(restoreJourneyGuideSource('js/app.js',app).includes('sharedScene.update();bookController?.update();'));
  const controller=await readFile(new URL('../js/book-controller.js',import.meta.url),'utf8');assert.ok(!controller.includes("'wheel'"));assert.ok(!controller.includes("'touchmove'"));
  const css=await readFile(new URL('../css/book.css',import.meta.url),'utf8');assert.ok(css.includes('(max-height:700px)'));assert.ok(css.includes('prefers-reduced-motion:reduce'));
 });

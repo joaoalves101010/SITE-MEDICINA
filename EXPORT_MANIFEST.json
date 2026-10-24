@@ -1,6 +1,6 @@
 {
   "project": "the med | Your Medical Journey",
-  "generated_at": "2026-10-24T16:16:57.484658+00:00",
+  "generated_at": "2026-10-24T16:42:36.008982+00:00",
   "scope": "Portable sanitized editable static website, including built dist output. No repository history, hosting credentials, environment secrets or private QA files.",
   "entrypoint": "README.md",
   "context": "CONTEXTO_PROJETO.md",
@@ -8,8 +8,8 @@
   "base_path": "/",
   "github_pages_configured": false,
   "validation": {
-    "structural_assertions": 579,
-    "automated_tests": 347,
+    "structural_assertions": 569,
+    "automated_tests": 382,
     "syntax": "pass",
     "static_build": "pass",
     "private_path_identity_and_credential_pattern_scan": "no findings; heuristic, not a guarantee against every possible secret",
@@ -17,7 +17,7 @@
     "globe_regeneration": "Portable generator and all bundled inputs preserved from the prior public export; no external source checkout required.",
     "original_checkout": "unchanged",
     "brand_assets": "Approved vector wordmark and four symbol09 colour variants; no bitmap or font dependency in SVGs.",
-    "mobile": "Native-touch scroll, every-reload welcome and bounded Retina resources covered by automated tests; physical iPhone visual/performance validation remains pending."
+    "mobile": "Book removed; native photo gallery, compositor-sticky background and gesture-cancelled deferred anchors covered by automated tests; physical iPhone confirmation of the correction remains pending."
   },
   "export_adjustments": [
     "README and public handoff/licence/architecture documents",
@@ -28,7 +28,8 @@
     "23/10/2026: Interny rebrand, seven authored book compositions and identity regressions; preserved original UI/video, external URLs and portable build inputs.",
     "23/10/2026: wordmark letter-spacing -.11em to -.07em only; typography geometry otherwise unchanged, with exact scoped regression.",
     "24/10/2026: current the med vector wordmark02, symbol09/favicons/footer/intro, seven authored book compositions, lowercase document titles and eight four-section editorial module routes; approved motion and original external product media preserved.",
-    "24/10/2026: mobile-native scrolling, Safari stable book height, every-reload first-paint welcome and bounded Retina gallery quality; desktop physics and approved artwork preserved."
+    "24/10/2026: mobile-native scrolling, Safari stable book height, every-reload first-paint welcome and bounded Retina gallery quality; desktop physics and approved artwork preserved.",
+    "24/10/2026: book replaced by light next-step guide on all screens; touch-first native photo gallery, stable CSS-sticky background and cancellation of pending hash jumps after manual gestures. Desktop gallery physics and unrelated artwork preserved."
   ],
   "licensing": "Per-file third-party rights apply. Roobert and reference-derived materials require redistribution review; see FONTES_E_LICENCAS.md.",
   "inventory_excludes": "EXPORT_MANIFEST.json itself (avoid recursive hash)",
@@ -50,13 +51,13 @@
     },
     {
       "path": "BOOK-IMPLEMENTATION.md",
-      "bytes": 3072,
-      "sha256": "85a752ef0cc34f0e53e2a2d0ca51b03081db36f591d53458b70fb991be48f9b2"
+      "bytes": 3302,
+      "sha256": "2cfb7a3e18f6ca7baad045c725556728df7823a9abedf34c296832915747c6f3"
     },
     {
       "path": "CONTEXTO_PROJETO.md",
-      "bytes": 41410,
-      "sha256": "7f94bd6a95f0a4af1233fe4cd5d492a6bb2daabb2cdf9cf24645b1f3eeb9eeb2"
+      "bytes": 42592,
+      "sha256": "f570df6a9138686ea436ee06a9d66d63a52d2de5a98d04b8cb7da8d3632b843c"
     },
     {
       "path": "FONTES_E_LICENCAS.md",
@@ -69,14 +70,19 @@
       "sha256": "7d10ae6f444bf499f8b230510c369d3377614697fded6317ab852dd9c3086185"
     },
     {
+      "path": "JOURNEY-GUIDE.md",
+      "bytes": 2140,
+      "sha256": "e4926455fb170648d6910a98584128c270bc30d788220294739e4108bc58eccc"
+    },
+    {
       "path": "MEDICAL-EXPERIENCES-SOURCES.md",
       "bytes": 11242,
       "sha256": "c9ccf5acf682452e388face2ea35ecef8aa58f016e55f9ec4b9c609ccb0e5a81"
     },
     {
       "path": "MOBILE-SAFARI.md",
-      "bytes": 3529,
-      "sha256": "5be53d1462787d0cec378bb00b0b4e98279b46046c0e433bd239a08029a51ace"
+      "bytes": 4509,
+      "sha256": "1ef37877f7ef10756d9616fa99ff8c9897269467d046d7296cb714db28e6af3a"
     },
     {
       "path": "MODULES-EDITORIAL.md",
@@ -85,8 +91,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6679,
-      "sha256": "df7a4bb89c916a290a5fe366407f341cdc5212188b04b863e9c63a27f11f2f78"
+      "bytes": 6801,
+      "sha256": "0bc618725963518b3dd57c0bb2ccbd7d840a0cb28996f706160d450e4c076522"
     },
     {
       "path": "REBRAND-INTERNY.md",
@@ -574,14 +580,19 @@
       "sha256": "4e9164c75949c9e2d14a9b76c68b8883171ef0afc8a0126ae26f1b38f1b1d5d1"
     },
     {
+      "path": "css/journey-guide.css",
+      "bytes": 6783,
+      "sha256": "5b79f59058329fdc25e9709e58e14d10942d9aa64f6baa444110260276578adf"
+    },
+    {
       "path": "css/main.css",
       "bytes": 31116,
       "sha256": "67e2d85054ee21330282a950cda448e217a86f7dd7cd79e22f3ac9c602c058e7"
     },
     {
       "path": "css/medical-experiences.css",
-      "bytes": 15501,
-      "sha256": "9e158adaffcb541cf4b80c0310d8a483f89776a289fddb00867fea51150ca336"
+      "bytes": 19238,
+      "sha256": "6b10391ec1b59c0cf47ee3e208550789b7ecda7ed1d45ba5f31de6e4d57a7a30"
     },
     {
       "path": "css/module-experiences.css",
@@ -600,8 +611,8 @@
     },
     {
       "path": "css/science-globe.css",
-      "bytes": 11331,
-      "sha256": "a134edfa5f49fcb6d05eac98ec597f2b009afb01c162a19c061ec6fe2ff83c04"
+      "bytes": 11755,
+      "sha256": "99b453051230f21c68d0e5285c82d6795236c42ed22792f26391b31c3bca3428"
     },
     {
       "path": "css/tiles.css",
@@ -626,7 +637,7 @@
     {
       "path": "dist/404.html",
       "bytes": 8871,
-      "sha256": "fc27a2335786ca0c286a01772d3494286a09a635836ffd8590a4e51296cb093a"
+      "sha256": "83cc5ccb154483228e9495d2fc4ab1a018b54c599229e5a32236bbe22face79c"
     },
     {
       "path": "dist/assets/Roobert-Light.woff2",
@@ -1051,12 +1062,12 @@
     {
       "path": "dist/build.json",
       "bytes": 425,
-      "sha256": "7cdf272973f4b4f42b1f5467d9b62d64b6e3035d3a98890a968504d41f1fa449"
+      "sha256": "ca8d9035fbc2c9330e29414ae689ac3c22e969a288638ec3ff1c7d14dbed8a9e"
     },
     {
       "path": "dist/comunidade/index.html",
       "bytes": 30120,
-      "sha256": "d2651b5c89034eb58d8cd0481833f552e3dc601c7396e76a57d4c21541f11221"
+      "sha256": "b280dc811f7009ed8b45130fe486aaae0c22e3f62d980e90b02c0b03674cf826"
     },
     {
       "path": "dist/css/book-fallback.css",
@@ -1074,14 +1085,19 @@
       "sha256": "4e9164c75949c9e2d14a9b76c68b8883171ef0afc8a0126ae26f1b38f1b1d5d1"
     },
     {
+      "path": "dist/css/journey-guide.css",
+      "bytes": 6783,
+      "sha256": "5b79f59058329fdc25e9709e58e14d10942d9aa64f6baa444110260276578adf"
+    },
+    {
       "path": "dist/css/main.css",
       "bytes": 31116,
       "sha256": "67e2d85054ee21330282a950cda448e217a86f7dd7cd79e22f3ac9c602c058e7"
     },
     {
       "path": "dist/css/medical-experiences.css",
-      "bytes": 15501,
-      "sha256": "9e158adaffcb541cf4b80c0310d8a483f89776a289fddb00867fea51150ca336"
+      "bytes": 19238,
+      "sha256": "6b10391ec1b59c0cf47ee3e208550789b7ecda7ed1d45ba5f31de6e4d57a7a30"
     },
     {
       "path": "dist/css/module-experiences.css",
@@ -1100,8 +1116,8 @@
     },
     {
       "path": "dist/css/science-globe.css",
-      "bytes": 11331,
-      "sha256": "a134edfa5f49fcb6d05eac98ec597f2b009afb01c162a19c061ec6fe2ff83c04"
+      "bytes": 11755,
+      "sha256": "99b453051230f21c68d0e5285c82d6795236c42ed22792f26391b31c3bca3428"
     },
     {
       "path": "dist/css/tiles.css",
@@ -1125,13 +1141,13 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 84314,
-      "sha256": "f5f90ad150395f8729925869381ac58a16d0aca25c10c02fe3ae70eb251a5e51"
+      "bytes": 83458,
+      "sha256": "1224fbe03df87d4311fe62c57f2f9f494d59008818decc550334a7959909c2cc"
     },
     {
       "path": "dist/js/app.js",
-      "bytes": 18997,
-      "sha256": "0094f546b84267e4837df08be421731d32efe6ae7014c94811ceef570ad918b8"
+      "bytes": 19105,
+      "sha256": "e1ba59bd399127799a308cf0fe6e685fb414ae03543f112a815a313b822c1bf5"
     },
     {
       "path": "dist/js/book-art.js",
@@ -1155,8 +1171,8 @@
     },
     {
       "path": "dist/js/book-drag.test.mjs",
-      "bytes": 13092,
-      "sha256": "cc700570c00f02de18cd3672ddd7bf09f6a76c424271a9f0987000f560d5430f"
+      "bytes": 13211,
+      "sha256": "d46be2b70126db8477ca9f285b2362e48a3dd84b5d2c9a00aaf79451fc64283a"
     },
     {
       "path": "dist/js/book-editorial.js",
@@ -1225,13 +1241,13 @@
     },
     {
       "path": "dist/js/hero.js",
-      "bytes": 17671,
-      "sha256": "343c98b5e36e9dace96e4c673d98d3aff30536452ec82f47e38e8256f50630ca"
+      "bytes": 17814,
+      "sha256": "120994800fe5ec66b444fa165cb802b89c5e1d147135b13f023fabf05c3ad409"
     },
     {
       "path": "dist/js/hero.test.mjs",
-      "bytes": 12550,
-      "sha256": "4f5ca9748369a69cf8be25f95c181fa8e1711137052f2f23a451323481063de4"
+      "bytes": 13972,
+      "sha256": "bb606c5728de3cdb85588be10f09ca75d53253c1acc70c1bc1bd43e8e702589d"
     },
     {
       "path": "dist/js/home-intro.js",
@@ -1244,14 +1260,44 @@
       "sha256": "421d730c5409983470f721cf9af4a68571308ec25a3d403d163db79888c983b3"
     },
     {
+      "path": "dist/js/journey-guide-controller.js",
+      "bytes": 3989,
+      "sha256": "2642f859796c9dfe695f638cd26e331c5f41f4c26fc9e67447b563b3672ca3e1"
+    },
+    {
+      "path": "dist/js/journey-guide-controller.test.mjs",
+      "bytes": 10986,
+      "sha256": "e0e2c62313cc3fc3d46be9e4c040c430920cbce85f33b2e4b2d0c25c93a9fa5d"
+    },
+    {
+      "path": "dist/js/journey-guide.js",
+      "bytes": 5213,
+      "sha256": "6ad07af102a93fab9b301c7952b017b8ce30182cc026f425aedfc542a99c9355"
+    },
+    {
       "path": "dist/js/medical-experiences-controller.js",
-      "bytes": 15043,
-      "sha256": "8a235e5f7257112768dbb9fba32dbe252989d8bbe5adf0f838aa62de1907ecd6"
+      "bytes": 15224,
+      "sha256": "c0f839baa63017a6023fe63241fd92345e4c1f8793b1126d2bc235ddaa562a83"
+    },
+    {
+      "path": "dist/js/medical-experiences-native.js",
+      "bytes": 7110,
+      "sha256": "bedf941a3b65dc984535d9d502ac4c7d25dd726fb555b1c4490830e1d731b3ee"
+    },
+    {
+      "path": "dist/js/medical-experiences-native.test.mjs",
+      "bytes": 10934,
+      "sha256": "fa08e4348e4afecb3ccbbb8330d5334c1f27a0026154a9e64aeda20c0017d4a7"
     },
     {
       "path": "dist/js/medical-experiences.js",
       "bytes": 24212,
       "sha256": "6065d3a2c251714efa6b3f5486d42692f27f20e466006e13e53bba35b2034665"
+    },
+    {
+      "path": "dist/js/mobile-continuity.test.mjs",
+      "bytes": 2548,
+      "sha256": "9d9be90b5990d84918e7d3837320b56fa447abf30ebdd34b6292592da726fcd8"
     },
     {
       "path": "dist/js/module-experiences-controller.js",
@@ -1295,13 +1341,13 @@
     },
     {
       "path": "dist/js/scroll-policy.js",
-      "bytes": 2164,
-      "sha256": "919bc31b4365c82c5fdc3c04029e42321a20527ac381b39fbf693190ffa26d4d"
+      "bytes": 3767,
+      "sha256": "9aeaccf54ae07f18967ea3f459cab905f7d6b29c57e5faab3a918af80bfb5db8"
     },
     {
       "path": "dist/js/scroll-policy.test.mjs",
-      "bytes": 3066,
-      "sha256": "f10720ca7f18a039b5865b11ff6d23287378288f8381c449745635f0ddff0fc9"
+      "bytes": 4136,
+      "sha256": "d4bf271c18d683c342f0f74187f8a13dfee2bdb699b2d91c94222052ef506db3"
     },
     {
       "path": "dist/js/shaders/background.frag.glsl",
@@ -1340,18 +1386,18 @@
     },
     {
       "path": "dist/js/shared-scene.js",
-      "bytes": 5066,
-      "sha256": "87300f51b4b2939d565e5d16cb36c7f9aef77d704ceee90cf9a17080818d6207"
+      "bytes": 5225,
+      "sha256": "535d1a7f88f4e3a09200138184bfc41fba1056a776717857c757023f38225dbd"
     },
     {
       "path": "dist/js/shared-scene.test.mjs",
-      "bytes": 8331,
-      "sha256": "3166f83f15d842327f202ad2f42aa922a3de3b75596bf2e489624ec5753b2483"
+      "bytes": 9106,
+      "sha256": "9ff607a0c648522748b048e2276be629837bca1bec75ae801f1fe1bff73007f5"
     },
     {
       "path": "dist/js/templates.js",
-      "bytes": 12967,
-      "sha256": "2bbdd936f5ea8a6110e30d079ad862d58b08e15219bb99575bb4e59deb5cd293"
+      "bytes": 12926,
+      "sha256": "d5e5b3655c2bd3a03cbfdede1616493e7a1acf19d85f1b2ff8a5b3738e33dc34"
     },
     {
       "path": "dist/js/trajectory-page.js",
@@ -1426,52 +1472,52 @@
     {
       "path": "dist/modulos/acervo/index.html",
       "bytes": 20815,
-      "sha256": "e20ba688a8371655c4af4c985bade874e03964677792c06a02ff7041a78c6d15"
+      "sha256": "19b5d36a7eeb87db12d794965f472a4a2d462500e4b4a900d14437c1b1ae7bf0"
     },
     {
       "path": "dist/modulos/club/index.html",
       "bytes": 20659,
-      "sha256": "13153ed0ba16fb2e309fd64d3fb8f622355600720ac0e1a8064d391f2a43f969"
+      "sha256": "6c69cf32f2fd6444e413f3c0ba83323d17897a8d6eb8e28c61f07b397201cf13"
     },
     {
       "path": "dist/modulos/explorar/index.html",
       "bytes": 21905,
-      "sha256": "b810a7a4babebdd952d5e71ec1d32c96c9814ece73e4ae97a9bde205da53e295"
+      "sha256": "953185ccbe7b78821551cc302faf495e6083dc58582fd7322f08e5b380999830"
     },
     {
       "path": "dist/modulos/hoje/index.html",
       "bytes": 20906,
-      "sha256": "b429fd4e16b6985c3d6b22a7f5f55fc1ed699c5d3ac1c5ef6d45010c6105ebc1"
+      "sha256": "feeac356b095e92d986760651f92428d82e6fca4ab45f62662f98c1075f29c0a"
     },
     {
       "path": "dist/modulos/ligas/index.html",
       "bytes": 20962,
-      "sha256": "768f938a1a970e11757a1d663467b8461929b30fcd46bbdbfa24caab85889ab9"
+      "sha256": "37397411994a15bce7215642a6dac1e3009886a163a16dffc1208cf7ef6c38ef"
     },
     {
       "path": "dist/modulos/mentor/index.html",
       "bytes": 19780,
-      "sha256": "fd2a104467eb4f7a8dbd8ad5b97e04b459839236b2db575ecd97fdaa2c0dd1ff"
+      "sha256": "2e4485d13f51fe83c15df45941da174e8df9ec5b7405124bb5c3ea9a8f97aec7"
     },
     {
       "path": "dist/modulos/pesquisa/index.html",
       "bytes": 23303,
-      "sha256": "a184ca6c9a39aa8b4a1c7fda1204199702a4e256985f2f89dac06b02b52806db"
+      "sha256": "308c27cb93e5fc42cc6200bdfc4d1b4420be50b0fb1966698c1f6c0f72ead76a"
     },
     {
       "path": "dist/modulos/trajetoria/index.html",
       "bytes": 31912,
-      "sha256": "4392e16eed0296363356313bb70db99e879ed3e83a9c6210a9423f8ec63e536d"
+      "sha256": "e7c34ca41361386f972d4915136b8d96c7608bd524ae7a5a680d1b21d833ce50"
     },
     {
       "path": "dist/percursos/index.html",
       "bytes": 11192,
-      "sha256": "d1aa6a4b6b310ca5af0a86bc5b7325a41cc497071ae3f870962b489bdf0526c1"
+      "sha256": "d032148a8b4ed65804f1fa1bce5a69010ce4196c3ce137d33d7f90f171ff2b1d"
     },
     {
       "path": "js/app.js",
-      "bytes": 18997,
-      "sha256": "0094f546b84267e4837df08be421731d32efe6ae7014c94811ceef570ad918b8"
+      "bytes": 19105,
+      "sha256": "e1ba59bd399127799a308cf0fe6e685fb414ae03543f112a815a313b822c1bf5"
     },
     {
       "path": "js/book-art.js",
@@ -1495,8 +1541,8 @@
     },
     {
       "path": "js/book-drag.test.mjs",
-      "bytes": 13092,
-      "sha256": "cc700570c00f02de18cd3672ddd7bf09f6a76c424271a9f0987000f560d5430f"
+      "bytes": 13211,
+      "sha256": "d46be2b70126db8477ca9f285b2362e48a3dd84b5d2c9a00aaf79451fc64283a"
     },
     {
       "path": "js/book-editorial.js",
@@ -1565,13 +1611,13 @@
     },
     {
       "path": "js/hero.js",
-      "bytes": 17671,
-      "sha256": "343c98b5e36e9dace96e4c673d98d3aff30536452ec82f47e38e8256f50630ca"
+      "bytes": 17814,
+      "sha256": "120994800fe5ec66b444fa165cb802b89c5e1d147135b13f023fabf05c3ad409"
     },
     {
       "path": "js/hero.test.mjs",
-      "bytes": 12550,
-      "sha256": "4f5ca9748369a69cf8be25f95c181fa8e1711137052f2f23a451323481063de4"
+      "bytes": 13972,
+      "sha256": "bb606c5728de3cdb85588be10f09ca75d53253c1acc70c1bc1bd43e8e702589d"
     },
     {
       "path": "js/home-intro.js",
@@ -1584,14 +1630,44 @@
       "sha256": "421d730c5409983470f721cf9af4a68571308ec25a3d403d163db79888c983b3"
     },
     {
+      "path": "js/journey-guide-controller.js",
+      "bytes": 3989,
+      "sha256": "2642f859796c9dfe695f638cd26e331c5f41f4c26fc9e67447b563b3672ca3e1"
+    },
+    {
+      "path": "js/journey-guide-controller.test.mjs",
+      "bytes": 10986,
+      "sha256": "e0e2c62313cc3fc3d46be9e4c040c430920cbce85f33b2e4b2d0c25c93a9fa5d"
+    },
+    {
+      "path": "js/journey-guide.js",
+      "bytes": 5213,
+      "sha256": "6ad07af102a93fab9b301c7952b017b8ce30182cc026f425aedfc542a99c9355"
+    },
+    {
       "path": "js/medical-experiences-controller.js",
-      "bytes": 15043,
-      "sha256": "8a235e5f7257112768dbb9fba32dbe252989d8bbe5adf0f838aa62de1907ecd6"
+      "bytes": 15224,
+      "sha256": "c0f839baa63017a6023fe63241fd92345e4c1f8793b1126d2bc235ddaa562a83"
+    },
+    {
+      "path": "js/medical-experiences-native.js",
+      "bytes": 7110,
+      "sha256": "bedf941a3b65dc984535d9d502ac4c7d25dd726fb555b1c4490830e1d731b3ee"
+    },
+    {
+      "path": "js/medical-experiences-native.test.mjs",
+      "bytes": 10934,
+      "sha256": "fa08e4348e4afecb3ccbbb8330d5334c1f27a0026154a9e64aeda20c0017d4a7"
     },
     {
       "path": "js/medical-experiences.js",
       "bytes": 24212,
       "sha256": "6065d3a2c251714efa6b3f5486d42692f27f20e466006e13e53bba35b2034665"
+    },
+    {
+      "path": "js/mobile-continuity.test.mjs",
+      "bytes": 2548,
+      "sha256": "9d9be90b5990d84918e7d3837320b56fa447abf30ebdd34b6292592da726fcd8"
     },
     {
       "path": "js/module-experiences-controller.js",
@@ -1635,13 +1711,13 @@
     },
     {
       "path": "js/scroll-policy.js",
-      "bytes": 2164,
-      "sha256": "919bc31b4365c82c5fdc3c04029e42321a20527ac381b39fbf693190ffa26d4d"
+      "bytes": 3767,
+      "sha256": "9aeaccf54ae07f18967ea3f459cab905f7d6b29c57e5faab3a918af80bfb5db8"
     },
     {
       "path": "js/scroll-policy.test.mjs",
-      "bytes": 3066,
-      "sha256": "f10720ca7f18a039b5865b11ff6d23287378288f8381c449745635f0ddff0fc9"
+      "bytes": 4136,
+      "sha256": "d4bf271c18d683c342f0f74187f8a13dfee2bdb699b2d91c94222052ef506db3"
     },
     {
       "path": "js/shaders/background.frag.glsl",
@@ -1680,18 +1756,18 @@
     },
     {
       "path": "js/shared-scene.js",
-      "bytes": 5066,
-      "sha256": "87300f51b4b2939d565e5d16cb36c7f9aef77d704ceee90cf9a17080818d6207"
+      "bytes": 5225,
+      "sha256": "535d1a7f88f4e3a09200138184bfc41fba1056a776717857c757023f38225dbd"
     },
     {
       "path": "js/shared-scene.test.mjs",
-      "bytes": 8331,
-      "sha256": "3166f83f15d842327f202ad2f42aa922a3de3b75596bf2e489624ec5753b2483"
+      "bytes": 9106,
+      "sha256": "9ff607a0c648522748b048e2276be629837bca1bec75ae801f1fe1bff73007f5"
     },
     {
       "path": "js/templates.js",
-      "bytes": 12967,
-      "sha256": "2bbdd936f5ea8a6110e30d079ad862d58b08e15219bb99575bb4e59deb5cd293"
+      "bytes": 12926,
+      "sha256": "d5e5b3655c2bd3a03cbfdede1616493e7a1acf19d85f1b2ff8a5b3738e33dc34"
     },
     {
       "path": "js/trajectory-page.js",
@@ -1765,8 +1841,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 2423,
-      "sha256": "85904a20e9092414ea2ffae285ce3a61c996fc779bd78258ce1a73bfdd569829"
+      "bytes": 2700,
+      "sha256": "8f1689bfd0f16862d1b273cb6802cca47c34fce0073342a9ef584986413ed6e0"
     },
     {
       "path": "scripts/generate-globe.mjs",
@@ -1805,8 +1881,8 @@
     },
     {
       "path": "tests/book.mjs",
-      "bytes": 14305,
-      "sha256": "d6a0de1c9e581e6eaeecbd8ef5ddc50213f8b5d598bd1b4aaf49db057ee57137"
+      "bytes": 14519,
+      "sha256": "af3871afd5c7c638e9caa652eec54115e0d3e77b6ffa5dd83deeeaa4855d47a0"
     },
     {
       "path": "tests/brand-motif-baseline.json",
@@ -1884,6 +1960,26 @@
       "sha256": "c900e1b915b87db85ea464c8ba8d8b45f7bbceaa5d33ffa277a2d1517998589a"
     },
     {
+      "path": "tests/journey-guide-baseline.json",
+      "bytes": 25175,
+      "sha256": "7931798f32961bdc08b539cfcfe9049959a4eb0c568dff4027dae4a9fa6c638a"
+    },
+    {
+      "path": "tests/journey-guide-normalize.mjs",
+      "bytes": 821,
+      "sha256": "b257953a5decebda7b59ea7071f4d4704bf1bdd852415d3afd2fe1026421f5d3"
+    },
+    {
+      "path": "tests/journey-guide-replacements.json",
+      "bytes": 56031,
+      "sha256": "cd8babbe2b952808cd8bc04e02895f1a9a035ab0b5f00d56d947a01c55e10538"
+    },
+    {
+      "path": "tests/journey-guide.mjs",
+      "bytes": 5576,
+      "sha256": "c10e80d75c8f461113ce422c5ec8be4ac18dae8278fab6831c38ba30df2fd03c"
+    },
+    {
       "path": "tests/medical-experiences-baseline.json",
       "bytes": 67754,
       "sha256": "f3690e700c7131133f927ba2e24dc1eb19780bcac76e4ff008c8ae4ec9356fe8"
@@ -1900,8 +1996,8 @@
     },
     {
       "path": "tests/medical-experiences.mjs",
-      "bytes": 16936,
-      "sha256": "76aec4e0c43e65411a6d3e507f06138e71f68942dc3a996833b046f7d44d8bd8"
+      "bytes": 17166,
+      "sha256": "2438e978bf57f6931ccb30518c5f1c432bf259fd5345e1500ba6e73d9de48b2e"
     },
     {
       "path": "tests/mobile-intro-baseline.json",
@@ -1910,8 +2006,8 @@
     },
     {
       "path": "tests/mobile-intro-normalize.mjs",
-      "bytes": 809,
-      "sha256": "dc7578ec7f742551dbe33f89c15f51c61f7037de158580664b64714c13cf80f5"
+      "bytes": 975,
+      "sha256": "dcc378b67c0b684dd36bf8a5b6ab154ae1cd9963225508ed9eea7f35b0eb0099"
     },
     {
       "path": "tests/mobile-intro-replacements.json",
@@ -1920,13 +2016,13 @@
     },
     {
       "path": "tests/mobile-intro.mjs",
-      "bytes": 4517,
-      "sha256": "b212d9524d462a07e0212c25df04413dbb52928faa9bbb7fd87f1d3a3df43422"
+      "bytes": 4678,
+      "sha256": "77eda177716ea66c49826016b8e4b2716b68e84a6851865fffd99244b13b0168"
     },
     {
       "path": "tests/portable-export-equivalence.json",
-      "bytes": 4172,
-      "sha256": "d34a27afea86e3112649e4eb4d4de494b6c005fb5063d2d561dc07e52a01760d"
+      "bytes": 4316,
+      "sha256": "2908f8347eacfd50ab2a955761a2d82e6307d02ae051535daa047da7322e6e35"
     },
     {
       "path": "tests/portable-export.mjs",
@@ -1950,8 +2046,8 @@
     },
     {
       "path": "tests/science.mjs",
-      "bytes": 6911,
-      "sha256": "0371cb956193e22bfcedbc2edfcf62b008a7bb376f201e4b3e6ea96298328cd1"
+      "bytes": 7099,
+      "sha256": "9273456a497031d7e4f2f4858b1775fb9057a1b13be826cc96867f7408c08876"
     },
     {
       "path": "tests/shared-seam-baseline.json",
@@ -1960,8 +2056,8 @@
     },
     {
       "path": "tests/shared-seam.mjs",
-      "bytes": 5393,
-      "sha256": "01bfed704ffbd52548aa79897e44d394914017d7d956d48d8b2afcbefc353e5a"
+      "bytes": 5581,
+      "sha256": "09621b548b58bead0ef22114f036f86e041cf9ea60b0446e11d8e27162d8dbae"
     },
     {
       "path": "tests/the-med-baseline.json",

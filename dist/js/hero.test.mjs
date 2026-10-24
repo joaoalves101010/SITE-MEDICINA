@@ -264,3 +264,15 @@ test('restored science scroll is sampled before the first visible draw in both m
     }finally{restore();}
   }
 });
+
+test('mobile stable-size hero ignores toolbar resize reallocations; orientation and desktop behavior remain intact',async()=>{
+ for(const stableResize of [true,false]){const {canvas,restore}=mockBrowser(),frames=frameQueue(),handlers=new Map(),sizes=[],composerSizes=[];let pendingResize;
+  window.addEventListener=(type,fn)=>handlers.set(type,fn);window.removeEventListener=type=>handlers.delete(type);window.setTimeout=fn=>{pendingResize=fn;return 1};window.clearTimeout=()=>{};
+  const runtime=mockRuntime();class Renderer extends runtime.WebGLRenderer{setSize(w,h){sizes.push([w,h]);}}class Composer extends runtime.EffectComposer{setSize(w,h){composerSizes.push([w,h]);}}
+  try{const pending=initHero(canvas,{stableResize,intro:false,timeoutMs:5000,loadRuntime:async()=>({...runtime,WebGLRenderer:Renderer,EffectComposer:Composer})});await nextTurn();frames.run();const hero=await pending;const before=sizes.length,composerBefore=composerSizes.length;
+   for(const height of [756,800,740,844]){window.innerHeight=height;handlers.get('resize')();pendingResize();}
+   assert.equal(sizes.length,before+(stableResize?0:4));assert.equal(composerSizes.length,composerBefore+(stableResize?0:4));
+   canvas.clientWidth=844;canvas.clientHeight=390;handlers.get('resize')();pendingResize();assert.deepEqual(sizes.at(-1),[844,390]);assert.deepEqual(composerSizes.at(-1),[844,390]);hero.dispose();
+  }finally{restore();}
+ }
+});

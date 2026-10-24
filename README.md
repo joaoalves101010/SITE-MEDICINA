@@ -62,6 +62,8 @@ Leia **[FONTES_E_LICENCAS.md](FONTES_E_LICENCAS.md)** antes de redistribuir/publ
 
 Documentação complementar: [REBRAND-THE-MED.md](REBRAND-THE-MED.md), [MODULES-EDITORIAL.md](MODULES-EDITORIAL.md), [IMPLEMENTATION.md](IMPLEMENTATION.md), [BOOK-IMPLEMENTATION.md](BOOK-IMPLEMENTATION.md), [SCIENCE-SOURCES.md](SCIENCE-SOURCES.md) e [MEDICAL-EXPERIENCES-SOURCES.md](MEDICAL-EXPERIENCES-SOURCES.md).
 
-## Ajuste mobile — 24/10/2026
+## Ajuste mobile e guia — 24/10/2026
 
-Dispositivos com entrada principal por toque usam rolagem nativa. A galeria mantém o gesto horizontal e não prende a rolagem vertical; o livro estabiliza sua geometria durante mudanças da barra do Safari. A saudação da home começa antes do primeiro conteúdo e reaparece em cada recarregamento completo, com saída segura em erro/redução de movimento. A nitidez da galeria usa orçamento Retina limitado apenas no mobile. Veja `MOBILE-SAFARI.md` para limites, testes e a confirmação ainda necessária no iPhone físico. O desktop mantém sua rolagem e física aprovadas.
+O livro foi retirado da home em desktop e mobile; `#team` agora apresenta o guia leve **Qual é o seu próximo passo?**, com três intenções e links reais. Seus arquivos históricos permanecem no repositório, mas não são carregados pela página.
+
+Na entrada principal por toque, a galeria usa fotos grandes e scroll horizontal nativo, sem WebGL ou intro longa. O fundo compartilhado usa sticky nativo com altura estável, e gestos cancelam deslocamentos automáticos de hash pendentes. A versão desktop mantém sua galeria líquida. Veja `JOURNEY-GUIDE.md` e `MOBILE-SAFARI.md` para evidências, decisões e limites: a versão corrigida ainda requer confirmação visual em iPhone físico.

@@ -1,3 +1,4 @@
+import { createNativeMedicalExperiences } from './medical-experiences-native.js';
 import { usesNativeTouchScroll } from './scroll-policy.js';
 import {createExperienceDiagnostic} from './experience-diagnostic.js';
 import { medicalExperiences } from './medical-experiences.js';
@@ -19,6 +20,7 @@ export function createMedicalExperiences(root,options={}){
   if(!root)return {update(){},setVisible(){},dispose(){}};
   const win=options.window||window,doc=options.document||document;
   const nativeTouch=options.nativeTouch??usesNativeTouchScroll(win);
+  if(nativeTouch)return createNativeMedicalExperiences(root,{...options,window:win,document:doc});
   let touchIntroStarted=false;
   const stage=root.querySelector('[data-experience-stage]'),canvas=root.querySelector('[data-experience-canvas]'),ring=root.querySelector('[data-experience-ring]');
   if(!stage||!canvas||!ring)return {update(){},setVisible(){},dispose(){}};
