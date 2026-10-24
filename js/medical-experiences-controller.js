@@ -1,3 +1,4 @@
+import { usesNativeTouchScroll } from './scroll-policy.js';
 import {createExperienceDiagnostic} from './experience-diagnostic.js';
 import { medicalExperiences } from './medical-experiences.js';
 import {createExperienceEngagement,experienceEntryVisual,experienceIntroDuration} from './experience-engagement.js';
@@ -17,6 +18,8 @@ export function createExperienceMeta(root,{window:win=window,reduced=()=>false}=
 export function createMedicalExperiences(root,options={}){
   if(!root)return {update(){},setVisible(){},dispose(){}};
   const win=options.window||window,doc=options.document||document;
+  const nativeTouch=options.nativeTouch??usesNativeTouchScroll(win);
+  let touchIntroStarted=false;
   const stage=root.querySelector('[data-experience-stage]'),canvas=root.querySelector('[data-experience-canvas]'),ring=root.querySelector('[data-experience-ring]');
   if(!stage||!canvas||!ring)return {update(){},setVisible(){},dispose(){}};
   const panels=[...root.querySelectorAll('[data-experience-panel]')],cards=[...root.querySelectorAll('[data-experience-card]')],jumps=[...root.querySelectorAll('[data-experience-jump]')];
@@ -35,9 +38,10 @@ export function createMedicalExperiences(root,options={}){
   const near=()=>{const r=root.getBoundingClientRect();return r.top<viewport()+700&&r.bottom>-700;};
   const visible=()=>{if(!allowed())return false;const r=stage.getBoundingClientRect();return r.top<viewport()&&r.bottom>0;};
   function syncCursor(){const r=stage.getBoundingClientRect(),p=cursorPoint;doc.body?.classList?.toggle('experience-cursor-active',!!p&&allowed()&&root.dataset.state==='interactive'&&p.x>=r.left&&p.x<=r.left+r.width&&p.y>=r.top&&p.y<=r.bottom);}
-  function syncWaiting(){root.dataset.entryWaiting=String(!media.matches&&!introComplete&&entryElapsed<=.25&&!engagement.engaged);}
+  function presentationActive(){if(!nativeTouch)return engagement.engaged;if(!allowed()||doc.body?.classList?.contains('menu-open'))return false;const r=stage.getBoundingClientRect(),height=Number(r.height??r.bottom-r.top)||0,shown=Math.max(0,Math.min(viewport(),r.bottom)-Math.max(0,r.top));if(height>0&&shown>=Math.min(viewport(),height)*.65)touchIntroStarted=true;return touchIntroStarted&&visible();}
+  function syncWaiting(){root.dataset.entryWaiting=String(!media.matches&&!introComplete&&entryElapsed<=.25&&!presentationActive());}
   const meta=createExperienceMeta(root,{window:win,reduced:()=>media.matches});
-  const engagement=createExperienceEngagement(stage,{window:win,document:doc,allowed:()=>allowed()&&!doc.body?.classList?.contains('menu-open'),reduced:()=>media.matches,getScrollY:options.getScrollY,scrollImmediate:options.scrollImmediate,onChange(active){root.dataset.engaged=String(active);doc.body?.classList?.toggle('experience-reading-active',active);if(header)header.inert=active?true:headerWasInert;engine?.setEngaged?.(active);syncWaiting();}});
+  const engagement=createExperienceEngagement(stage,{window:win,document:doc,nativeTouch:()=>nativeTouch,allowed:()=>allowed()&&!doc.body?.classList?.contains('menu-open'),reduced:()=>media.matches,getScrollY:options.getScrollY,scrollImmediate:options.scrollImmediate,onChange(active){root.dataset.engaged=String(active);doc.body?.classList?.toggle('experience-reading-active',active);if(header)header.inert=active?true:headerWasInert;engine?.setEngaged?.(active);syncWaiting();}});
   function select(index,instant=false){
     const next=((Math.round(index)%medicalExperiences.length)+medicalExperiences.length)%medicalExperiences.length,p=medicalExperiences[next];
     if(!p||disposed)return;selected=next;
@@ -65,11 +69,11 @@ export function createMedicalExperiences(root,options={}){
     if(starting||engine||failed||!allowed()||!near())return;starting=true;const token=++generation;
     try{const {createViscoseEngine}=await loader();if(disposed||token!==generation||!allowed()||!near()){starting=false;return;}
       root.dataset.state='interactive';root.dataset.renderMode='fallback';syncWaiting();if(controls)controls.hidden=false;select(selected,true);
-      const created=createViscoseEngine(stage,{canvas,onDiagnostic:diagnostic.enabled?snapshot=>diagnostic.update(snapshot):undefined,engaged:false,introDuration,wheelOwned:()=>engagement.engaged,onWheelConsume:()=>engagement.align(),onWheelExit:()=>engagement.release(),files:medicalExperiences.map(p=>({src:p.image,focalY:p.id==='nus'?.35:.5})),window:win,document:doc,onPose:frame=>{if(!disposed&&token===generation)pose(frame);},onSelection:index=>{if(!disposed&&token===generation)select(index);},onReady(result){if(disposed||token!==generation)return;const mode=typeof result==='string'?result:result?.mode;diagnostic.update({mode});root.dataset.renderMode=mode==='webgl'?'webgl':'fallback';},onMode(mode){if(!disposed&&token===generation){diagnostic.update({mode});root.dataset.renderMode=mode==='webgl'?'webgl':'fallback';}},onFallback(error){if(!disposed&&token===generation){diagnostic.update({mode:'fallback',error});root.dataset.renderMode='fallback';}}});
-      if(disposed||token!==generation){created?.dispose();return;}engine=created;engine.setVisible(visible());engagement.update();engine.setEngaged?.(engagement.engaged);engine.resize();starting=false;options.onLayout?.();
+      const created=createViscoseEngine(stage,{canvas,onDiagnostic:diagnostic.enabled?snapshot=>diagnostic.update(snapshot):undefined,engaged:false,introDuration,wheelEnabled:()=>!nativeTouch,wheelOwned:()=>engagement.engaged,onWheelConsume:()=>engagement.align(),onWheelExit:()=>engagement.release(),files:medicalExperiences.map(p=>({src:p.image,focalY:p.id==='nus'?.35:.5})),window:win,document:doc,onPose:frame=>{if(!disposed&&token===generation)pose(frame);},onSelection:index=>{if(!disposed&&token===generation)select(index);},onReady(result){if(disposed||token!==generation)return;const mode=typeof result==='string'?result:result?.mode;diagnostic.update({mode});root.dataset.renderMode=mode==='webgl'?'webgl':'fallback';},onMode(mode){if(!disposed&&token===generation){diagnostic.update({mode});root.dataset.renderMode=mode==='webgl'?'webgl':'fallback';}},onFallback(error){if(!disposed&&token===generation){diagnostic.update({mode:'fallback',error});root.dataset.renderMode='fallback';}}});
+      if(disposed||token!==generation){created?.dispose();return;}engine=created;engine.setVisible(visible());engagement.update();engine.setEngaged?.(presentationActive());engine.resize();starting=false;options.onLayout?.();
     }catch(error){if(disposed||token!==generation)return;starting=false;failed=true;release();restore();diagnostic.update({mode:'fallback',phase:'fallback',error});options.onError?.(error);}
   }
-  function update(){if(disposed)return;engagement.update();if(engagement.engaged&&header)header.inert=true;syncWaiting();if(hint)hint.textContent=media.matches?'Use os botões ou as setas do teclado para escolher.':defaultHint;if(media.matches)meta.pause();if(!engine){if(allowed()&&near())void start();return;}engine.updateBounds();syncCursor();const active=visible();engine.setVisible(active);if(!active){meta.pause();doc.body?.classList?.remove('experience-cursor-active');}}
+  function update(){if(disposed)return;engagement.update();if(engagement.engaged&&header)header.inert=true;syncWaiting();if(hint)hint.textContent=media.matches?'Use os botões ou as setas do teclado para escolher.':defaultHint;if(media.matches)meta.pause();if(!engine){if(allowed()&&near())void start();return;}engine.updateBounds();syncCursor();const active=visible();engine.setVisible(active);if(nativeTouch)engine.setEngaged?.(presentationActive());if(!active){meta.pause();doc.body?.classList?.remove('experience-cursor-active');}}
   function pick(index){if(engine)engine.pick(index);}
   for(const button of jumps)on(button,'click',event=>{event.stopPropagation();pick(Number(button.dataset.experienceJump));});
   on(root.querySelector('[data-experience-prev]'),'click',()=>engine?.next(-1));on(root.querySelector('[data-experience-next]'),'click',()=>engine?.next(1));

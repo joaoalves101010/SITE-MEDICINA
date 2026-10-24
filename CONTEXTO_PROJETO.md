@@ -374,3 +374,11 @@ Preservar:
 - `assets/manifest.json` e `assets/experiences/credits.json`: procedência dos materiais e créditos.
 
 **Resumo para retomar:** manter uma apresentação the med completa, médica, vinho/creme e utilizável sem GPU; preservar a animação aprovada do livro e a sequência finita da galeria; comunicar o produto com verdade; alterar apenas o escopo combinado e comprovar o resultado antes de declarar uma correção concluída.
+
+## Atualização mobile e abertura — 24/10/2026
+
+Após relatos de rolagem irregular no iPhone 14/Safari, a entrada principal por toque passou a usar scroll nativo, sem Locomotive. A galeria não alinha nem captura a rolagem vertical nesse modo; seleção por botões e arraste horizontal continuam disponíveis. O livro conserva a altura de referência durante o recolhimento da barra do Safari e recalibra em mudança real de largura/orientação. Menus e modais restauram a posição nativa ao fechar. O comportamento desktop permanece protegido.
+
+A saudação “Olá. Bem-vindo à” com o wordmark oficial inicia por um gate no head, sem flash da frase principal, e reaparece em cada recarregamento completo. Não depende de marca em sessionStorage nem do carregamento de WebGL. Hashes aguardam a abertura; ausência de JavaScript, redução de movimento, erro ou watchdog mantêm a página utilizável.
+
+A galeria mobile usa atlas de 768–1024 pixels por fotografia, até 24 MiB RGBA base, e drawing buffer de até 1,5 milhão de pixels. Não equivale a uma garantia de memória total do navegador. Os testes determinísticos cobrem comportamento e recursos; a validação visual/performance em iPhone físico permanece pendente. Detalhes em `MOBILE-SAFARI.md`.

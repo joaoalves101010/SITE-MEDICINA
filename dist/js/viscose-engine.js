@@ -1,4 +1,5 @@
 import {VISCOSE_MAX_CARDS,viscoseVertex,viscoseFragment} from './viscose-shaders.js';
+import {usesNativeTouchScroll} from './scroll-policy.js';
 const TAU=Math.PI*2;
 const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,Number.isFinite(v)?v:a));
 const smooth=v=>{const t=clamp(v);return t*t*(3-2*t);};
@@ -131,10 +132,27 @@ function runtimeTypes(T){
  if(T.CanvasTexture)return {Geometry,Attribute,Texture:T.CanvasTexture};
  const cube=new T.WebGLCubeRenderTarget(1),Texture=Object.getPrototypeOf(cube.texture.constructor);cube.dispose();return {Geometry,Attribute,Texture};
 }
+// Higher density is restricted to touch-first devices. These are base RGBA
+// atlas/drawing-buffer budgets, not an estimate of total driver/MSAA memory.
+export function viscoseResourceQuality({width=1,height=1,devicePixelRatio=1,mobile=false,count=8,maxTextureSize=4096}={}){
+ const positive=(value,fallback)=>Number.isFinite(Number(value))&&Number(value)>0?Number(value):fallback;
+ const w=positive(width,1),h=positive(height,1),dpr=positive(devicePixelRatio,1),n=Math.max(1,Math.min(8,Math.round(positive(count,8))));
+ const cols=Math.ceil(Math.sqrt(n)),rows=Math.ceil(n/cols),maxTexture=Math.max(1,Math.floor(positive(maxTextureSize,4096)));
+ const pixelBudget=1500000,atlasBudget=24*1024*1024;
+ const pixelRatio=mobile?Math.min(dpr,3,Math.sqrt(pixelBudget/(w*h))):Math.min(1.5,dpr);
+ const geometry=viscoseGeometry(w,h),focalWidth=VISCOSE.baseWidth*geometry.plane*geometry.scale*geometry.fit;
+ const desiredCell=mobile?(focalWidth*pixelRatio*1.2>768?1024:768):512;
+ let cellWidth=Math.max(1,Math.min(desiredCell,Math.floor(maxTexture/cols))),cellHeight=mobile?Math.max(1,Math.floor(cellWidth/1.5)):Math.round(cellWidth/1.5);
+ if(mobile)while(cellWidth>1&&(cellHeight*rows>maxTexture||cellWidth*cols*cellHeight*rows*4>atlasBudget)){cellWidth--;cellHeight=Math.max(1,Math.floor(cellWidth/1.5));}
+ return {pixelRatio,cols,rows,cellWidth,cellHeight,atlasWidth:cellWidth*cols,atlasHeight:cellHeight*rows,atlasBytes:cellWidth*cols*cellHeight*rows*4,bufferPixels:Math.floor(w*pixelRatio)*Math.floor(h*pixelRatio),pixelBudget,atlasBudget};
+}
 function createGPU(canvas,T,doc,win,files,onImage){
  const types=runtimeTypes(T),renderer=new T.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'low-power'});
- renderer.setPixelRatio(Math.min(1.5,Number(win.devicePixelRatio)||1));renderer.setClearColor?.(0,0);
- const maxTexture=renderer.capabilities?.maxTextureSize||4096,cols=Math.ceil(Math.sqrt(files.length)),rows=Math.ceil(files.length/cols),cellWidth=Math.min(512,Math.floor(maxTexture/cols)),cellHeight=Math.round(cellWidth/1.5);
+ const mobile=usesNativeTouchScroll(win),maxTexture=renderer.capabilities?.maxTextureSize||4096,rect=canvas.getBoundingClientRect?.();
+ const qualityFor=(width,height)=>viscoseResourceQuality({width,height,devicePixelRatio:win.devicePixelRatio,mobile,count:files.length,maxTextureSize:maxTexture});
+ const quality=qualityFor(rect?.width||canvas.clientWidth||win.innerWidth||1,rect?.height||canvas.clientHeight||win.innerHeight||1);
+ let pixelRatio=quality.pixelRatio;renderer.setPixelRatio(pixelRatio);renderer.setClearColor?.(0,0);
+ const {cols,rows,cellWidth,cellHeight}=quality;
  const atlas=doc.createElement('canvas');atlas.width=cols*cellWidth;atlas.height=rows*cellHeight;const ctx=atlas.getContext('2d');if(!ctx){renderer.dispose();throw Error('Atlas canvas unavailable');}ctx.fillStyle='#542a37';ctx.fillRect(0,0,atlas.width,atlas.height);
  const texture=new types.Texture(atlas);texture.flipY=false;texture.encoding=3000;texture.wrapS=texture.wrapT=1001;texture.minFilter=texture.magFilter=1006;texture.generateMipmaps=false;texture.needsUpdate=true;
  const tagCanvas=doc.createElement('canvas');tagCanvas.width=208;tagCanvas.height=80;const tagContext=tagCanvas.getContext('2d');if(tagContext){tagContext.scale(2,2);tagContext.font='500 14px Roobert,Arial,sans-serif';tagContext.textAlign='center';tagContext.textBaseline='middle';tagContext.fillStyle='#fff';tagContext.fillText('Focar ↗',52,20);}
@@ -144,7 +162,7 @@ function createGPU(canvas,T,doc,win,files,onImage){
  const geometry=new types.Geometry();geometry.setAttribute('position',new types.Attribute([-1,-1,0,1,-1,0,1,1,0,-1,-1,0,1,1,0,-1,1,0],3));geometry.setAttribute('uv',new types.Attribute([0,0,1,0,1,1,0,0,1,1,0,1],2));
  const material=new T.ShaderMaterial({vertexShader:viscoseVertex,fragmentShader:viscoseFragment,uniforms,transparent:true,depthWrite:false,depthTest:false,extensions:{derivatives:true}}),mesh=new T.Mesh(geometry,material),scene=new T.Scene(),camera=new T.PerspectiveCamera(36,1,.01,10);mesh.frustumCulled=false;scene.add(mesh);
  let disposed=false,loaded=0,lastW=0,lastH=0;
- return {get loaded(){return loaded;},get atlasBytes(){return atlas.width*atlas.height*4;},paint(image,index){if(disposed)return;const w=image.naturalWidth||image.width,h=image.naturalHeight||image.height;if(!(w>0&&h>0))throw Error('Invalid institution image');const scale=Math.max(cellWidth/w,cellHeight/h),dw=w*scale,dh=h*scale,x=index%cols*cellWidth,y=Math.floor(index/cols)*cellHeight,focus=clamp(files[index].focalY??.5),dy=(cellHeight-dh)*focus;ctx.save();ctx.beginPath();ctx.rect(x,y,cellWidth,cellHeight);ctx.clip();ctx.drawImage(image,x+(cellWidth-dw)*.5,y+dy,dw,dh);ctx.restore();loaded++;texture.needsUpdate=true;onImage();},draw(frame,time){if(disposed||loaded<files.length)return false;const {width:w,height:h}=frame;if(w!==lastW||h!==lastH){renderer.setSize(w,h,false);lastW=w;lastH=h;}uniforms.uResolution.value.set(w,h);uniforms.uSize.value.set(frame.cardWidth,frame.cardHeight);uniforms.uCorner.value=frame.cornerRadius;uniforms.uUnion.value=frame.union;uniforms.uBlend.value=frame.blend;uniforms.uBirth.value=frame.birthNoise;uniforms.uTime.value=time;uniforms.uTextured.value=1;uniforms.uLinkCount.value=frame.links.length;
+ return {get loaded(){return loaded;},get atlasBytes(){return atlas.width*atlas.height*4;},get resourceQuality(){return {...quality,mobile,pixelRatio,width:lastW,height:lastH,bufferPixels:Math.floor(lastW*pixelRatio)*Math.floor(lastH*pixelRatio)};},paint(image,index){if(disposed)return;const w=image.naturalWidth||image.width,h=image.naturalHeight||image.height;if(!(w>0&&h>0))throw Error('Invalid institution image');const scale=Math.max(cellWidth/w,cellHeight/h),dw=w*scale,dh=h*scale,x=index%cols*cellWidth,y=Math.floor(index/cols)*cellHeight,focus=clamp(files[index].focalY??.5),dy=(cellHeight-dh)*focus;ctx.save();ctx.beginPath();ctx.rect(x,y,cellWidth,cellHeight);ctx.clip();ctx.drawImage(image,x+(cellWidth-dw)*.5,y+dy,dw,dh);ctx.restore();loaded++;texture.needsUpdate=true;onImage();},draw(frame,time){if(disposed||loaded<files.length)return false;const {width:w,height:h}=frame;if(w!==lastW||h!==lastH){if(mobile){const nextRatio=qualityFor(w,h).pixelRatio;if(Math.abs(nextRatio-pixelRatio)>.0001){pixelRatio=nextRatio;renderer.setPixelRatio(pixelRatio);}}renderer.setSize(w,h,false);lastW=w;lastH=h;}uniforms.uResolution.value.set(w,h);uniforms.uSize.value.set(frame.cardWidth,frame.cardHeight);uniforms.uCorner.value=frame.cornerRadius;uniforms.uUnion.value=frame.union;uniforms.uBlend.value=frame.blend;uniforms.uBirth.value=frame.birthNoise;uniforms.uTime.value=time;uniforms.uTextured.value=1;uniforms.uLinkCount.value=frame.links.length;
   for(let i=0;i<8;i++){const c=frame.cards[i];if(c){uniforms.uPositions.value[i].set(c.x-w*.5,h*.5-c.y);uniforms.uAngles.value[i]=-c.rotation;uniforms.uCards.value[i].set(c.scaleX,c.scaleY,c.brightness,c.index);}else uniforms.uCards.value[i].set(0,0,1,0);const l=frame.links[i];if(l){uniforms.uLinkA.value[i].set(l.a.x-w*.5,h*.5-l.a.y);uniforms.uLinkB.value[i].set(l.b.x-w*.5,h*.5-l.b.y);uniforms.uLinks.value[i].set(l.rEnd,l.rMid,l.sag,l.fillet);}else uniforms.uLinks.value[i].set(-100,-100,0,0);}
   const p=frame.pointer,t=frame.tag;uniforms.uPointer.value.set(p.x,p.y,p.amount,p.melt);uniforms.uWake.value.set(p.reach,p.wave,.05,7);uniforms.uTag.value.set(t.x,t.y,t.sx,t.sy);renderer.render(scene,camera);const gl=renderer.getContext?.();if(gl?.isContextLost?.())throw Error('WebGL context lost');const programs=renderer.info?.programs||[];if(programs.some(p=>p.diagnostics?.runnable===false))throw Error('SDF shader compilation unavailable');return true;},dispose({loseContext=true}={}){if(disposed)return;disposed=true;uniforms.uAtlas.value=uniforms.uTagMap.value=null;texture.dispose();tagTexture.dispose();texture.image=tagTexture.image=null;geometry.dispose();material.dispose();scene.clear?.();renderer.dispose();if(loseContext)renderer.forceContextLoss?.();atlas.width=atlas.height=tagCanvas.width=tagCanvas.height=1;}};
 }
@@ -204,6 +222,7 @@ export function createViscoseEngine(surface,options={}){
  // Capture before Locomotive; viewport ownership is explicit and temporary.
  on(doc,'wheel',event=>{
   const owned=!!options.wheelOwned?.();
+  if(options.wheelEnabled?.()===false)return;
   if(!visible()||!engaged||reduced||event.ctrlKey||event.metaKey||event.target?.isContentEditable||event.target?.closest?.('input,select,textarea,[contenteditable=""],[contenteditable="true"],[contenteditable="plaintext-only"]'))return;
   if(!owned&&(!surface.contains?.(event.target)||event.target?.closest?.('a,summary')))return;
   const delta=Math.abs(event.deltaX)>Math.abs(event.deltaY)?event.deltaX:event.deltaY;if(!Number.isFinite(delta)||Math.abs(delta)<1)return;

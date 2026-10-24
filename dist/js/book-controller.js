@@ -1,4 +1,5 @@
 import { createBookDrag } from './book-drag.js';
+import { usesNativeTouchScroll } from './scroll-policy.js';
 export { setBookScrollImmediate } from './book-drag.js';
 const clamp=(v,min,max)=>Math.min(max,Math.max(min,Number.isFinite(v)?v:min));
 export function bookScrollState(top,viewportHeight,steps=6){
@@ -6,6 +7,32 @@ export function bookScrollState(top,viewportHeight,steps=6){
   const offset=clamp(-top,0,travel),raw=offset/step,index=Math.min(steps,Math.floor(raw));
   const fraction=index===steps?0:raw-index,t=clamp((fraction-.16)/.68,0,1);
   return {height,step,travel,offset,progress:index+t*t*(3-2*t),raw};
+}
+// Mobile browser chrome changes innerHeight while scrolling. Keep the book's
+// scroll distance tied to one layout height until the layout width/orientation
+// actually changes; desktop window resizing retains its existing live behavior.
+export function createBookViewport(win,doc={}){
+  const readHeight=()=>Math.max(1,Number(win.innerHeight)||Number(doc.documentElement?.clientHeight)||1);
+  const readWidth=()=>Math.max(1,Number(win.innerWidth)||Number(doc.documentElement?.clientWidth)||1);
+  const readOrientation=()=>{
+    const orientation=win.screen?.orientation;
+    if(Number.isFinite(orientation?.angle))return `angle:${orientation.angle}`;
+    if(Number.isFinite(win.orientation))return `angle:${win.orientation}`;
+    return orientation?.type||null;
+  };
+  let width=readWidth(),orientation=readOrientation(),height=readHeight();
+  const stable=usesNativeTouchScroll(win);
+  return {
+    getHeight:()=>stable?height:readHeight(),
+    refresh(){
+      const nextWidth=readWidth(),nextOrientation=readOrientation();
+      const geometryChanged=nextWidth!==width||nextOrientation!==orientation,previousHeight=height;
+      if(!stable||geometryChanged)height=readHeight();
+      width=nextWidth;orientation=nextOrientation;
+      return {stable,geometryChanged,changed:height!==previousHeight,previousHeight,height};
+    },
+    get stable(){return stable;}
+  };
 }
 export function createSpreadCache(load,limit=3){
   const cache=new Map(),pending=new Map();let disposed=false,epoch=0;
@@ -24,7 +51,8 @@ export function createBookController(root,options={}){
   const engineLoader=options.loadEngines||(()=>Promise.all([import('./book-art.js'),import('./book-renderer.js'),import('./book-fallback.js')]));
   const cleanup=[];const on=(target,event,fn,opts)=>{target?.addEventListener?.(event,fn,opts);cleanup.push(()=>target?.removeEventListener?.(event,fn,opts));};
   let disposed=false,externalVisible=true,starting=false,interactive=false,gpu=null,css=null,art=null,cache=null,engines=null,progress=0,active=-1,announceTimer=0,generation=0,navTarget=null,gpuStarting=false,gpuAttempted=false,fallbackReady=false,gpuAbort=null,failed=false;
-  const viewport=()=>Math.max(1,win.innerHeight||doc.documentElement?.clientHeight||1);
+  const bookViewport=createBookViewport(win,doc),viewport=()=>bookViewport.getHeight();
+  let lastGeometry=null;
   const state=()=>bookScrollState(track.getBoundingClientRect().top,viewport());
   const within=(margin=0)=>{const rect=track.getBoundingClientRect();return rect.top<viewport()+margin&&rect.bottom>-margin;};
   const allowed=()=>!disposed&&externalVisible&&doc.visibilityState!=='hidden'&&!reduce.matches;
@@ -50,14 +78,30 @@ export function createBookController(root,options={}){
       // after an actual frame. No page-wide loading gate or alternative artwork.
       await upgrade(token);starting=false;
     }catch(error){if(disposed||token!==generation)return;starting=false;if(css){visual.dataset.bookRender='fallback-ready';}else{failed=true;release();restore();}options.onError?.(error);}}
-  function update(){if(disposed)return;drag?.sync();if(reduce.matches){if(interactive){release();restore();}return;}if(!interactive){if(allowed()&&within(900))void start();return;}const nextState=state();root.style.setProperty('--book-stage-height',`${nextState.height}px`);const height=`${nextState.travel+nextState.height}px`;if(track.style.height!==height)track.style.height=height;stage.style.transform=`translate3d(0,${nextState.offset}px,0)`;progress=nextState.progress;pinHeader(allowed()&&track.getBoundingClientRect().top<=0&&track.getBoundingClientRect().top>=-nextState.travel);caption(progress);const isVisible=visible();if(!allowed()||!within(900))pauseUpgrade();gpu?.setVisible(isVisible);css?.setVisible(isVisible);gpu?.setProgress(progress);css?.setProgress(progress);if(navTarget!==null&&Math.abs(nextState.raw-navTarget)<.02)navTarget=null;if(fallbackReady&&!gpuAttempted)void upgrade();}
+  function update(){if(disposed)return;drag?.sync();if(reduce.matches){if(interactive){release();restore();}return;}if(!interactive){if(allowed()&&within(900))void start();return;}const nextState=state();lastGeometry={...nextState,top:track.getBoundingClientRect().top};root.style.setProperty('--book-stage-height',`${nextState.height}px`);const height=`${nextState.travel+nextState.height}px`;if(track.style.height!==height)track.style.height=height;stage.style.transform=`translate3d(0,${nextState.offset}px,0)`;progress=nextState.progress;pinHeader(allowed()&&track.getBoundingClientRect().top<=0&&track.getBoundingClientRect().top>=-nextState.travel);caption(progress);const isVisible=visible();if(!allowed()||!within(900))pauseUpgrade();gpu?.setVisible(isVisible);css?.setVisible(isVisible);gpu?.setProgress(progress);css?.setProgress(progress);if(navTarget!==null&&Math.abs(nextState.raw-navTarget)<.02)navTarget=null;if(fallbackReady&&!gpuAttempted)void upgrade();}
   function go(index){drag?.cancel();if(!interactive)return;const target=clamp(index,0,6);navTarget=target;const currentY=options.getScrollY?.()??win.scrollY??0;const top=track.getBoundingClientRect().top+currentY;options.scrollTo?.(top+state().step*target,700);}
   const drag=createBookDrag(visual,{window:win,document:doc,getState(){const s=state(),top=track.getBoundingClientRect().top,scrollY=options.getScrollY?.()??win.scrollY??0;return {enabled:interactive&&fallbackReady&&allowed()&&top<=2&&top>=-s.travel-2&&typeof options.scrollImmediate==='function',progress:s.progress,step:s.step,top:top+scrollY,scrollY};},scrollImmediate:target=>{navTarget=null;options.scrollImmediate?.(target);},snapTo:go});
   const fine=win.matchMedia('(pointer:fine)');const updateHint=()=>{if(hint)hint.textContent=fine.matches?'Role ou arraste para virar as páginas. Volte para reler.':'Role para virar as páginas. Volte para reler.';};updateHint();on(fine,'change',updateHint);
   on(prev,'click',()=>go((navTarget??active)-1));on(next,'click',()=>go((navTarget??active)+1));for(const button of jumps)on(button,'click',()=>go(Number(button.dataset.bookJump)));
   on(skip,'click',event=>{const end=root.querySelector('#book-end');if(!end)return;event.preventDefault();event.stopPropagation();options.scrollTo?.(end,700);end.focus?.({preventScroll:true});});
   on(controls,'keydown',event=>{let target;if(event.key==='ArrowRight')target=(navTarget??active)+1;if(event.key==='ArrowLeft')target=(navTarget??active)-1;if(event.key==='Home')target=0;if(event.key==='End')target=6;if(target===undefined)return;event.preventDefault();event.stopPropagation();go(target);});
-  on(win,'resize',()=>{update();gpu?.resize();css?.resize();notifyLayout();});on(doc,'visibilitychange',()=>{if(doc.visibilityState==='hidden')pauseUpgrade();update();gpu?.setVisible(visible());css?.setVisible(visible());});on(reduce,'change',update);
+  function resize(){
+    const previous=lastGeometry,change=bookViewport.refresh();
+    // Re-map only a genuine mobile layout change, and only while this book was
+    // pinned. URL-bar changes never write scroll coordinates. The same raw
+    // fraction preserves held/eased page poses without changing their timing.
+    if(change.stable&&change.geometryChanged&&interactive&&allowed()&&previous&&previous.top<=0&&previous.top>=-previous.travel&&typeof options.scrollImmediate==='function'){
+      const scrollY=options.getScrollY?.()??win.scrollY??0;
+      const absoluteTop=track.getBoundingClientRect().top+scrollY;
+      const nextState=bookScrollState(0,change.height);
+      root.style.setProperty('--book-stage-height',`${change.height}px`);
+      track.style.height=`${nextState.travel+change.height}px`;
+      const target=absoluteTop+previous.raw*nextState.step;
+      if(Math.abs(target-scrollY)>.5)options.scrollImmediate(target);
+    }
+    update();gpu?.resize();css?.resize();notifyLayout();
+  }
+  on(win,'resize',resize);on(win,'orientationchange',resize);on(win.screen?.orientation,'change',resize);on(doc,'visibilitychange',()=>{if(doc.visibilityState==='hidden')pauseUpgrade();update();gpu?.setVisible(visible());css?.setVisible(visible());});on(reduce,'change',update);
   let observer;if(win.IntersectionObserver){observer=new win.IntersectionObserver(()=>update(),{rootMargin:'900px'});observer.observe(track);}
   update();
   return {update,setVisible(value){externalVisible=!!value;if(!externalVisible)pauseUpgrade();update();gpu?.setVisible(visible());css?.setVisible(visible());},go,dispose(){if(disposed)return;drag.dispose();pinHeader(false);disposed=true;release();observer?.disconnect();cleanup.splice(0).forEach(fn=>fn());win.clearTimeout(announceTimer);},get progress(){return progress;},get interactive(){return interactive;}};

@@ -96,6 +96,10 @@
     {
       "fixture": "wordmark-baseline.json",
       "sha256": "ef41915b589310020270f3be0b0cbe2bf607cd6b86a52c5285194c5064d16e0c"
+    },
+    {
+      "fixture": "mobile-intro-baseline.json",
+      "sha256": "988a7f118c5863f66e9c0bc25f3931038047ec0634a8effd8773513bed5ed7f1"
     }
   ]
 }

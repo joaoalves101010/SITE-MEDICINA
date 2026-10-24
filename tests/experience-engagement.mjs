@@ -20,3 +20,9 @@ test('ordinary wheel over viewport margins or index controls retains the aligned
 test('wheel arriving on meaningful entry aligns before the renderer handles that same event',()=>{const f=setup();f.setTop(260);f.doc.emit('wheel',{target:f.outside,deltaY:700});assert.equal(f.c.engaged,true);assert.deepEqual(f.positions,[200]);f.c.dispose();});
 test('small residual native or smooth scroll drift is corrected while the gallery owns the viewport',()=>{const f=setup();f.setTop(60);f.c.update();f.setY(140);f.setTop(-80);f.c.update();assert.equal(f.c.engaged,true);assert.equal(f.stage.getBoundingClientRect().top,60);f.c.dispose();});
 test('zoom and editable-target wheel never acquire an inactive gallery',()=>{for(const e of[{ctrlKey:true},{metaKey:true},{target:{closest:()=>({})}}]){const f=setup();f.setTop(260);f.doc.emit('wheel',{deltaY:120,...e});assert.equal(f.c.engaged,false);assert.deepEqual(f.positions,[]);f.c.dispose();}});
+
+test('native touch never aligns or owns the page while a finger scrolls through the gallery',()=>{
+ let top=600,y=1000;const positions=[],win={...events(),innerHeight:800},doc={...events(),visibilityState:'visible'},stage={getBoundingClientRect:()=>({top,bottom:top+680,height:680})};
+ const c=createExperienceEngagement(stage,{window:win,document:doc,nativeTouch:()=>true,getScrollY:()=>y,scrollImmediate:value=>{positions.push(value);top-=value-y;y=value;}});
+ doc.emit('touchstart',{touches:[{clientX:200,clientY:500}]});top=260;c.update();assert.equal(c.engaged,false);assert.deepEqual(positions,[]);doc.emit('touchmove',{touches:[{clientX:200,clientY:460}]});doc.emit('touchend',{touches:[]});top=60;c.update();doc.emit('wheel',{deltaY:120});assert.equal(c.engaged,false);assert.deepEqual(positions,[]);c.align();assert.deepEqual(positions,[]);c.dispose();
+});

@@ -70,7 +70,7 @@ test('unrelated pointer events cannot interrupt or steal an active mouse gesture
 test('normal scroll timing, accepted motion/art and geometry are untouched outside the new input adapter',async()=>{
  const baseline=JSON.parse(await readFile(new URL('../tests/book-medical-baseline.json',import.meta.url),'utf8'));
  for(const path of ['js/book-renderer.js','js/book-controller.js','js/book-fallback.js','css/book.css','css/book-fallback.css','js/app.js']){const text=await readFile(new URL('./../'+path,import.meta.url),'utf8');assert.equal(createHash('sha256').update(restoreBookDrag(path,text)).digest('hex'),baseline.protected[path],path);}
- const app=await readFile(new URL('./app.js',import.meta.url),'utf8');assert.ok(app.includes("scrollImmediate:target=>setBookScrollImmediate(scroll,target)"));assert.ok(!app.slice(app.indexOf('let bookController;'),app.indexOf('let scienceController;')).includes('scroll?.stop()'));assert.ok(!app.includes('onDragActive:'));
+ const app=await readFile(new URL('./app.js',import.meta.url),'utf8');assert.ok(app.includes("scrollImmediate:target=>nativeTouch?setNativeScrollImmediate(window,target):setBookScrollImmediate(scroll,target)"));assert.ok(!app.slice(app.indexOf('let bookController;'),app.indexOf('let scienceController;')).includes('scroll?.stop()'));assert.ok(!app.includes('onDragActive:'));
  const css=await readFile(new URL('../css/book.css',import.meta.url),'utf8');assert.ok(!css.includes('touch-action'));const drag=await readFile(new URL('./book-drag.js',import.meta.url),'utf8');assert.ok(!drag.includes("'touchmove'"));
 });
 test('all approved medical art/copy, hero/globe, internal content and diagonal screenshot assets match the published release',async()=>{

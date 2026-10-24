@@ -61,3 +61,7 @@ WebGL é aprimoramento visual, não requisito para ler o conteúdo. Há alternat
 Leia **[FONTES_E_LICENCAS.md](FONTES_E_LICENCAS.md)** antes de redistribuir/publicar comercialmente. Os créditos individuais das fotografias devem ser mantidos. A presença dos arquivos **Roobert** e dos efeitos derivados de referências não estabelece autorização geral de redistribuição. Este pacote não aplica uma licença única que substitua direitos de terceiros.
 
 Documentação complementar: [REBRAND-THE-MED.md](REBRAND-THE-MED.md), [MODULES-EDITORIAL.md](MODULES-EDITORIAL.md), [IMPLEMENTATION.md](IMPLEMENTATION.md), [BOOK-IMPLEMENTATION.md](BOOK-IMPLEMENTATION.md), [SCIENCE-SOURCES.md](SCIENCE-SOURCES.md) e [MEDICAL-EXPERIENCES-SOURCES.md](MEDICAL-EXPERIENCES-SOURCES.md).
+
+## Ajuste mobile — 24/10/2026
+
+Dispositivos com entrada principal por toque usam rolagem nativa. A galeria mantém o gesto horizontal e não prende a rolagem vertical; o livro estabiliza sua geometria durante mudanças da barra do Safari. A saudação da home começa antes do primeiro conteúdo e reaparece em cada recarregamento completo, com saída segura em erro/redução de movimento. A nitidez da galeria usa orçamento Retina limitado apenas no mobile. Veja `MOBILE-SAFARI.md` para limites, testes e a confirmação ainda necessária no iPhone físico. O desktop mantém sua rolagem e física aprovadas.

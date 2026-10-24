@@ -27,7 +27,7 @@ test('shared viewport follows existing scroll before throttled effects and retai
   const app=await readFile(new URL('../js/app.js',import.meta.url),'utf8');
   assert.equal((app.match(/initHero\(canvas/g)||[]).length,1);
   assert.ok(app.includes('onScroll(y=window.scrollY){sharedScene.update()'));
-  assert.ok(app.includes("const hero=$('#home')||canvas.closest('.hero')"));
+  assert.ok(app.includes("const homeIntro=initHomeIntro({hero:$('#home')});"));
   assert.ok(!app.includes('initScienceBackground'));
   const css=await readFile(new URL('../css/science-globe.css',import.meta.url),'utf8');
   assert.match(css,/\.shared-artwork\{[^}]*height:100dvh/);

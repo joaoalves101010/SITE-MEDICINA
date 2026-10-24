@@ -10,7 +10,7 @@ export function createExperienceEngagement(stage,options={}){
  const win=options.window||window,doc=options.document||document,cleanups=[];
  let active=false,blocked=false,disposed=false,aligning=false,touch=null;
  const on=(t,n,f,o)=>{t?.addEventListener?.(n,f,o);cleanups.push(()=>t?.removeEventListener?.(n,f,o));};
- const allowed=()=>!disposed&&options.allowed?.()!==false&&!options.reduced?.()&&doc.visibilityState!=='hidden';
+ const allowed=()=>!disposed&&!options.nativeTouch?.()&&options.allowed?.()!==false&&!options.reduced?.()&&doc.visibilityState!=='hidden';
  function change(value){if(active===value)return;active=value;options.onChange?.(value);}
  function release(block=true){if(block)blocked=true;change(false);}
  function bounds(){const r=stage.getBoundingClientRect(),vh=Math.max(1,win.innerHeight||1),h=Number(r.height??r.bottom-r.top),visible=Math.max(0,Math.min(vh,r.bottom)-Math.max(0,r.top)),offset=Math.abs(r.top+h*.5-vh*.5);return {r,vh,h,visible,offset,valid:h>0&&Number.isFinite(h),whole:visible>=Math.min(vh,h)*.94,centered:offset<=Math.max(32,vh*.12)};}
