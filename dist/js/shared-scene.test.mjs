@@ -139,3 +139,9 @@ test('touch-first compositor positioning never writes a compensating transform w
  try{const shared=createSharedScene(env.world,{nativeTouch:true});shared.bindRenderer(hero);for(const top of [0,-120,-800,-1900,-400,0]){env.world.top=top;shared.update();assert.equal(env.artwork.style.transform,undefined);assert.deepEqual(offsets.at(-1),[Math.max(0,Math.min(2400,-top)),800]);}window.innerHeight=650;env.fire('window:resize');assert.equal(env.artwork.style.transform,undefined);assert.equal(env.artwork.clientHeight,800);shared.dispose();}
  finally{env.restore();}
 });
+
+test('touch fallback keeps lens position fixed while preserving field travel and the existing science fade',()=>{
+ const env=environment({height:3200});window.CSS={supports:()=>true};
+ try{const shared=createSharedScene(env.world,{nativeTouch:true});for(const top of [0,-200,-400,-800,-1600,-400,0]){env.world.top=top;shared.update();assert.equal(env.artwork.style.transform,undefined);assert.equal(env.properties.get('--shared-lens-y'),'0.000px');const progress=-top/800,clamped=Math.min(1,progress);assert.equal(env.properties.get('--shared-field-travel'),`${(progress*18).toFixed(3)}%`);assert.equal(env.properties.get('--shared-lens-opacity'),(1-clamped*clamped*(3-2*clamped)).toFixed(5));}shared.dispose();}
+ finally{env.restore();}
+});

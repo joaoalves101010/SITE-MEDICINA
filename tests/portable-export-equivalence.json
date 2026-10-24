@@ -104,6 +104,10 @@
     {
       "fixture": "journey-guide-baseline.json",
       "sha256": "472396a8c7793bc982952741c2d9a4babcf87b0674968a2c541fdecbe8c1ead2"
+    },
+    {
+      "fixture": "mobile-lens-pose-baseline.json",
+      "sha256": "e5b3633a4cfd779330799ab26733fb8959a8d6aefdf80f982c57ee9d127dcd94"
     }
   ]
 }

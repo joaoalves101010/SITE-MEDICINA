@@ -72,7 +72,7 @@ export function createSharedScene(world, options = {}) {
     const lensProgress=Math.min(1,Math.max(0,progress));
     const lensOpacity=1-lensProgress*lensProgress*(3-2*lensProgress);
     const fieldTravel=motion?.matches?0:progress*18;
-    const lensY=motion?.matches?0:-offset*.9;
+    const lensY=motion?.matches||options.nativeTouch?0:-offset*.9;
     const scrollStyle=`${fieldTravel}|${lensY}|${lensOpacity}`;
     if(scrollStyle!==lastScrollStyle){
       artwork.style.setProperty?.('--shared-field-travel',`${fieldTravel.toFixed(3)}%`);

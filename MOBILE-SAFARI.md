@@ -33,3 +33,8 @@ O vídeo também mostrou bordas retangulares do fundo da própria página durant
 As atualizações móveis de uniforms são agrupadas no RAF, e eventos de resize sem mudança real das dimensões do canvas não realocam o renderer/composer. Os testes verificam ausência de translação de posicionamento móvel, reversibilidade do campo/lente e zero realocações em mudanças apenas da barra, com recalibração em largura/orientação real.
 
 Foi identificado ainda um caminho capaz de sobrescrever um gesto: um hash inicial aguardava 6,8 segundos para deslocar a página após a saudação. A gravação não revela o fragmento da URL, portanto não prova que esse era o caso específico, embora o horário coincida com a descontinuidade observada. No mobile, touchmove, wheel ou tecla de navegação agora cancelam esse deslocamento automático pendente; o fragmento continua na URL. Saída/BFCache também invalida a ação atrasada. Nenhum desses listeners captura ou impede a rolagem.
+
+
+## Ajuste pontual — posição estável da lente no mobile (24/10/2026)
+
+Após a aprovação da navegação mobile, somente o deslocamento da esfera do hero pelo scroll e a câmera que seguia o toque foram desativados no home touch. A esfera continua sendo o mesmo vidro WebGL: shaders, refração, captura cúbica e movimento interno do campo permanecem. O fade já existente encerra a lente antes da ciência; o fundo sticky contínuo não muda. A representação de reserva também mantém sua posição, caso o WebGL realmente esteja indisponível. Desktop, demais rotas e abertura preservam o comportamento anterior. Testes verificam posição fixa, refração/cubemap ativos, evolução do tempo e retorno após subir a página; não substituem a conferência visual no iPhone físico.

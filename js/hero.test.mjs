@@ -276,3 +276,23 @@ test('mobile stable-size hero ignores toolbar resize reallocations; orientation 
   }finally{restore();}
  }
 });
+
+test('fixed mobile lens keeps actual glass/refraction and time animation, without scroll/pointer displacement',async()=>{
+ const {canvas,restore}=mockBrowser(),frames=frameQueue(),handlers=new Map(),capture={};let camera;
+ window.addEventListener=(type,fn)=>handlers.set(type,fn);window.removeEventListener=type=>handlers.delete(type);
+ const runtime=mockRuntime(()=>{},capture);class Camera extends T.PerspectiveCamera{constructor(...args){super(...args);camera=this;}}
+ try{const pending=initHero(canvas,{intro:false,fixedLensPose:true,timeoutMs:5000,loadRuntime:async()=>({...runtime,PerspectiveCamera:Camera})});await nextTurn();frames.run();const hero=await pending;
+  const background=capture.materials[0],material=capture.materials[1],lens=capture.meshes[1],startTime=background.uniforms.uTime.value;
+  assert.equal(lens.visible,true);assert.equal(material.uniforms.uRefractionPower.value,.75);assert.ok(material.uniforms.tCube.value);assert.equal(material.fragmentShader,shaders.LENS_FRAG);
+  for(const offset of [0,200,500,800,1600,200,0]){const before=capture.cubeUpdates||0;handlers.get('pointermove')?.({clientX:1200,clientY:700,pointerType:'touch'});hero.setScrollOffset(offset,800);frames.run();const state=getHeroScrollState(offset,800);assert.equal(lens.position.y,.75);assert.equal(lens.visible,state.lensVisible);assert.equal(material.uniforms.uSphereAlpha.value,state.lensAlpha);assert.equal(material.uniforms.uRefractionPower.value,.75*state.lensAlpha);assert.equal(capture.cubeUpdates,before+(state.lensVisible?1:0));assert.equal(Math.abs(camera.position.x),0);assert.equal(Math.abs(camera.position.y),0);assert.equal(background.uniforms.uScrollOffset.value,state.fieldY);}
+  assert.ok(background.uniforms.uTime.value>startTime);assert.equal(lens.visible,true);assert.equal(material.uniforms.uRefractionPower.value,.75);hero.dispose();assert.equal(frames.size,0);
+ }finally{restore();}
+});
+
+test('default desktop lens still travels with scroll and follows the pointer camera',async()=>{
+ const {canvas,restore}=mockBrowser(),frames=frameQueue(),handlers=new Map(),capture={};let camera;
+ window.addEventListener=(type,fn)=>handlers.set(type,fn);window.removeEventListener=type=>handlers.delete(type);
+ const runtime=mockRuntime(()=>{},capture);class Camera extends T.PerspectiveCamera{constructor(...args){super(...args);camera=this;}}
+ try{const pending=initHero(canvas,{intro:false,timeoutMs:5000,loadRuntime:async()=>({...runtime,PerspectiveCamera:Camera})});await nextTurn();frames.run();const hero=await pending;handlers.get('pointermove')({clientX:1200,clientY:700,pointerType:'mouse'});hero.setScrollOffset(400,800);frames.run();assert.equal(capture.meshes[1].position.y,1.65);assert.equal(capture.meshes[1].visible,true);assert.ok(capture.cubeUpdates>=2);assert.notEqual(camera.position.x,0);assert.notEqual(camera.position.y,0);hero.dispose();
+ }finally{restore();}
+});

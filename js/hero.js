@@ -33,7 +33,7 @@ export function getHeroScrollState(offsetPx=0, heroHeightPx=1, reducedMotion=fal
 
 /**
  * @param {HTMLCanvasElement} canvas Decorative, aria-hidden canvas.
- * @param {{intro?: boolean, forceFallback?: boolean, pixelRatio?: number, timeoutMs?: number, loadRuntime?: Function, getInitialScrollState?: Function, stableResize?: boolean}} options
+ * @param {{intro?: boolean, forceFallback?: boolean, pixelRatio?: number, timeoutMs?: number, loadRuntime?: Function, getInitialScrollState?: Function, stableResize?: boolean, fixedLensPose?: boolean}} options
  * @returns {Promise<{mode:string,reason:string,dispose:Function,reveal:Function,setVisible:Function,setScrollOffset:Function}>}
  * intro=true preserves reference 0.35s/4s/5s artwork opening timing. Call reveal()
  * to skip the opening for returning navigation. Reduced motion renders one still.
@@ -277,7 +277,7 @@ export async function initHero(canvas, options = {}) {
       lensUniforms.uRefractionPower.value = .75 * showLens * scrollState.lensAlpha;
       lens.scale.setScalar(3 + .5 * expandLens);
       lens.position.x = -1.25 + .25 * expandLens;
-      lens.position.y = .75 + scrollState.lensOffsetY;
+      lens.position.y = .75 + (options.fixedLensPose?0:scrollState.lensOffsetY);
       const easing = 1 - Math.pow(.94, Math.max(1, delta * 60));
       cameraPosition.x += ((reduced ? 0 : mouse.x) - cameraPosition.x) * easing;
       cameraPosition.y += ((reduced ? 0 : mouse.y) - cameraPosition.y) * easing;
@@ -321,7 +321,7 @@ export async function initHero(canvas, options = {}) {
       raf = win.requestAnimationFrame(frame);
     };
     listen(win, 'pointermove', event => {
-      if (reduced) return;
+      if (reduced || options.fixedLensPose) return;
       mouse.x = event.clientX / win.innerWidth * 2 - 1;
       mouse.y = event.clientY / win.innerHeight * 2 - 1;
     }, { passive: true });

@@ -390,3 +390,8 @@ Após relatos de rolagem irregular no iPhone 14/Safari, a entrada principal por 
 A saudação “Olá. Bem-vindo à” com o wordmark oficial inicia por um gate no head, sem flash da frase principal, e reaparece em cada recarregamento completo. Não depende de marca em sessionStorage nem do carregamento de WebGL. Hashes aguardam a abertura; ausência de JavaScript, redução de movimento, erro ou watchdog mantêm a página utilizável.
 
 A galeria mobile usa atlas de 768–1024 pixels por fotografia, até 24 MiB RGBA base, e drawing buffer de até 1,5 milhão de pixels. Não equivale a uma garantia de memória total do navegador. Os testes determinísticos cobrem comportamento e recursos; a validação visual/performance em iPhone físico permanece pendente. Detalhes em `MOBILE-SAFARI.md`.
+
+
+### 24/10/2026 — posição da esfera no celular
+
+Somente o home touch mantém a posição da lente estável durante scroll/toque. O vidro WebGL original, refração, cubemap, animação interna e fade para a ciência permanecem; não foi substituído por uma esfera CSS. Desktop e a navegação mobile recém-aprovada não mudam. Ver `MOBILE-SAFARI.md` e os testes de pose.

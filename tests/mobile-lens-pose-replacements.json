@@ -1,0 +1,30 @@
+{
+  "source": {
+    "js/app.js": [
+      {
+        "old": "let pageGone=false;\nif(canvas)initHero(canvas,{intro,stableResize:nativeTouch,getInitialScrollState:sharedScene.getInitialScrollState}).then(controller=>{if(pageGone)controller.dispose();else{heroController=controller;sharedScene.bindRenderer(controller);}}).catch(()=>{\n  (canvas.closest('[data-shared-artwork]')||canvas.closest('.hero')||canvas.parentElement).dataset.renderMode='fallback';canvas.style.opacity='0';\n",
+        "new": "let pageGone=false;\nif(canvas)initHero(canvas,{intro,stableResize:nativeTouch,fixedLensPose:nativeTouch&&document.body.dataset.page==='home',getInitialScrollState:sharedScene.getInitialScrollState}).then(controller=>{if(pageGone)controller.dispose();else{heroController=controller;sharedScene.bindRenderer(controller);}}).catch(()=>{\n  (canvas.closest('[data-shared-artwork]')||canvas.closest('.hero')||canvas.parentElement).dataset.renderMode='fallback';canvas.style.opacity='0';\n"
+      }
+    ],
+    "js/hero.js": [
+      {
+        "old": " * @param {HTMLCanvasElement} canvas Decorative, aria-hidden canvas.\n * @param {{intro?: boolean, forceFallback?: boolean, pixelRatio?: number, timeoutMs?: number, loadRuntime?: Function, getInitialScrollState?: Function, stableResize?: boolean}} options\n * @returns {Promise<{mode:string,reason:string,dispose:Function,reveal:Function,setVisible:Function,setScrollOffset:Function}>}\n",
+        "new": " * @param {HTMLCanvasElement} canvas Decorative, aria-hidden canvas.\n * @param {{intro?: boolean, forceFallback?: boolean, pixelRatio?: number, timeoutMs?: number, loadRuntime?: Function, getInitialScrollState?: Function, stableResize?: boolean, fixedLensPose?: boolean}} options\n * @returns {Promise<{mode:string,reason:string,dispose:Function,reveal:Function,setVisible:Function,setScrollOffset:Function}>}\n"
+      },
+      {
+        "old": "      lens.position.x = -1.25 + .25 * expandLens;\n      lens.position.y = .75 + scrollState.lensOffsetY;\n      const easing = 1 - Math.pow(.94, Math.max(1, delta * 60));\n",
+        "new": "      lens.position.x = -1.25 + .25 * expandLens;\n      lens.position.y = .75 + (options.fixedLensPose?0:scrollState.lensOffsetY);\n      const easing = 1 - Math.pow(.94, Math.max(1, delta * 60));\n"
+      },
+      {
+        "old": "    listen(win, 'pointermove', event => {\n      if (reduced) return;\n      mouse.x = event.clientX / win.innerWidth * 2 - 1;\n",
+        "new": "    listen(win, 'pointermove', event => {\n      if (reduced || options.fixedLensPose) return;\n      mouse.x = event.clientX / win.innerWidth * 2 - 1;\n"
+      }
+    ],
+    "js/shared-scene.js": [
+      {
+        "old": "    const fieldTravel=motion?.matches?0:progress*18;\n    const lensY=motion?.matches?0:-offset*.9;\n    const scrollStyle=`${fieldTravel}|${lensY}|${lensOpacity}`;\n",
+        "new": "    const fieldTravel=motion?.matches?0:progress*18;\n    const lensY=motion?.matches||options.nativeTouch?0:-offset*.9;\n    const scrollStyle=`${fieldTravel}|${lensY}|${lensOpacity}`;\n"
+      }
+    ]
+  }
+}

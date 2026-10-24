@@ -28,7 +28,7 @@ const homeIntro=initHomeIntro({hero:$('#home')});
 const initialNavigation=createDeferredNavigationGuard(document,nativeTouch&&!!homeIntro.initialHash);
 const intro=!!canvas&&document.body.dataset.page==='home'&&homeIntro.intro&&!reduce.matches;
 let pageGone=false;
-if(canvas)initHero(canvas,{intro,stableResize:nativeTouch,getInitialScrollState:sharedScene.getInitialScrollState}).then(controller=>{if(pageGone)controller.dispose();else{heroController=controller;sharedScene.bindRenderer(controller);}}).catch(()=>{
+if(canvas)initHero(canvas,{intro,stableResize:nativeTouch,fixedLensPose:nativeTouch&&document.body.dataset.page==='home',getInitialScrollState:sharedScene.getInitialScrollState}).then(controller=>{if(pageGone)controller.dispose();else{heroController=controller;sharedScene.bindRenderer(controller);}}).catch(()=>{
   (canvas.closest('[data-shared-artwork]')||canvas.closest('.hero')||canvas.parentElement).dataset.renderMode='fallback';canvas.style.opacity='0';
 });
 // The second-fold globe is isolated from the working hero and loads only on home.

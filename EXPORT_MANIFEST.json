@@ -1,6 +1,6 @@
 {
   "project": "the med | Your Medical Journey",
-  "generated_at": "2026-10-24T16:42:36.008982+00:00",
+  "generated_at": "2026-10-24T17:01:16.735407+00:00",
   "scope": "Portable sanitized editable static website, including built dist output. No repository history, hosting credentials, environment secrets or private QA files.",
   "entrypoint": "README.md",
   "context": "CONTEXTO_PROJETO.md",
@@ -9,7 +9,7 @@
   "github_pages_configured": false,
   "validation": {
     "structural_assertions": 569,
-    "automated_tests": 382,
+    "automated_tests": 388,
     "syntax": "pass",
     "static_build": "pass",
     "private_path_identity_and_credential_pattern_scan": "no findings; heuristic, not a guarantee against every possible secret",
@@ -17,7 +17,7 @@
     "globe_regeneration": "Portable generator and all bundled inputs preserved from the prior public export; no external source checkout required.",
     "original_checkout": "unchanged",
     "brand_assets": "Approved vector wordmark and four symbol09 colour variants; no bitmap or font dependency in SVGs.",
-    "mobile": "Book removed; native photo gallery, compositor-sticky background and gesture-cancelled deferred anchors covered by automated tests; physical iPhone confirmation of the correction remains pending."
+    "mobile": "Previously approved native mobile navigation retained. Home touch lens position and touch camera are now stable while original GLSL glass/refraction, cubemap, time animation and fade remain; final physical iPhone confirmation of this small adjustment remains pending."
   },
   "export_adjustments": [
     "README and public handoff/licence/architecture documents",
@@ -29,7 +29,8 @@
     "23/10/2026: wordmark letter-spacing -.11em to -.07em only; typography geometry otherwise unchanged, with exact scoped regression.",
     "24/10/2026: current the med vector wordmark02, symbol09/favicons/footer/intro, seven authored book compositions, lowercase document titles and eight four-section editorial module routes; approved motion and original external product media preserved.",
     "24/10/2026: mobile-native scrolling, Safari stable book height, every-reload first-paint welcome and bounded Retina gallery quality; desktop physics and approved artwork preserved.",
-    "24/10/2026: book replaced by light next-step guide on all screens; touch-first native photo gallery, stable CSS-sticky background and cancellation of pending hash jumps after manual gestures. Desktop gallery physics and unrelated artwork preserved."
+    "24/10/2026: book replaced by light next-step guide on all screens; touch-first native photo gallery, stable CSS-sticky background and cancellation of pending hash jumps after manual gestures. Desktop gallery physics and unrelated artwork preserved.",
+    "24/10/2026: mobile home lens Y and pointer camera frozen without replacing or removing the original GLSL glass/refraction; desktop, shaders, CSS, HTML and assets preserved."
   ],
   "licensing": "Per-file third-party rights apply. Roobert and reference-derived materials require redistribution review; see FONTES_E_LICENCAS.md.",
   "inventory_excludes": "EXPORT_MANIFEST.json itself (avoid recursive hash)",
@@ -56,8 +57,8 @@
     },
     {
       "path": "CONTEXTO_PROJETO.md",
-      "bytes": 42592,
-      "sha256": "f570df6a9138686ea436ee06a9d66d63a52d2de5a98d04b8cb7da8d3632b843c"
+      "bytes": 42970,
+      "sha256": "06301359d7b6ce98af9529eb51368fbb442270dc97d4cde2a0505d73ecbdea33"
     },
     {
       "path": "FONTES_E_LICENCAS.md",
@@ -81,8 +82,8 @@
     },
     {
       "path": "MOBILE-SAFARI.md",
-      "bytes": 4509,
-      "sha256": "1ef37877f7ef10756d9616fa99ff8c9897269467d046d7296cb714db28e6af3a"
+      "bytes": 5304,
+      "sha256": "ce0c78fc1cf4f79611cf3b399064326c961546aa800d40894d43bb1ae9ffb017"
     },
     {
       "path": "MODULES-EDITORIAL.md",
@@ -637,7 +638,7 @@
     {
       "path": "dist/404.html",
       "bytes": 8871,
-      "sha256": "83cc5ccb154483228e9495d2fc4ab1a018b54c599229e5a32236bbe22face79c"
+      "sha256": "6c86b271d1aeb118880d97df19b7c83622beee481d621b18b861732972ab3a14"
     },
     {
       "path": "dist/assets/Roobert-Light.woff2",
@@ -1062,12 +1063,12 @@
     {
       "path": "dist/build.json",
       "bytes": 425,
-      "sha256": "ca8d9035fbc2c9330e29414ae689ac3c22e969a288638ec3ff1c7d14dbed8a9e"
+      "sha256": "015ee56b9f72e90c8ec6250b69c983a2613774201b4d0627b67a7bcd5a4cf2dd"
     },
     {
       "path": "dist/comunidade/index.html",
       "bytes": 30120,
-      "sha256": "b280dc811f7009ed8b45130fe486aaae0c22e3f62d980e90b02c0b03674cf826"
+      "sha256": "c7256c187a755085640a911e68d29a6d5cb40188b3ebe7d2e82f009d536b3c54"
     },
     {
       "path": "dist/css/book-fallback.css",
@@ -1142,12 +1143,12 @@
     {
       "path": "dist/index.html",
       "bytes": 83458,
-      "sha256": "1224fbe03df87d4311fe62c57f2f9f494d59008818decc550334a7959909c2cc"
+      "sha256": "25995afd7611148478798a6d2f640c988b0225549e2a2f66f2efd63fb092685d"
     },
     {
       "path": "dist/js/app.js",
-      "bytes": 19105,
-      "sha256": "e1ba59bd399127799a308cf0fe6e685fb414ae03543f112a815a313b822c1bf5"
+      "bytes": 19168,
+      "sha256": "fbb87c0debbf334a570e2881bc450084fd67ccbb80888986e13c79b590804843"
     },
     {
       "path": "dist/js/book-art.js",
@@ -1241,13 +1242,13 @@
     },
     {
       "path": "dist/js/hero.js",
-      "bytes": 17814,
-      "sha256": "120994800fe5ec66b444fa165cb802b89c5e1d147135b13f023fabf05c3ad409"
+      "bytes": 17890,
+      "sha256": "1a78855fbcdd8d2b1dbb3d7fd4b1c9045afb4bc548b2bca44ce5e6f73c9e705c"
     },
     {
       "path": "dist/js/hero.test.mjs",
-      "bytes": 13972,
-      "sha256": "bb606c5728de3cdb85588be10f09ca75d53253c1acc70c1bc1bd43e8e702589d"
+      "bytes": 16873,
+      "sha256": "13c2f3958332e4f035cf65bda2303e431983d7ef152461cd1c68ced5ee0740a8"
     },
     {
       "path": "dist/js/home-intro.js",
@@ -1386,13 +1387,13 @@
     },
     {
       "path": "dist/js/shared-scene.js",
-      "bytes": 5225,
-      "sha256": "535d1a7f88f4e3a09200138184bfc41fba1056a776717857c757023f38225dbd"
+      "bytes": 5246,
+      "sha256": "77021f582ce54c4d4927e593f3a4fa1e7bfd4e0f8eb358dfc80d83a24ae7c59e"
     },
     {
       "path": "dist/js/shared-scene.test.mjs",
-      "bytes": 9106,
-      "sha256": "9ff607a0c648522748b048e2276be629837bca1bec75ae801f1fe1bff73007f5"
+      "bytes": 9849,
+      "sha256": "ea7be2e1a6dadbf0e7075df60920664dcabdc04137a9b50914a111497c482f96"
     },
     {
       "path": "dist/js/templates.js",
@@ -1472,52 +1473,52 @@
     {
       "path": "dist/modulos/acervo/index.html",
       "bytes": 20815,
-      "sha256": "19b5d36a7eeb87db12d794965f472a4a2d462500e4b4a900d14437c1b1ae7bf0"
+      "sha256": "1e39f7cd53901c435739db0c47428600cb83eeac1192755d7c327d2b14d4716a"
     },
     {
       "path": "dist/modulos/club/index.html",
       "bytes": 20659,
-      "sha256": "6c69cf32f2fd6444e413f3c0ba83323d17897a8d6eb8e28c61f07b397201cf13"
+      "sha256": "1d3abc4e7ad2d727c27b4d7254f3b35b851cfb65dc2abbf795fb532ad3c5caf6"
     },
     {
       "path": "dist/modulos/explorar/index.html",
       "bytes": 21905,
-      "sha256": "953185ccbe7b78821551cc302faf495e6083dc58582fd7322f08e5b380999830"
+      "sha256": "3a24951afa69faaf8112004e4d15b1be142afe672fe611f7d578d9539a461d72"
     },
     {
       "path": "dist/modulos/hoje/index.html",
       "bytes": 20906,
-      "sha256": "feeac356b095e92d986760651f92428d82e6fca4ab45f62662f98c1075f29c0a"
+      "sha256": "245d150d2acd434bd324df9b0fc5428a8d8a36ca9be1f93b98011467c91c5880"
     },
     {
       "path": "dist/modulos/ligas/index.html",
       "bytes": 20962,
-      "sha256": "37397411994a15bce7215642a6dac1e3009886a163a16dffc1208cf7ef6c38ef"
+      "sha256": "cfc752a8f1873b2bb17db9d1376bc06ce52ab4a2825b09419b1e89752fcfb8c0"
     },
     {
       "path": "dist/modulos/mentor/index.html",
       "bytes": 19780,
-      "sha256": "2e4485d13f51fe83c15df45941da174e8df9ec5b7405124bb5c3ea9a8f97aec7"
+      "sha256": "baf4f7ae56fdb9c9d3582d09b352396ed0280e537dae2dd05cfb23c41b33fbce"
     },
     {
       "path": "dist/modulos/pesquisa/index.html",
       "bytes": 23303,
-      "sha256": "308c27cb93e5fc42cc6200bdfc4d1b4420be50b0fb1966698c1f6c0f72ead76a"
+      "sha256": "ba7962eef1dc6c5ff1325ebb874045548b5f5a1274d7a0c849014e67012338d8"
     },
     {
       "path": "dist/modulos/trajetoria/index.html",
       "bytes": 31912,
-      "sha256": "e7c34ca41361386f972d4915136b8d96c7608bd524ae7a5a680d1b21d833ce50"
+      "sha256": "4bfff7271507062c0976df30377e310bc6b066c1d53a0d289d66ead4aa08970a"
     },
     {
       "path": "dist/percursos/index.html",
       "bytes": 11192,
-      "sha256": "d032148a8b4ed65804f1fa1bce5a69010ce4196c3ce137d33d7f90f171ff2b1d"
+      "sha256": "ff1a204139381356ba3def76fbf619ada3f4167d605433327ecc10a671d6aff2"
     },
     {
       "path": "js/app.js",
-      "bytes": 19105,
-      "sha256": "e1ba59bd399127799a308cf0fe6e685fb414ae03543f112a815a313b822c1bf5"
+      "bytes": 19168,
+      "sha256": "fbb87c0debbf334a570e2881bc450084fd67ccbb80888986e13c79b590804843"
     },
     {
       "path": "js/book-art.js",
@@ -1611,13 +1612,13 @@
     },
     {
       "path": "js/hero.js",
-      "bytes": 17814,
-      "sha256": "120994800fe5ec66b444fa165cb802b89c5e1d147135b13f023fabf05c3ad409"
+      "bytes": 17890,
+      "sha256": "1a78855fbcdd8d2b1dbb3d7fd4b1c9045afb4bc548b2bca44ce5e6f73c9e705c"
     },
     {
       "path": "js/hero.test.mjs",
-      "bytes": 13972,
-      "sha256": "bb606c5728de3cdb85588be10f09ca75d53253c1acc70c1bc1bd43e8e702589d"
+      "bytes": 16873,
+      "sha256": "13c2f3958332e4f035cf65bda2303e431983d7ef152461cd1c68ced5ee0740a8"
     },
     {
       "path": "js/home-intro.js",
@@ -1756,13 +1757,13 @@
     },
     {
       "path": "js/shared-scene.js",
-      "bytes": 5225,
-      "sha256": "535d1a7f88f4e3a09200138184bfc41fba1056a776717857c757023f38225dbd"
+      "bytes": 5246,
+      "sha256": "77021f582ce54c4d4927e593f3a4fa1e7bfd4e0f8eb358dfc80d83a24ae7c59e"
     },
     {
       "path": "js/shared-scene.test.mjs",
-      "bytes": 9106,
-      "sha256": "9ff607a0c648522748b048e2276be629837bca1bec75ae801f1fe1bff73007f5"
+      "bytes": 9849,
+      "sha256": "ea7be2e1a6dadbf0e7075df60920664dcabdc04137a9b50914a111497c482f96"
     },
     {
       "path": "js/templates.js",
@@ -1841,8 +1842,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 2700,
-      "sha256": "8f1689bfd0f16862d1b273cb6802cca47c34fce0073342a9ef584986413ed6e0"
+      "bytes": 2742,
+      "sha256": "16b2ad23c040c3add9ff4b3641058ec77588d010f4a11ab320d10d2e6c9b2028"
     },
     {
       "path": "scripts/generate-globe.mjs",
@@ -1966,8 +1967,8 @@
     },
     {
       "path": "tests/journey-guide-normalize.mjs",
-      "bytes": 821,
-      "sha256": "b257953a5decebda7b59ea7071f4d4704bf1bdd852415d3afd2fe1026421f5d3"
+      "bytes": 945,
+      "sha256": "cb80a921dbadf447ce4553c6f64b8cd8d0891a792f7162b22fd15433b9e38804"
     },
     {
       "path": "tests/journey-guide-replacements.json",
@@ -2020,9 +2021,29 @@
       "sha256": "77eda177716ea66c49826016b8e4b2716b68e84a6851865fffd99244b13b0168"
     },
     {
+      "path": "tests/mobile-lens-pose-baseline.json",
+      "bytes": 16810,
+      "sha256": "4b738321ecf4cd663a18e76b6641502b00fb15af48e2b1fe5755979469c6c122"
+    },
+    {
+      "path": "tests/mobile-lens-pose-normalize.mjs",
+      "bytes": 620,
+      "sha256": "941c316b317fbd3ec96618b7a02b0f7731f386f82296ea4c9adaa999fb4accbb"
+    },
+    {
+      "path": "tests/mobile-lens-pose-replacements.json",
+      "bytes": 3086,
+      "sha256": "4a439acf9b63e44fe41f330121f01ff9fa3b6f081894f9e79ebd7cb6d09e8890"
+    },
+    {
+      "path": "tests/mobile-lens-pose.mjs",
+      "bytes": 3547,
+      "sha256": "6a8c90851aa9eadc31a5268b3f993dbb68e4882810053733851790c07cd00da9"
+    },
+    {
       "path": "tests/portable-export-equivalence.json",
-      "bytes": 4316,
-      "sha256": "2908f8347eacfd50ab2a955761a2d82e6307d02ae051535daa047da7322e6e35"
+      "bytes": 4463,
+      "sha256": "02b5c3cf18df5faec04cd87d8df01c6548cbc00f751aec9b65a522e8ad682fa5"
     },
     {
       "path": "tests/portable-export.mjs",
