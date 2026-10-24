@@ -1,3 +1,4 @@
+import {restoreProductOSHTML} from './product-os-normalize.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
@@ -12,7 +13,7 @@ test('the lens-pose change touches only three reviewed runtime files; every docu
  assert.equal(baseline.baseline,'8df13f8db09501e2dbede144f361265f994c33df');
  assert.deepEqual(Object.keys(patches.source),['js/app.js','js/hero.js','js/shared-scene.js']);
  for(const[path,expected]of Object.entries(baseline.protected)){const bytes=await readFile(new URL('../'+path,import.meta.url));assert.equal(hash(restoreMobileLensPoseSource(path,bytes)),expected,path);}
- for(const row of baseline.routes)assert.equal(hash(renderDocument({...row.route,build:baseline.buildToken})),row.sha256,row.route.slug||row.route.page);
+ for(const row of baseline.routes)assert.equal(hash(restoreProductOSHTML(renderDocument({...row.route,build:baseline.buildToken}))),row.sha256,row.route.slug||row.route.page);
 });
 
 test('mobile home fixes placement and pointer drift without substituting the actual procedural lens',async()=>{

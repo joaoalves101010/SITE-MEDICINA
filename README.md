@@ -16,6 +16,10 @@ A apresentação evoluiu de Innecta para Interny (23/10/2026) e, depois, para **
 - Screenshots originais e vídeo de demonstração ainda podem mostrar **Innecta** nos pixels. Os destinos [innectaos.vercel.app](https://innectaos.vercel.app/) e [innecta.vercel.app](https://innecta.vercel.app/) continuam inalterados. O projeto Enter permanece independente e com o nome Innecta; não houve renomeação de backend.
 - Créditos históricos, origem dos materiais e licenças não foram reescritos. A aprovação visual da marca não equivale a pesquisa de disponibilidade ou registro.
 
+## Apresentação do produto
+
+A dobra `#product-os`, após a ciência e antes das capacidades, apresenta **the med OS** com o wordmark oficial, etapas conectadas e CTA para o produto externo. É uma composição responsiva HTML/CSS, sem capturar scroll ou adicionar GPU. O aviso de pré-lançamento e os limites de backend permanecem.
+
 ## Executar
 
 Requisitos: **Node.js 22 ou superior**, npm e Python 3 para o servidor local. Não há dependências npm para instalar: as bibliotecas de execução estão incluídas localmente.

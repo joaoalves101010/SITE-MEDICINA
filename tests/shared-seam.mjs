@@ -1,3 +1,4 @@
+import {restoreProductOSHTML} from './product-os-normalize.mjs';
 import {restoreInternySource,restoreInternyHTML} from './interny-normalize.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -14,7 +15,7 @@ test('approved phrase motion, interactive globe and scientific content are uncha
   assert.equal(hash(restoreInternyHTML(renderScienceSection()).replace(motif.scienceNew,motif.scienceOld)),baseline.scienceContentSHA256);
 });
 test('one shared canvas spans both sections; no second scene or join gradient remains',()=>{
-  const html=renderHome();
+  const html=restoreProductOSHTML(renderHome());
   assert.equal((html.match(/class="hero-canvas"/g)||[]).length,1);
   assert.equal((html.match(/data-shared-scene/g)||[]).length,1);
   assert.equal((html.match(/data-shared-artwork/g)||[]).length,1);
@@ -62,8 +63,8 @@ test('science exit fully covers canvas/grain before its clipped boundary without
 });
 
 
-test('capability words are the new third fold; old works links resolve without the removed grid',async()=>{
-  const html=renderHome();
+test('capability words retain their exact approved position after normalizing only the later product introduction',async()=>{
+  const html=restoreProductOSHTML(renderHome());
   assert.ok(!html.includes('<section id="works">'));
   assert.ok(!html.includes('UM ECOSSISTEMA. MUITOS CAMINHOS.'));
   assert.ok(!html.includes('class="project-grid"'));

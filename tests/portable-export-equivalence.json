@@ -108,6 +108,10 @@
     {
       "fixture": "mobile-lens-pose-baseline.json",
       "sha256": "e5b3633a4cfd779330799ab26733fb8959a8d6aefdf80f982c57ee9d127dcd94"
+    },
+    {
+      "fixture": "product-os-baseline.json",
+      "sha256": "db70a073437fd4c830ce3c18e39404e6e9213f7d75ac1ee2b6885e50d3da330d"
     }
   ]
 }

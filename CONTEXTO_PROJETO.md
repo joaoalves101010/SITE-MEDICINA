@@ -10,6 +10,10 @@ No mobile por toque, a galeria mostra fotos grandes imediatamente, com deslizame
 
 A gravação recebida demonstrou os problemas da versão anterior; não constitui teste da correção. Testes de código e preservação passam, mas confirmação em Safari/iPhone físico continua necessária. Consulte `MOBILE-SAFARI.md` e `JOURNEY-GUIDE.md`; seções históricas abaixo documentam a evolução, não autorização para reativar o livro.
 
+### Apresentação do produto — 24/10/2026
+
+Entre ciência e capacidades, `#product-os` apresenta **the med OS**, com wordmark oficial + OS contextual, três movimentos (Planejar, Construir, Avançar), links aos módulos e CTA para `https://innectaos.vercel.app/`. Mantém fundo vinho/escuro e pré-lançamento explícito. É HTML/CSS em fluxo normal: sem screenshots, pin, parallax, novo JavaScript ou WebGL. Fontes: `js/product-os.js` e `css/product-os.css`.
+
 ## 1. O que é este projeto
 
 Esta é uma experiência de apresentação da **the med | Your Medical Journey**, voltada à trajetória acadêmica e à formação médica. A proposta conecta organização da rotina, currículo, residência, oportunidades, pesquisa, ligas, conhecimento e orientação.
@@ -67,17 +71,18 @@ Esta lista corresponde à montagem atual de `js/templates.js`, e não à primeir
 | --- | --- | --- |
 | 1 | **Hero — `#home`** | Frase editorial com alternância, apresentação the med, campo procedural vinho/creme, lente e convite à exploração. |
 | 2 | **Ciência — `#science`** | “A ciência avança no mundo. Sua trajetória começa aqui.” Globo interativo, quatro leituras científicas datadas e quatro referências institucionais independentes. Compartilha a mesma cena de fundo do hero. |
-| 3 | **Capacidades — `#partners`** | Lista tipográfica dos caminhos do ecossistema e link para Trajetória. O nome técnico do identificador não significa parceiros comerciais. `#works` permanece como âncora de compatibilidade nesta seção. |
-| 4 | **Experiências médicas — `#medical-experiences`** | Galeria interativa com oito programas/instituições internacionais, fotografias reais, requisitos, fontes e créditos. |
-| 5 | **Manifesto — `#manifesto`** | “Não é sobre chegar mais rápido. É sobre construir um caminho que faça sentido.” Tipografia grande com revelações por linha. |
-| 6 | **Princípios — `#strengths`** | Conectar, Construir e Acompanhar, com três diagramas editoriais próprios e textos preservados. |
-| 7 | **Faixa tipográfica** | “Seu futuro é feito de conexões.” Movimento horizontal decorativo. |
-| 8 | **Comunidade** | Texto sobre conhecimento que circula e chamada circular para `/comunidade/`. |
-| 9 | **Mosaico — `#product-mosaic`** | Quatro linhas diagonais, doze instâncias de oito interfaces reais; movimento de rolagem e telas inteiras dentro dos quadros. |
-| 10 | **Livro — `#team`** | “Diferentes formas de avançar”: capa e seis capítulos médicos ilustrados, navegáveis por rolagem, controles e arraste de mouse. O identificador histórico não representa uma equipe de pessoas. |
-| 11 | **Rodapé — `#contact`** | Próximo passo, links do produto/apresentação, Percursos, Mentor + Ultra, aviso de pré-lançamento e retorno ao topo. |
+| 3 | **Produto — `#product-os`** | the med OS: formação conectada, Planejar/Construir/Avançar e acesso ao produto externo em pré-lançamento. |
+| 4 | **Capacidades — `#partners`** | Lista tipográfica dos caminhos do ecossistema e link para Trajetória. O nome técnico do identificador não significa parceiros comerciais. `#works` permanece como âncora de compatibilidade nesta seção. |
+| 5 | **Experiências médicas — `#medical-experiences`** | Galeria interativa com oito programas/instituições internacionais, fotografias reais, requisitos, fontes e créditos. |
+| 6 | **Manifesto — `#manifesto`** | “Não é sobre chegar mais rápido. É sobre construir um caminho que faça sentido.” Tipografia grande com revelações por linha. |
+| 7 | **Princípios — `#strengths`** | Conectar, Construir e Acompanhar, com três diagramas editoriais próprios e textos preservados. |
+| 8 | **Faixa tipográfica** | “Seu futuro é feito de conexões.” Movimento horizontal decorativo. |
+| 9 | **Comunidade** | Texto sobre conhecimento que circula e chamada circular para `/comunidade/`. |
+| 10 | **Mosaico — `#product-mosaic`** | Quatro linhas diagonais, doze instâncias de oito interfaces reais; movimento de rolagem e telas inteiras dentro dos quadros. |
+| 11 | **Guia — `#team`** | “Qual é o seu próximo passo?” Três intenções, ações úteis e links de módulos; componente leve e acessível, sem livro ou pin. |
+| 12 | **Rodapé — `#contact`** | Próximo passo, links do produto/apresentação, Percursos, Mentor + Ultra, aviso de pré-lançamento e retorno ao topo. |
 
-**Não restaurar elementos obsoletos por engano:** a grade inicial de oito work cards não está mais na home atual; as oito páginas de módulos continuam existindo. O vídeo/reel da homepage foi removido. Os antigos seis perfis visuais da home deram lugar ao livro. A revisão posterior de 24/10/2026 também retirou a mídia das oito páginas de módulos. Comunidade e Percursos conservam sua mídia e suas narrativas próprias.
+**Não restaurar elementos obsoletos por engano:** a grade inicial de oito work cards não está mais na home atual; as oito páginas de módulos continuam existindo. O vídeo/reel da homepage foi removido. Os antigos seis perfis visuais deram lugar ao livro, posteriormente removido e substituído pelo guia leve de próximos passos. A revisão posterior de 24/10/2026 também retirou a mídia das oito páginas de módulos. Comunidade e Percursos conservam sua mídia e suas narrativas próprias.
 
 ## 4. Identidade visual e referências
 
