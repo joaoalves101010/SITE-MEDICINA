@@ -1,4 +1,5 @@
 import { bookEditorialChapters, bookCover } from './book-editorial.js';
+import { drawWordmark, WORDMARK_VIEWBOX } from './wordmark.js';
 
 /** Original medical editorial book: no product screenshots or reference artwork. */
 export const BOOK_ART_SIZE=Object.freeze({width:2100,height:1200,pageWidth:1050});
@@ -27,7 +28,7 @@ function display(ctx,family,word,{x=95,y=855,width=1910,size=610,color='#f3eee6'
 }
 export function containBookImage(image,box){const width=Number(image?.naturalWidth||image?.width)||0,height=Number(image?.naturalHeight||image?.height)||0;if(width<=0||height<=0)return null;const scale=Math.min(box.width/width,box.height/height),w=width*scale,h=height*scale;return{x:box.x+(box.width-w)/2,y:box.y+(box.height-h)/2,width:w,height:h};}
 function paintBackground(ctx,family,index){
- if(index===0){ctx.fillStyle='#4b2434';ctx.fillRect(0,0,W,H);ctx.fillStyle='#542a37';ctx.fillRect(P,0,P,H);display(ctx,family,'INTERNY',{x:1130,y:530,width:857,size:375,color:'#f3eee6',seed:82});}
+ if(index===0){ctx.fillStyle='#4b2434';ctx.fillRect(0,0,W,H);ctx.fillStyle='#542a37';ctx.fillRect(P,0,P,H);drawWordmark(ctx,{x:1130,y:230+(300-857*WORDMARK_VIEWBOX.height/WORDMARK_VIEWBOX.width)/2,width:857,fill:'#f3eee6'});}
  else{const chapter=bookChapters[index-1];ctx.fillStyle=chapter.palette.paper;ctx.fillRect(0,0,W,H);display(ctx,family,chapter.displayTitle,{x:60,y:index===6?620:(index===2?695:675),width:1980,color:chapter.palette.light,seed:index,size:index===6?570:650});}
  grain(ctx,index*541+82);
 }
@@ -45,7 +46,8 @@ function paintType(ctx,family,index){
   const chapter=bookChapters[index-1],p=chapter.palette;
   // Text remains anchored and never parallax-shifts with the pictured world.
   ctx.fillStyle=p.caption;paragraph(ctx,family,chapter.summary,1410,846,585,32,40);paragraph(ctx,family,chapter.excerpt,1410,985,585,26,34);
-  font(ctx,family,20,500);ctx.fillText(`INTERNY / ${chapter.module.toLocaleUpperCase('pt-BR')}`,1410,1140);ctx.textAlign='right';ctx.fillText(`${String(chapter.index).padStart(2,'0')}`,1995,1140);ctx.textAlign='left';
+  const markWidth=20*WORDMARK_VIEWBOX.width/WORDMARK_VIEWBOX.height;drawWordmark(ctx,{x:1410,y:1120,width:markWidth,fill:p.caption});
+  font(ctx,family,20,500);ctx.fillText(`/ ${chapter.module.toLocaleUpperCase('pt-BR')}`,1410+markWidth+12,1140);ctx.textAlign='right';ctx.fillText(`${String(chapter.index).padStart(2,'0')}`,1995,1140);ctx.textAlign='left';
  }
 }
 /**

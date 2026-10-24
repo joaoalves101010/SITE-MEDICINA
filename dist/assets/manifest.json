@@ -1,5 +1,5 @@
 {
-  "provenance": "Product UI images and tour were supplied for the Innecta project. Roobert fonts were retrieved from the public reference URLs for a private visual recreation; redistribution rights remain unverified. Source-brand decorative loops were excluded. Demonstration images do not establish endorsements or live commercial terms.",
+  "provenance": "Innecta UI images and tour copied from owner-supplied screenshots and reviewed local derivatives. Six Roobert fonts and three dual-format decorative sphere loops were downloaded from exact reference URLs at parent request for private faithful recreation. Rights for those source fonts/media remain unverified. The decorative loops contain visible source-brand letter fragments and are flagged, not approved as brand-neutral Innecta artwork. Demonstration images do not establish endorsements or live commercial terms.",
   "files": [
     {
       "file": "Roobert-Light.woff2",
@@ -7,7 +7,8 @@
       "sha256": "06f4de7fd4f59eb202ec513918b815eba05dae1bbb1200dbec32bf53be68f6a4",
       "source": "https://monopo.vn/fonts/WOFF2/Roobert-Light.woff2",
       "status": "downloaded_for_requested_private_reference_recreation",
-      "license": "Unverified; private-font reuse rights not established."
+      "license": "Unverified; private-font reuse rights not established.",
+      "validation": "HTTP200 font/woff2, wOF2 header valid; fontTools decode not run because Python Brotli extension is missing."
     },
     {
       "file": "Roobert-LightItalic.woff2",
@@ -15,7 +16,8 @@
       "sha256": "aab3aec0b673fbfaea5775041e0ce596c0c7856d627eb53c126ecc24183b6336",
       "source": "https://monopo.vn/fonts/WOFF2/Roobert-LightItalic.woff2",
       "status": "downloaded_for_requested_private_reference_recreation",
-      "license": "Unverified; private-font reuse rights not established."
+      "license": "Unverified; private-font reuse rights not established.",
+      "validation": "HTTP200 font/woff2, wOF2 header valid; fontTools decode not run because Python Brotli extension is missing."
     },
     {
       "file": "Roobert-Medium.woff2",
@@ -23,7 +25,8 @@
       "sha256": "191375b8b1d24edaf97f22c818493b8837be687e58e82387872902f241f7077d",
       "source": "https://monopo.vn/fonts/WOFF2/Roobert-Medium.woff2",
       "status": "downloaded_for_requested_private_reference_recreation",
-      "license": "Unverified; private-font reuse rights not established."
+      "license": "Unverified; private-font reuse rights not established.",
+      "validation": "HTTP200 font/woff2, wOF2 header valid; fontTools decode not run because Python Brotli extension is missing."
     },
     {
       "file": "Roobert-Regular.woff2",
@@ -31,7 +34,8 @@
       "sha256": "820d8e467fece85a56eb12aae1fdf9b372e0730bc492d30aed19d584b07a8cc0",
       "source": "https://monopo.vn/fonts/WOFF2/Roobert-Regular.woff2",
       "status": "downloaded_for_requested_private_reference_recreation",
-      "license": "Unverified; private-font reuse rights not established."
+      "license": "Unverified; private-font reuse rights not established.",
+      "validation": "HTTP200 font/woff2, wOF2 header valid; fontTools decode not run because Python Brotli extension is missing."
     },
     {
       "file": "Roobert-RegularItalic.woff2",
@@ -39,7 +43,8 @@
       "sha256": "2613bd4ee542b74f16547e338671ca7309b04e82292cabdf4b84cd8e182642f6",
       "source": "https://monopo.vn/fonts/WOFF2/Roobert-RegularItalic.woff2",
       "status": "downloaded_for_requested_private_reference_recreation",
-      "license": "Unverified; private-font reuse rights not established."
+      "license": "Unverified; private-font reuse rights not established.",
+      "validation": "HTTP200 font/woff2, wOF2 header valid; fontTools decode not run because Python Brotli extension is missing."
     },
     {
       "file": "Roobert-SemiBold.woff2",
@@ -47,7 +52,8 @@
       "sha256": "8a2c7401bbd4eda63c8928565d3ce6359486a0198e3ad062efd37a9b36daee7b",
       "source": "https://monopo.vn/fonts/WOFF2/Roobert-SemiBold.woff2",
       "status": "downloaded_for_requested_private_reference_recreation",
-      "license": "Unverified; private-font reuse rights not established."
+      "license": "Unverified; private-font reuse rights not established.",
+      "validation": "HTTP200 font/woff2, wOF2 header valid; fontTools decode not run because Python Brotli extension is missing."
     },
     {
       "file": "acervo.png",
@@ -86,8 +92,8 @@
     },
     {
       "file": "favicon.svg",
-      "bytes": 215,
-      "sha256": "c168566991e96afe4794688bf12900fef3d5e678c5518e0e95fd7e0094e98876"
+      "bytes": 4827,
+      "sha256": "9633c52f810ea045e53811d90e714e890bfc0e7c7aa638e1385b34c45e0ba78e"
     },
     {
       "file": "geist.woff2",
@@ -221,136 +227,155 @@
     },
     {
       "file": "book-pages/medical-00-cover.webp",
-      "bytes": 162862,
-      "sha256": "8744a715d34603b18d12f37498f07463acdb185fafdda697d0385bf065ceb869",
+      "bytes": 160148,
+      "sha256": "cfa9276e9f69521faa659ebc9baeee9829e40d6f8c1fdba89f906c27ff6795bc",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "authored_medical_editorial_book_composition"
+      "status": "authored_medical_editorial_book_composition",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-01-clareza.webp",
-      "bytes": 225170,
-      "sha256": "e023de51983713ea64691882c9464ab27d5ac30fa463cbb5e01cfd85b2344a98",
+      "bytes": 225504,
+      "sha256": "a2410bd5b1e11aec42e298c9d177bdbb2f9c1657a55ba73c6204f2ff33c1edfd",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "authored_medical_editorial_book_composition"
+      "status": "authored_medical_editorial_book_composition",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-02-direcao.webp",
-      "bytes": 215126,
-      "sha256": "bec54ffcb464e50a58dd72f795711410d9c77cdb00537761297d74ca12f93c79",
+      "bytes": 215518,
+      "sha256": "c9f9404f930e2d00e3be59a03fe8255916e52c560f18992dc0b40ae40a83ef1b",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "authored_medical_editorial_book_composition"
+      "status": "authored_medical_editorial_book_composition",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-03-descoberta.webp",
-      "bytes": 237442,
-      "sha256": "fa4bf2f73cfedd615409ae1fb5d84d6d0bf2e9fa906857eb6ee5a30c911a096b",
+      "bytes": 237760,
+      "sha256": "e402587a76a2035c06ae6e66c7e537cf1129ab67a3dc31504d2613133a86c46a",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "authored_medical_editorial_book_composition"
+      "status": "authored_medical_editorial_book_composition",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-04-metodo.webp",
-      "bytes": 228970,
-      "sha256": "8064dd605e7790cdaec52ef60c78178df3284cf0c9d709b0013380d5f547265c",
+      "bytes": 225894,
+      "sha256": "21517ebb6e919cb8b3505f8e035465564ab6daa94d50bb988f2fb666d0fe3bd8",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "authored_medical_editorial_book_composition"
+      "status": "authored_medical_editorial_book_composition",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-05-troca.webp",
-      "bytes": 217590,
-      "sha256": "047438afe6c40b3a12fd9a6b3957b46ccbcde7fb92aa6c5914792774f548f024",
+      "bytes": 217816,
+      "sha256": "d9e00f5f2242f851ae82b07b9eeb83e702818083d53e415b13f28aede76cb349",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "authored_medical_editorial_book_composition"
+      "status": "authored_medical_editorial_book_composition",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-06-presenca.webp",
-      "bytes": 237514,
-      "sha256": "5ba1df5afb58ee3e29b7bedc87feb3604b5e5b8b0e31b5f282b06c4af34dc784",
+      "bytes": 237846,
+      "sha256": "7d70b657d99eba10db4afaee1a586a942c5ac290d523a7227812a92cf9d27961",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "authored_medical_editorial_book_composition"
+      "status": "authored_medical_editorial_book_composition",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-clareza-art.webp",
       "bytes": 245588,
       "sha256": "6064bd306f0d85e430fda2750f7f5854fc9a2752d4aa983522b478a4ad7a7385",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "optimized_medical_alpha_derivative"
+      "status": "optimized_medical_alpha_derivative",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-clareza.png",
       "bytes": 1559295,
       "sha256": "fc3cb2d3b23efa1b12d3206aef6a7e7043bb5d290b7c04c6133813c7a0d6ca4f",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "original_medical_editorial_illustration_master"
+      "status": "original_medical_editorial_illustration_master",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-descoberta-art.webp",
       "bytes": 253172,
       "sha256": "0d5a447bb58f07c56aa88964e4589a87a4225fca66fb79d5692fc3641b101228",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "optimized_medical_alpha_derivative"
+      "status": "optimized_medical_alpha_derivative",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-descoberta.png",
       "bytes": 1834007,
       "sha256": "62b57e6d81894f61e8e06342f2445f0145ea9ec8b8d7a448bc32d9190189e050",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "original_medical_editorial_illustration_master"
+      "status": "original_medical_editorial_illustration_master",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-direcao-art.webp",
       "bytes": 232274,
       "sha256": "50ff2dc6a954c328f46ff377ee412a12faafbd5e9dc1e1bdf3fd2aec386ada47",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "optimized_medical_alpha_derivative"
+      "status": "optimized_medical_alpha_derivative",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-direcao.png",
       "bytes": 1674346,
       "sha256": "5e7b9fc21978bf5f818f33080cd84810f5930c44cbd14e03915fc598614709c3",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "original_medical_editorial_illustration_master"
+      "status": "original_medical_editorial_illustration_master",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-metodo-art.webp",
       "bytes": 273700,
       "sha256": "ff84d99d825523c685220bc49a5c88f3fc0065e93c12f844538fc69f8c8a2725",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "optimized_medical_alpha_derivative"
+      "status": "optimized_medical_alpha_derivative",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-metodo.png",
       "bytes": 1739158,
       "sha256": "0f170cdfc4a8680e33720e4d762b6f971f9f144613f8eeb3f059bce034b543a4",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "original_medical_editorial_illustration_master"
+      "status": "original_medical_editorial_illustration_master",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-presenca-art.webp",
       "bytes": 275386,
       "sha256": "0c1cd5d451aab13972957fe14c606765b21e3f3cf7e18a2d9bfcc1b0125fa353",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "optimized_medical_alpha_derivative"
+      "status": "optimized_medical_alpha_derivative",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-presenca.png",
       "bytes": 1903853,
       "sha256": "3b3f4a52a38609b0f3c05f4ec9c83a51b615e0d6a52254f98946d945b62f6c93",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "original_medical_editorial_illustration_master"
+      "status": "original_medical_editorial_illustration_master",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-troca-art.webp",
       "bytes": 218266,
       "sha256": "712e5856e3767109b0466d675ea37475d84afb79bc979ff9f45c2ae7e7e1aadb",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "optimized_medical_alpha_derivative"
+      "status": "optimized_medical_alpha_derivative",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "book-pages/medical-troca.png",
       "bytes": 1594841,
       "sha256": "d361890e80171bbb69bfef4a65b1a654d41921942a58b948d7ecdaa0f656e31c",
       "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-      "status": "original_medical_editorial_illustration_master"
+      "status": "original_medical_editorial_illustration_master",
+      "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
     },
     {
       "file": "experiences/mayo.webp",
@@ -446,6 +471,19 @@
       "sha256": "3af5c4a2e760c22af2680989a4456957b4b0d36f989cc922649cc6f1753d2cea",
       "source": "Verified Wikimedia Commons photo records,2026-10-23",
       "license": "Metadata with per-image licence references"
+    },
+    {
+      "file": "the-med-wordmark.svg",
+      "bytes": 5294,
+      "sha256": "d944a6eb4a02bd3cb289659b0de238ac4659e3c4cff9fcfc0804b30a34db79fc",
+      "source": "User-selected option 02 typography image",
+      "treatment": "Smooth cubic vector reconstruction of the approved lowercase wordmark; transparent, proportional, no embedded image or font dependency.",
+      "status": "Approved visual direction; brand registration and availability not assessed."
+    },
+    {
+      "file": "the-med-symbol-09-preto.svg",
+      "bytes": 4786,
+      "sha256": "3653572b4a836ab31431c666f87d0001d77bb3c53e2b680339df9c43c94e3454"
     }
   ],
   "excluded_reference_media": [
@@ -494,6 +532,7 @@
   },
   "book_editorial": {
     "revision": "medical-academic wine identity; user-approved ROTINA flagship",
+    "baseline": "66ad978ff4150f7cbb0007eb0b7292ccfc1417a3",
     "chapters": [
       "ROTINA",
       "TRAJETÓRIA",
@@ -503,16 +542,16 @@
       "ORIENTAÇÃO"
     ],
     "screenshots": "None in book; approved diagonal mosaic unchanged.",
-    "mechanics": "Reversible rounded-leaf book, shared scroll coordinate, mouse drag, CSS3D fallback and accessible controls.",
+    "mechanics": "Accepted renderers, controller, stage CSS, fallback and app are byte-identical to baseline.",
     "prompts": "BOOK-ART-PROMPTS.json",
     "copy": "Book-only js/book-editorial.js shared by illustration captions and semantic HTML.",
-    "superseded_assets": "Only the current medical-editorial art is included."
+    "superseded_assets": "Previous non-medical book assets removed from current source/dist; retained in Git rollback history."
   },
   "international_experiences": {
     "checked_at": "2026-10-23",
     "selection": "Editorial, not a demand ranking or institutional partnership",
     "programme_sources": "MEDICAL-EXPERIENCES-SOURCES.md",
-    "photographs": "Authentic licensed Wikimedia Commons photographs; local resized WebP derivatives retain per-image licences and accessible source credits.",
+    "photographs": "Authentic licensed Wikimedia Commons images. Resized WebP derivatives retain per-image licences and accessible credits. Originals retained in separate research workspace.",
     "interaction": "Original scoped code implementing documented circular SDF/liquid behaviour. No overall Morphin component reuse licence is claimed; unlicensed TSX/source shader was not copied wholesale.",
     "fallback": "Same ring pose via DOM cards; no claim of identical per-pixel liquid deformation without WebGL."
   }

@@ -1,0 +1,101 @@
+{
+  "publicBaseline": "9525a9133e567823e0c19524ac371514bb80cb10",
+  "reason": "Portable export only: retained previously public provenance/build descriptions; no artwork, licence grant, runtime or interaction change.",
+  "files": [
+    {
+      "file": "assets/experiences/credits.json",
+      "sourceSHA256": "3af5c4a2e760c22af2680989a4456957b4b0d36f989cc922649cc6f1753d2cea",
+      "exportSHA256": "a7dc62b23da069ff5e66d906160e9fa31249c5104d3ef0fd9386551843e16212"
+    },
+    {
+      "file": "assets/tiles/manifest.json",
+      "sourceSHA256": "78400bef7b4554bd65f2f6471e09c9b8d15fa8b7875b5563357fd79dda15d799",
+      "exportSHA256": "4d41b33c8b873982a29878b08a50b84dcc749fb07b9a514596ba2629c8f1568b"
+    },
+    {
+      "file": "assets/science-globe/README.md",
+      "sourceSHA256": "50cd87d371c180a78f479aed393162fb5afd92c9d708e58e1e1e4af74da87ccc",
+      "exportSHA256": "c0f9aae57268604eb7a0180b871793f321703543f40040c4c35e5a318bf6c4dc"
+    },
+    {
+      "file": "js/vendor/README.md",
+      "sourceSHA256": "6a17eb3560031cee4c603a1a4014f8c3318e94c28da0c93f4991e47b428c424d",
+      "exportSHA256": "b22cef563978cfe1754aba69e631636f9c778d2e3bc24c690b91431d5bef5ae5"
+    },
+    {
+      "file": "build.mjs",
+      "sourceSHA256": "d35711821f27eccbed2e90cf58a9187d5239d52498ff9dc873d8bcc374028b2a",
+      "exportSHA256": "b6dce72ea091c4603325843d0e11d1c4e632f9d3e05279826530a3264240e082"
+    }
+  ],
+  "manifestVariants": [
+    {
+      "fixture": "trajectory-baseline.json",
+      "sourceSHA256": "e259733ac82d7719f8dd43e36cf97d5d809d571727819e4afc687fca53bdb64b",
+      "exportSHA256": "16760269901bf137df4f0aea48fb848887de9b70b21a6373c5826e536991b465"
+    },
+    {
+      "fixture": "footer-closing-symbol-baseline.json",
+      "sourceSHA256": "a6025b97e11f522a917c6019ebc400e781ec7b46a75e4e764e1ff7d334d3b0a8",
+      "exportSHA256": "50c72dc2c6b4336a753a5318523660412d1db109b9f7f91400493cdcdbbc60ac"
+    },
+    {
+      "fixture": "favicon-symbol09-baseline.json",
+      "sourceSHA256": "5c4f1321eb80fb13ef2509e492b74c551e83cbf247cbf697ba4d08baaa6b1d6c",
+      "exportSHA256": "2df7aab6e5158a3e7c0a812695c431aff6fb6ce3032ab462602e4ce2547fdcc2"
+    },
+    {
+      "fixture": "book-drag-baseline.json",
+      "sourceSHA256": "240a6fc0db1f73e4ecf44ce8e2a3fb842a39958083cc33f07e83b21b1cb7cfd0",
+      "exportSHA256": "f41dc24df98ce8b1262fba0f87500847967d7e385c29d1161eed00e161a9048e"
+    }
+  ],
+  "portableGeography": "Read-only copy/derivation of user project tools/globe-source/countries.json",
+  "omittedPrivateFiles": [
+    ".openai/hosting.json"
+  ],
+  "changedFixtures": [
+    "book-drag-baseline.json",
+    "favicon-symbol09-baseline.json",
+    "footer-closing-symbol-baseline.json",
+    "interny-baseline.json",
+    "medical-experiences-baseline.json",
+    "the-med-baseline.json",
+    "trajectory-baseline.json",
+    "wordmark-baseline.json"
+  ],
+  "fixtureRemainders": [
+    {
+      "fixture": "book-drag-baseline.json",
+      "sha256": "3e60ed1db76ac5373d4205fc042c01ff21b874e6d01e4c7ef85824e106f63e89"
+    },
+    {
+      "fixture": "favicon-symbol09-baseline.json",
+      "sha256": "f083c58a908cbb5502bfd1be329de8ae639ed75e82a1f329e0578de741f7cf1f"
+    },
+    {
+      "fixture": "footer-closing-symbol-baseline.json",
+      "sha256": "71a7e0ffeb0ab90cc6dd1d3db334433ee33806dd209c65dba91454bf39c7b35b"
+    },
+    {
+      "fixture": "interny-baseline.json",
+      "sha256": "189b9bc68992f3bd0fcd96457371d47c432d7d72df1be08b44acd31d9cc6b2cb"
+    },
+    {
+      "fixture": "medical-experiences-baseline.json",
+      "sha256": "d6b1e5bcaaf43b91e7491212a4b2f7ab6ccccaf2a6fba510d79aa1715457b028"
+    },
+    {
+      "fixture": "the-med-baseline.json",
+      "sha256": "9c6cd97c80ccc3c02e332b19f9317655a5e880b1bb3b42962373da9d786a5d43"
+    },
+    {
+      "fixture": "trajectory-baseline.json",
+      "sha256": "7c7ad15ab5d663c515181cef87bd03d3b8c38c8c511c859186734521f8f7a6d5"
+    },
+    {
+      "fixture": "wordmark-baseline.json",
+      "sha256": "ef41915b589310020270f3be0b0cbe2bf607cd6b86a52c5285194c5064d16e0c"
+    }
+  ]
+}

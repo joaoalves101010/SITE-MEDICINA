@@ -1,19 +1,20 @@
-# Interny | Your Medical Journey
+# the med | Your Medical Journey
 
-Landing page editorial da **Interny | Your Medical Journey** para a formação acadêmica e a trajetória de estudantes de medicina. Projeto estático completo, em português, com animações progressivas, páginas de módulos, comunidade e percursos.
+Landing page editorial da **the med | Your Medical Journey** para a formação acadêmica e a trajetória de estudantes de medicina. Projeto estático completo, em português, com animações progressivas, páginas de módulos, comunidade e percursos.
 
 **Comece por [CONTEXTO_PROJETO.md](CONTEXTO_PROJETO.md)** para entender o objetivo, as decisões aprovadas, a ordem atual das seções, os comportamentos e os cuidados de continuidade.
 
-## Identidade atual — 23/10/2026
+## Identidade atual — 24/10/2026
 
-A apresentação passou de Innecta para **Interny | Your Medical Journey**. Esta revisão é de identidade, não um redesenho nem uma migração do produto:
+A apresentação evoluiu de Innecta para Interny (23/10/2026) e, depois, para **the med | Your Medical Journey**. A identidade atual usa o **wordmark 02 aprovado, em minúsculas e curvas vetoriais próprias**, não um logotipo digitado em Roobert nem uma fonte identificada por aproximação.
 
-- A mesma fonte **Roobert**, a paleta vinho/creme/rosa, a composição e todas as animações foram preservadas.
-- Nome, assinatura e rótulos autorais do livro foram atualizados. O livro conserva suas ilustrações médicas, suas páginas, o arraste e a rolagem aprovados.
-- **OS** deixou de acompanhar o nome principal da marca; permanece como motivo gráfico contextual e no índice do livro, onde já existia.
-- Screenshots originais e vídeo de demonstração ainda podem mostrar **Innecta** dentro da imagem. Não foram adulterados nem apresentados como novas capturas do produto.
-- Os destinos externos continuam sendo [innectaos.vercel.app](https://innectaos.vercel.app/) e [innecta.vercel.app](https://innecta.vercel.app/). Não há migração automática de domínio ou backend.
-- O projeto Enter continua independente e com o nome Innecta. Créditos históricos, origem dos materiais e licenças foram preservados; referências antigas nesses registros não devem ser substituídas cegamente.
+- Roobert permanece nos textos. A paleta vinho/creme/rosa, a arte médica e as animações aprovadas foram preservadas. O vinho escuro da identidade é **`#501F30`**.
+- O símbolo **09** complementa o wordmark; há variantes em preto, branco, vinho `#84384F` e vinho escuro `#501F30` em `brand/symbol-09/`. Na página, o símbolo preto fecha o rodapé alinhado à margem esquerda dos textos. O favicon usa o 09 branco sobre vinho escuro, com o desenho reduzido em **10%** em relação à primeira aplicação.
+- A introdução mantém sua animação e os dois fragmentos: **“Olá.” / “Bem-vindo à”**, seguidos pelo wordmark SVG oficial. A capa e os rótulos autorais do livro também usam o desenho aprovado, sem mudar a mecânica.
+- As **oito rotas de módulos** agora têm quatro seções editoriais cada, gráficos SVG/DOM e seleções locais, **sem screenshots, vídeos ou miniaturas de próximo projeto**. A home, o mosaico, a comunidade e os percursos mantêm seus conteúdos próprios.
+- **OS** não faz parte do nome principal e não é mais o favicon; permanece apenas nos motivos contextuais e no índice do livro onde já existia.
+- Screenshots originais e vídeo de demonstração ainda podem mostrar **Innecta** nos pixels. Os destinos [innectaos.vercel.app](https://innectaos.vercel.app/) e [innecta.vercel.app](https://innecta.vercel.app/) continuam inalterados. O projeto Enter permanece independente e com o nome Innecta; não houve renomeação de backend.
+- Créditos históricos, origem dos materiais e licenças não foram reescritos. A aprovação visual da marca não equivale a pesquisa de disponibilidade ou registro.
 
 ## Executar
 
@@ -42,6 +43,7 @@ Abra o endereço do servidor, não os arquivos por `file://`. O `dist/` já acom
 - `js/`: componentes, conteúdo, controladores, renderizadores e testes de unidade.
 - `css/`: estilos e responsividade.
 - `assets/`: imagens, ilustrações originais, fontes, vídeo e créditos.
+- `brand/`: cópia do wordmark oficial e quatro variantes SVG do símbolo 09.
 - `tests/`: regressões, conteúdo e integridade de escopo.
 - `scripts/` e `tools/globe-source/`: regeneração opcional da geografia do globo.
 - `build.mjs`: geração das 11 rotas físicas e do `404.html`.
@@ -58,4 +60,4 @@ WebGL é aprimoramento visual, não requisito para ler o conteúdo. Há alternat
 
 Leia **[FONTES_E_LICENCAS.md](FONTES_E_LICENCAS.md)** antes de redistribuir/publicar comercialmente. Os créditos individuais das fotografias devem ser mantidos. A presença dos arquivos **Roobert** e dos efeitos derivados de referências não estabelece autorização geral de redistribuição. Este pacote não aplica uma licença única que substitua direitos de terceiros.
 
-Documentação complementar: [IMPLEMENTATION.md](IMPLEMENTATION.md), [BOOK-IMPLEMENTATION.md](BOOK-IMPLEMENTATION.md), [SCIENCE-SOURCES.md](SCIENCE-SOURCES.md) e [MEDICAL-EXPERIENCES-SOURCES.md](MEDICAL-EXPERIENCES-SOURCES.md).
+Documentação complementar: [REBRAND-THE-MED.md](REBRAND-THE-MED.md), [MODULES-EDITORIAL.md](MODULES-EDITORIAL.md), [IMPLEMENTATION.md](IMPLEMENTATION.md), [BOOK-IMPLEMENTATION.md](BOOK-IMPLEMENTATION.md), [SCIENCE-SOURCES.md](SCIENCE-SOURCES.md) e [MEDICAL-EXPERIENCES-SOURCES.md](MEDICAL-EXPERIENCES-SOURCES.md).

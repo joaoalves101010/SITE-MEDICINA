@@ -1,0 +1,33 @@
+{
+  "baseline": "67f5495d63154dbf1c2abe5bb9055805c0eaceda",
+  "oldSVG": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\"><rect width=\"64\" height=\"64\" rx=\"16\" fill=\"#743047\"/><text x=\"32\" y=\"32\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#f3eee6\" font-family=\"Roobert,Geist,Arial,sans-serif\" font-size=\"38\" font-weight=\"550\" letter-spacing=\"0\" textLength=\"48\" lengthAdjust=\"spacingAndGlyphs\">OS</text></svg>\n",
+  "oldEntry": {
+    "file": "favicon.svg",
+    "bytes": 215,
+    "sha256": "c168566991e96afe4794688bf12900fef3d5e678c5518e0e95fd7e0094e98876"
+  },
+  "approvedViewBox": "0 0 217 236",
+  "approvedPathSHA256": "126fe1195afa148bc4c6b6999b62e7961bbbeecc3231eeca412e9b4f1b5cc68b",
+  "hrefBefore": "/assets/favicon.svg",
+  "hrefAfter": "/assets/favicon.svg?v=symbol09-small-20261024",
+  "protected": {
+    "js/templates.js": "b52a1a7a5c9754b775b32ec8a55e733ea655fb72b60f3d4d71bf8b18c2be2f7f",
+    "assets/manifest.json": "2df7aab6e5158a3e7c0a812695c431aff6fb6ce3032ab462602e4ce2547fdcc2",
+    "assets/favicon.svg": "ba6cbf396149180d8ab7b51830f84c30100f9810c1d60f5ec1a8ec41ec7ff504",
+    "js/wordmark.js": "b77f58490866c5ccc69969204f41f54e411677af3e947ab7f14362b3a3a76d21",
+    "js/footer-wordmark.js": "a78c128e8642101fdb71e0721075c5c1b27e4a961c49d65c0f7418448718dc91",
+    "css/main.css": "67e2d85054ee21330282a950cda448e217a86f7dd7cd79e22f3ac9c602c058e7",
+    "css/pages.css": "cf96462221bd98e8b6b79b00a820c913674244549c40cf103698de764b3df61b",
+    "css/wordmark.css": "7c41fe0a2f05e3e3e240bb28395047a90afdca0683052881001d0b41f30cc1fa",
+    "js/app.js": "7822e66db67b0fabeb02976448d49df73fc3b1094b281a5ff3137c4a5b6bbf1f",
+    "js/hero.js": "343c98b5e36e9dace96e4c673d98d3aff30536452ec82f47e38e8256f50630ca",
+    "js/science-content.js": "f87ea8db72a27ffd768b5b9b24e0532faaeddca74593cd02e2c6dd65428e85c4",
+    "js/book-art.js": "1bc2a2e7e73ee0d050fcb87464eab2172b6b49e0ab561763f4c35bd700462093"
+  },
+  "newIconSHA256": "9633c52f810ea045e53811d90e714e890bfc0e7c7aa638e1385b34c45e0ba78e",
+  "newEntry": {
+    "file": "favicon.svg",
+    "bytes": 4827,
+    "sha256": "9633c52f810ea045e53811d90e714e890bfc0e7c7aa638e1385b34c45e0ba78e"
+  }
+}

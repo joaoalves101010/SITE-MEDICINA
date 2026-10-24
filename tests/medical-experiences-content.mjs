@@ -6,7 +6,7 @@ const html=renderMedicalExperiences();
 test('eight editorial programmes remain in the verified order with official destinations and no ranking claims',()=>{
  assert.deepEqual(medicalExperiences.map(p=>p.id),['mayo','cleveland','yale','harvard','ucl','oxford','nus','queensland']);
  for(const p of medicalExperiences){assert.equal(p.checkedAt,'2026-10-23');assert.ok(p.href.startsWith('https://'));assert.ok(p.requirementsUrl.startsWith('https://'));for(const field of ['name','shortName','country','city','type','duration','program','summary','eligibility','status','photoCaption','imageAlt'])assert.ok(p[field]?.length>0,p.id+': '+field);}
- assert.match(html,/não um ranking de procura/);assert.match(html,/Não implica parceria com a Interny/);assert.match(html,/<time datetime="2026-10-23">23\/10\/2026<\/time>/);assert.doesNotMatch(html,/mais procurados do mundo|aprovação garantida|nossos parceiros/i);
+ assert.match(html,/não um ranking de procura/);assert.match(html,/Não implica parceria com a THE MED/);assert.match(html,/<time datetime="2026-10-23">23\/10\/2026<\/time>/);assert.doesNotMatch(html,/mais procurados do mundo|aprovação garantida|nossos parceiros/i);
 });
 test('clinical participation and observership cannot be confused, and hard eligibility/status restrictions are visible',()=>{
  const by=Object.fromEntries(medicalExperiences.map(p=>[p.id,p]));assert.equal(by.cleveland.type,'Observership');assert.match(by.cleveland.eligibility,/exclusivamente observacional.*sem atendimento a pacientes.*sem crédito acadêmico/);assert.match(by.cleveland.eligibility,/não estar no último ano/);assert.match(by.cleveland.status,/encerradas.*01\/12\/2026 a 31\/01\/2027/);assert.ok(by.cleveland.href.includes('physician-observer'));

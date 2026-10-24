@@ -53,7 +53,7 @@ test('four primary-source readings are dated; experimental result and independen
   for(const item of scienceReadings){assert.ok(/^https:\/\/(doi\.org|www\.nature\.com|www\.who\.int)\//.test(item.href));assert.ok(html.includes(item.headline));assert.ok(html.includes(item.year));assert.ok(html.includes(item.href));}
   for(const item of scienceInstitutions){assert.ok(html.includes(item.name));assert.ok(html.includes(item.href));}
   assert.ok(html.includes('experimental'));assert.ok(html.includes('estudo inicial'));
-  assert.ok(html.includes('Referências editoriais independentes.'));assert.ok(html.includes('Sem vínculo institucional com a Interny.'));
+  assert.ok(html.includes('Referências editoriais independentes.'));assert.ok(html.includes('Sem vínculo institucional com a THE MED.'));
   assert.equal((html.match(/rel="noopener noreferrer"/g)||[]).length,8);
   assert.ok(html.includes('perspectivas.<br> Conhecimento'));assert.ok(html.includes('<svg class="science-spark"'));assert.ok(!html.includes('✳'));
 });

@@ -1,6 +1,6 @@
 {
-  "project": "Interny | Your Medical Journey",
-  "generated_at": "2026-10-23T22:43:24.947513+00:00",
+  "project": "the med | Your Medical Journey",
+  "generated_at": "2026-10-24T15:15:02.715828+00:00",
   "scope": "Portable sanitized editable static website, including built dist output. No repository history, hosting credentials, environment secrets or private QA files.",
   "entrypoint": "README.md",
   "context": "CONTEXTO_PROJETO.md",
@@ -8,14 +8,15 @@
   "base_path": "/",
   "github_pages_configured": false,
   "validation": {
-    "structural_assertions": 513,
-    "automated_tests": 256,
+    "structural_assertions": 578,
+    "automated_tests": 305,
     "syntax": "pass",
     "static_build": "pass",
     "private_path_identity_and_credential_pattern_scan": "no findings; heuristic, not a guarantee against every possible secret",
-    "runtime_code_styles_and_shaders": "byte-identical to current Interny live release; portable metadata and test fixtures sanitized",
-    "globe_regeneration": "self-contained; generated geography and fallback byte-identical",
-    "original_checkout": "unchanged"
+    "runtime_code_styles_and_shaders": "Byte-identical to current published the med source; five provenance notices/manifests use the previously public portable wording. All 12 HTML documents match apart from generated build ID.",
+    "globe_regeneration": "Portable generator and all bundled inputs preserved from the prior public export; no external source checkout required.",
+    "original_checkout": "unchanged",
+    "brand_assets": "Approved vector wordmark and four symbol09 colour variants; no bitmap or font dependency in SVGs."
   },
   "export_adjustments": [
     "README and public handoff/licence/architecture documents",
@@ -24,7 +25,8 @@
     "Metadata-only regression baselines adjusted to sanitized notices/manifests",
     "Build status wording made host-independent; source/dist runtime preserved",
     "23/10/2026: Interny rebrand, seven authored book compositions and identity regressions; preserved original UI/video, external URLs and portable build inputs.",
-    "23/10/2026: wordmark letter-spacing -.11em to -.07em only; typography geometry otherwise unchanged, with exact scoped regression."
+    "23/10/2026: wordmark letter-spacing -.11em to -.07em only; typography geometry otherwise unchanged, with exact scoped regression.",
+    "24/10/2026: current the med vector wordmark02, symbol09/favicons/footer/intro, seven authored book compositions, lowercase document titles and eight four-section editorial module routes; approved motion and original external product media preserved."
   ],
   "licensing": "Per-file third-party rights apply. Roobert and reference-derived materials require redistribution review; see FONTES_E_LICENCAS.md.",
   "inventory_excludes": "EXPORT_MANIFEST.json itself (avoid recursive hash)",
@@ -46,23 +48,23 @@
     },
     {
       "path": "BOOK-IMPLEMENTATION.md",
-      "bytes": 2751,
-      "sha256": "4132d9281f3b2399cdb96b7260ccff71ae1d8c7739f13ed9fa8a9b78b9ef3a33"
+      "bytes": 3072,
+      "sha256": "85a752ef0cc34f0e53e2a2d0ca51b03081db36f591d53458b70fb991be48f9b2"
     },
     {
       "path": "CONTEXTO_PROJETO.md",
-      "bytes": 37137,
-      "sha256": "797718446f0a5ddd70dc646aefecfccec735165206cd83cd54b55009f87c3eb8"
+      "bytes": 40138,
+      "sha256": "a0eb83743b3c80aea25012dc9890b4392117f93ead226f4a17551b73d9976bc3"
     },
     {
       "path": "FONTES_E_LICENCAS.md",
-      "bytes": 4498,
-      "sha256": "2f0cb5c3a49569ca5c3b75728cfe39a55958819ade2bd9ec9766dfea24cbb6f2"
+      "bytes": 5219,
+      "sha256": "d91a462582eb797fe26077bf5f85e2d8386fd499f0d9438699630a131134fb5c"
     },
     {
       "path": "IMPLEMENTATION.md",
-      "bytes": 2989,
-      "sha256": "e7e764ec5d6c539a800feb853e2d4deb39aa562e496de5cb6dc95f6183ffac60"
+      "bytes": 4680,
+      "sha256": "7d10ae6f444bf499f8b230510c369d3377614697fded6317ab852dd9c3086185"
     },
     {
       "path": "MEDICAL-EXPERIENCES-SOURCES.md",
@@ -70,9 +72,14 @@
       "sha256": "c9ccf5acf682452e388face2ea35ecef8aa58f016e55f9ec4b9c609ccb0e5a81"
     },
     {
+      "path": "MODULES-EDITORIAL.md",
+      "bytes": 4504,
+      "sha256": "a86b9da9d4359ada62814ed31490131a445798796156b9f615158058cb285cd2"
+    },
+    {
       "path": "README.md",
-      "bytes": 5114,
-      "sha256": "372995a04f33fcbe2c525b24eb87410ca4cf7b990260ee44369ec4a174daae55"
+      "bytes": 6064,
+      "sha256": "00ce656ac18c35363a669c34b8e7518949cb820461512c8091a82b9e7420e32a"
     },
     {
       "path": "REBRAND-INTERNY.md",
@@ -80,9 +87,14 @@
       "sha256": "491b60c378a7cfa601ea3c39ef4725075aa434c4ea055b285460b1fad3562400"
     },
     {
+      "path": "REBRAND-THE-MED.md",
+      "bytes": 3823,
+      "sha256": "ddb71ab09fd4adc792eea009406bef70450f0252067f1767b2846dd9be9c7301"
+    },
+    {
       "path": "SCIENCE-SOURCES.md",
       "bytes": 2871,
-      "sha256": "346b6be0b66c76512f88a9a1131a492f47ff8394c725de2e31560bda8c7ed963"
+      "sha256": "d49e823ff6cd1ba7dbcc44277d0318572cb204773b93c21500d673f64bfb035c"
     },
     {
       "path": "assets/Roobert-Light.woff2",
@@ -126,38 +138,38 @@
     },
     {
       "path": "assets/book-pages/medical-00-cover.webp",
-      "bytes": 162862,
-      "sha256": "8744a715d34603b18d12f37498f07463acdb185fafdda697d0385bf065ceb869"
+      "bytes": 160148,
+      "sha256": "cfa9276e9f69521faa659ebc9baeee9829e40d6f8c1fdba89f906c27ff6795bc"
     },
     {
       "path": "assets/book-pages/medical-01-clareza.webp",
-      "bytes": 225170,
-      "sha256": "e023de51983713ea64691882c9464ab27d5ac30fa463cbb5e01cfd85b2344a98"
+      "bytes": 225504,
+      "sha256": "a2410bd5b1e11aec42e298c9d177bdbb2f9c1657a55ba73c6204f2ff33c1edfd"
     },
     {
       "path": "assets/book-pages/medical-02-direcao.webp",
-      "bytes": 215126,
-      "sha256": "bec54ffcb464e50a58dd72f795711410d9c77cdb00537761297d74ca12f93c79"
+      "bytes": 215518,
+      "sha256": "c9f9404f930e2d00e3be59a03fe8255916e52c560f18992dc0b40ae40a83ef1b"
     },
     {
       "path": "assets/book-pages/medical-03-descoberta.webp",
-      "bytes": 237442,
-      "sha256": "fa4bf2f73cfedd615409ae1fb5d84d6d0bf2e9fa906857eb6ee5a30c911a096b"
+      "bytes": 237760,
+      "sha256": "e402587a76a2035c06ae6e66c7e537cf1129ab67a3dc31504d2613133a86c46a"
     },
     {
       "path": "assets/book-pages/medical-04-metodo.webp",
-      "bytes": 228970,
-      "sha256": "8064dd605e7790cdaec52ef60c78178df3284cf0c9d709b0013380d5f547265c"
+      "bytes": 225894,
+      "sha256": "21517ebb6e919cb8b3505f8e035465564ab6daa94d50bb988f2fb666d0fe3bd8"
     },
     {
       "path": "assets/book-pages/medical-05-troca.webp",
-      "bytes": 217590,
-      "sha256": "047438afe6c40b3a12fd9a6b3957b46ccbcde7fb92aa6c5914792774f548f024"
+      "bytes": 217816,
+      "sha256": "d9e00f5f2242f851ae82b07b9eeb83e702818083d53e415b13f28aede76cb349"
     },
     {
       "path": "assets/book-pages/medical-06-presenca.webp",
-      "bytes": 237514,
-      "sha256": "5ba1df5afb58ee3e29b7bedc87feb3604b5e5b8b0e31b5f282b06c4af34dc784"
+      "bytes": 237846,
+      "sha256": "7d70b657d99eba10db4afaee1a586a942c5ac290d523a7227812a92cf9d27961"
     },
     {
       "path": "assets/book-pages/medical-clareza-art.webp",
@@ -291,8 +303,8 @@
     },
     {
       "path": "assets/favicon.svg",
-      "bytes": 358,
-      "sha256": "ba6cbf396149180d8ab7b51830f84c30100f9810c1d60f5ec1a8ec41ec7ff504"
+      "bytes": 4827,
+      "sha256": "9633c52f810ea045e53811d90e714e890bfc0e7c7aa638e1385b34c45e0ba78e"
     },
     {
       "path": "assets/geist.woff2",
@@ -346,8 +358,8 @@
     },
     {
       "path": "assets/manifest.json",
-      "bytes": 26595,
-      "sha256": "803a586c412816ce150e451d9484bbece67b84d9bbeed8fe83b6ee6a16015e06"
+      "bytes": 32040,
+      "sha256": "16760269901bf137df4f0aea48fb848887de9b70b21a6373c5826e536991b465"
     },
     {
       "path": "assets/mentor-detail.webp",
@@ -435,6 +447,16 @@
       "sha256": "451dd41c4bd4a9f2de8bb7c83e2e2da458ae3278c0542f6058b292992da6992f"
     },
     {
+      "path": "assets/the-med-symbol-09-preto.svg",
+      "bytes": 4786,
+      "sha256": "3653572b4a836ab31431c666f87d0001d77bb3c53e2b680339df9c43c94e3454"
+    },
+    {
+      "path": "assets/the-med-wordmark.svg",
+      "bytes": 5294,
+      "sha256": "d944a6eb4a02bd3cb289659b0de238ac4659e3c4cff9fcfc0804b30a34db79fc"
+    },
+    {
       "path": "assets/tiles/acervo.png",
       "bytes": 993200,
       "sha256": "f1982516bdd689064227ff4ee76acd973c6eccb8e278eb2fff2dcc457b8e6a78"
@@ -495,6 +517,36 @@
       "sha256": "3e7e868c7a8107394b5f3d7ed8aba751c36c181429ae18b1aa4c085f99334023"
     },
     {
+      "path": "brand/README.md",
+      "bytes": 1114,
+      "sha256": "7d6ec496bd1f720c0a531155cb7ca1598bf3ced3bad94e98a5008cf619c82a3e"
+    },
+    {
+      "path": "brand/symbol-09/the-med-symbol-09-branco.svg",
+      "bytes": 4788,
+      "sha256": "10bf5f8429794ccc93072d8ce2074b1f38ba952bfd8748e54ff70bdfdb9850ae"
+    },
+    {
+      "path": "brand/symbol-09/the-med-symbol-09-preto.svg",
+      "bytes": 4786,
+      "sha256": "3653572b4a836ab31431c666f87d0001d77bb3c53e2b680339df9c43c94e3454"
+    },
+    {
+      "path": "brand/symbol-09/the-med-symbol-09-vinho-escuro.svg",
+      "bytes": 4786,
+      "sha256": "05296c022ecaceb68faf8dd4f6d22b3748eea01608cdfe7d08762b4c0216a5da"
+    },
+    {
+      "path": "brand/symbol-09/the-med-symbol-09-vinho.svg",
+      "bytes": 4786,
+      "sha256": "ce5a97c2321be8be72285e1607e7c3a5b02fac0b67a052ab8ef4639cd7cc3498"
+    },
+    {
+      "path": "brand/the-med-wordmark.svg",
+      "bytes": 5294,
+      "sha256": "d944a6eb4a02bd3cb289659b0de238ac4659e3c4cff9fcfc0804b30a34db79fc"
+    },
+    {
       "path": "build.mjs",
       "bytes": 1262,
       "sha256": "b6dce72ea091c4603325843d0e11d1c4e632f9d3e05279826530a3264240e082"
@@ -520,6 +572,11 @@
       "sha256": "9e158adaffcb541cf4b80c0310d8a483f89776a289fddb00867fea51150ca336"
     },
     {
+      "path": "css/module-experiences.css",
+      "bytes": 20406,
+      "sha256": "66b48db83b50c00d18064a719c19a280b46b533d4c2d90546992d3759db7e4f9"
+    },
+    {
       "path": "css/pages.css",
       "bytes": 28960,
       "sha256": "cf96462221bd98e8b6b79b00a820c913674244549c40cf103698de764b3df61b"
@@ -540,14 +597,24 @@
       "sha256": "b3d1336310105c5907fa2c329bf990d86cc72b520a1da79832c607547d5f292a"
     },
     {
+      "path": "css/trajectory.css",
+      "bytes": 37212,
+      "sha256": "a5e0701be401490b782f7737c48b1b02ba26609ababe9c21350110d3c928689a"
+    },
+    {
       "path": "css/video.css",
       "bytes": 4394,
       "sha256": "328ebcc18e5125d5cffa251a68cc5faef16f57ccc80df0ac1d1ab482b08f5684"
     },
     {
+      "path": "css/wordmark.css",
+      "bytes": 1435,
+      "sha256": "4a9421ca1e82f9537edcb22276bb08a76b90a0e1ea9fafc14ebabf255a01cc8a"
+    },
+    {
       "path": "dist/404.html",
-      "bytes": 3478,
-      "sha256": "458b5d1350021e3acbdd518100feffa0e0ff39ce9147d6f71269eebb42a07ba3"
+      "bytes": 8871,
+      "sha256": "34fde3142051b8b9889b92952a03d06f37995ce7982b9a8ac192bd640b33b099"
     },
     {
       "path": "dist/assets/Roobert-Light.woff2",
@@ -591,38 +658,38 @@
     },
     {
       "path": "dist/assets/book-pages/medical-00-cover.webp",
-      "bytes": 162862,
-      "sha256": "8744a715d34603b18d12f37498f07463acdb185fafdda697d0385bf065ceb869"
+      "bytes": 160148,
+      "sha256": "cfa9276e9f69521faa659ebc9baeee9829e40d6f8c1fdba89f906c27ff6795bc"
     },
     {
       "path": "dist/assets/book-pages/medical-01-clareza.webp",
-      "bytes": 225170,
-      "sha256": "e023de51983713ea64691882c9464ab27d5ac30fa463cbb5e01cfd85b2344a98"
+      "bytes": 225504,
+      "sha256": "a2410bd5b1e11aec42e298c9d177bdbb2f9c1657a55ba73c6204f2ff33c1edfd"
     },
     {
       "path": "dist/assets/book-pages/medical-02-direcao.webp",
-      "bytes": 215126,
-      "sha256": "bec54ffcb464e50a58dd72f795711410d9c77cdb00537761297d74ca12f93c79"
+      "bytes": 215518,
+      "sha256": "c9f9404f930e2d00e3be59a03fe8255916e52c560f18992dc0b40ae40a83ef1b"
     },
     {
       "path": "dist/assets/book-pages/medical-03-descoberta.webp",
-      "bytes": 237442,
-      "sha256": "fa4bf2f73cfedd615409ae1fb5d84d6d0bf2e9fa906857eb6ee5a30c911a096b"
+      "bytes": 237760,
+      "sha256": "e402587a76a2035c06ae6e66c7e537cf1129ab67a3dc31504d2613133a86c46a"
     },
     {
       "path": "dist/assets/book-pages/medical-04-metodo.webp",
-      "bytes": 228970,
-      "sha256": "8064dd605e7790cdaec52ef60c78178df3284cf0c9d709b0013380d5f547265c"
+      "bytes": 225894,
+      "sha256": "21517ebb6e919cb8b3505f8e035465564ab6daa94d50bb988f2fb666d0fe3bd8"
     },
     {
       "path": "dist/assets/book-pages/medical-05-troca.webp",
-      "bytes": 217590,
-      "sha256": "047438afe6c40b3a12fd9a6b3957b46ccbcde7fb92aa6c5914792774f548f024"
+      "bytes": 217816,
+      "sha256": "d9e00f5f2242f851ae82b07b9eeb83e702818083d53e415b13f28aede76cb349"
     },
     {
       "path": "dist/assets/book-pages/medical-06-presenca.webp",
-      "bytes": 237514,
-      "sha256": "5ba1df5afb58ee3e29b7bedc87feb3604b5e5b8b0e31b5f282b06c4af34dc784"
+      "bytes": 237846,
+      "sha256": "7d70b657d99eba10db4afaee1a586a942c5ac290d523a7227812a92cf9d27961"
     },
     {
       "path": "dist/assets/book-pages/medical-clareza-art.webp",
@@ -756,8 +823,8 @@
     },
     {
       "path": "dist/assets/favicon.svg",
-      "bytes": 358,
-      "sha256": "ba6cbf396149180d8ab7b51830f84c30100f9810c1d60f5ec1a8ec41ec7ff504"
+      "bytes": 4827,
+      "sha256": "9633c52f810ea045e53811d90e714e890bfc0e7c7aa638e1385b34c45e0ba78e"
     },
     {
       "path": "dist/assets/geist.woff2",
@@ -811,8 +878,8 @@
     },
     {
       "path": "dist/assets/manifest.json",
-      "bytes": 26595,
-      "sha256": "803a586c412816ce150e451d9484bbece67b84d9bbeed8fe83b6ee6a16015e06"
+      "bytes": 32040,
+      "sha256": "16760269901bf137df4f0aea48fb848887de9b70b21a6373c5826e536991b465"
     },
     {
       "path": "dist/assets/mentor-detail.webp",
@@ -900,6 +967,16 @@
       "sha256": "451dd41c4bd4a9f2de8bb7c83e2e2da458ae3278c0542f6058b292992da6992f"
     },
     {
+      "path": "dist/assets/the-med-symbol-09-preto.svg",
+      "bytes": 4786,
+      "sha256": "3653572b4a836ab31431c666f87d0001d77bb3c53e2b680339df9c43c94e3454"
+    },
+    {
+      "path": "dist/assets/the-med-wordmark.svg",
+      "bytes": 5294,
+      "sha256": "d944a6eb4a02bd3cb289659b0de238ac4659e3c4cff9fcfc0804b30a34db79fc"
+    },
+    {
       "path": "dist/assets/tiles/acervo.png",
       "bytes": 993200,
       "sha256": "f1982516bdd689064227ff4ee76acd973c6eccb8e278eb2fff2dcc457b8e6a78"
@@ -962,12 +1039,12 @@
     {
       "path": "dist/build.json",
       "bytes": 425,
-      "sha256": "dbc139c829facc2335384c148e3fc37b28b2231bbc1680a5bae20bec7678dc13"
+      "sha256": "63b5c63e46b4e8c8778c9712e95f37577fb1a465e27898d6bef9df701b45634a"
     },
     {
       "path": "dist/comunidade/index.html",
-      "bytes": 13332,
-      "sha256": "47ace09a67f663fc0c181b03ca04ad1211bd6f377d0ac116812fbca9093b8e60"
+      "bytes": 30120,
+      "sha256": "f624e134b8381c36b350cbd680ae6525d4e6f1073e8ac9ff19f1421e0dadddb9"
     },
     {
       "path": "dist/css/book-fallback.css",
@@ -990,6 +1067,11 @@
       "sha256": "9e158adaffcb541cf4b80c0310d8a483f89776a289fddb00867fea51150ca336"
     },
     {
+      "path": "dist/css/module-experiences.css",
+      "bytes": 20406,
+      "sha256": "66b48db83b50c00d18064a719c19a280b46b533d4c2d90546992d3759db7e4f9"
+    },
+    {
       "path": "dist/css/pages.css",
       "bytes": 28960,
       "sha256": "cf96462221bd98e8b6b79b00a820c913674244549c40cf103698de764b3df61b"
@@ -1010,34 +1092,44 @@
       "sha256": "b3d1336310105c5907fa2c329bf990d86cc72b520a1da79832c607547d5f292a"
     },
     {
+      "path": "dist/css/trajectory.css",
+      "bytes": 37212,
+      "sha256": "a5e0701be401490b782f7737c48b1b02ba26609ababe9c21350110d3c928689a"
+    },
+    {
       "path": "dist/css/video.css",
       "bytes": 4394,
       "sha256": "328ebcc18e5125d5cffa251a68cc5faef16f57ccc80df0ac1d1ab482b08f5684"
     },
     {
+      "path": "dist/css/wordmark.css",
+      "bytes": 1435,
+      "sha256": "4a9421ca1e82f9537edcb22276bb08a76b90a0e1ea9fafc14ebabf255a01cc8a"
+    },
+    {
       "path": "dist/index.html",
-      "bytes": 63602,
-      "sha256": "f33d6940b17942d85489980223989739b550e8b2945b70a717d7d9351ec7d7a3"
+      "bytes": 80386,
+      "sha256": "a1e90d7df3b51e2e590a0cb4654e94e943f67a69b607b16d89cac2baeeede149"
     },
     {
       "path": "dist/js/app.js",
       "bytes": 18851,
-      "sha256": "7766c6b5b0b89fe463f35f9ffe597ac18165da62d1924d0739ce78d3d3da5ffb"
+      "sha256": "7822e66db67b0fabeb02976448d49df73fc3b1094b281a5ff3137c4a5b6bbf1f"
     },
     {
       "path": "dist/js/book-art.js",
-      "bytes": 10347,
-      "sha256": "1165b77ebc533a7b6adc290e518f207a89118bc337aa50d431c4a62123557173"
+      "bytes": 10579,
+      "sha256": "1bc2a2e7e73ee0d050fcb87464eab2172b6b49e0ab561763f4c35bd700462093"
     },
     {
       "path": "dist/js/book-art.test.mjs",
-      "bytes": 14906,
-      "sha256": "a55b370ce593d192c199d04da865e52cc8779054fe16e4509b6241956b8f26b1"
+      "bytes": 15827,
+      "sha256": "413c07ac11c5f6a3f02e22106f083436955278759d14e6a00ff349417738f32d"
     },
     {
       "path": "dist/js/book-controller.js",
       "bytes": 11554,
-      "sha256": "19aea7b4d65fa63b68bbab4080df6fc3e204e4b74ca1715578eb1a8bba3f2f66"
+      "sha256": "8afd85646f3f670705d60acad1f7cd80ec5f8bbea825740dc87b25d8bdc1d770"
     },
     {
       "path": "dist/js/book-drag.js",
@@ -1052,7 +1144,7 @@
     {
       "path": "dist/js/book-editorial.js",
       "bytes": 4328,
-      "sha256": "8fcff9addc352499af978cdd5389532ddc48522e603ae2f0dbdca09515924b1b"
+      "sha256": "d9df03848c014cd0465a1007c4b4ffffceaf99341b27eb89c65a13eadd7febdb"
     },
     {
       "path": "dist/js/book-fallback.js",
@@ -1077,12 +1169,12 @@
     {
       "path": "dist/js/book-section.js",
       "bytes": 3316,
-      "sha256": "7406fc1539ae82613d6781acbb6af5914314f7175997afec629cb0e9ca364a03"
+      "sha256": "e1dcf896f4dc1ad561bbac1c412bd98dcfd0819cf8bbcd60de008dfb63790ed8"
     },
     {
       "path": "dist/js/content.js",
       "bytes": 39067,
-      "sha256": "70a8583cef7cbe083603f56ad183cd00bed429faf9270e610bce384830874813"
+      "sha256": "1a5bec121057d506e76d2e742670a9b28d8f980bc8bd38bc624beb75c0e4202e"
     },
     {
       "path": "dist/js/experience-diagnostic.js",
@@ -1093,6 +1185,11 @@
       "path": "dist/js/experience-engagement.js",
       "bytes": 4288,
       "sha256": "9947dbdbf7c2e851baf1841e8fec0911be822619e8b06b3a8490ce4a80b5f900"
+    },
+    {
+      "path": "dist/js/footer-wordmark.js",
+      "bytes": 979,
+      "sha256": "a78c128e8642101fdb71e0721075c5c1b27e4a961c49d65c0f7418448718dc91"
     },
     {
       "path": "dist/js/hero-copy.js",
@@ -1122,12 +1219,27 @@
     {
       "path": "dist/js/medical-experiences.js",
       "bytes": 24212,
-      "sha256": "6ef3605594c0b34143ecc7f34f35da2e78c10ad34753ad8e9908c1ed97c28b09"
+      "sha256": "6065d3a2c251714efa6b3f5486d42692f27f20e466006e13e53bba35b2034665"
+    },
+    {
+      "path": "dist/js/module-experiences-controller.js",
+      "bytes": 4322,
+      "sha256": "8a4d44a9e372c071974251bc65d581bfdda54b5e540dc33226964f08a1a5ccb7"
+    },
+    {
+      "path": "dist/js/module-experiences-controller.test.mjs",
+      "bytes": 13214,
+      "sha256": "fef066396a41391dac0a0eeabcceaddbff90db8bf037924cd9d4b2262627c3da"
+    },
+    {
+      "path": "dist/js/module-experiences.js",
+      "bytes": 30130,
+      "sha256": "323164134d58d407f1bc0a82d3da645acef75ab88bc39468b772fa6ab0ee614f"
     },
     {
       "path": "dist/js/pages.js",
-      "bytes": 17834,
-      "sha256": "53360c0714a24b078582976bc48607b8c504f6f170fed952782544c63133b4e5"
+      "bytes": 18002,
+      "sha256": "1c3b17f33b7c2d6abc6aeae22c0f58f6290d69ef01929f04f1957427e6ea40b0"
     },
     {
       "path": "dist/js/principle-visuals.js",
@@ -1137,7 +1249,7 @@
     {
       "path": "dist/js/science-content.js",
       "bytes": 5115,
-      "sha256": "f6aa4e3809f9639a7430cb2403101630a558c39c6ba22280b0727e97e6bf6c8d"
+      "sha256": "f87ea8db72a27ffd768b5b9b24e0532faaeddca74593cd02e2c6dd65428e85c4"
     },
     {
       "path": "dist/js/science-globe.js",
@@ -1196,8 +1308,23 @@
     },
     {
       "path": "dist/js/templates.js",
-      "bytes": 11717,
-      "sha256": "873c878b81d364e030a16261ac97bf702c4835c4c15f19478799f6572a73e052"
+      "bytes": 12682,
+      "sha256": "2e6fbb545c28633682ff2bdcb89952d6c4dbf111c65c4b75bbd3d99f1d47997f"
+    },
+    {
+      "path": "dist/js/trajectory-page.js",
+      "bytes": 18905,
+      "sha256": "2f90553b36a96536974a9b15a2cee73d6dfd49817bf485b786d18a125e444d3c"
+    },
+    {
+      "path": "dist/js/trajectory.js",
+      "bytes": 5707,
+      "sha256": "b2ec624bf1b2bce98f6a843c1d1c2b075da7a7cba043b9e1d3dd4ca1a4135224"
+    },
+    {
+      "path": "dist/js/trajectory.test.mjs",
+      "bytes": 7965,
+      "sha256": "f41d4b922ece446c3dd9f88d6bfef0893605dd4e5f872e4fa78875cd964f8eb1"
     },
     {
       "path": "dist/js/vendor/README.md",
@@ -1245,69 +1372,74 @@
       "sha256": "a6158c2f456320077af7d87a34fbeeeb0ffc00643fffc99f831b82fadb1dad66"
     },
     {
+      "path": "dist/js/wordmark.js",
+      "bytes": 7373,
+      "sha256": "b77f58490866c5ccc69969204f41f54e411677af3e947ab7f14362b3a3a76d21"
+    },
+    {
       "path": "dist/modulos/acervo/index.html",
-      "bytes": 7784,
-      "sha256": "ef77234a2c2962d174ee0bf1146e30dfb7c7d0546e528bb8b0b622f243e8456f"
+      "bytes": 20815,
+      "sha256": "216104697f77c13e13ca307d762be89830f92c522341058d9c4fa7d30c4e0511"
     },
     {
       "path": "dist/modulos/club/index.html",
-      "bytes": 8309,
-      "sha256": "85542eb8d3cdcd041fa54b95f371fd10c598307df40a79ffd8949ea224eb9c5a"
+      "bytes": 20659,
+      "sha256": "8174f0787179414223f3e93f706746d1dc5469ef335de421993ea903e534174b"
     },
     {
       "path": "dist/modulos/explorar/index.html",
-      "bytes": 8381,
-      "sha256": "82c815cf7492b43ab4e8fefb254e5ca22eeb723d4584acdef658c00be79a5e1f"
+      "bytes": 21905,
+      "sha256": "7221a032b28a3e878b673f9cf0a8a660ea5955f3916dd641b9eba5f95e1be58f"
     },
     {
       "path": "dist/modulos/hoje/index.html",
-      "bytes": 7438,
-      "sha256": "5e6d22ed4e859cf5b400f6a06a122783a5b5adb63d9b02a485dd7799cedd814f"
+      "bytes": 20906,
+      "sha256": "9bf43293960928a21fc321ac75a0c2729bce3113211f1c5abc73552579ef4a74"
     },
     {
       "path": "dist/modulos/ligas/index.html",
-      "bytes": 11043,
-      "sha256": "e426753e09ce3345e3e0587a9429eb914bf7d15725a435445aeefe5d63a378c3"
+      "bytes": 20962,
+      "sha256": "65bc8d15c1e5739110622f0fef3308525a93cb5968609af9e2257c51c90746ff"
     },
     {
       "path": "dist/modulos/mentor/index.html",
-      "bytes": 7771,
-      "sha256": "ecbd178ffd82a22bed2b9de224b2e50ef489f772a188588bd845ff0322d8b45d"
+      "bytes": 19780,
+      "sha256": "8b500d3296992214572325d7c972701d5dc75229ce0117ef3d842e20cbcacc30"
     },
     {
       "path": "dist/modulos/pesquisa/index.html",
-      "bytes": 12437,
-      "sha256": "da9459a5cf9d61159df758753e92d97c97e90a48e45bd344a46e8f18e419051d"
+      "bytes": 23303,
+      "sha256": "a0c8d9ff5485c1ad8ee4e6e5bf1c0d4373c7d948680d2485958c2ec079964902"
     },
     {
       "path": "dist/modulos/trajetoria/index.html",
-      "bytes": 19370,
-      "sha256": "e4788913813b04dbfb9112e7e9ef306f32d5b1dfa1e6ea6fc9177ca849af3bad"
+      "bytes": 31912,
+      "sha256": "06b174da15382f260dc2f19e15d9af5e692e34062c7de98595a02e30a13866c5"
     },
     {
       "path": "dist/percursos/index.html",
-      "bytes": 5799,
-      "sha256": "13bb2a19db625e4fa695de8c46157929f406cf97002fa4c7342b1a13a686009a"
+      "bytes": 11192,
+      "sha256": "29d1256b48876189d8c90fabfd15c9a04f1ee67a7a213f1f62fb9f7498e26d27"
     },
     {
       "path": "js/app.js",
       "bytes": 18851,
-      "sha256": "7766c6b5b0b89fe463f35f9ffe597ac18165da62d1924d0739ce78d3d3da5ffb"
+      "sha256": "7822e66db67b0fabeb02976448d49df73fc3b1094b281a5ff3137c4a5b6bbf1f"
     },
     {
       "path": "js/book-art.js",
-      "bytes": 10347,
-      "sha256": "1165b77ebc533a7b6adc290e518f207a89118bc337aa50d431c4a62123557173"
+      "bytes": 10579,
+      "sha256": "1bc2a2e7e73ee0d050fcb87464eab2172b6b49e0ab561763f4c35bd700462093"
     },
     {
       "path": "js/book-art.test.mjs",
-      "bytes": 14906,
-      "sha256": "a55b370ce593d192c199d04da865e52cc8779054fe16e4509b6241956b8f26b1"
+      "bytes": 15827,
+      "sha256": "413c07ac11c5f6a3f02e22106f083436955278759d14e6a00ff349417738f32d"
     },
     {
       "path": "js/book-controller.js",
       "bytes": 11554,
-      "sha256": "19aea7b4d65fa63b68bbab4080df6fc3e204e4b74ca1715578eb1a8bba3f2f66"
+      "sha256": "8afd85646f3f670705d60acad1f7cd80ec5f8bbea825740dc87b25d8bdc1d770"
     },
     {
       "path": "js/book-drag.js",
@@ -1322,7 +1454,7 @@
     {
       "path": "js/book-editorial.js",
       "bytes": 4328,
-      "sha256": "8fcff9addc352499af978cdd5389532ddc48522e603ae2f0dbdca09515924b1b"
+      "sha256": "d9df03848c014cd0465a1007c4b4ffffceaf99341b27eb89c65a13eadd7febdb"
     },
     {
       "path": "js/book-fallback.js",
@@ -1347,12 +1479,12 @@
     {
       "path": "js/book-section.js",
       "bytes": 3316,
-      "sha256": "7406fc1539ae82613d6781acbb6af5914314f7175997afec629cb0e9ca364a03"
+      "sha256": "e1dcf896f4dc1ad561bbac1c412bd98dcfd0819cf8bbcd60de008dfb63790ed8"
     },
     {
       "path": "js/content.js",
       "bytes": 39067,
-      "sha256": "70a8583cef7cbe083603f56ad183cd00bed429faf9270e610bce384830874813"
+      "sha256": "1a5bec121057d506e76d2e742670a9b28d8f980bc8bd38bc624beb75c0e4202e"
     },
     {
       "path": "js/experience-diagnostic.js",
@@ -1363,6 +1495,11 @@
       "path": "js/experience-engagement.js",
       "bytes": 4288,
       "sha256": "9947dbdbf7c2e851baf1841e8fec0911be822619e8b06b3a8490ce4a80b5f900"
+    },
+    {
+      "path": "js/footer-wordmark.js",
+      "bytes": 979,
+      "sha256": "a78c128e8642101fdb71e0721075c5c1b27e4a961c49d65c0f7418448718dc91"
     },
     {
       "path": "js/hero-copy.js",
@@ -1392,12 +1529,27 @@
     {
       "path": "js/medical-experiences.js",
       "bytes": 24212,
-      "sha256": "6ef3605594c0b34143ecc7f34f35da2e78c10ad34753ad8e9908c1ed97c28b09"
+      "sha256": "6065d3a2c251714efa6b3f5486d42692f27f20e466006e13e53bba35b2034665"
+    },
+    {
+      "path": "js/module-experiences-controller.js",
+      "bytes": 4322,
+      "sha256": "8a4d44a9e372c071974251bc65d581bfdda54b5e540dc33226964f08a1a5ccb7"
+    },
+    {
+      "path": "js/module-experiences-controller.test.mjs",
+      "bytes": 13214,
+      "sha256": "fef066396a41391dac0a0eeabcceaddbff90db8bf037924cd9d4b2262627c3da"
+    },
+    {
+      "path": "js/module-experiences.js",
+      "bytes": 30130,
+      "sha256": "323164134d58d407f1bc0a82d3da645acef75ab88bc39468b772fa6ab0ee614f"
     },
     {
       "path": "js/pages.js",
-      "bytes": 17834,
-      "sha256": "53360c0714a24b078582976bc48607b8c504f6f170fed952782544c63133b4e5"
+      "bytes": 18002,
+      "sha256": "1c3b17f33b7c2d6abc6aeae22c0f58f6290d69ef01929f04f1957427e6ea40b0"
     },
     {
       "path": "js/principle-visuals.js",
@@ -1407,7 +1559,7 @@
     {
       "path": "js/science-content.js",
       "bytes": 5115,
-      "sha256": "f6aa4e3809f9639a7430cb2403101630a558c39c6ba22280b0727e97e6bf6c8d"
+      "sha256": "f87ea8db72a27ffd768b5b9b24e0532faaeddca74593cd02e2c6dd65428e85c4"
     },
     {
       "path": "js/science-globe.js",
@@ -1466,8 +1618,23 @@
     },
     {
       "path": "js/templates.js",
-      "bytes": 11717,
-      "sha256": "873c878b81d364e030a16261ac97bf702c4835c4c15f19478799f6572a73e052"
+      "bytes": 12682,
+      "sha256": "2e6fbb545c28633682ff2bdcb89952d6c4dbf111c65c4b75bbd3d99f1d47997f"
+    },
+    {
+      "path": "js/trajectory-page.js",
+      "bytes": 18905,
+      "sha256": "2f90553b36a96536974a9b15a2cee73d6dfd49817bf485b786d18a125e444d3c"
+    },
+    {
+      "path": "js/trajectory.js",
+      "bytes": 5707,
+      "sha256": "b2ec624bf1b2bce98f6a843c1d1c2b075da7a7cba043b9e1d3dd4ca1a4135224"
+    },
+    {
+      "path": "js/trajectory.test.mjs",
+      "bytes": 7965,
+      "sha256": "f41d4b922ece446c3dd9f88d6bfef0893605dd4e5f872e4fa78875cd964f8eb1"
     },
     {
       "path": "js/vendor/README.md",
@@ -1515,9 +1682,14 @@
       "sha256": "a6158c2f456320077af7d87a34fbeeeb0ffc00643fffc99f831b82fadb1dad66"
     },
     {
+      "path": "js/wordmark.js",
+      "bytes": 7373,
+      "sha256": "b77f58490866c5ccc69969204f41f54e411677af3e947ab7f14362b3a3a76d21"
+    },
+    {
       "path": "package.json",
-      "bytes": 1948,
-      "sha256": "ea3d1b684641cc3ee3d75ac9fe466b5206b62aa7d3fa8f2037adeef00dec5219"
+      "bytes": 2213,
+      "sha256": "acfa9f12cb91e69ef947d450fa1c80c33a8c84c9dfafb5cd114b601f9a617051"
     },
     {
       "path": "scripts/generate-globe.mjs",
@@ -1532,7 +1704,7 @@
     {
       "path": "tests/book-drag-baseline.json",
       "bytes": 4802,
-      "sha256": "d90078b56c22c6f6b533be0df9a4b541d1ae0add1f1da8df1e6e77105995caba"
+      "sha256": "9560d136dd09493ff318ce717aae30b60e1b8edb2dae3a1c3a081d10391ecce8"
     },
     {
       "path": "tests/book-drag-normalize.mjs",
@@ -1566,8 +1738,8 @@
     },
     {
       "path": "tests/brand-motif.mjs",
-      "bytes": 3015,
-      "sha256": "6b048bdca6018f1edda48e44b3ce9ad50d38b06bda8c2a83fb3abc6438902e00"
+      "bytes": 8983,
+      "sha256": "d6672f33652bc8ec1cf8e6ab70fdd4067afd2cbab4bdbbad6be481f2a4d2fa2d"
     },
     {
       "path": "tests/experience-diagnostic.mjs",
@@ -1578,6 +1750,36 @@
       "path": "tests/experience-engagement.mjs",
       "bytes": 6351,
       "sha256": "e9054c5316777d50811bdb149cf72650b163e69125e7430ba1e0b6db2dfe2a90"
+    },
+    {
+      "path": "tests/favicon-symbol09-baseline.json",
+      "bytes": 2199,
+      "sha256": "97173856e087f492def4fe0ab1c7a50fc7d1a628d4feec5413e001808475cb47"
+    },
+    {
+      "path": "tests/favicon-symbol09-normalize.mjs",
+      "bytes": 1247,
+      "sha256": "93fc89fba389547a9b3555f9a6dc575cb121582a280a061117b3d295b005ea69"
+    },
+    {
+      "path": "tests/footer-closing-symbol-baseline.json",
+      "bytes": 2145,
+      "sha256": "5f3f83602f76d79dc18de5fbca2b0f3ac4c37e19cea6c6e781f3df2f3d2654d1"
+    },
+    {
+      "path": "tests/footer-closing-symbol-normalize.mjs",
+      "bytes": 1293,
+      "sha256": "2a7c439d91df61a69e5567707576f72e036a10b8c46600fef53e5fa086c7c956"
+    },
+    {
+      "path": "tests/footer-wordmark-baseline.json",
+      "bytes": 1508,
+      "sha256": "98e22fbe1e8c9cc3cd72a8f238da0ea6838020c5288d423895f93e7e91f4b044"
+    },
+    {
+      "path": "tests/footer-wordmark-normalize.mjs",
+      "bytes": 1053,
+      "sha256": "1c610ae41213cc63485bde9d2eb885dbbc648c7b88c29ba975be648a78674f69"
     },
     {
       "path": "tests/home-principles-reel-baseline.json",
@@ -1591,8 +1793,8 @@
     },
     {
       "path": "tests/interny-normalize.mjs",
-      "bytes": 2376,
-      "sha256": "0ea6703008c70ef8e6ba2813b4222097c2045c84da74452fc640aa3c648f40e7"
+      "bytes": 2514,
+      "sha256": "cd359119ee1ab9fb071453d788499ea032259ffe76774890b3640f0bf598b907"
     },
     {
       "path": "tests/interny-replacements.json",
@@ -1601,18 +1803,18 @@
     },
     {
       "path": "tests/interny.mjs",
-      "bytes": 4476,
-      "sha256": "26077f569b4babe426e6caa7fdbcc2869b1339b802a3d276a05f42944c830216"
+      "bytes": 15238,
+      "sha256": "c900e1b915b87db85ea464c8ba8d8b45f7bbceaa5d33ffa277a2d1517998589a"
     },
     {
       "path": "tests/medical-experiences-baseline.json",
-      "bytes": 62922,
-      "sha256": "0b11759acbd98ceeda04ba795065d04636147add8d047c91471488ac2733b66b"
+      "bytes": 67754,
+      "sha256": "f3690e700c7131133f927ba2e24dc1eb19780bcac76e4ff008c8ae4ec9356fe8"
     },
     {
       "path": "tests/medical-experiences-content.mjs",
       "bytes": 5241,
-      "sha256": "fb23bdb868f67a23deba31de70a60f35d552f71a0391834de01004686e6f07cc"
+      "sha256": "b2bfa55cb9a44d1e4cea185e476392c53fc6d33b4503644576380429df092fa5"
     },
     {
       "path": "tests/medical-experiences-normalize.mjs",
@@ -1623,6 +1825,16 @@
       "path": "tests/medical-experiences.mjs",
       "bytes": 15426,
       "sha256": "d51f346fed40def7b266e9b491f5d37568b2a1761c198875f83a60ce51d3c824"
+    },
+    {
+      "path": "tests/portable-export-equivalence.json",
+      "bytes": 4029,
+      "sha256": "3317c61de908fea2de36a38f667f0d1852fcc31ace27a080de06943db7efafc7"
+    },
+    {
+      "path": "tests/portable-export.mjs",
+      "bytes": 2748,
+      "sha256": "3b92aed0889d80e1cced2552c152b1454ba9a5fb450abb814641717c5ece4861"
     },
     {
       "path": "tests/principles.mjs",
@@ -1642,7 +1854,7 @@
     {
       "path": "tests/science.mjs",
       "bytes": 6911,
-      "sha256": "47aa2b32b529e04b595498a2b2db8388ecd496e2b6c0646c8f63fb7124034855"
+      "sha256": "0371cb956193e22bfcedbc2edfcf62b008a7bb376f201e4b3e6ea96298328cd1"
     },
     {
       "path": "tests/shared-seam-baseline.json",
@@ -1655,6 +1867,16 @@
       "sha256": "1c124c0e5f61d466a81af76d99774797bf996dce49ec49ba2bfb99f3b9a71b10"
     },
     {
+      "path": "tests/the-med-baseline.json",
+      "bytes": 18697,
+      "sha256": "c70b44e203df6945a0381dc909a912b178df11623ad962a62e06e02394640c8f"
+    },
+    {
+      "path": "tests/the-med-normalize.mjs",
+      "bytes": 2754,
+      "sha256": "28b90775b4d47ca2990a7dd82ab6de8d6727b91b0d3974cc8de3db342a390d2c"
+    },
+    {
       "path": "tests/tiles-baseline.json",
       "bytes": 2664,
       "sha256": "c92310fbc75a961d8dc880ed53599e385ae6efef97cbdd6095a2085fd4bf4647"
@@ -1665,9 +1887,44 @@
       "sha256": "dba7b4f05790843b69d900a872a6c954fab5ab8d29c95e60f4f57c394e97e1e1"
     },
     {
+      "path": "tests/trajectory-baseline.json",
+      "bytes": 145464,
+      "sha256": "94a00e9612ee5b2e4ea2b1850241bb4e6c30b0aeb563e1cedef13fcf72e42a33"
+    },
+    {
+      "path": "tests/trajectory-normalize.mjs",
+      "bytes": 2241,
+      "sha256": "249362e6c7271b239da1a32f1a8b92f22819d01d859543efb0dceba62c3098c9"
+    },
+    {
+      "path": "tests/trajectory-replacements.json",
+      "bytes": 7240,
+      "sha256": "765fc986cb03c6c3ccce5839b082efa33dfd405f4d36efc14c0fec5b7aca8c9b"
+    },
+    {
+      "path": "tests/trajectory.mjs",
+      "bytes": 8524,
+      "sha256": "af047d270b4f38580db05bd80e0cbe4f21e28ea2d973a905cdbbc363155d2f16"
+    },
+    {
       "path": "tests/validate.mjs",
-      "bytes": 5672,
-      "sha256": "582c6b5783a0cf85c0b971fe52dd3152e9652f530c5722f60387462c166e99a3"
+      "bytes": 6844,
+      "sha256": "15cf8b3b2d01feaf60ba35ff0b6d7df232509f398c246345284e579bf8ac98f2"
+    },
+    {
+      "path": "tests/wordmark-baseline.json",
+      "bytes": 19469,
+      "sha256": "96d5b96d8e0b31f434e81c62c413c72329e21cc75178812870a58c27d1542f73"
+    },
+    {
+      "path": "tests/wordmark-normalize.mjs",
+      "bytes": 1875,
+      "sha256": "fd4b4fe3a45a136bf24aa43519bb49a45c1265483c93801c5562177c11f00f9c"
+    },
+    {
+      "path": "tests/wordmark-replacements.json",
+      "bytes": 2035,
+      "sha256": "0f2bc5b127832475d8ab0e16f8e10626e250fe20d4e1d37d20c09204a1b89dda"
     },
     {
       "path": "tools/globe-source/countries.json",

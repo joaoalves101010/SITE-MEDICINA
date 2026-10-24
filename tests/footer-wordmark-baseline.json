@@ -1,0 +1,29 @@
+{
+  "baseline": "d20751b85d32cd1de108ad5a9da837705bd09378",
+  "protected": {
+    "js/templates.js": "dfde123b1cb9d15f43c22df356fb581c57884a03bbcf336584937d238087e3c7",
+    "css/wordmark.css": "c263eb6f14655c7a7e6081cfc709ced67c624e87b8e41fc873674a16bd5711a6",
+    "js/wordmark.js": "b77f58490866c5ccc69969204f41f54e411677af3e947ab7f14362b3a3a76d21"
+  },
+  "added": {
+    "js/footer-wordmark.js": "a78c128e8642101fdb71e0721075c5c1b27e4a961c49d65c0f7418448718dc91"
+  },
+  "sourceReplacements": {
+    "js/templates.js": [
+      {
+        "old": "",
+        "new": "import { renderFooterWordmark } from './footer-wordmark.js';\n"
+      },
+      {
+        "old": "<a href=\"${productUrl || 'https://innectaos.vercel.app/'}\" target=\"_blank\" rel=\"noopener\">Conhe\u00e7a a THE MED ${arrow}</a>",
+        "new": "<a href=\"${productUrl || 'https://innectaos.vercel.app/'}\" target=\"_blank\" rel=\"noopener\" aria-label=\"Conhe\u00e7a a the med\"><span class=\"footer-cta-copy\">Conhe\u00e7a a ${renderFooterWordmark()}</span> ${arrow}</a>"
+      }
+    ],
+    "css/wordmark.css": [
+      {
+        "old": "",
+        "new": "\n/* Footer keeps one text/mark flex item, the original arrow gap and full gradient. */\n.contact>a .footer-cta-copy{white-space:nowrap}\n.contact>a .footer-wordmark{display:inline-block;width:4.115em;height:.8786476868em;vertical-align:-.035em;overflow:visible}\n@media(max-width:1023px){.contact>a .footer-wordmark path{fill:url(#footer-brand-gradient-narrow)}}\n"
+      }
+    ]
+  }
+}

@@ -9,13 +9,13 @@
     "assets/Roobert-SemiBold.woff2": "8a2c7401bbd4eda63c8928565d3ce6359486a0198e3ad062efd37a9b36daee7b",
     "assets/acervo.png": "f1982516bdd689064227ff4ee76acd973c6eccb8e278eb2fff2dcc457b8e6a78",
     "assets/acompanhamento.png": "ddaa10cb03cdbefd760f80705fd222c06880079fc6bb4e1310c43d0536517aec",
-    "assets/book-pages/medical-00-cover.webp": "8744a715d34603b18d12f37498f07463acdb185fafdda697d0385bf065ceb869",
-    "assets/book-pages/medical-01-clareza.webp": "e023de51983713ea64691882c9464ab27d5ac30fa463cbb5e01cfd85b2344a98",
-    "assets/book-pages/medical-02-direcao.webp": "bec54ffcb464e50a58dd72f795711410d9c77cdb00537761297d74ca12f93c79",
-    "assets/book-pages/medical-03-descoberta.webp": "fa4bf2f73cfedd615409ae1fb5d84d6d0bf2e9fa906857eb6ee5a30c911a096b",
-    "assets/book-pages/medical-04-metodo.webp": "8064dd605e7790cdaec52ef60c78178df3284cf0c9d709b0013380d5f547265c",
-    "assets/book-pages/medical-05-troca.webp": "047438afe6c40b3a12fd9a6b3957b46ccbcde7fb92aa6c5914792774f548f024",
-    "assets/book-pages/medical-06-presenca.webp": "5ba1df5afb58ee3e29b7bedc87feb3604b5e5b8b0e31b5f282b06c4af34dc784",
+    "assets/book-pages/medical-00-cover.webp": "cfa9276e9f69521faa659ebc9baeee9829e40d6f8c1fdba89f906c27ff6795bc",
+    "assets/book-pages/medical-01-clareza.webp": "a2410bd5b1e11aec42e298c9d177bdbb2f9c1657a55ba73c6204f2ff33c1edfd",
+    "assets/book-pages/medical-02-direcao.webp": "c9f9404f930e2d00e3be59a03fe8255916e52c560f18992dc0b40ae40a83ef1b",
+    "assets/book-pages/medical-03-descoberta.webp": "e402587a76a2035c06ae6e66c7e537cf1129ab67a3dc31504d2613133a86c46a",
+    "assets/book-pages/medical-04-metodo.webp": "21517ebb6e919cb8b3505f8e035465564ab6daa94d50bb988f2fb666d0fe3bd8",
+    "assets/book-pages/medical-05-troca.webp": "d9e00f5f2242f851ae82b07b9eeb83e702818083d53e415b13f28aede76cb349",
+    "assets/book-pages/medical-06-presenca.webp": "7d70b657d99eba10db4afaee1a586a942c5ac290d523a7227812a92cf9d27961",
     "assets/book-pages/medical-clareza-art.webp": "6064bd306f0d85e430fda2750f7f5854fc9a2752d4aa983522b478a4ad7a7385",
     "assets/book-pages/medical-clareza.png": "fc3cb2d3b23efa1b12d3206aef6a7e7043bb5d290b7c04c6133813c7a0d6ca4f",
     "assets/book-pages/medical-descoberta-art.webp": "0d5a447bb58f07c56aa88964e4589a87a4225fca66fb79d5692fc3641b101228",
@@ -112,7 +112,7 @@
   "app": "import { createSharedScene } from './shared-scene.js';\nimport { initHero } from './hero.js';\nimport { createHeroCopyCycle } from './hero-copy.js';\nimport { enhanceVideos } from './video.js';\nimport { profiles, directoryProfiles, imageNotice } from './content.js';\nimport { renderProfileModal } from './pages.js';\n\nconst $ = (s, scope=document) => scope.querySelector(s);\nconst $$ = (s, scope=document) => [...scope.querySelectorAll(s)];\nconst allProfiles=[...profiles,...directoryProfiles];\nconst storage={get(key){try{return sessionStorage.getItem(key);}catch{return null;}},set(key,value){try{sessionStorage.setItem(key,value);}catch{}}};\nconst reduce = window.matchMedia('(prefers-reduced-motion: reduce)');\nif(reduce.matches)$$('video[autoplay]').forEach(video=>{video.pause();video.removeAttribute('autoplay');});\nlet scroll, gsap, heroController, lastY=0, scrollFrame=0;\nconst main=$('main');\nconst backLink=$('.btn-wrapper');if(backLink){backLink.classList.add('case-back-fixed');document.body.append(backLink);}\nconst cleanups=[];\nconst on=(el,event,handler,options)=>{el?.addEventListener(event,handler,options);cleanups.push(()=>el?.removeEventListener(event,handler,options));};\n// Start the artwork independently: motion/scroll initialization cannot delay its first frame.\nconst canvas=$('.hero-canvas');\nconst sharedScene=createSharedScene($('[data-shared-scene]'));\nconst intro=!!canvas&&document.body.dataset.page==='home'&&!storage.get('innecta-intro-seen')&&!reduce.matches;\nlet pageGone=false;\nif(canvas)initHero(canvas,{intro,getInitialScrollState:sharedScene.getInitialScrollState}).then(controller=>{if(pageGone)controller.dispose();else{heroController=controller;sharedScene.bindRenderer(controller);}}).catch(()=>{\n  (canvas.closest('[data-shared-artwork]')||canvas.closest('.hero')||canvas.parentElement).dataset.renderMode='fallback';canvas.style.opacity='0';\n});\n// The second-fold globe is isolated from the working hero and loads only on home.\nlet bookController;\nconst bookRoot=$('[data-book]');\nif(bookRoot)import('./book-controller.js').then(({createBookController,setBookScrollImmediate})=>{if(pageGone)return;bookController=createBookController(bookRoot,{scrollTo,scrollImmediate:target=>setBookScrollImmediate(scroll,target),getScrollY:()=>scroll?.scroll?.instance?.scroll?.y||window.scrollY,onLayout:()=>updateScroll()});}).catch(()=>{bookRoot.dataset.bookState='static';});\nlet scienceController;\nconst scienceRoot=$('[data-science-globe]');\nif(scienceRoot)import('./science-globe.js').then(({initScienceGlobe})=>initScienceGlobe(scienceRoot)).then(controller=>{if(pageGone)controller?.dispose();else scienceController=controller;}).catch(()=>{scienceRoot.dataset.globeState='fallback';});\nfunction scrollTo(target, duration=850){if(scroll){scroll.scrollTo(target,{duration:reduce.matches?0:duration,easing:[.87,0,.13,1],disableLerp:reduce.matches});return;}const top=typeof target==='number'?target:target.getBoundingClientRect().top+window.scrollY;window.scrollTo({top,behavior:reduce.matches?'auto':'smooth'});}\n\n// Navigation is never gated by WebGL, motion initialization, or media readiness.\nconst menu=$('#mobile-menu'),menuToggle=$('.menu-toggle');\nlet menuFocus=null;\nfunction closeMenu(restore=true){if(!menu||menu.hidden)return;document.body.classList.remove('menu-open');menuToggle?.setAttribute('aria-expanded','false');menuToggle?.setAttribute('aria-label','Abrir menu');scroll?.start();setTimeout(()=>{if(!document.body.classList.contains('menu-open'))menu.hidden=true;},reduce.matches?0:750);if(restore)menuFocus?.focus();}\nfunction openMenu(){if(!menu)return;menuFocus=document.activeElement;menu.hidden=false;menuToggle.setAttribute('aria-expanded','true');menuToggle.setAttribute('aria-label','Fechar menu');scroll?.stop();requestAnimationFrame(()=>document.body.classList.add('menu-open'));setTimeout(()=>$('a',menu)?.focus(),50);}\non(menuToggle,'click',()=>document.body.classList.contains('menu-open')?closeMenu():openMenu());\non(menu,'click',event=>{if(event.target.closest('a'))closeMenu(false);});\non(document,'keydown',event=>{if(event.key==='Escape')closeMenu();if(event.key==='Tab'&&document.body.classList.contains('menu-open')){const focusable=[menuToggle,...$$('a',menu)];const first=focusable[0],last=focusable.at(-1);if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}});\non(window,'resize',()=>{if(window.innerWidth>=1024)closeMenu(false);});\n$$('[data-back-top]').forEach(button=>on(button,'click',()=>scrollTo(0,700)));\non(document,'click',event=>{const anchor=event.target.closest('a[href]');if(!anchor||event.defaultPrevented||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;const url=new URL(anchor.href,location.href);if(url.origin===location.origin&&url.pathname===location.pathname&&url.hash&&!url.hash.startsWith('#percurso/')){const target=document.getElementById(decodeURIComponent(url.hash.slice(1)));if(target){event.preventDefault();history.replaceState({...history.state,innectaScrollY:scroll?.scroll?.instance?.scroll?.y||window.scrollY},'',location.href);history.pushState(null,'',url.hash);scrollTo(target);if(anchor.classList.contains('skip-link'))target.focus({preventScroll:true});}}});\n\n// Readable by default; reveal observers are added only after a working setup.\nconst revealElements=$$('.reveal');\nif('IntersectionObserver' in window&&!reduce.matches){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-inview');observer.unobserve(entry.target);}}),{rootMargin:'0px 0px 5% 0px',threshold:.01});revealElements.forEach(el=>{if(el.getBoundingClientRect().top<innerHeight)el.classList.add('is-inview');else observer.observe(el);});document.documentElement.classList.add('motion-ready');cleanups.push(()=>observer.disconnect());}else revealElements.forEach(el=>el.classList.add('is-inview'));\n\nfunction onScroll(y=window.scrollY){sharedScene.update();bookController?.update();const diff=y-lastY;if(Math.abs(diff)>2){document.body.classList.toggle('sc-down',diff>0&&y>100);lastY=y;}if(scrollFrame)return;scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;const h=innerHeight;const footer=$('[data-footer]');document.body.classList.toggle('light-section',!!footer&&footer.getBoundingClientRect().top<h*.65);if(reduce.matches)return;$$('.manifesto-lines>span').forEach(line=>{const rect=line.getBoundingClientRect();const progress=Math.max(0,Math.min(1,(h*.82-rect.top)/(h*.55)));line.style.setProperty('--mask',1-progress);});$$('[data-marquee]').forEach(el=>{const rect=el.parentElement.getBoundingClientRect();el.style.transform=`translate3d(${(h*.5-rect.top)*-.16}px,0,0)`;});$$('[data-tile-row]').forEach((el,i)=>{const rect=el.closest('.tiles').getBoundingClientRect();el.style.transform=`translate3d(${(h*.5-rect.top)*.075*(i%2?1:-1)}px,0,0)`;});if(innerWidth>=1024)$$('[data-parallax]').forEach(el=>{const rect=el.parentElement.getBoundingClientRect();const progress=Math.max(-1,Math.min(1,(h*.5-rect.top-rect.height*.5)/h));el.style.translate=`0 ${progress*Number(el.dataset.parallax)*36}px`;});});}\non(window,'scroll',()=>onScroll(),{passive:true});\n\n// Original local GSAP/Locomotive machinery is progressive enhancement.\ntry{const motion=await import('./vendor/motion.js');gsap=motion.gsap;if(!reduce.matches){scroll=new motion.LocomotiveScroll({el:main,smooth:true,smoothMobile:.5,touchMultiplier:3.5,useKeyboard:true,tablet:{smooth:true},smartphone:{smooth:true,horizontalGesture:true}});scroll.on('scroll',event=>onScroll(event.scroll?.y||0));document.body.dataset.scrollEngine='locomotive';}else document.body.dataset.scrollEngine='native-reduced';}catch(error){document.body.dataset.scrollEngine='native-fallback';document.documentElement.classList.remove('has-scroll-smooth','has-scroll-init');document.body.style.overflow='';main.style.transform='';console.warn('Innecta: native scrolling retained.',error);}\nfunction updateScroll(){scroll?.update();onScroll(scroll?.scroll?.instance?.scroll?.y||window.scrollY);}\n$$('.principle-loop').forEach(video=>{video.muted=true;on(video,'error',()=>video.parentElement.classList.add('media-failed'));if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting&&!reduce.matches)video.play().catch(()=>{});else video.pause();}),{rootMargin:'100px'});observer.observe(video);cleanups.push(()=>observer.disconnect());}});\n$$('img').forEach(img=>{if(!img.complete)on(img,'load',updateScroll,{once:true});});\ndocument.fonts?.ready.then(updateScroll);on(window,'load',updateScroll,{once:true});\nsetTimeout(updateScroll,120);setTimeout(updateScroll,800);\n\nlet introDelay=0;\nif(canvas&&intro){introDelay=5200;storage.set('innecta-intro-seen','1');const hero=$('#home')||canvas.closest('.hero');const greeting=$('.intro-greeting',hero);const sentence=$('.hero-sentence',hero);if(greeting&&gsap){hero.classList.add('hero-intro');gsap.fromTo($('.site-header'),{opacity:0,yPercent:-100},{opacity:1,yPercent:0,duration:1,delay:5.1,ease:'power3.out',clearProps:'opacity,transform'});gsap.fromTo($('.scroll-seal',hero),{opacity:0},{opacity:1,duration:.8,delay:5.5,clearProps:'opacity'});gsap.set(greeting.children,{opacity:0,yPercent:100});gsap.to(greeting.children,{opacity:1,yPercent:0,duration:1.2,stagger:.1,delay:1.1,ease:'power3.out'});gsap.to(greeting.children,{opacity:0,yPercent:-100,duration:1.2,stagger:.1,delay:4.5,ease:'power3.inOut'});setTimeout(()=>{hero.classList.remove('hero-intro');gsap.fromTo($$('.hero-copy-layer:not(.hero-copy-layer--clone) .hero-line>*',sentence),{yPercent:60,opacity:0},{yPercent:0,opacity:1,duration:1.2,stagger:.1,ease:'power3.out'});},5200);setTimeout(()=>hero.classList.remove('hero-intro'),6500);}}\nconst copyCycle=createHeroCopyCycle($('.hero-sentence'),gsap,{reducedMotion:reduce.matches,delay:introDelay});\n\nconst videoControllers=enhanceVideos(document);cleanups.push(()=>videoControllers.forEach(controller=>controller.destroy()));\n// Native video controls remain available. Custom cover only initiates playback.\n$$('[data-play-video]').forEach(button=>{const video=document.getElementById(button.dataset.playVideo);on(button,'click',async()=>{try{await video.play();button.hidden=true;}catch{button.hidden=true;video.focus();}});on(video,'play',()=>button.hidden=true);on(video,'ended',()=>button.hidden=false);on(video,'error',()=>{button.hidden=true;video.insertAdjacentHTML('afterend','<p class=\"media-error\">Não foi possível reproduzir o tour. Explore as interfaces nas páginas dos módulos.</p>');});});\n\n// Accessible full-screen editorial modal, history-aware and repeat-safe.\nconst dialog=$('.profile-dialog');let modalVideoControllers=[];let activeProfile=null,modalFocus=null,carouselIndex=0,carouselToken=0,modalPushed=false;\nfunction profileFromHash(){if(!location.hash.startsWith('#percurso/'))return null;return allProfiles.find(p=>p.id===decodeURIComponent(location.hash.slice('#percurso/'.length)));}\nfunction renderCarousel(delta){if(!activeProfile)return;const gallery=activeProfile.gallery?.length?activeProfile.gallery:[activeProfile.image||activeProfile.cover];carouselIndex=(carouselIndex+delta+gallery.length)%gallery.length;const token=++carouselToken;const image=$('[data-carousel-image]',dialog),count=$('[data-carousel-count]',dialog);if(count)count.textContent=`${carouselIndex+1} / ${gallery.length}`;if(!image)return;image.style.opacity='0';setTimeout(()=>{if(token!==carouselToken||!activeProfile)return;image.src=gallery[carouselIndex];image.alt=`${activeProfile.title}: interface ${carouselIndex+1}`;image.onload=()=>image.style.opacity='1';if(image.complete)image.style.opacity='1';},reduce.matches?0:120);}\nfunction openProfile(profile,push=true){if(!profile||!dialog)return;modalFocus=document.activeElement;activeProfile=profile;carouselIndex=0;modalVideoControllers.forEach(controller=>controller.destroy());$('.modal-content',dialog).innerHTML=renderProfileModal(profile);modalVideoControllers=enhanceVideos(dialog);dialog.setAttribute('aria-labelledby','profile-title');if(!dialog.open)dialog.showModal();scroll?.stop();document.body.classList.add('modal-open');if(push){history.replaceState({...history.state,innectaScrollY:scroll?.scroll?.instance?.scroll?.y||window.scrollY},'',location.href);history.pushState({innectaModal:profile.id},'',`#percurso/${profile.id}`);modalPushed=true;}else modalPushed=!!history.state?.innectaModal;setTimeout(()=>$('[data-modal-close]',dialog)?.focus(),0);const slider=$('.profile-slider',dialog);let downX=0;if(slider){slider.onpointerdown=event=>downX=event.clientX;slider.onpointerup=event=>{if(Math.abs(event.clientX-downX)>50)renderCarousel(event.clientX<downX?1:-1);};}}\nfunction dismissProfile(restore=true){if(!dialog?.open)return;$$('video',dialog).forEach(video=>video.pause());modalVideoControllers.forEach(controller=>controller.destroy());modalVideoControllers=[];dialog.close();activeProfile=null;carouselToken++;document.body.classList.remove('modal-open');scroll?.start();if(restore)modalFocus?.focus();}\nfunction closeProfile(){const didPush=modalPushed;dismissProfile();modalPushed=false;if(didPush)history.back();else history.replaceState(null,'',location.pathname+location.search);}\non(document,'click',event=>{const opener=event.target.closest('[data-profile]');if(opener){const profile=allProfiles.find(p=>p.id===opener.dataset.profile||p.slug===opener.dataset.profile);openProfile(profile);}});\non(dialog,'click',event=>{if(event.target.closest('[data-modal-close]'))closeProfile();if(event.target.closest('[data-carousel-prev]'))renderCarousel(-1);if(event.target.closest('[data-carousel-next]'))renderCarousel(1);if(event.target.closest('[data-modal-top]'))(innerWidth<1024?$('.profile-modal',dialog):$('[data-modal-scroll]',dialog))?.scrollTo({top:0,behavior:reduce.matches?'auto':'smooth'});});\non(dialog,'cancel',event=>{event.preventDefault();closeProfile();});\non(dialog,'keydown',event=>{if(event.key==='ArrowRight')renderCarousel(1);if(event.key==='ArrowLeft')renderCarousel(-1);});\non(window,'popstate',event=>{const profile=profileFromHash();if(profile)openProfile(profile,false);else{dismissProfile();const target=location.hash?document.getElementById(decodeURIComponent(location.hash.slice(1))):null;if(typeof event.state?.innectaScrollY==='number')scrollTo(event.state.innectaScrollY,0);else if(target)scrollTo(target,0);else scrollTo(0,0);}});\nconst initialProfile=profileFromHash();if(initialProfile)openProfile(initialProfile,false);\n\n// Unobtrusive demonstration disclaimer; never invent client/people claims.\nconst notice=document.createElement('p');notice.className='interface-notice';notice.textContent=imageNotice;\nconst noticeTarget=$('.project--details')||$('#directory-grid')||$('.reel-caption');if(!$('.interface-notice'))noticeTarget?.insertAdjacentElement('afterend',notice);\n\n// Cursor is an addition, not a replacement for the system pointer.\nconst cursor=$('.dot-cursor');\nif(cursor&&matchMedia('(pointer:fine)').matches&&!reduce.matches){on(document,'pointermove',event=>{cursor.style.left=`${event.clientX}px`;cursor.style.top=`${event.clientY}px`;cursor.style.opacity='1';const target=event.target.closest('[data-cursor]');cursor.classList.toggle('active',!!target);$('span',cursor).textContent=target?.dataset.cursor||'';},{passive:true});on(document,'pointerleave',()=>cursor.style.opacity='0');}\nconst originalHash=location.hash;if(originalHash&&!originalHash.startsWith('#percurso/')){const target=document.getElementById(decodeURIComponent(originalHash.slice(1)));if(target)setTimeout(()=>scrollTo(target,0),250);}\n// Lifecycle cleanup keeps back/forward cache and context recovery predictable.\non(window,'pagehide',event=>{if(event.persisted){scroll?.stop();heroController?.setVisible(false);scienceController?.setVisible(false);bookController?.setVisible(false);sharedScene.setVisible(false);return;}pageGone=true;copyCycle.dispose();heroController?.dispose();scienceController?.dispose();bookController?.dispose();sharedScene.dispose();scroll?.destroy();cleanups.splice(0).forEach(fn=>fn());});\non(window,'pageshow',event=>{if(event.persisted){navigating=false;gsap?.set([main,$('.site-header')].filter(Boolean),{clearProps:'opacity,transform'});const c=$('.dot-cursor');if(c){c.style.opacity='0';c.classList.remove('active');}scroll?.start();heroController?.setVisible(true);scienceController?.setVisible(true);bookController?.setVisible(true);sharedScene.setVisible(true);updateScroll();}});\ndocument.body.dataset.ready='true';updateScroll();\n\n// Source-style route choreography around normal, directly loadable HTML links.\nif(gsap&&!reduce.matches&&document.body.dataset.page==='project'){\n  gsap.fromTo($('.case-back-fixed .background'),{opacity:0,scale:.6},{opacity:1,scale:1,duration:.6,delay:2.2,ease:'power3.out',clearProps:'all'});\n  gsap.fromTo($('.case-back-fixed .content'),{opacity:0,xPercent:100},{opacity:1,xPercent:0,duration:.6,delay:2.45,ease:'power3.out',clearProps:'all'});\n  gsap.fromTo($('.project--title'),{opacity:0,yPercent:50},{opacity:1,yPercent:0,duration:.8,delay:2.45,ease:'power3.out',clearProps:'all'});\n  gsap.fromTo($('.project--thumbnail'),{opacity:0,yPercent:20},{opacity:1,yPercent:0,duration:.8,delay:2.5,ease:'power3.out',clearProps:'all'});\n}\nlet navigating=false;\non(document,'click',event=>{const anchor=event.target.closest('a[href]');if(!anchor||event.defaultPrevented||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey||anchor.target==='_blank'||anchor.hasAttribute('download'))return;const url=new URL(anchor.href,location.href);if(url.origin!==location.origin||url.pathname===location.pathname||reduce.matches||!gsap)return;event.preventDefault();if(navigating)return;navigating=true;closeMenu(false);const duration=document.body.dataset.page==='project'&&url.pathname.startsWith('/modulos/')?.4:.85;gsap.to(main,{opacity:0,y:-25,duration,ease:'power3.inOut'});gsap.to($('.site-header'),{opacity:0,duration});setTimeout(()=>location.assign(url.href),duration*1000);});\n",
   "templates": "import { renderBookSection } from './book-section.js';\nimport { renderPrincipleVisual } from './principle-visuals.js';\nimport { renderScienceSection } from './science-content.js';\nimport { projects, principles, profiles, editorial, productUrl, siteUrl, imageNotice, directoryProfiles } from './content.js';\nimport { renderProject, renderCommunity, renderDirectory } from './pages.js';\nexport const escapeHtml = value => String(value ?? '').replace(/[&<>\"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[s]));\nconst e=escapeHtml;\nexport const arrow = '<svg viewBox=\"0 0 30 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M1 10h26M18 1l9 9-9 9\" stroke=\"currentColor\" stroke-width=\"1.25\"/></svg>';\nconst star='<svg viewBox=\"0 0 32 32\" fill=\"none\" aria-hidden=\"true\"><text x=\"16\" y=\"16\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"currentColor\" font-family=\"Roobert,Geist,Arial,sans-serif\" font-size=\"24\" font-weight=\"550\" letter-spacing=\"0\" textLength=\"30\" lengthAdjust=\"spacingAndGlyphs\">OS</text></svg>';\nexport function seal(target='#works',label='Explore a Innecta') {return `<a class=\"scroll-seal\" href=\"${target}\" aria-label=\"${label}\"><svg viewBox=\"0 0 100 100\" aria-hidden=\"true\"><defs><path id=\"seal-path\" d=\"M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0\"/></defs><text><textPath href=\"#seal-path\" textLength=\"225\">CONTINUE EXPLORANDO · INNECTA · </textPath></text></svg><span>↓</span></a>`;}\nexport function header(page='home') {const peer=['community','directory'].includes(page);const nav=peer?`<a href=\"/comunidade/\" ${page==='community'?'aria-current=\"page\"':''}>Comunidade</a><a href=\"/percursos/\" ${page==='directory'?'aria-current=\"page\"':''}>Percursos</a>`:`<a href=\"/#works\">Ecossistema</a><a href=\"/#manifesto\">Nossa visão</a><a href=\"/comunidade/\">Comunidade</a><a href=\"/#contact\">Comece por aqui</a>`;return `<a class=\"skip-link\" href=\"#main\">Pular para o conteúdo</a><header class=\"site-header\"><div class=\"container header-grid\"><a class=\"brand\" href=\"/\" aria-label=\"Innecta — início\"><span>innecta</span>${star}</a><span class=\"header-caption\">Um novo olhar<br>para a sua trajetória.</span><nav class=\"desktop-nav\" aria-label=\"Navegação principal\">${nav}</nav><button class=\"menu-toggle\" aria-expanded=\"false\" aria-controls=\"mobile-menu\" aria-label=\"Abrir menu\"><span></span><span></span></button></div></header><div class=\"mobile-menu\" id=\"mobile-menu\" hidden><div class=\"menu-glow\"></div><nav aria-label=\"Menu móvel\"><a href=\"/#works\">Ecossistema</a><a href=\"/#manifesto\">Nossa visão</a><a href=\"/comunidade/\">Comunidade</a><a href=\"/percursos/\">Percursos</a><a href=\"/#contact\">Comece por aqui</a></nav><a class=\"menu-product\" href=\"${productUrl || 'https://innectaos.vercel.app/'}\" target=\"_blank\" rel=\"noopener\">Conheça o produto ${arrow}</a><p>Medicina. Pesquisa. Possibilidades.</p></div>`;}\nexport function footer(){return `<footer id=\"contact\" data-footer><div class=\"container footer-grid\"><div class=\"footer-main\"><h2 class=\"intro reveal\">Seu próximo passo<br>merece um <i>novo olhar.</i> ${arrow}</h2><div class=\"contact\"><span>Uma trajetória inteira de possibilidades.</span><a href=\"${productUrl || 'https://innectaos.vercel.app/'}\" target=\"_blank\" rel=\"noopener\">Conheça a Innecta ${arrow}</a></div><div class=\"footer-topics\"><div><h3>Construa com intenção.</h3><p>Do que você faz hoje<br>ao caminho que quer percorrer.</p><a href=\"/modulos/trajetoria/\">Explore sua trajetória ${arrow}</a></div><div><h3>Avance em companhia.</h3><p>Pesquisa, comunidade<br>e orientação conectadas.</p><a href=\"/comunidade/\">Encontre novas perspectivas ${arrow}</a></div></div></div><div class=\"footer-links\"><span>Continue a conversa</span><a href=\"${productUrl || 'https://innectaos.vercel.app/'}\" target=\"_blank\" rel=\"noopener\">Produto ↗</a><a href=\"${siteUrl || 'https://innecta.vercel.app/'}\" target=\"_blank\" rel=\"noopener\">Apresentação ↗</a><a href=\"/percursos/\">Percursos ↗</a><a href=\"/modulos/mentor/\">Mentor + Ultra ↗</a></div><div class=\"footer-note\"><span>INNECTA · EM PRÉ-LANÇAMENTO</span><span>Uma experiência para conhecer o que estamos construindo.</span></div></div><button class=\"back-top\" data-back-top aria-label=\"Voltar ao topo\">↑</button></footer>`;}\nfunction card(p,index){return `<li class=\"project-card reveal\" data-scroll data-scroll-speed=\"${index%2 ? '.4':'0'}\"><a href=\"/modulos/${e(p.slug)}/\" class=\"project-card-content\" data-cursor=\"Explorar\"><div class=\"card-image composition-${index+1}\" style=\"--card-accent:${e(p.accent || '#753947')}\"><div class=\"card-art-number\" aria-hidden=\"true\">0${index+1}</div><img src=\"/${e(p.cover).replace(/^\\//,'')}\" alt=\"Interface do módulo ${e(p.title)} da Innecta\" width=\"1400\" height=\"1000\" loading=\"lazy\"><span class=\"card-art-label\" aria-hidden=\"true\">${e(p.title)}</span><span class=\"card-arrow\">↗</span></div><div class=\"card-caption\"><h3>${e(p.title)}</h3><span>${e(p.category)}</span></div></a></li>`;}\nexport function renderHome(){return `<div class=\"home-world\" data-shared-scene><div class=\"shared-artwork\" data-shared-artwork data-render-mode=\"pending\" aria-hidden=\"true\"><div class=\"hero-fallback\" aria-hidden=\"true\"><div class=\"fallback-field\"></div><div class=\"fallback-lens\"></div></div><canvas class=\"hero-canvas\" id=\"lens-artwork\" aria-hidden=\"true\"></canvas></div><section class=\"hero\" id=\"home\"><div class=\"container hero-inner\"><h1 class=\"hero-sentence\"><span class=\"hero-copy-layer\" data-hero-current><span class=\"hero-line\"><span data-hero-prefix>Uma nova forma de</span></span> <span class=\"hero-line\"><i data-hero-word>conectar seu futuro.</i></span></span></h1>${seal()}<p class=\"hero-caption\">Sua vida acadêmica.<br>Um universo de possibilidades.</p></div><div class=\"intro-greeting\" aria-hidden=\"true\"><span>Olá.</span><span>Somos a Innecta.</span></div></section>${renderScienceSection()}</div><div class=\"container home-content\"><section id=\"partners\"><span id=\"works\" class=\"legacy-anchor\" aria-hidden=\"true\"></span><h2 class=\"eyebrow reveal\">CONEXÕES QUE FAZEM SUA TRAJETÓRIA AVANÇAR</h2><p class=\"capability-words reveal\">${['Visão','Currículo Studio','Instituições','Comparar','Residência','Internacional','Meu Caminho','Pesquisa','Ligas','Mentor','Acervo','Club'].map(x=>`<span>${x}</span>`).join(' ')}</p><a class=\"text-link reveal\" href=\"/modulos/trajetoria/\">Explore as possibilidades ${arrow}</a></section><section id=\"manifesto\"><h2 class=\"eyebrow reveal\">${star} NOSSA VISÃO</h2><p class=\"manifesto-lines\"><span>Não é sobre chegar</span><span>mais <i>rápido.</i></span><span>É sobre construir</span><span>um caminho que</span><span>faça <i>sentido.</i></span></p><span class=\"manifesto-star\" aria-hidden=\"true\">${star}</span></section><section id=\"strengths\">${principles.map((p,i)=>`<section class=\"principle reveal\" id=\"principle-${['conectar','construir','acompanhar'][i]}\"><h3 class=\"eyebrow\">${e(p.title)}</h3><div class=\"principle-content\">${renderPrincipleVisual(i)}<div class=\"principle-text\"><span class=\"principle-number\">0${i+1}</span><p>${e(p.body || p.description || p.text)}</p></div></div></section>`).join('')}</section><div class=\"marquee\" aria-hidden=\"true\"><p data-marquee>Seu futuro é <i>feito de conexões.</i></p></div></div><div class=\"container\"><section class=\"editorial-cta reveal\"><h2 class=\"eyebrow\">${star} CONHECIMENTO QUE CIRCULA</h2><div class=\"editorial-cta-content\"><p>Nenhuma trajetória se constrói sozinha. Aproximamos perguntas, oportunidades e pessoas para transformar o que você aprende em caminhos que pode percorrer.</p><a class=\"circle-link\" href=\"/comunidade/\"><span>Conheça<br>a comunidade</span>${arrow}</a></div></section><section class=\"tiles tiles--rotated\" id=\"product-mosaic\" aria-label=\"Perspectivas do ecossistema Innecta\"><div class=\"tiles__wrap\">${[0,1,2,3].map((r)=>`<div class=\"tiles__line\" data-tile-row=\"${r}\">${[0,1,2].map((c)=>{const p=projects[(r*3+c)%projects.length];return `<div class=\"tiles__line-img\"><img src=\"/assets/tiles/${e(p.slug)}.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"2880\" height=\"1800\"></div>`}).join('')}</div>`).join('')}</div></section>${renderBookSection({star,arrow})}</div>`;}\nexport function renderContent(page,slug){if(page==='project')return renderProject(projects.find(p=>p.slug===slug),projects);if(page==='community')return renderCommunity(editorial,projects);if(page==='directory')return renderDirectory(directoryProfiles);if(page==='404')return `<section class=\"hero not-found-hero\" data-render-mode=\"pending\"><div class=\"hero-fallback\" aria-hidden=\"true\"><div class=\"fallback-field\"></div><div class=\"fallback-lens\"></div></div><canvas class=\"hero-canvas\" aria-hidden=\"true\"></canvas><div class=\"container not-found\"><p class=\"eyebrow\">404 · UM DESVIO NO CAMINHO</p><h1>Vamos encontrar<br>um novo <i>começo.</i></h1><a class=\"text-link\" href=\"/\">Voltar para a Innecta ${arrow}</a></div></section>`;return renderHome();}\nexport function renderDocument({page='home',slug='',build='dev'}){const p=projects.find(p=>p.slug===slug);if(page==='project'&&!p)return renderDocument({page:'404',build});const title=page==='project'?`${p.title} — Innecta`:page==='community'?'Comunidade — Innecta':page==='directory'?'Percursos — Innecta':page==='404'?'Página não encontrada — Innecta':'Innecta — Sua trajetória, um novo olhar';return `<!doctype html><html lang=\"pt-BR\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta name=\"theme-color\" content=\"#160e12\"><title>${e(title)}</title><meta name=\"description\" content=\"${e(p?.summary || 'Um ecossistema para conectar sua trajetória acadêmica e médica. Explore planejamento, pesquisa, oportunidades, comunidade e orientação com a Innecta.')}\"><meta name=\"innecta-build\" content=\"${e(build)}\"><meta property=\"og:type\" content=\"website\"><meta property=\"og:title\" content=\"${e(title)}\"><meta property=\"og:description\" content=\"Uma nova perspectiva para sua trajetória acadêmica e médica. Innecta, em pré-lançamento.\"><meta name=\"twitter:card\" content=\"summary_large_image\"><link rel=\"icon\" type=\"image/svg+xml\" href=\"/assets/favicon.svg\"><link rel=\"preload\" as=\"font\" href=\"/assets/Roobert-Regular.woff2\" type=\"font/woff2\" crossorigin>${['home','directory','404'].includes(page)?'<link rel=\"modulepreload\" href=\"/js/vendor/three-scene.js\">':''}<link rel=\"stylesheet\" href=\"/css/main.css\"><link rel=\"stylesheet\" href=\"/css/pages.css\"><link rel=\"stylesheet\" href=\"/css/video.css\">${page==='home'?'<link rel=\"stylesheet\" href=\"/css/science-globe.css\"><link rel=\"stylesheet\" href=\"/css/principle-visuals.css\"><link rel=\"stylesheet\" href=\"/css/tiles.css\"><link rel=\"stylesheet\" href=\"/css/book.css\"><link rel=\"stylesheet\" href=\"/css/book-fallback.css\">':''}<noscript><style>.hero .hero-fallback{opacity:1;visibility:visible}</style>${page==='home'?'<style>.shared-artwork .hero-fallback{opacity:1;visibility:visible}.home-world .shared-artwork{height:100%}</style>':''}</noscript></head><body data-page=\"${page}\" data-build=\"${build}\">${page==='project'?'':header(page)}<main id=\"main\" data-scroll-container tabindex=\"-1\">${renderContent(page,slug)}${['home','community'].includes(page)?footer():''}</main><dialog class=\"profile-dialog\" aria-label=\"Percurso Innecta\"><div class=\"modal-content\"></div></dialog><div class=\"dot-cursor\" aria-hidden=\"true\"><span></span></div><script type=\"module\" src=\"/js/app.js\"></script></body></html>`;}\n",
   "manifest": {
-    "provenance": "Product UI images and tour were supplied for the Innecta project. Roobert fonts were retrieved from the public reference URLs for a private visual recreation; redistribution rights remain unverified. Source-brand decorative loops were excluded. Demonstration images do not establish endorsements or live commercial terms.",
+    "provenance": "Innecta UI images and tour copied from owner-supplied screenshots and reviewed local derivatives. Six Roobert fonts and three dual-format decorative sphere loops were downloaded from exact reference URLs at parent request for private faithful recreation. Rights for those source fonts/media remain unverified. The decorative loops contain visible source-brand letter fragments and are flagged, not approved as brand-neutral Innecta artwork. Demonstration images do not establish endorsements or live commercial terms.",
     "files": [
       {
         "file": "Roobert-Light.woff2",
@@ -120,7 +120,8 @@
         "sha256": "06f4de7fd4f59eb202ec513918b815eba05dae1bbb1200dbec32bf53be68f6a4",
         "source": "https://monopo.vn/fonts/WOFF2/Roobert-Light.woff2",
         "status": "downloaded_for_requested_private_reference_recreation",
-        "license": "Unverified; private-font reuse rights not established."
+        "license": "Unverified; private-font reuse rights not established.",
+        "validation": "HTTP200 font/woff2, wOF2 header valid; fontTools decode not run because Python Brotli extension is missing."
       },
       {
         "file": "Roobert-LightItalic.woff2",
@@ -128,7 +129,8 @@
         "sha256": "aab3aec0b673fbfaea5775041e0ce596c0c7856d627eb53c126ecc24183b6336",
         "source": "https://monopo.vn/fonts/WOFF2/Roobert-LightItalic.woff2",
         "status": "downloaded_for_requested_private_reference_recreation",
-        "license": "Unverified; private-font reuse rights not established."
+        "license": "Unverified; private-font reuse rights not established.",
+        "validation": "HTTP200 font/woff2, wOF2 header valid; fontTools decode not run because Python Brotli extension is missing."
       },
       {
         "file": "Roobert-Medium.woff2",
@@ -136,7 +138,8 @@
         "sha256": "191375b8b1d24edaf97f22c818493b8837be687e58e82387872902f241f7077d",
         "source": "https://monopo.vn/fonts/WOFF2/Roobert-Medium.woff2",
         "status": "downloaded_for_requested_private_reference_recreation",
-        "license": "Unverified; private-font reuse rights not established."
+        "license": "Unverified; private-font reuse rights not established.",
+        "validation": "HTTP200 font/woff2, wOF2 header valid; fontTools decode not run because Python Brotli extension is missing."
       },
       {
         "file": "Roobert-Regular.woff2",
@@ -144,7 +147,8 @@
         "sha256": "820d8e467fece85a56eb12aae1fdf9b372e0730bc492d30aed19d584b07a8cc0",
         "source": "https://monopo.vn/fonts/WOFF2/Roobert-Regular.woff2",
         "status": "downloaded_for_requested_private_reference_recreation",
-        "license": "Unverified; private-font reuse rights not established."
+        "license": "Unverified; private-font reuse rights not established.",
+        "validation": "HTTP200 font/woff2, wOF2 header valid; fontTools decode not run because Python Brotli extension is missing."
       },
       {
         "file": "Roobert-RegularItalic.woff2",
@@ -152,7 +156,8 @@
         "sha256": "2613bd4ee542b74f16547e338671ca7309b04e82292cabdf4b84cd8e182642f6",
         "source": "https://monopo.vn/fonts/WOFF2/Roobert-RegularItalic.woff2",
         "status": "downloaded_for_requested_private_reference_recreation",
-        "license": "Unverified; private-font reuse rights not established."
+        "license": "Unverified; private-font reuse rights not established.",
+        "validation": "HTTP200 font/woff2, wOF2 header valid; fontTools decode not run because Python Brotli extension is missing."
       },
       {
         "file": "Roobert-SemiBold.woff2",
@@ -160,7 +165,8 @@
         "sha256": "8a2c7401bbd4eda63c8928565d3ce6359486a0198e3ad062efd37a9b36daee7b",
         "source": "https://monopo.vn/fonts/WOFF2/Roobert-SemiBold.woff2",
         "status": "downloaded_for_requested_private_reference_recreation",
-        "license": "Unverified; private-font reuse rights not established."
+        "license": "Unverified; private-font reuse rights not established.",
+        "validation": "HTTP200 font/woff2, wOF2 header valid; fontTools decode not run because Python Brotli extension is missing."
       },
       {
         "file": "acervo.png",
@@ -337,133 +343,152 @@
         "bytes": 166206,
         "sha256": "8926ce23b6e17d9859c800c0c66218ba983f408d08fdfa664edfcdd6493aeb20",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "authored_medical_editorial_book_composition"
+        "status": "authored_medical_editorial_book_composition",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-01-clareza.webp",
         "bytes": 225560,
         "sha256": "bf4fe4547c2534724cad669f933a62272432ed8dc5a73f16edb389d1fef575eb",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "authored_medical_editorial_book_composition"
+        "status": "authored_medical_editorial_book_composition",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-02-direcao.webp",
         "bytes": 215558,
         "sha256": "d1f2f075ec58bf75d30544323017e7b1096086d0bbf8e6bd0f2aea9b80dc1a45",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "authored_medical_editorial_book_composition"
+        "status": "authored_medical_editorial_book_composition",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-03-descoberta.webp",
         "bytes": 237848,
         "sha256": "5ddb37d0ecc291e2d01d2a2a279108ec2349b5ce2a728cf1113fd8c411c012fb",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "authored_medical_editorial_book_composition"
+        "status": "authored_medical_editorial_book_composition",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-04-metodo.webp",
         "bytes": 226280,
         "sha256": "19d1c1c45d38d078876427a846d964c3cc4e962851cc2c8a05798dd566ea71f2",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "authored_medical_editorial_book_composition"
+        "status": "authored_medical_editorial_book_composition",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-05-troca.webp",
         "bytes": 218118,
         "sha256": "5ac99c0d93709c0639eddcc80bd7cc5e2f9aab22d57e05937fbe17eb11c0b5e1",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "authored_medical_editorial_book_composition"
+        "status": "authored_medical_editorial_book_composition",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-06-presenca.webp",
         "bytes": 237934,
         "sha256": "8a8c14a05d219b5ea35cd775e5fc4ff6d6dd33f839ffe74664748a1947a0795d",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "authored_medical_editorial_book_composition"
+        "status": "authored_medical_editorial_book_composition",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-clareza-art.webp",
         "bytes": 245588,
         "sha256": "6064bd306f0d85e430fda2750f7f5854fc9a2752d4aa983522b478a4ad7a7385",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "optimized_medical_alpha_derivative"
+        "status": "optimized_medical_alpha_derivative",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-clareza.png",
         "bytes": 1559295,
         "sha256": "fc3cb2d3b23efa1b12d3206aef6a7e7043bb5d290b7c04c6133813c7a0d6ca4f",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "original_medical_editorial_illustration_master"
+        "status": "original_medical_editorial_illustration_master",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-descoberta-art.webp",
         "bytes": 253172,
         "sha256": "0d5a447bb58f07c56aa88964e4589a87a4225fca66fb79d5692fc3641b101228",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "optimized_medical_alpha_derivative"
+        "status": "optimized_medical_alpha_derivative",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-descoberta.png",
         "bytes": 1834007,
         "sha256": "62b57e6d81894f61e8e06342f2445f0145ea9ec8b8d7a448bc32d9190189e050",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "original_medical_editorial_illustration_master"
+        "status": "original_medical_editorial_illustration_master",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-direcao-art.webp",
         "bytes": 232274,
         "sha256": "50ff2dc6a954c328f46ff377ee412a12faafbd5e9dc1e1bdf3fd2aec386ada47",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "optimized_medical_alpha_derivative"
+        "status": "optimized_medical_alpha_derivative",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-direcao.png",
         "bytes": 1674346,
         "sha256": "5e7b9fc21978bf5f818f33080cd84810f5930c44cbd14e03915fc598614709c3",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "original_medical_editorial_illustration_master"
+        "status": "original_medical_editorial_illustration_master",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-metodo-art.webp",
         "bytes": 273700,
         "sha256": "ff84d99d825523c685220bc49a5c88f3fc0065e93c12f844538fc69f8c8a2725",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "optimized_medical_alpha_derivative"
+        "status": "optimized_medical_alpha_derivative",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-metodo.png",
         "bytes": 1739158,
         "sha256": "0f170cdfc4a8680e33720e4d762b6f971f9f144613f8eeb3f059bce034b543a4",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "original_medical_editorial_illustration_master"
+        "status": "original_medical_editorial_illustration_master",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-presenca-art.webp",
         "bytes": 275386,
         "sha256": "0c1cd5d451aab13972957fe14c606765b21e3f3cf7e18a2d9bfcc1b0125fa353",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "optimized_medical_alpha_derivative"
+        "status": "optimized_medical_alpha_derivative",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-presenca.png",
         "bytes": 1903853,
         "sha256": "3b3f4a52a38609b0f3c05f4ec9c83a51b615e0d6a52254f98946d945b62f6c93",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "original_medical_editorial_illustration_master"
+        "status": "original_medical_editorial_illustration_master",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-troca-art.webp",
         "bytes": 218266,
         "sha256": "712e5856e3767109b0466d675ea37475d84afb79bc979ff9f45c2ae7e7e1aadb",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "optimized_medical_alpha_derivative"
+        "status": "optimized_medical_alpha_derivative",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       },
       {
         "file": "book-pages/medical-troca.png",
         "bytes": 1594841,
         "sha256": "d361890e80171bbb69bfef4a65b1a654d41921942a58b948d7ecdaa0f656e31c",
         "source": "Original Innecta medical-academic illustration generated with built-in image_gen; exact prompts in BOOK-ART-PROMPTS.json. Composed using local Roobert and js/book-art.js. No source-reference artwork, actual people, institutional endorsements or system screenshots.",
-        "status": "original_medical_editorial_illustration_master"
+        "status": "original_medical_editorial_illustration_master",
+        "validation": "Fictional adult academic scene; wine/cream palette. Alpha WebP derivatives retain byte-identical alpha to PNG masters; static pages rendered from exact served derivatives."
       }
     ],
     "excluded_reference_media": [
@@ -512,6 +537,7 @@
     },
     "book_editorial": {
       "revision": "medical-academic wine identity; user-approved ROTINA flagship",
+      "baseline": "66ad978ff4150f7cbb0007eb0b7292ccfc1417a3",
       "chapters": [
         "ROTINA",
         "TRAJETÓRIA",
@@ -521,10 +547,10 @@
         "ORIENTAÇÃO"
       ],
       "screenshots": "None in book; approved diagonal mosaic unchanged.",
-      "mechanics": "Reversible rounded-leaf book, shared scroll coordinate, mouse drag, CSS3D fallback and accessible controls.",
+      "mechanics": "Accepted renderers, controller, stage CSS, fallback and app are byte-identical to baseline.",
       "prompts": "BOOK-ART-PROMPTS.json",
       "copy": "Book-only js/book-editorial.js shared by illustration captions and semantic HTML.",
-      "superseded_assets": "Only the current medical-editorial art is included."
+      "superseded_assets": "Previous non-medical book assets removed from current source/dist; retained in Git rollback history."
     }
   },
   "rebrandStaticPages": "Seven generated page labels updated to Interny; original illustrations and motion retain the prior hashes."

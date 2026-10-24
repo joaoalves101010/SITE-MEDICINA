@@ -1,9 +1,11 @@
+import {restoreTheMedSource,restoreTheMedHTML} from './the-med-normalize.mjs';
 import {readFileSync} from 'node:fs';
 const mappings=JSON.parse(readFileSync(new URL('./interny-replacements.json',import.meta.url),'utf8'));
 const baseline=JSON.parse(readFileSync(new URL('./interny-baseline.json',import.meta.url),'utf8'));
 const motif=JSON.parse(readFileSync(new URL('./brand-motif-baseline.json',import.meta.url),'utf8'));
 /** Reverse only reviewed branding literals, never runtime/layout expressions. */
 export function restoreInternySource(path,value){
+ value=restoreTheMedSource(path,value);
  const binary=Buffer.isBuffer(value);
  if(!mappings[path]&&path!=='assets/manifest.json')return value;
  let source=String(value);
@@ -17,7 +19,7 @@ export function restoreInternySource(path,value){
 }
 /** Rendered equivalents of the same approved copy/signature changes. */
 export function restoreInternyHTML(html){
- return html
+ return restoreTheMedHTML(html)
   .replaceAll('<span>interny</span></a>',`<span>innecta</span><svg viewBox="0 0 32 32" fill="none" aria-hidden="true">${motif.sharedNew}</svg></a>`)
   .replaceAll('<span class="header-caption" lang="en">Your Medical<br>Journey</span>','<span class="header-caption">Um novo olhar<br>para a sua trajetória.</span>')
   .replaceAll('<p class="book-kicker">Interny | Your Medical Journey</p>','<p class="book-kicker">INNECTA OS · FORMAÇÃO MÉDICA, COM CONTEXTO</p>')

@@ -1,26 +1,30 @@
-# Interny | Your Medical Journey — contexto do projeto Monopo LP
+# the med | Your Medical Journey — contexto do projeto Monopo LP
 
-> **Documento de continuidade — 23 de outubro de 2026.** Descreve a versão atual da landing page, suas decisões aprovadas, a organização técnica e os limites conhecidos. É um ponto de partida para manter o projeto sem reconstruir decisões antigas ou confundir a apresentação com o produto completo.
+> **Documento de continuidade — atualizado em 24 de outubro de 2026.** Descreve a versão atual da landing page, suas decisões aprovadas, a organização técnica e os limites conhecidos. É um ponto de partida para manter o projeto sem reconstruir decisões antigas ou confundir a apresentação com o produto completo.
 
 ## 1. O que é este projeto
 
-Esta é uma experiência de apresentação da **Interny | Your Medical Journey**, voltada à trajetória acadêmica e à formação médica. A proposta conecta organização da rotina, currículo, residência, oportunidades, pesquisa, ligas, conhecimento e orientação.
+Esta é uma experiência de apresentação da **the med | Your Medical Journey**, voltada à trajetória acadêmica e à formação médica. A proposta conecta organização da rotina, currículo, residência, oportunidades, pesquisa, ligas, conhecimento e orientação.
 
-A proposta apresentada como Interny está **em pré-lançamento**. Este repositório contém uma **landing page estática com páginas editoriais internas e interações visuais**, não o backend da plataforma. Não implementa autenticação, banco de dados, inscrições em programas externos, checkout ou cobrança. A integração com **Asaas permanece expressamente adiada**.
+A proposta apresentada como the med está **em pré-lançamento**. Este repositório contém uma **landing page estática com páginas editoriais internas e interações visuais**, não o backend da plataforma. Não implementa autenticação, banco de dados, inscrições em programas externos, checkout ou cobrança. A integração com **Asaas permanece expressamente adiada**.
 
-O projeto nasceu de uma adaptação estrutural e visual do site Monopo e evoluiu por revisões específicas aprovadas: ciência com globo interativo, princípios editoriais, mosaico de interfaces, livro médico ilustrado e galeria de experiências internacionais. Não é um portfólio de clientes da Interny nem uma cópia do conteúdo comercial da referência.
+O projeto nasceu de uma adaptação estrutural e visual do site Monopo e evoluiu por revisões específicas aprovadas: ciência com globo interativo, princípios editoriais, mosaico de interfaces, livro médico ilustrado e galeria de experiências internacionais. Não é um portfólio de clientes da the med nem uma cópia do conteúdo comercial da referência.
 
 **Há outro projeto Innecta, inspirado em Enter, que deve permanecer separado e protegido.** Esta landing page não autoriza alterações no código, hospedagem ou configurações daquele projeto. Também não autoriza alterações no produto real só porque um módulo aparece na apresentação.
 
-### Rebranding aprovado — 23/10/2026
+### Identidade atual e histórico — 24/10/2026
 
-A identidade pública desta LP passou de **Innecta** para **Interny | Your Medical Journey**. Foram atualizados os nomes e rótulos editoriais visíveis, sem trocar a fonte Roobert, a paleta vinho/creme/rosa, a organização das seções, a arte médica ou as animações aprovadas. Hero, campo contínuo, lente, globo, galeria, mosaico, livro e seus gestos mantêm os mesmos comportamentos.
+A LP passou de **Innecta** para **Interny | Your Medical Journey** em 23/10/2026 e para **the med | Your Medical Journey** em 24/10/2026. A forma visual aprovada é o **wordmark 02 em minúsculas**, reconstruído em contornos vetoriais próprios a partir da opção escolhida. Não é uma substituição por Roobert nem uma identificação de fonte. Roobert continua na tipografia dos textos; a paleta vinho/creme/rosa, a arte médica e as animações aprovadas permanecem.
 
-No livro, a capa autoral agora traz **INTERNY** e **YOUR MEDICAL JOURNEY**; o título médico “Sua formação médica, por inteiro.” permanece. Os rótulos autorais das sete imagens compostas e o HTML correspondente foram atualizados, preservando as ilustrações originais, a geometria e a mecânica. **OS** saiu da identificação principal da marca e dos rótulos de marca do livro; continua em usos contextuais, como o motivo gráfico e o índice do livro. Não confundir esses usos remanescentes com a assinatura principal.
+`assets/the-med-wordmark.svg` e `js/wordmark.js` compartilham os contornos usados nas páginas e no Canvas2D do livro. O símbolo **09**, com variantes em preto, branco, vinho `#84384F` e vinho escuro `#501F30` em `brand/symbol-09/`, é uma marca complementar. O rodapé usa a versão preta, alinhada à esquerda dos textos. O favicon atual usa o símbolo branco sobre **`#501F30`**, 10% menor que na primeira aplicação; **não usa OS**. A introdução mantém os dois fragmentos animados **“Olá.” / “Bem-vindo à”**, com o wordmark SVG oficial.
 
-Os screenshots originais e o vídeo demonstrativo conservam a marca **Innecta** embutida nos pixels. São registros do material original, não evidência de uma nova interface já renomeada. O mosaico não foi redesenhado nem suas telas reeditadas. Os links externos abaixo também foram mantidos. **Não houve renomeação ou migração do backend, da autenticação, dos domínios externos ou do projeto Enter**, que continua original Innecta e separado.
+A capa e os rótulos das sete composições do livro usam o wordmark; **YOUR MEDICAL JOURNEY** e o título “Sua formação médica, por inteiro.” permanecem. Ilustrações, geometria, camadas, rolagem e arraste não foram redesenhados. **OS** não integra a marca principal; continua somente em motivos contextuais e no índice do livro onde já existia.
 
-Créditos, prompts, nomes técnicos e registros de procedência podem conter a identidade anterior por razões históricas. Preservar esses fatos e as licenças; uma substituição global de nomes não deve reescrever a origem dos materiais. O escopo desta mudança é a marca da apresentação atual, não a titularidade, a disponibilidade do produto ou a concessão de novos direitos.
+As oito páginas de módulos receberam uma revisão editorial própria: **quatro seções por rota, sem screenshots, vídeos ou miniaturas de próximo projeto**, com gráficos e seleções locais. Isso não remove o mosaico de interfaces da home nem a mídia pertinente da comunidade e dos percursos. Hero, campo contínuo, lente, globo, galeria e livro mantêm seus comportamentos.
+
+Os screenshots originais e o vídeo demonstrativo conservam a marca **Innecta** embutida nos pixels. São registros do material original, não evidência de uma interface já renomeada. O mosaico não foi reeditado. Os links externos abaixo permanecem. **Não houve migração do backend, da autenticação, dos domínios externos ou do projeto Enter**, que continua original Innecta e separado.
+
+Créditos, prompts, nomes técnicos e registros de procedência preservam os nomes usados em cada etapa. Não substituir cegamente fatos históricos ou condições de licença. A aprovação visual da marca não equivale a pesquisa de disponibilidade, registro ou concessão de direitos. Ver detalhes em `REBRAND-THE-MED.md` e `MODULES-EDITORIAL.md`.
 
 ### Destinos públicos usados na navegação
 
@@ -31,7 +35,7 @@ Esses links são destinos externos preservados após o rebranding; não signific
 
 ## 2. Escopo de produto comunicado
 
-O conteúdo apresenta capacidades e propostas sob a identidade Interny. A disponibilidade real de cada funcionalidade deve ser validada no produto antes de transformar texto editorial em promessa de lançamento.
+O conteúdo apresenta capacidades e propostas sob a identidade the med. A disponibilidade real de cada funcionalidade deve ser validada no produto antes de transformar texto editorial em promessa de lançamento.
 
 | Área | Papel na trajetória |
 | --- | --- |
@@ -45,7 +49,7 @@ O conteúdo apresenta capacidades e propostas sob a identidade Interny. A dispon
 | **Acervo** | Aulas e materiais de apoio à formação e a diferentes momentos da trajetória. |
 | **Club** | Espaço e experiência de membro em preparação; condições comerciais serão apresentadas no lançamento. Não inventar descontos, parceiros ou benefícios contratados. |
 
-As interfaces mostradas são materiais de demonstração fornecidos para a apresentação. Pessoas, contagens e atividades presentes nessas telas **não comprovam clientes, resultados ou parcerias**. Os avisos de demonstração das páginas internas devem ser preservados.
+As interfaces mostradas são materiais de demonstração fornecidos para a apresentação. Pessoas, contagens e atividades presentes nessas telas **não comprovam clientes, resultados ou parcerias**. Os avisos de demonstração da mídia remanescente devem ser preservados; as oito rotas de módulos não exibem mais essas interfaces.
 
 ## 3. Ordem atual da página inicial
 
@@ -53,7 +57,7 @@ Esta lista corresponde à montagem atual de `js/templates.js`, e não à primeir
 
 | Ordem | Seção | Conteúdo e decisão aprovada |
 | --- | --- | --- |
-| 1 | **Hero — `#home`** | Frase editorial com alternância, apresentação Interny, campo procedural vinho/creme, lente e convite à exploração. |
+| 1 | **Hero — `#home`** | Frase editorial com alternância, apresentação the med, campo procedural vinho/creme, lente e convite à exploração. |
 | 2 | **Ciência — `#science`** | “A ciência avança no mundo. Sua trajetória começa aqui.” Globo interativo, quatro leituras científicas datadas e quatro referências institucionais independentes. Compartilha a mesma cena de fundo do hero. |
 | 3 | **Capacidades — `#partners`** | Lista tipográfica dos caminhos do ecossistema e link para Trajetória. O nome técnico do identificador não significa parceiros comerciais. `#works` permanece como âncora de compatibilidade nesta seção. |
 | 4 | **Experiências médicas — `#medical-experiences`** | Galeria interativa com oito programas/instituições internacionais, fotografias reais, requisitos, fontes e créditos. |
@@ -65,22 +69,22 @@ Esta lista corresponde à montagem atual de `js/templates.js`, e não à primeir
 | 10 | **Livro — `#team`** | “Diferentes formas de avançar”: capa e seis capítulos médicos ilustrados, navegáveis por rolagem, controles e arraste de mouse. O identificador histórico não representa uma equipe de pessoas. |
 | 11 | **Rodapé — `#contact`** | Próximo passo, links do produto/apresentação, Percursos, Mentor + Ultra, aviso de pré-lançamento e retorno ao topo. |
 
-**Não restaurar elementos obsoletos por engano:** a grade inicial de oito work cards não está mais na home atual; as oito páginas de módulos continuam existindo. O vídeo/reel da homepage foi removido. Os antigos seis perfis visuais da home deram lugar ao livro. Vídeos e galerias que pertencem às páginas internas não foram removidos por essa decisão.
+**Não restaurar elementos obsoletos por engano:** a grade inicial de oito work cards não está mais na home atual; as oito páginas de módulos continuam existindo. O vídeo/reel da homepage foi removido. Os antigos seis perfis visuais da home deram lugar ao livro. A revisão posterior de 24/10/2026 também retirou a mídia das oito páginas de módulos. Comunidade e Percursos conservam sua mídia e suas narrativas próprias.
 
 ## 4. Identidade visual e referências
 
-### Direção Interny
+### Direção the med
 
-- Vinho predominante, com bases como **`#542a37` e `#572335`**, creme **`#f3eee6`** e rosa **`#d7a5b7`**.
-- Tipografia Roobert, escala editorial, contraste de pesos, espaços amplos e regras finas.
-- A assinatura principal é **Interny | Your Medical Journey**. **OS** não acompanha mais o nome principal; permanece como motivo contextual nas seções, no favicon e no índice do livro, não como uma estrela de oito pontas.
+- Vinho predominante: **`#501F30`** na identidade atual e nos módulos, com bases como **`#542a37` e `#572335`** preservadas no livro; creme **`#f3eee6`** e rosa **`#d7a5b7`**.
+- Roobert nos textos, escala editorial, contraste de pesos, espaços amplos e regras finas. O logotipo é o desenho vetorial 02, independente de fonte.
+- A assinatura principal é **the med | Your Medical Journey**, com wordmark 02 em minúsculas e símbolo complementar 09. **OS** não acompanha o nome nem o favicon atual; permanece como motivo contextual e no índice do livro, sem restaurar a antiga estrela de oito pontas.
 - O livro deve continuar **adulto, médico e editorial**. Não voltar à estética de fantasia, personagens infantis, paleta arco-íris ou catálogo de telas de software.
 - Nenhuma fotografia institucional, ilustração ou interface deve sugerir uma parceria inexistente.
 
 ### Referências estudadas
 
 1. **[Monopo Vietnam](https://monopo.vn/):** base de hierarquia, ritmo, proporções, navegação, transições e campo procedural com lente. A implementação usa elementos preservados/adaptados do código público de referência. O conteúdo de clientes, pessoas e escritórios não foi transplantado como se pertencesse a esta marca.
-2. **[How to Talk to White Kids About Racism](https://howtotalktowhitekidsaboutracism.com/):** referência de livro ilustrado, composição em camadas, páginas com dobradiça e interação. A geometria e as artes foram produzidas para este projeto, inicialmente sob o nome Innecta e agora apresentadas com os rótulos Interny; não se reutilizam os personagens, textos, modelos ou ilustrações da história original.
+2. **[How to Talk to White Kids About Racism](https://howtotalktowhitekidsaboutracism.com/):** referência de livro ilustrado, composição em camadas, páginas com dobradiça e interação. A geometria e as artes foram produzidas para este projeto, inicialmente sob o nome Innecta e agora apresentadas com o wordmark the med; não se reutilizam os personagens, textos, modelos ou ilustrações da história original.
 3. **[Morphin — Viscose Carousel](https://morphin.dev/components/viscose-carousel-interactive-portfolio-gallery):** referência de galeria com entrada, leque, revolução, fusão viscosa e cursor refrativo. O motor e os shaders desta galeria são implementações próprias orientadas pelo comportamento observado; não há inclusão integral do componente, das suas fotografias ou dos seus textos.
 
 ### Direitos e limites de reutilização
@@ -118,7 +122,7 @@ As leituras científicas são uma seleção editorial datada, não um feed em te
 
 ### Conteúdo e data de referência
 
-São **oito programas distintos**, com informações registradas em **23/10/2026**. As instituições não são parceiras da Interny, e a seleção não constitui ranking de procura, garantia de vaga ou serviço de candidatura. Os links levam às fontes oficiais; o site não envia inscrições nem pagamentos.
+São **oito programas distintos**, com informações registradas em **23/10/2026**. As instituições não são parceiras da the med, e a seleção não constitui ranking de procura, garantia de vaga ou serviço de candidatura. Os links levam às fontes oficiais; o site não envia inscrições nem pagamentos.
 
 | Instituição | Distinções que não podem ser perdidas |
 | --- | --- |
@@ -176,7 +180,7 @@ Para investigar na página real, acrescentar **`?galleryDiagnostic=1`**. O paine
 
 ## 7. Livro médico ilustrado
 
-A versão aprovada tem a marca **INTERNY**, a assinatura **YOUR MEDICAL JOURNEY**, o título de capa **“Sua formação médica, por inteiro.”** e seis capítulos:
+A versão aprovada tem o wordmark vetorial **the med**, a assinatura **YOUR MEDICAL JOURNEY**, o título de capa **“Sua formação médica, por inteiro.”** e seis capítulos:
 
 | Título visível | Conteúdo | Identificador interno preservado |
 | --- | --- | --- |
@@ -189,7 +193,7 @@ A versão aprovada tem a marca **INTERNY**, a assinatura **YOUR MEDICAL JOURNEY*
 
 As cenas mostram adultos fictícios, atlas de anatomia, objetos didáticos, planejamento, revisão de evidências, simulação e orientação acadêmica. São **ilustrações editoriais originais geradas para o projeto**, não fotografias de clientes nem instruções clínicas. A paleta vinho/creme/rosa e a linguagem adulta foram aprovadas. As versões fantasiosas anteriores foram substituídas.
 
-**Não colocar prints do sistema dentro do livro.** Eles pertencem ao mosaico separado e às páginas de produto. A composição do livro usa tipografia grande codificada, imagem ilustrada transparente e legendas ancoradas em uma área livre. Os textos são compartilhados entre arte e HTML por `js/book-editorial.js`.
+**Não colocar prints do sistema dentro do livro.** Na LP atual, o mosaico separado conserva as interfaces; os módulos editoriais também são livres de screenshots. A composição do livro usa tipografia grande codificada, imagem ilustrada transparente e legendas ancoradas em uma área livre. Os textos são compartilhados entre arte e HTML por `js/book-editorial.js`.
 
 ### Mecânica preservada
 
@@ -234,7 +238,9 @@ Não voltar aos vídeos/esferas/letras decorativas descartados. As revelações 
 
 São **onze rotas de conteúdo mais a página 404**. Cada rota de conteúdo é gerada como um diretório com `index.html`; não depende de roteamento client-side ou regra de SPA.
 
-As páginas de módulo têm textos completos, mídia local, detalhes e continuação para outro módulo. Comunidade é uma narrativa sobre conhecimento, pesquisa e colaboração. Percursos contém **Trajetória acadêmica** e **Pesquisa em movimento**, com narrativas em modal e galerias de oito/nove imagens. Não são perfis biográficos inventados. Menu, fechamento por Escape, restauração de foco, links e histórico devem continuar funcionais.
+As oito páginas de módulo têm **quatro seções editoriais cada**, cabeçalho e navegação locais, conteúdo médico, gráficos SVG/DOM e seleções ilustrativas. Não contêm screenshots, vídeo, canvas, iframe ou miniatura de próximo projeto. Trajetória tem perspectivas de formação, currículo/evidências, comparação e próximo passo; os sete módulos irmãos têm interações próprias de prioridade, descoberta, orientação, leitura, colaboração, pesquisa e interesses. Nada é salvo ou enviado: não há conta, plano persistente ou serviço de produto executado pela demonstração. Controles nativos/teclado, conteúdo sem JavaScript e movimento reduzido são preservados, sem pinagem de rolagem. Ver `MODULES-EDITORIAL.md`.
+
+Comunidade é uma narrativa sobre conhecimento, pesquisa e colaboração. Percursos contém **Trajetória acadêmica** e **Pesquisa em movimento**, com narrativas em modal e galerias de oito/nove imagens. Não são perfis biográficos inventados. Menu, fechamento por Escape, restauração de foco, links e histórico devem continuar funcionais.
 
 ## 9. Arquitetura e arquivos principais
 
@@ -244,8 +250,11 @@ O projeto usa **HTML pré-renderizado, CSS e módulos JavaScript locais**. Não 
 | --- | --- |
 | `build.mjs` | Gera as rotas e copia CSS, JavaScript e assets para `dist/`. |
 | `js/templates.js` | Documento HTML, home, navegação e rodapé; fonte de verdade da ordem das seções. |
-| `js/content.js` | Conteúdo global de módulos, princípios, comunidade e percursos. |
-| `js/pages.js` | Templates de páginas internas e modais. |
+| `js/content.js` | Metadados globais dos módulos, princípios, comunidade e percursos. |
+| `js/wordmark.js`, `js/footer-wordmark.js`, `css/wordmark.css` | Desenho vetorial compartilhado e aplicações locais da identidade. |
+| `js/trajectory-page.js`, `js/trajectory.js`, `css/trajectory.css` | Quatro seções e controles editoriais de Trajetória. |
+| `js/module-experiences.js`, `js/module-experiences-controller.js`, `css/module-experiences.css` | Renderização, conteúdo e seleções locais dos sete módulos irmãos. |
+| `js/pages.js` | Templates de comunidade, percursos e modais; os módulos atuais usam os renderizadores dedicados. |
 | `js/app.js` | Integração, navegação, scroll, inicialização preguiçosa e ciclo de vida. |
 | `js/hero.js`, `js/hero-copy.js` | Cena procedural/lente e alternância editorial do hero. |
 | `js/shared-scene.js` | Continuidade do campo entre hero e ciência, com saída da lente. |
@@ -294,7 +303,7 @@ O diretório público de uma hospedagem estática deve ser **`dist/`**. Publicar
 
 Os caminhos de CSS, JavaScript, imagens e links internos começam em **`/`**. Isso pressupõe publicação na raiz de um domínio/origem. **GitHub Pages ainda não está configurado.** Hospedar em um subdiretório como `usuario.github.io/repositorio/` exige adaptação controlada de base paths ou uso de domínio/raiz apropriado; subir os arquivos ao GitHub não resolve isso automaticamente nem publica o site.
 
-`dist/build.json` e a meta tag `interny-build` permitem comparar a versão gerada com a servida. O marcador foi atualizado junto com a identidade Interny; chaves internas de sessão e histórico permaneceram compatíveis com o comportamento anterior. O campo de status emitido pelo build não é um relatório automático de QA visual. Publicação, endereço final e funcionamento precisam ser confirmados depois do envio. Não substituir a hospedagem do projeto Enter para colocar esta LP no ar.
+`dist/build.json` e a meta tag `interny-build` permitem comparar a versão gerada com a servida. O nome técnico `interny-build` foi preservado após a identidade the med; não indica uma marca desatualizada no conteúdo. Chaves internas de sessão e histórico também mantêm compatibilidade. O campo de status emitido pelo build não é um relatório automático de QA visual. Publicação, endereço final e funcionamento precisam ser confirmados depois do envio. Não substituir a hospedagem do projeto Enter para colocar esta LP no ar.
 
 ## 11. Acessibilidade, desempenho e comportamento de falha
 
@@ -325,7 +334,9 @@ Preservar:
 ### Antes de publicar
 
 - [ ] Rodar build, sintaxe e testes; verificar arquivos locais ausentes e rotas profundas.
-- [ ] Conferir a ordem da home e os links das oito páginas de módulos.
+- [ ] Conferir a ordem da home e os links das oito páginas de módulos; manter quatro seções por rota, sem screenshots ou retorno ao antigo estudo de caso.
+- [ ] Conferir wordmark 02 proporcional, símbolo 09, favicon branco/vinho escuro, rodapé à esquerda e introdução com SVG; não substituir o logo por texto em Roobert.
+- [ ] Testar seleções locais, teclado, atalhos modificados, ausência de persistência e conteúdo sem JavaScript nos módulos.
 - [ ] Testar desktop e mobile, menu, modais, retorno ao topo e histórico.
 - [ ] Percorrer hero → ciência sem emenda; verificar saída/retorno da lente e arraste/pausa do globo.
 - [ ] Recarregar antes, dentro e depois da galeria; confirmar entrada nova ao alcançá-la, sem palco vazio permanente.
@@ -351,6 +362,9 @@ Preservar:
 ## 14. Documentos complementares do repositório
 
 - `README.md`: comandos e visão técnica curta.
+- `REBRAND-THE-MED.md`: identidade atual, wordmark 02, símbolo 09 e limites da mudança.
+- `MODULES-EDITORIAL.md`: oito rotas editoriais, quatro seções e interações locais.
+- `REBRAND-INTERNY.md`: registro histórico da etapa anterior, não especificação da marca atual.
 - `FONTES_E_LICENCAS.md`: direitos de terceiros, avisos e pendências de redistribuição.
 - `IMPLEMENTATION.md`: arquitetura atual, responsabilidades, ciclo de vida e manutenção.
 - `BOOK-IMPLEMENTATION.md`: arte médica, geometria, camadas, recursos e interação do livro.
@@ -359,4 +373,4 @@ Preservar:
 - `SCIENCE-SOURCES.md`: fontes científicas e referências institucionais da segunda seção.
 - `assets/manifest.json` e `assets/experiences/credits.json`: procedência dos materiais e créditos.
 
-**Resumo para retomar:** manter uma apresentação Interny completa, médica, vinho/creme e utilizável sem GPU; preservar a animação aprovada do livro e a sequência finita da galeria; comunicar o produto com verdade; alterar apenas o escopo combinado e comprovar o resultado antes de declarar uma correção concluída.
+**Resumo para retomar:** manter uma apresentação the med completa, médica, vinho/creme e utilizável sem GPU; preservar a animação aprovada do livro e a sequência finita da galeria; comunicar o produto com verdade; alterar apenas o escopo combinado e comprovar o resultado antes de declarar uma correção concluída.

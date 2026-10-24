@@ -1,0 +1,29 @@
+{
+  "baseline": "38a2ff53d82b0ada2c88d1f161bf12553d69c6d5",
+  "markup": "<div class=\"footer-closing-symbol\"><img src=\"/assets/the-med-symbol-09-preto.svg\" alt=\"Símbolo the med\" width=\"217\" height=\"236\" loading=\"lazy\" decoding=\"async\"></div>",
+  "asset": "assets/the-med-symbol-09-preto.svg",
+  "approvedBytes": 4786,
+  "approvedSHA256": "3653572b4a836ab31431c666f87d0001d77bb3c53e2b680339df9c43c94e3454",
+  "approvedPathSHA256": "126fe1195afa148bc4c6b6999b62e7961bbbeecc3231eeca412e9b4f1b5cc68b",
+  "protected": {
+    "js/templates.js": "481e8935b678ddd5d506e2b3d0fbadd4da121b04b89ad838599dbec48379fad4",
+    "css/wordmark.css": "7c41fe0a2f05e3e3e240bb28395047a90afdca0683052881001d0b41f30cc1fa",
+    "assets/manifest.json": "50c72dc2c6b4336a753a5318523660412d1db109b9f7f91400493cdcdbbc60ac",
+    "assets/favicon.svg": "9633c52f810ea045e53811d90e714e890bfc0e7c7aa638e1385b34c45e0ba78e",
+    "js/wordmark.js": "b77f58490866c5ccc69969204f41f54e411677af3e947ab7f14362b3a3a76d21",
+    "js/footer-wordmark.js": "a78c128e8642101fdb71e0721075c5c1b27e4a961c49d65c0f7418448718dc91",
+    "css/main.css": "67e2d85054ee21330282a950cda448e217a86f7dd7cd79e22f3ac9c602c058e7",
+    "css/pages.css": "cf96462221bd98e8b6b79b00a820c913674244549c40cf103698de764b3df61b",
+    "js/pages.js": "1c3b17f33b7c2d6abc6aeae22c0f58f6290d69ef01929f04f1957427e6ea40b0",
+    "js/app.js": "7822e66db67b0fabeb02976448d49df73fc3b1094b281a5ff3137c4a5b6bbf1f",
+    "js/hero.js": "343c98b5e36e9dace96e4c673d98d3aff30536452ec82f47e38e8256f50630ca",
+    "js/science-content.js": "f87ea8db72a27ffd768b5b9b24e0532faaeddca74593cd02e2c6dd65428e85c4",
+    "js/book-art.js": "1bc2a2e7e73ee0d050fcb87464eab2172b6b49e0ab561763f4c35bd700462093"
+  },
+  "cssAddition": "\n/* Closing signature: selected symbol 09, black on the existing cream footer. */\n.footer-closing-symbol{width:clamp(80px,8vw,130px);margin:clamp(48px,7vw,100px) auto 0}\n.footer-closing-symbol img{display:block;width:100%;height:auto}\n",
+  "manifestEntry": {
+    "file": "the-med-symbol-09-preto.svg",
+    "bytes": 4786,
+    "sha256": "3653572b4a836ab31431c666f87d0001d77bb3c53e2b680339df9c43c94e3454"
+  }
+}

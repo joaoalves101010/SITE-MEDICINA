@@ -1,0 +1,20 @@
+/* Selected option 02: original approved silhouette, scaled without distortion. */
+.wordmark-svg{display:block;width:100%;height:100%;overflow:visible;fill:currentColor}
+.brand-wordmark{display:block;width:3.73em;height:.9em;flex:none}
+.community-identity .community-wordmark{width:3.73em;max-width:100%;height:.88em;margin:0 auto}
+#case-study .case-brand .case-wordmark{display:block;font-size:inherit;line-height:inherit;width:3.73em;height:1em;margin:0;vertical-align:baseline}
+@media(max-width:1023px){.community-identity .community-wordmark{height:.95em}}
+
+/* Footer keeps one text/mark flex item, the original arrow gap and full gradient. */
+.contact>a .footer-cta-copy{white-space:nowrap}
+.contact>a .footer-wordmark{display:inline-block;width:4.115em;height:.8786476868em;vertical-align:-.035em;overflow:visible}
+@media(max-width:1023px){.contact>a .footer-wordmark path{fill:url(#footer-brand-gradient-narrow)}}
+
+/* Closing signature: selected symbol 09, black on the existing cream footer. */
+.footer-closing-symbol{width:clamp(80px,8vw,130px);margin:clamp(48px,7vw,100px) 0 0 12.58vw}
+.footer-closing-symbol img{display:block;width:100%;height:auto}
+
+@media(max-width:1023px){.footer-closing-symbol{margin-left:6.4vw}}
+
+/* Greeting keeps its two existing animation fragments and the approved vector. */
+.intro-greeting .intro-brand-mark{display:inline-block;width:3.73em;height:.8em;vertical-align:-.08em;font-style:normal}

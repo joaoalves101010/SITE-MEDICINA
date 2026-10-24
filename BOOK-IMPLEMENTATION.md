@@ -1,6 +1,6 @@
-# Livro editorial médico da Interny
+# Livro editorial médico — the med
 
-Identidade atual: **Interny | Your Medical Journey** (23/10/2026). A capa e os rótulos editoriais foram atualizados; ilustrações, camadas e mecânica permanecem preservadas.
+Identidade atual: **the med | Your Medical Journey** (24/10/2026), após as etapas Innecta e Interny. A capa e os rótulos autorais usam o **wordmark vetorial 02 em minúsculas**, com os mesmos contornos de `js/wordmark.js` e `assets/the-med-wordmark.svg`. Não é um logo digitado em Roobert. Textos editoriais continuam em Roobert; ilustrações médicas, camadas, paleta e mecânica permanecem preservadas. **OS** continua apenas no motivo/índice contextual, não na marca principal.
 
 O livro substitui a antiga apresentação de seis perfis da home em `#team`. Não contém prints do sistema. O mosaico diagonal de prints é outra seção e deve permanecer separado.
 
@@ -20,6 +20,6 @@ O WebGL compõe camadas separadas de fundo/título, ilustração e legenda; a il
 
 ## Recursos e limites
 
-No máximo duas composições exigidas por vez no GPU, até seis texturas. Em desktop, camadas2100×1200 representam até60,48MB de RGBA base; até640px são enviadas cópias1050×600, até15,12MB. Essas contas não incluem framebuffer, profundidade, compositor ou CPU. O fallback mantém quatro faces1050×1200, além do cache de composições. Há limpeza de referências, prevenção de resultados assíncronos obsoletos e pausa fora de tela.
+No máximo duas composições exigidas por vez no GPU, até seis texturas. Em desktop, camadas 2100×1200 representam até 60,48 MB de RGBA base; até 640px são enviadas cópias 1050×600, até 15,12 MB. Essas contas não incluem framebuffer, profundidade, compositor ou CPU. O fallback mantém quatro faces 1050×1200, além do cache de composições. Há limpeza de referências, prevenção de resultados assíncronos obsoletos e pausa fora de tela.
 
-A tipografia, o conteúdo médico e a mecânica foram aprovados separadamente. Ao editar arte ou copy, mantenha os renderizadores/controladores intactos salvo pedido explícito. Verifique títulos longos, acentos, legenda livre de sobreposição e o ângulo próximo de90° em tela pequena.
+A tipografia, o conteúdo médico e a mecânica foram aprovados separadamente. Ao editar arte ou copy, mantenha os renderizadores/controladores intactos salvo pedido explícito. Verifique títulos longos, acentos, legenda livre de sobreposição e o ângulo próximo de 90° em tela pequena.

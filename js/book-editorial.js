@@ -4,9 +4,9 @@ export const bookCover=Object.freeze({
  image:'/assets/book-pages/medical-00-cover.webp',
  title:'Sua formação médica, por inteiro.',
  summary:'Do estudo de anatomia ao currículo, da pesquisa às ligas: um olhar conectado para a formação médica.',
- body:'Conheça seis perspectivas da Interny para organizar o estudo, compreender oportunidades e construir uma trajetória acadêmica com responsabilidade. Plataforma em pré-lançamento.',
+ body:'Conheça seis perspectivas da THE MED para organizar o estudo, compreender oportunidades e construir uma trajetória acadêmica com responsabilidade. Plataforma em pré-lançamento.',
  backSummary:'Estudo, trajetória, pesquisa e comunidade.',
- status:'INTERNY / PRÉ-LANÇAMENTO'
+ status:'THE MED / PRÉ-LANÇAMENTO'
 });
 export const bookEditorialChapters=Object.freeze([
  {
@@ -36,7 +36,7 @@ export const bookEditorialChapters=Object.freeze([
  {
   id:'troca',title:'Troca',displayTitle:'LIGAS',role:'LIGAS E APRENDIZADO ENTRE PARES',module:'Ligas',href:'/modulos/ligas/',
   summary:'A formação médica também se constrói com colegas.',
-  excerpt:'Ligas acadêmicas: estudo, simulação e troca entre pares. Na Interny, o foco é descobrir atividades e acompanhar a participação.',
+  excerpt:'Ligas acadêmicas: estudo, simulação e troca entre pares. Na THE MED, o foco é descobrir atividades e acompanhar a participação.',
   body:'Descubra ligas acadêmicas, compreenda suas atividades e acompanhe a própria participação. Aproxime-se de colegas com interesses em comum para compartilhar experiências de estudo, simulação e aprendizado entre pares.'
  },
  {
