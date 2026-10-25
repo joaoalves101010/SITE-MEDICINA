@@ -1,3 +1,4 @@
+import {restoreTimesCoverSource} from './times-cover-normalize.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
@@ -19,7 +20,7 @@ test('only the paper representation changes; approved right-side copy, desks, CT
  const oldPaper=before.match(/<figure class="times-editorial-paper">[^]*?<\/figure>/)[0];
  const restored=after.replace("import { renderTimesFrontpage } from './times-frontpage.js';\n",'').replace('/** Evergreen marketing copy with a separately dated sample cover; no live-feed claim. */','/** A timeless editorial introduction, not a live cover or a promise of daily output. */').replace('${renderTimesFrontpage(href)}',oldPaper);
  assert.equal(restored,before);
- for(const[path,digest]of Object.entries(baseline.protected))assert.equal(hash(await readFile(new URL('../'+path,import.meta.url))),digest,path);
+ for(const[path,digest]of Object.entries(baseline.protected))assert.equal(hash(restoreTimesCoverSource(path,await readFile(new URL('../'+path,import.meta.url)))),digest,path);
  const withoutPaper=css=>css.replace(/\.times-editorial-(?:paper|masthead|frontpage|credits|photo-notice)[^{}]*\{[^{}]*\}/g,'').replace(/\s+/g,'');
  assert.equal(withoutPaper(await read('css/times-editorial.css')),withoutPaper(baseline.originalSource['css/times-editorial.css']));
 });

@@ -1,6 +1,6 @@
 {
   "project": "the med | Your Medical Journey",
-  "generated_at": "2026-10-25T16:35:53.409677+00:00",
+  "generated_at": "2026-10-25T17:10:13.959531+00:00",
   "scope": "Portable sanitized editable static website, including built dist output. No repository history, hosting credentials, environment secrets or private QA files.",
   "entrypoint": "README.md",
   "context": "CONTEXTO_PROJETO.md",
@@ -8,8 +8,8 @@
   "base_path": "/",
   "github_pages_configured": false,
   "validation": {
-    "structural_assertions": 584,
-    "automated_tests": 411,
+    "structural_assertions": 585,
+    "automated_tests": 465,
     "syntax": "pass",
     "static_build": "pass",
     "private_path_identity_and_credential_pattern_scan": "no findings; heuristic, not a guarantee against every possible secret",
@@ -17,13 +17,16 @@
     "globe_regeneration": "Portable generator and all bundled inputs preserved from the prior public export; no external source checkout required.",
     "original_checkout": "Not modified by portable export synchronization.",
     "brand_assets": "Approved vector wordmark and four symbol09 colour variants; no bitmap or font dependency in SVGs.",
-    "mobile": "New newspaper fold is responsive normal-flow HTML/CSS without browser runtime, pinning or scroll capture. Original touch lens pose, glass/refraction, native Safari scrolling, welcome intro, gallery and OS destination remain protected. Source/HTML regression checks passed; no real-browser or physical Safari visual validation is claimed.",
-    "newspaper_fold": "Home-only after capabilities and before international experiences; official masthead and six desks. PUBLIC_TIMES_URL is https://themedtimes.vercel.app/: Ler o jornal is a real HTTPS anchor with noopener noreferrer and new-tab notice. No daily publication or automatic GitHub/Vercel sync claim.",
+    "mobile": "Newspaper layout/CSS and initial approved004 SVG remain byte-exact. Optional home-only module is isolated from app/intro/hero, native scroll and touch behavior; no iframe, scroll capture, animation loop or dependency. Node/mock/static checks passed; no real-browser, CLS or physical Safari result claimed.",
+    "newspaper_fold": "Home-only after capabilities and before international experiences; same official masthead, six desks, copy and public new-tab CTA. Optional public edition-cover.json consumer follows validated published covers; this is not a promise that an edition publishes every day or an atomic cross-repository deployment.",
     "portable_regression_adaptation": "Only the six established portable provenance/build hashes were adapted in the new times baseline; all unrelated fixture content remains independently hash-protected.",
     "newspaper_cta_activation": "Only the public destination configuration, rendered CTA state and status documentation changed. Editorial copy, renderer, CSS, artwork, runtime behavior, tests and portable provenance remain unchanged; unrelated HTML changes only generated build IDs.",
-    "newspaper_dense_preview": "Only the paper representation is replaced by a complete, densely typeset static edition-004 cover dated 25/10/2026. Nine article records exactly match the published edition; official masthead and two whole-frame public-domain photographs retained. Accessible full-reading link, dated caption, source credits and CDC free-source/no-endorsement notice. No new browser runtime, iframe, nested scroll or change to copy, desks, CTA, placement, hero, OS or mobile touch behavior.",
+    "newspaper_dense_preview": "Approved complete dense edition004 SVG dated25/10/2026 remains unchanged and is always the immediate static fallback. All old fonts, nine article inputs, uncropped photos, credits and generator files are preserved. Dynamic replacement uses the separately validated current-edition image/date/credits as one atomic figure.",
     "newspaper_preview_proof": "Independent vector-generator reproduction is byte-exact. SVG and mathematical-width raster proofs reviewed; no real-browser or physical Safari result claimed. Supported browser preview was unavailable.",
-    "newspaper_preview_preservation": "All 12 HTML documents preserve baseline markup after build-ID normalization and replacement of the single approved newspaper figure; all old regression baselines and portable provenance exceptions remain byte-identical."
+    "newspaper_preview_preservation": "All12 generated HTML documents match the published dense-cover baseline after build-ID normalization and removal of exactly one home-only optional module inclusion. All old assets/CSS/app/hero/intro/scroll/runtime inputs and older regression baselines remain exact.",
+    "newspaper_live_cover": "Manifest/schema/calendar/origin/path/credit validation,3MiB image cap,16KiB JSON cap,SHA256 and off-DOM decode/natural dimensions before one figure replacement. Credentials omitted; redirects rejected; one optional IndexedDB public record; bounded5-minute near/visible refresh; failures retain the complete last valid bundle or approved004 fallback.",
+    "newspaper_live_cover_test_scope": "462 project tests plus3 existing portable-equivalence tests,585 structural assertions; full build and syntax pass. Runtime tests use actual JS Fetch/Response/WebCrypto with mocked DOM/Image/IndexedDB/scheduler. They do not establish real-browser pixel/CLS/Safari behavior.",
+    "newspaper_live_cover_portability": "New188-file preservation baseline adapts only six established portable provenance/build hashes plus the already-public globe generator input relocation to tools/globe-source. No corresponding source files or older baselines were modified."
   },
   "export_adjustments": [
     "README and public handoff/licence/architecture documents",
@@ -41,7 +44,8 @@
     "24/10/2026: changed only the product-os CTA destination to https://themed-os.vercel.app/; kept all other URLs, content, styling and behavior intact.",
     "25/10/2026: added the home-only THE MED TIMES editorial fold after capabilities; official horizontal masthead, six desks and non-clickable Em breve while the owner supplies the future public HTTPS URL. Preserved hero glass/refraction, touch pose, native scrolling, intro, animations and OS link. No new browser runtime, WebGL, pinning or automatic newspaper synchronization.",
     "25/10/2026: activated Ler o jornal for the owner-supplied, HTTPS-checked public URL https://themedtimes.vercel.app/. Configuration-only runtime change; layout, editorial copy, renderer, CSS, original animations and portable provenance unchanged. No newspaper deployment or synchronization configured by this update.",
-    "25/10/2026: replaced only the newspaper paper preview with the complete frozen edition-004 front page, official masthead, real edition headlines/excerpts, two uncropped public-domain context photos, outlined Liberation typography (SIL OFL 1.1), accessible dated caption/credits/source/no-endorsement and full-reading link. Right-side copy, six desks, CTA destination and all unrelated runtime/assets preserved. Generator inputs and source licences included."
+    "25/10/2026: replaced only the newspaper paper preview with the complete frozen edition-004 front page, official masthead, real edition headlines/excerpts, two uncropped public-domain context photos, outlined Liberation typography (SIL OFL 1.1), accessible dated caption/credits/source/no-endorsement and full-reading link. Right-side copy, six desks, CTA destination and all unrelated runtime/assets preserved. Generator inputs and source licences included.",
+    "25/10/2026: added only independent home-only live-cover consumer with public manifest validation, hash/decode-before-atomic-swap, edition-bound plain-text credits, bounded optional offline cache and near/visible revalidation. Preserved approved004 fallback bytes, layout, CSS, right-side copy, six desks, CTA, hero, intro and scroll; no browser/Safari result claimed."
   ],
   "licensing": "Per-file third-party rights apply. Roobert and reference-derived materials require redistribution review; see FONTES_E_LICENCAS.md.",
   "inventory_excludes": "EXPORT_MANIFEST.json itself (avoid recursive hash)",
@@ -103,8 +107,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8343,
-      "sha256": "d0026df31ae14ab17dc87f1b65acf6848cadbe9129c650f1a638b7d657959f1d"
+      "bytes": 8903,
+      "sha256": "af5bacd338fb41296cd494a215e28fed71ae546ca7494abd3c3b31f75bf926ee"
     },
     {
       "path": "REBRAND-INTERNY.md",
@@ -123,8 +127,8 @@
     },
     {
       "path": "THE-MED-TIMES-FOLD.md",
-      "bytes": 6869,
-      "sha256": "699bc431d2d0a9de20d40df8ddbe12c74de1ac79ade94ad0bfcf4cd3f2571be6"
+      "bytes": 12027,
+      "sha256": "466ab8ea73044e9e21c55a09f1c0cf25e563b03b2ebfbba9be3d450958875606"
     },
     {
       "path": "assets/Roobert-Light.woff2",
@@ -679,7 +683,7 @@
     {
       "path": "dist/404.html",
       "bytes": 8871,
-      "sha256": "10eaec687100a63500eec28eae17940cb26d3952e151fb50f06a4719c8bc835a"
+      "sha256": "1f30b1cd0bcd5404d31dd45813e518bec2bc43793a36eab669b3334e04363fd3"
     },
     {
       "path": "dist/assets/Roobert-Light.woff2",
@@ -1119,12 +1123,12 @@
     {
       "path": "dist/build.json",
       "bytes": 425,
-      "sha256": "ff1ed320d8d4407a42470ca52b6a706ae012136b8fad8c19235fd123bf2042ce"
+      "sha256": "6fa405c26931c5055ae360128a08f51ab2dd9517b0bd8022262a1bc5a312317a"
     },
     {
       "path": "dist/comunidade/index.html",
       "bytes": 30120,
-      "sha256": "c82bc7e6def9ff219b3d50e95832e359849a3b012b565d12a85abf3e83739657"
+      "sha256": "780d136f86bf994de0fb5237690a1c35536321f6bd9ca88a197514154d5ec03d"
     },
     {
       "path": "dist/css/book-fallback.css",
@@ -1208,8 +1212,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 93884,
-      "sha256": "cbd461c9d09b272ae9c388c8b7c7a908aae87d09b8d1ed6cc0bded715ed2c352"
+      "bytes": 93945,
+      "sha256": "405fd30382db7d981f62f6b240cd6387fd598bd4c41142f8b091baf81f729a0f"
     },
     {
       "path": "dist/js/app.js",
@@ -1468,13 +1472,18 @@
     },
     {
       "path": "dist/js/templates.js",
-      "bytes": 13188,
-      "sha256": "8e3489d52346d63c9fbcf25818fccb38f2189d3adf8bfe75e60d3988b5171fb5"
+      "bytes": 13271,
+      "sha256": "d78779e3d6e0b2c13768c30cb1cc00d972983b13656994ec8f2b4fb4fbaf95b9"
     },
     {
       "path": "dist/js/times-config.js",
       "bytes": 296,
       "sha256": "488f56ed6845a2b27bcf562a236109d9e2993c017604e61334551e20cd76a0c4"
+    },
+    {
+      "path": "dist/js/times-cover-live.js",
+      "bytes": 16498,
+      "sha256": "2a0704ad90e9152e79b519ce163237e50046fcca49e4dc3691d761cbf21c68b6"
     },
     {
       "path": "dist/js/times-editorial.js",
@@ -1559,47 +1568,47 @@
     {
       "path": "dist/modulos/acervo/index.html",
       "bytes": 20815,
-      "sha256": "fcdfdb96993be329fa8cd6e4d0279b636919617307e4da2e7ff5f4eb7ffa4703"
+      "sha256": "6b865797f6593f83e02bda6a0f203b03d239b700fc9815d6ae4184cb9f9b0d70"
     },
     {
       "path": "dist/modulos/club/index.html",
       "bytes": 20659,
-      "sha256": "e94153a1184f703dab6c4b18736af4d9b4cfa9fdba7bea117586792f3de9591c"
+      "sha256": "ffd6f9499e9fcdc24d8f18da3306fc10761d9d0e059146475526db4d112fb113"
     },
     {
       "path": "dist/modulos/explorar/index.html",
       "bytes": 21905,
-      "sha256": "59dbc45ba0b71baa7103f1f3e0cf2f2ef4abe7369f7db8ce22a67975c5ff9126"
+      "sha256": "d1f72c6656a924fc4eb3dea1b314b485d861232a791aa784f1e41343b8824a70"
     },
     {
       "path": "dist/modulos/hoje/index.html",
       "bytes": 20906,
-      "sha256": "5038cf257302dbc0b55edb986949ddad7fd41fdadd1da559fcf382900b3307a5"
+      "sha256": "61c99250555f8e5c19b4c074500829bd0dbb69dffc4a2df6c07aaf3603a64021"
     },
     {
       "path": "dist/modulos/ligas/index.html",
       "bytes": 20962,
-      "sha256": "9e6cfb35c5e888bd3e28740d8695c1df53eb047a8aa7f5ad91bbfe94c72edaa8"
+      "sha256": "6c2b5bd891653161577b2b23eacec873fb6f7f91dc518f07b4c4e2d6f4ede6a3"
     },
     {
       "path": "dist/modulos/mentor/index.html",
       "bytes": 19780,
-      "sha256": "8c3100ec1f5cdfc1cf68989c751b8eabbdc6920ad2c97d4d9533deca6969adf4"
+      "sha256": "fc2195c2409ad14968e95ccec011298866db5d680d4835679472bec6a0c80ddb"
     },
     {
       "path": "dist/modulos/pesquisa/index.html",
       "bytes": 23303,
-      "sha256": "3d70360ea5a872a518be546e1f54d507d4a640d7614f6184253069962e8d2f62"
+      "sha256": "e5eef7325e4ff18ea41f4635d309dc6bab18ed8c2d4eded9f8a0339404dd9247"
     },
     {
       "path": "dist/modulos/trajetoria/index.html",
       "bytes": 31912,
-      "sha256": "63fca204a9615deafac62f43a63f83e9381a71e3e55aa7b518df739659343136"
+      "sha256": "e47d1c2be8ad52ddbcd190121b531f6c907a23f520169691ea0749a11218bfc3"
     },
     {
       "path": "dist/percursos/index.html",
       "bytes": 11192,
-      "sha256": "be9be4c511edc64b09975609b9afa20b03dd9b4fa942544c6f069757d9252998"
+      "sha256": "9c009651420cbc3ecad88b68676f1955b8ecf8e664cbb222bf8adb963103d97c"
     },
     {
       "path": "js/app.js",
@@ -1858,13 +1867,18 @@
     },
     {
       "path": "js/templates.js",
-      "bytes": 13188,
-      "sha256": "8e3489d52346d63c9fbcf25818fccb38f2189d3adf8bfe75e60d3988b5171fb5"
+      "bytes": 13271,
+      "sha256": "d78779e3d6e0b2c13768c30cb1cc00d972983b13656994ec8f2b4fb4fbaf95b9"
     },
     {
       "path": "js/times-config.js",
       "bytes": 296,
       "sha256": "488f56ed6845a2b27bcf562a236109d9e2993c017604e61334551e20cd76a0c4"
+    },
+    {
+      "path": "js/times-cover-live.js",
+      "bytes": 16498,
+      "sha256": "2a0704ad90e9152e79b519ce163237e50046fcca49e4dc3691d761cbf21c68b6"
     },
     {
       "path": "js/times-editorial.js",
@@ -1948,8 +1962,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 3004,
-      "sha256": "37d6bf6ee4ae00d121574785e8e7fcfa5fcbde337069eba4d5cdfa84c7e9f9e7"
+      "bytes": 3113,
+      "sha256": "c728e8309f501238374e6cf5fccb2dc34b5eeeec26dbcde70461515639e3bef2"
     },
     {
       "path": "scripts/generate-globe.mjs",
@@ -2297,14 +2311,34 @@
       "sha256": "dba7b4f05790843b69d900a872a6c954fab5ab8d29c95e60f4f57c394e97e1e1"
     },
     {
+      "path": "tests/times-cover-baseline.json",
+      "bytes": 19455,
+      "sha256": "df8c8a350260d6103d3b55273a42526b2d68a7070e32d4e2d75503febe55dcb5"
+    },
+    {
+      "path": "tests/times-cover-live.mjs",
+      "bytes": 35685,
+      "sha256": "82110b31ecdfcf1d3ddb9cb53124bc06b838ee12892983a07944d8bf6666a027"
+    },
+    {
+      "path": "tests/times-cover-normalize.mjs",
+      "bytes": 750,
+      "sha256": "a98763a28bbeafed3772fce134e2787ddfc31be3707cae776d2ea2839607735f"
+    },
+    {
+      "path": "tests/times-cover-scope.mjs",
+      "bytes": 3154,
+      "sha256": "e8f0336419c2af193bf8a53f6f0f253f4abd5067dd5f83ea9a336606c946807c"
+    },
+    {
       "path": "tests/times-editorial-baseline.json",
       "bytes": 16995,
       "sha256": "9e54f429772d2467910b0892559ece4dcda46cb036d31f282fdcb989c0084449"
     },
     {
       "path": "tests/times-editorial-normalize.mjs",
-      "bytes": 925,
-      "sha256": "50349211d9effd35a19e5a19ae2746ea36ccd4cbe9d271d078080ddae5c8893d"
+      "bytes": 1081,
+      "sha256": "17fa83a5f103fdc8c7b4ad70c8cf2b6d9fd443be3fe7eea9f3e9f4aacb1ff5e5"
     },
     {
       "path": "tests/times-editorial-replacements.json",
@@ -2323,8 +2357,8 @@
     },
     {
       "path": "tests/times-frontpage.mjs",
-      "bytes": 8681,
-      "sha256": "d1df7184954aab318a95e0c7f12dfdae06825e0ea01c7f59917727c28c0f750d"
+      "bytes": 8780,
+      "sha256": "b3204785e75b7844bec8413d35036892aad818eb62c05c86ce0682d75fe46822"
     },
     {
       "path": "tests/trajectory-baseline.json",
