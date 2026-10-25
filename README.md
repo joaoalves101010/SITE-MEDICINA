@@ -24,7 +24,7 @@ A dobra `#product-os`, após a ciência e antes das capacidades, apresenta **the
 
 A dobra `#the-med-times`, depois das capacidades e antes das experiências internacionais, apresenta **THE MED TIMES** com o masthead oficial, seis editorias e uma composição responsiva em fluxo normal. Não adiciona runtime de navegador, WebGL ou captura de scroll.
 
-O endereço público do jornal será fornecido após a publicação pelo proprietário. Até lá, `PUBLIC_TIMES_URL` em `js/times-config.js` permanece vazio e o acesso é anunciado somente como **“Em breve”**, sem link. Depois de verificar a URL pública HTTPS, preencher essa única configuração, reconstruir e validar o site. Veja [THE-MED-TIMES-FOLD.md](THE-MED-TIMES-FOLD.md). Nenhuma sincronização diária do jornal com GitHub/Vercel é configurada por esta apresentação.
+O jornal está disponível em [themedtimes.vercel.app](https://themedtimes.vercel.app/), endereço público fornecido pelo proprietário e conferido por HTTPS. `PUBLIC_TIMES_URL` em `js/times-config.js` agora aponta para esse destino; a dobra apresenta **“Ler o jornal”** com abertura em nova aba e `noopener noreferrer`. Caso a configuração seja removida ou inválida, o componente volta ao estado não clicável “Em breve”. Veja [THE-MED-TIMES-FOLD.md](THE-MED-TIMES-FOLD.md). Nenhuma sincronização diária do jornal com GitHub/Vercel é configurada por esta apresentação.
 
 ## Executar
 

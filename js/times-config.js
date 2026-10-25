@@ -3,4 +3,4 @@
  * Empty means “Em breve”; never substitute a private Sites preview or a # link.
  * Rebuild the static site after changing this one value.
  */
-export const PUBLIC_TIMES_URL = '';
+export const PUBLIC_TIMES_URL = 'https://themedtimes.vercel.app/';

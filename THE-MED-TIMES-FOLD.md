@@ -18,17 +18,19 @@ As seis editorias reproduzem a estrutura real do jornal: Pesquisa, Clínica, Sa�
 - HTML/CSS estáticos; nenhuma nova animação de rolagem, pin, WebGL, cursor, fetch ou estado persistente. Não modifica hero, lente mobile, saudação de cada reload, globo, galeria, módulos, navegação, guia ou CTA do OS.
 - O desenho é uma **apresentação editorial atemporal**, não uma miniatura da edição vigente.
 
-## Publicação futura: uma única configuração
+## Acesso público ativo: uma única configuração
 
 Em `js/times-config.js`:
 
 ```js
-export const PUBLIC_TIMES_URL = '';
+export const PUBLIC_TIMES_URL = 'https://themedtimes.vercel.app/';
 ```
 
-Enquanto a URL pública não for fornecida e verificada, a dobra mostra apenas **“Em breve”** e **“Leitura disponível em breve”**. São texto, não link, botão desabilitado, `#` ou captura de contato.
+O proprietário forneceu o endereço público acima após publicar o jornal; a resposta HTTPS e o conteúdo da primeira página foram conferidos. A dobra agora oferece **“Ler o jornal”**, com aviso de nova aba e `noopener noreferrer`. Esta ativação altera somente a configuração e o estado de acesso; layout, copy editorial, estilos, hero e animações permanecem iguais.
 
-Quando o usuário enviar a URL pública:
+Se a configuração ficar vazia ou inválida, a dobra mostra **“Em breve”** e **“Leitura disponível em breve”** como texto não clicável, sem botão desabilitado, `#` ou captura de contato.
+
+Para uma futura mudança de endereço autorizada:
 
 1. Verificar que é realmente o jornal, acessível sem login, no destino autorizado pelo usuário.
 2. Preencher somente `PUBLIC_TIMES_URL` com a URL HTTPS pública.
