@@ -1,6 +1,6 @@
 # the med | Your Medical Journey — contexto do projeto Monopo LP
 
-> **Documento de continuidade — atualizado em 24 de outubro de 2026.** Descreve a versão atual da landing page, suas decisões aprovadas, a organização técnica e os limites conhecidos. É um ponto de partida para manter o projeto sem reconstruir decisões antigas ou confundir a apresentação com o produto completo.
+> **Documento de continuidade — atualizado em 25 de outubro de 2026.** Descreve a versão atual da landing page, suas decisões aprovadas, a organização técnica e os limites conhecidos. É um ponto de partida para manter o projeto sem reconstruir decisões antigas ou confundir a apresentação com o produto completo.
 
 ## Estado vigente após análise do vídeo mobile — 24/10/2026
 
@@ -13,6 +13,14 @@ A gravação recebida demonstrou os problemas da versão anterior; não constitu
 ### Apresentação do produto — 24/10/2026
 
 Entre ciência e capacidades, `#product-os` apresenta **the med OS**, com wordmark oficial + OS contextual, três movimentos (Planejar, Construir, Avançar), links aos módulos e CTA para `https://themed-os.vercel.app/`. Mantém fundo vinho/escuro e pré-lançamento explícito. É HTML/CSS em fluxo normal: sem screenshots, pin, parallax, novo JavaScript ou WebGL. Fontes: `js/product-os.js` e `css/product-os.css`.
+
+### Jornal THE MED TIMES — 25/10/2026
+
+A nova dobra `#the-med-times` entra **depois das capacidades e antes das experiências internacionais**. “A medicina avança. Sua visão também.” apresenta pesquisa, clínica e inovação no mundo, em português e com fontes visíveis. A composição usa uma folha editorial plana com o masthead horizontal oficial à esquerda, texto e acesso à direita; mobile segue em uma coluna, sem pin ou novo runtime. As seis editorias reais são Pesquisa, Clínica, Saúde pública, Formação, Inovação e Instituições.
+
+**A URL pública do jornal ainda será fornecida pelo usuário após a publicação no Vercel.** `js/times-config.js` contém o único ponto de configuração, `PUBLIC_TIMES_URL`, atualmente vazio. Assim, a dobra mostra “Em breve” e “Leitura disponível em breve” como texto não clicável. Não há placeholder `#` ou destino privado. Após confirmação de uma URL pública HTTPS, a mesma configuração gera “Ler o jornal”. Verificar acessibilidade pública antes de preencher; a validação de URL por si só não comprova acesso sem login.
+
+Não se anuncia volume diário, publicação garantida às 08h ou manchete datada como se fosse atual. A seção amplia repertório e visão da medicina, não se restringe a carreira ou preparação de provas. Hero/lente e saudação, cena hero/ciência, OS, experiências, guia e navegação permanecem intactos. Consulte `THE-MED-TIMES-FOLD.md` para copy, localização, fontes, testes e procedimento de ativação. A checagem automática de fonte/HTML não equivale à validação visual em Safari físico; a inspeção visual da nova dobra em navegador e em dispositivos físicos continua necessária.
 
 ## 1. O que é este projeto
 
@@ -73,14 +81,15 @@ Esta lista corresponde à montagem atual de `js/templates.js`, e não à primeir
 | 2 | **Ciência — `#science`** | “A ciência avança no mundo. Sua trajetória começa aqui.” Globo interativo, quatro leituras científicas datadas e quatro referências institucionais independentes. Compartilha a mesma cena de fundo do hero. |
 | 3 | **Produto — `#product-os`** | the med OS: formação conectada, Planejar/Construir/Avançar e acesso ao produto externo em pré-lançamento. |
 | 4 | **Capacidades — `#partners`** | Lista tipográfica dos caminhos do ecossistema e link para Trajetória. O nome técnico do identificador não significa parceiros comerciais. `#works` permanece como âncora de compatibilidade nesta seção. |
-| 5 | **Experiências médicas — `#medical-experiences`** | Galeria interativa com oito programas/instituições internacionais, fotografias reais, requisitos, fontes e créditos. |
-| 6 | **Manifesto — `#manifesto`** | “Não é sobre chegar mais rápido. É sobre construir um caminho que faça sentido.” Tipografia grande com revelações por linha. |
-| 7 | **Princípios — `#strengths`** | Conectar, Construir e Acompanhar, com três diagramas editoriais próprios e textos preservados. |
-| 8 | **Faixa tipográfica** | “Seu futuro é feito de conexões.” Movimento horizontal decorativo. |
-| 9 | **Comunidade** | Texto sobre conhecimento que circula e chamada circular para `/comunidade/`. |
-| 10 | **Mosaico — `#product-mosaic`** | Quatro linhas diagonais, doze instâncias de oito interfaces reais; movimento de rolagem e telas inteiras dentro dos quadros. |
-| 11 | **Guia — `#team`** | “Qual é o seu próximo passo?” Três intenções, ações úteis e links de módulos; componente leve e acessível, sem livro ou pin. |
-| 12 | **Rodapé — `#contact`** | Próximo passo, links do produto/apresentação, Percursos, Mentor + Ultra, aviso de pré-lançamento e retorno ao topo. |
+| 5 | **Jornal — `#the-med-times`** | THE MED TIMES: pesquisa, clínica e inovação no mundo, em português; seis editorias e apresentação editorial estática. URL pública pendente: “Em breve”, sem link privado. |
+| 6 | **Experiências médicas — `#medical-experiences`** | Galeria interativa com oito programas/instituições internacionais, fotografias reais, requisitos, fontes e créditos. |
+| 7 | **Manifesto — `#manifesto`** | “Não é sobre chegar mais rápido. É sobre construir um caminho que faça sentido.” Tipografia grande com revelações por linha. |
+| 8 | **Princípios — `#strengths`** | Conectar, Construir e Acompanhar, com três diagramas editoriais próprios e textos preservados. |
+| 9 | **Faixa tipográfica** | “Seu futuro é feito de conexões.” Movimento horizontal decorativo. |
+| 10 | **Comunidade** | Texto sobre conhecimento que circula e chamada circular para `/comunidade/`. |
+| 11 | **Mosaico — `#product-mosaic`** | Quatro linhas diagonais, doze instâncias de oito interfaces reais; movimento de rolagem e telas inteiras dentro dos quadros. |
+| 12 | **Guia — `#team`** | “Qual é o seu próximo passo?” Três intenções, ações úteis e links de módulos; componente leve e acessível, sem livro ou pin. |
+| 13 | **Rodapé — `#contact`** | Próximo passo, links do produto/apresentação, Percursos, Mentor + Ultra, aviso de pré-lançamento e retorno ao topo. |
 
 **Não restaurar elementos obsoletos por engano:** a grade inicial de oito work cards não está mais na home atual; as oito páginas de módulos continuam existindo. O vídeo/reel da homepage foi removido. Os antigos seis perfis visuais deram lugar ao livro, posteriormente removido e substituído pelo guia leve de próximos passos. A revisão posterior de 24/10/2026 também retirou a mídia das oito páginas de módulos. Comunidade e Percursos conservam sua mídia e suas narrativas próprias.
 

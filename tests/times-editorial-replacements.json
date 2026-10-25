@@ -1,0 +1,18 @@
+{
+  "source": {
+    "js/templates.js": [
+      {
+        "old": "import { renderProductOS } from './product-os.js';\n",
+        "new": "import { renderProductOS } from './product-os.js';\nimport { renderTimesEditorial } from './times-editorial.js';\n"
+      },
+      {
+        "old": "${renderMedicalExperiences()}<section id=\"manifesto\">",
+        "new": "${renderTimesEditorial()}${renderMedicalExperiences()}<section id=\"manifesto\">"
+      },
+      {
+        "old": "<link rel=\"stylesheet\" href=\"/css/product-os.css\"><link rel=\"stylesheet\" href=\"/css/medical-experiences.css\">",
+        "new": "<link rel=\"stylesheet\" href=\"/css/product-os.css\"><link rel=\"stylesheet\" href=\"/css/times-editorial.css\"><link rel=\"stylesheet\" href=\"/css/medical-experiences.css\">"
+      }
+    ]
+  }
+}

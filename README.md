@@ -20,6 +20,12 @@ A apresentação evoluiu de Innecta para Interny (23/10/2026) e, depois, para **
 
 A dobra `#product-os`, após a ciência e antes das capacidades, apresenta **the med OS** com o wordmark oficial, etapas conectadas e CTA para o produto externo. É uma composição responsiva HTML/CSS, sem capturar scroll ou adicionar GPU. O aviso de pré-lançamento e os limites de backend permanecem.
 
+## Apresentação do jornal — 25/10/2026
+
+A dobra `#the-med-times`, depois das capacidades e antes das experiências internacionais, apresenta **THE MED TIMES** com o masthead oficial, seis editorias e uma composição responsiva em fluxo normal. Não adiciona runtime de navegador, WebGL ou captura de scroll.
+
+O endereço público do jornal será fornecido após a publicação pelo proprietário. Até lá, `PUBLIC_TIMES_URL` em `js/times-config.js` permanece vazio e o acesso é anunciado somente como **“Em breve”**, sem link. Depois de verificar a URL pública HTTPS, preencher essa única configuração, reconstruir e validar o site. Veja [THE-MED-TIMES-FOLD.md](THE-MED-TIMES-FOLD.md). Nenhuma sincronização diária do jornal com GitHub/Vercel é configurada por esta apresentação.
+
 ## Executar
 
 Requisitos: **Node.js 22 ou superior**, npm e Python 3 para o servidor local. Não há dependências npm para instalar: as bibliotecas de execução estão incluídas localmente.

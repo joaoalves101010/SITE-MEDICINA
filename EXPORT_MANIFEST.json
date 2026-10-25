@@ -1,6 +1,6 @@
 {
   "project": "the med | Your Medical Journey",
-  "generated_at": "2026-10-24T17:36:42.904968+00:00",
+  "generated_at": "2026-10-25T15:53:26.158360+00:00",
   "scope": "Portable sanitized editable static website, including built dist output. No repository history, hosting credentials, environment secrets or private QA files.",
   "entrypoint": "README.md",
   "context": "CONTEXTO_PROJETO.md",
@@ -8,16 +8,18 @@
   "base_path": "/",
   "github_pages_configured": false,
   "validation": {
-    "structural_assertions": 579,
-    "automated_tests": 394,
+    "structural_assertions": 581,
+    "automated_tests": 403,
     "syntax": "pass",
     "static_build": "pass",
     "private_path_identity_and_credential_pattern_scan": "no findings; heuristic, not a guarantee against every possible secret",
-    "runtime_code_styles_and_shaders": "Byte-identical to current published the med source; five provenance notices/manifests use the previously public portable wording. All 12 HTML documents match apart from generated build ID.",
+    "runtime_code_styles_and_shaders": "Runtime code, styles and assets match the reviewed native source; five provenance/build notices plus the asset provenance manifest retain previously public portable wording. All 12 generated HTML documents match apart from build ID.",
     "globe_regeneration": "Portable generator and all bundled inputs preserved from the prior public export; no external source checkout required.",
-    "original_checkout": "unchanged",
+    "original_checkout": "Not modified by portable export synchronization.",
     "brand_assets": "Approved vector wordmark and four symbol09 colour variants; no bitmap or font dependency in SVGs.",
-    "mobile": "No visual or interaction change. Only the product-os CTA destination was updated to https://themed-os.vercel.app/; all other product links retain their prior destinations. Exact component and route regression checks passed."
+    "mobile": "New newspaper fold is responsive normal-flow HTML/CSS without browser runtime, pinning or scroll capture. Original touch lens pose, glass/refraction, native Safari scrolling, welcome intro, gallery and OS destination remain protected. Source/HTML regression checks passed; no real-browser or physical Safari visual validation is claimed.",
+    "newspaper_fold": "Home-only after capabilities and before international experiences; official masthead and six desks. PUBLIC_TIMES_URL is empty: Em breve is non-clickable. No daily publication or automatic GitHub/Vercel sync claim.",
+    "portable_regression_adaptation": "Only the six established portable provenance/build hashes were adapted in the new times baseline; all unrelated fixture content remains independently hash-protected."
   },
   "export_adjustments": [
     "README and public handoff/licence/architecture documents",
@@ -32,7 +34,8 @@
     "24/10/2026: book replaced by light next-step guide on all screens; touch-first native photo gallery, stable CSS-sticky background and cancellation of pending hash jumps after manual gestures. Desktop gallery physics and unrelated artwork preserved.",
     "24/10/2026: mobile home lens Y and pointer camera frozen without replacing or removing the original GLSL glass/refraction; desktop, shaders, CSS, HTML and assets preserved.",
     "24/10/2026: added product-os editorial fold between science and capability words, official the med wordmark + contextual OS, three connected phases and exact external product CTA; no new browser JS, GPU, pinning, screenshots or global palette change.",
-    "24/10/2026: changed only the product-os CTA destination to https://themed-os.vercel.app/; kept all other URLs, content, styling and behavior intact."
+    "24/10/2026: changed only the product-os CTA destination to https://themed-os.vercel.app/; kept all other URLs, content, styling and behavior intact.",
+    "25/10/2026: added the home-only THE MED TIMES editorial fold after capabilities; official horizontal masthead, six desks and non-clickable Em breve while the owner supplies the future public HTTPS URL. Preserved hero glass/refraction, touch pose, native scrolling, intro, animations and OS link. No new browser runtime, WebGL, pinning or automatic newspaper synchronization."
   ],
   "licensing": "Per-file third-party rights apply. Roobert and reference-derived materials require redistribution review; see FONTES_E_LICENCAS.md.",
   "inventory_excludes": "EXPORT_MANIFEST.json itself (avoid recursive hash)",
@@ -59,8 +62,8 @@
     },
     {
       "path": "CONTEXTO_PROJETO.md",
-      "bytes": 43589,
-      "sha256": "81f781a3f649d6570cf4a6cf92b4a3667779d58bb9d2ecc119e582c1aecd038a"
+      "bytes": 45541,
+      "sha256": "75bb2278abe4543c6e44563209c8718f56ca60a27c6f64644f5bf5954ba592e5"
     },
     {
       "path": "FONTES_E_LICENCAS.md",
@@ -94,8 +97,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7137,
-      "sha256": "288f77f09e603ad24ea7eb79d6102715e455e966ce31fb04a93b90dda44b3a4b"
+      "bytes": 7939,
+      "sha256": "e1c9f71be22131634a77ed7564bd414cbfc5624fbd3711786b8f62e7626b3c2e"
     },
     {
       "path": "REBRAND-INTERNY.md",
@@ -111,6 +114,11 @@
       "path": "SCIENCE-SOURCES.md",
       "bytes": 2871,
       "sha256": "d49e823ff6cd1ba7dbcc44277d0318572cb204773b93c21500d673f64bfb035c"
+    },
+    {
+      "path": "THE-MED-TIMES-FOLD.md",
+      "bytes": 4495,
+      "sha256": "ea840c03f3fcd6f9aadcd0550a39204a5d797e9901f25b72e0fef28796fa7693"
     },
     {
       "path": "assets/Roobert-Light.woff2",
@@ -468,6 +476,11 @@
       "sha256": "3653572b4a836ab31431c666f87d0001d77bb3c53e2b680339df9c43c94e3454"
     },
     {
+      "path": "assets/the-med-times-masthead.svg",
+      "bytes": 294829,
+      "sha256": "f6d9bec3d6aad270324e4af2cf0f5794b9aa8c02b3e72f4ffe2a86662e3a1b38"
+    },
+    {
       "path": "assets/the-med-wordmark.svg",
       "bytes": 5294,
       "sha256": "d944a6eb4a02bd3cb289659b0de238ac4659e3c4cff9fcfc0804b30a34db79fc"
@@ -628,6 +641,11 @@
       "sha256": "b3d1336310105c5907fa2c329bf990d86cc72b520a1da79832c607547d5f292a"
     },
     {
+      "path": "css/times-editorial.css",
+      "bytes": 5136,
+      "sha256": "1a81c4cb7b71ef00bd15440c9a7aac2b0035c5c5a290b3a192181be1f3c4812e"
+    },
+    {
       "path": "css/trajectory.css",
       "bytes": 37212,
       "sha256": "a5e0701be401490b782f7737c48b1b02ba26609ababe9c21350110d3c928689a"
@@ -645,7 +663,7 @@
     {
       "path": "dist/404.html",
       "bytes": 8871,
-      "sha256": "e16172483150f1aea3dd2eef36390186489fbbcad31b637ab1b14dee790150d5"
+      "sha256": "52bb3602796c0bd00cd32ce38a693d762744036c203c72a55fb363611f1711e9"
     },
     {
       "path": "dist/assets/Roobert-Light.woff2",
@@ -1003,6 +1021,11 @@
       "sha256": "3653572b4a836ab31431c666f87d0001d77bb3c53e2b680339df9c43c94e3454"
     },
     {
+      "path": "dist/assets/the-med-times-masthead.svg",
+      "bytes": 294829,
+      "sha256": "f6d9bec3d6aad270324e4af2cf0f5794b9aa8c02b3e72f4ffe2a86662e3a1b38"
+    },
+    {
       "path": "dist/assets/the-med-wordmark.svg",
       "bytes": 5294,
       "sha256": "d944a6eb4a02bd3cb289659b0de238ac4659e3c4cff9fcfc0804b30a34db79fc"
@@ -1070,12 +1093,12 @@
     {
       "path": "dist/build.json",
       "bytes": 425,
-      "sha256": "5e962a8154f261ce45581b80137348fcadf5f285bd98382e18ac18506470d535"
+      "sha256": "05c77057e5141b61f691c8478018d840ce74702a3bf581c933cf452e5df88c3a"
     },
     {
       "path": "dist/comunidade/index.html",
       "bytes": 30120,
-      "sha256": "bc3dae7eab3d2ccad38000e53aa3e48aa4535aec0f65101f4f9e3e54dc91b37c"
+      "sha256": "6523592d94a54d10eef4b8b1bbb8bac201f43a1bb7e11ef9989dff04ce75f93f"
     },
     {
       "path": "dist/css/book-fallback.css",
@@ -1138,6 +1161,11 @@
       "sha256": "b3d1336310105c5907fa2c329bf990d86cc72b520a1da79832c607547d5f292a"
     },
     {
+      "path": "dist/css/times-editorial.css",
+      "bytes": 5136,
+      "sha256": "1a81c4cb7b71ef00bd15440c9a7aac2b0035c5c5a290b3a192181be1f3c4812e"
+    },
+    {
       "path": "dist/css/trajectory.css",
       "bytes": 37212,
       "sha256": "a5e0701be401490b782f7737c48b1b02ba26609ababe9c21350110d3c928689a"
@@ -1154,8 +1182,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 91156,
-      "sha256": "f82ee08f6f588268ae4b62b5d4a683e0e9e38857231dcb477db30f7c18c5f73b"
+      "bytes": 93036,
+      "sha256": "2b1b1fa70833fb25dee3d10619dbb5526cdc0dfeba3ddc98948650380db2dde7"
     },
     {
       "path": "dist/js/app.js",
@@ -1414,8 +1442,18 @@
     },
     {
       "path": "dist/js/templates.js",
-      "bytes": 13047,
-      "sha256": "d74c7c6abdb659a28597bc4f0df9afa8f83708c4b3c137f7de6082d90dd34f41"
+      "bytes": 13188,
+      "sha256": "8e3489d52346d63c9fbcf25818fccb38f2189d3adf8bfe75e60d3988b5171fb5"
+    },
+    {
+      "path": "dist/js/times-config.js",
+      "bytes": 265,
+      "sha256": "1e59e2519058c318fe9a7a7db0de19dedc9725dcacacb31c2fcdb536849c6d75"
+    },
+    {
+      "path": "dist/js/times-editorial.js",
+      "bytes": 3629,
+      "sha256": "e69131329c3269caa68508ac836952095a491d84f6432ab6c034f17823600fa6"
     },
     {
       "path": "dist/js/trajectory-page.js",
@@ -1490,47 +1528,47 @@
     {
       "path": "dist/modulos/acervo/index.html",
       "bytes": 20815,
-      "sha256": "45df66c70f14c13f743f3727afa8e4d6a85dde84672efcac3e07ac234138c22b"
+      "sha256": "aff10e420f567277b56e52d05ece7ec6f1c3f6d66cd76cd1865a10ec18d2f79c"
     },
     {
       "path": "dist/modulos/club/index.html",
       "bytes": 20659,
-      "sha256": "126dfac3d8a2effb3c8b5eb1c2fa73da155833a81afd1383022352772e619102"
+      "sha256": "45dccd188e1c753aeb3e5357936b37d0a3d4c94cd9c9e638f4edb70729b69c11"
     },
     {
       "path": "dist/modulos/explorar/index.html",
       "bytes": 21905,
-      "sha256": "e912bfc052e148dccb7e1b3c97af8b3bc5a304e58f09e7dfb3ccba18f5f40b3c"
+      "sha256": "e8ba8461a1d34b94608ff86cdc717e39629eaef8b80f291e97fc858566d184fc"
     },
     {
       "path": "dist/modulos/hoje/index.html",
       "bytes": 20906,
-      "sha256": "3ef97bfeb40e79d08ed8b8c7abe8cd1fa8633022cb0fc713a5ab502e1210535a"
+      "sha256": "0cbd105f969922af8a2fd7c34c712c46d171c86b8ab0b599be68265f2d14b08d"
     },
     {
       "path": "dist/modulos/ligas/index.html",
       "bytes": 20962,
-      "sha256": "05917f056818d62c546b44926d9b73959ffe74f1fcd3162c6e692028fcaa241c"
+      "sha256": "a46cf5e18ee0d5af73b035b74a90d047b35ecd243018a321809c57a10af74cfb"
     },
     {
       "path": "dist/modulos/mentor/index.html",
       "bytes": 19780,
-      "sha256": "9ef06451eae9830a5d7a38173e2d7bbb4bcc5839113579bdb75cdee4b0443b61"
+      "sha256": "fbd962d0622759db61ce39cfc921f179be04dd0719518864e2c4057e7ec0784a"
     },
     {
       "path": "dist/modulos/pesquisa/index.html",
       "bytes": 23303,
-      "sha256": "8228788309dbe280052a195f0dcf29958f656ad2b478e6bdba0aec202fe55157"
+      "sha256": "463fc429e99c1a7c3c79e07eee5682a50b856de4b3ed1602fdf2337163616c67"
     },
     {
       "path": "dist/modulos/trajetoria/index.html",
       "bytes": 31912,
-      "sha256": "873300884dbbf2fb874a0740934af56f49b0a9935ab2d7927fcf5544505f10f4"
+      "sha256": "864913bcc9e2a7cb5cfd30e039f28a7d263f8f6844f0049a3d3d7a84874cb958"
     },
     {
       "path": "dist/percursos/index.html",
       "bytes": 11192,
-      "sha256": "be8cc966df120f2c528518e4117ed6edeb203ce9f7864a89330ab8a30aeebc2b"
+      "sha256": "2498135e4f57ec10e6cecc570b8b278024e4046f789c654771277d18aa8cfa80"
     },
     {
       "path": "js/app.js",
@@ -1789,8 +1827,18 @@
     },
     {
       "path": "js/templates.js",
-      "bytes": 13047,
-      "sha256": "d74c7c6abdb659a28597bc4f0df9afa8f83708c4b3c137f7de6082d90dd34f41"
+      "bytes": 13188,
+      "sha256": "8e3489d52346d63c9fbcf25818fccb38f2189d3adf8bfe75e60d3988b5171fb5"
+    },
+    {
+      "path": "js/times-config.js",
+      "bytes": 265,
+      "sha256": "1e59e2519058c318fe9a7a7db0de19dedc9725dcacacb31c2fcdb536849c6d75"
+    },
+    {
+      "path": "js/times-editorial.js",
+      "bytes": 3629,
+      "sha256": "e69131329c3269caa68508ac836952095a491d84f6432ab6c034f17823600fa6"
     },
     {
       "path": "js/trajectory-page.js",
@@ -1864,8 +1912,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 2811,
-      "sha256": "696e6f9891e144abc4faf7264babe9ffa9f93939fe2e1fae8b9afd053099f01b"
+      "bytes": 2925,
+      "sha256": "a9311f9286362991921e74b4e2e6d4ce0cb85cdc5191da9bd444811464538d7b"
     },
     {
       "path": "scripts/generate-globe.mjs",
@@ -2064,8 +2112,8 @@
     },
     {
       "path": "tests/portable-export-equivalence.json",
-      "bytes": 4604,
-      "sha256": "a371e6bc1ea2783eeaad41cb6223940d880e1ea9c693a92a9eb177e6a328624b"
+      "bytes": 4787,
+      "sha256": "6eb3183252444839011d38cec41a4e7fb2fa18d4747703ca1264d4213993f4c8"
     },
     {
       "path": "tests/portable-export.mjs",
@@ -2084,8 +2132,8 @@
     },
     {
       "path": "tests/product-os-normalize.mjs",
-      "bytes": 814,
-      "sha256": "b5307f1ca547d3d707bb2b3f946b8907f46cc0016637c32d931401d4c8acba29"
+      "bytes": 990,
+      "sha256": "6851154a5a404686660e45f1c1e96a113e2fcf0ae8c78ab4c3d86f1acded0ed4"
     },
     {
       "path": "tests/product-os-replacements.json",
@@ -2143,6 +2191,26 @@
       "sha256": "dba7b4f05790843b69d900a872a6c954fab5ab8d29c95e60f4f57c394e97e1e1"
     },
     {
+      "path": "tests/times-editorial-baseline.json",
+      "bytes": 16995,
+      "sha256": "9e54f429772d2467910b0892559ece4dcda46cb036d31f282fdcb989c0084449"
+    },
+    {
+      "path": "tests/times-editorial-normalize.mjs",
+      "bytes": 925,
+      "sha256": "50349211d9effd35a19e5a19ae2746ea36ccd4cbe9d271d078080ddae5c8893d"
+    },
+    {
+      "path": "tests/times-editorial-replacements.json",
+      "bytes": 808,
+      "sha256": "80831787fdb6a1cae659d20fad9d74fee4001c9b924fdfa0fae71876d53d26b7"
+    },
+    {
+      "path": "tests/times-editorial.mjs",
+      "bytes": 9008,
+      "sha256": "4c36bb595395c5283a6caa6ac319f8644b826e893d2bcc3d0760e9ebb08c8e2b"
+    },
+    {
       "path": "tests/trajectory-baseline.json",
       "bytes": 145464,
       "sha256": "94a00e9612ee5b2e4ea2b1850241bb4e6c30b0aeb563e1cedef13fcf72e42a33"
@@ -2164,8 +2232,8 @@
     },
     {
       "path": "tests/validate.mjs",
-      "bytes": 6876,
-      "sha256": "190a65e3541558d52f49669aee1a7917be60348e085f99a0cc16e9722dbeb1cc"
+      "bytes": 7059,
+      "sha256": "a21743388538677c01ac39c53d143113ccee870ac3abd21720d366b28ed71150"
     },
     {
       "path": "tests/wordmark-baseline.json",

@@ -62,7 +62,8 @@
     "medical-experiences-baseline.json",
     "the-med-baseline.json",
     "trajectory-baseline.json",
-    "wordmark-baseline.json"
+    "wordmark-baseline.json",
+    "times-editorial-baseline.json"
   ],
   "fixtureRemainders": [
     {
@@ -112,6 +113,10 @@
     {
       "fixture": "product-os-baseline.json",
       "sha256": "db70a073437fd4c830ce3c18e39404e6e9213f7d75ac1ee2b6885e50d3da330d"
+    },
+    {
+      "fixture": "times-editorial-baseline.json",
+      "sha256": "76a7b95009c9cd624d72ef5fd0bff27504a08f46daa0b22fa0696b880b8e046d"
     }
   ]
 }
