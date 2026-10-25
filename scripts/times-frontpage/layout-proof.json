@@ -1,0 +1,600 @@
+{
+  "kind": "deterministic native SVG composition, not browser screenshot",
+  "width": 1000,
+  "height": 1480,
+  "edition": "004",
+  "date": "2026-10-25",
+  "svgSha256": "1b51d66ece0df3b69ddd78a84dfa7ef20bf77d6e8bfd4a770b0d9781093b3657",
+  "blocks": [
+    {
+      "tag": "mais-medicos-especialistas-224:teaser-category",
+      "text": "FORMAÇÃO",
+      "x": 30,
+      "y": 25,
+      "width": 300,
+      "height": 10.079999999999998,
+      "fontSize": 9,
+      "lineCount": 1
+    },
+    {
+      "tag": "mais-medicos-especialistas-224:teaser-title",
+      "text": "Mais Médicos oferece aperfeiçoamento para especialistas",
+      "x": 30,
+      "y": 43,
+      "width": 300,
+      "height": 39.0,
+      "fontSize": 19,
+      "lineCount": 2
+    },
+    {
+      "tag": "instituicoes-ucl-reciprocidade:teaser-category",
+      "text": "INSTITUIÇÕES",
+      "x": 350,
+      "y": 25,
+      "width": 300,
+      "height": 10.079999999999998,
+      "fontSize": 9,
+      "lineCount": 1
+    },
+    {
+      "tag": "instituicoes-ucl-reciprocidade:teaser-title",
+      "text": "UCL: candidatura para 2027 tem prazo em 30 de outubro",
+      "x": 350,
+      "y": 43,
+      "width": 300,
+      "height": 39.0,
+      "fontSize": 19,
+      "lineCount": 2
+    },
+    {
+      "tag": "inovacao-rm-fetal-simetria:teaser-category",
+      "text": "INOVAÇÃO",
+      "x": 670,
+      "y": 25,
+      "width": 300,
+      "height": 10.079999999999998,
+      "fontSize": 9,
+      "lineCount": 1
+    },
+    {
+      "tag": "inovacao-rm-fetal-simetria:teaser-title",
+      "text": "IA usa simetria para acompanhar o cérebro fetal na ressonância",
+      "x": 670,
+      "y": 43,
+      "width": 300,
+      "height": 39.0,
+      "fontSize": 19,
+      "lineCount": 2
+    },
+    {
+      "tag": null,
+      "text": "MEDICINA, CIÊNCIA E DESCOBERTAS.",
+      "x": 360,
+      "y": 233,
+      "width": 400,
+      "height": 9.52000000000001,
+      "fontSize": 8.5,
+      "lineCount": 1
+    },
+    {
+      "tag": null,
+      "text": "ANO I · Nº 004",
+      "x": 30,
+      "y": 270,
+      "width": 180,
+      "height": 10.079999999999984,
+      "fontSize": 9,
+      "lineCount": 1
+    },
+    {
+      "tag": null,
+      "text": "DOMINGO, 25 DE OUTUBRO DE 2026",
+      "x": 320,
+      "y": 270,
+      "width": 440,
+      "height": 10.079999999999984,
+      "fontSize": 9,
+      "lineCount": 1
+    },
+    {
+      "tag": null,
+      "text": "EDIÇÃO DIGITAL · EM PORTUGUÊS",
+      "x": 787,
+      "y": 270,
+      "width": 184,
+      "height": 9.295999999999992,
+      "fontSize": 8.3,
+      "lineCount": 1
+    },
+    {
+      "tag": "cateterismo-araguaia-2026:kicker",
+      "text": "SAÚDE PÚBLICA · NOTÍCIA",
+      "x": 30,
+      "y": 308,
+      "width": 190,
+      "height": 9.744000000000028,
+      "fontSize": 8.7,
+      "lineCount": 1
+    },
+    {
+      "tag": "cateterismo-araguaia-2026:title",
+      "text": "Araguaia inicia cateterismo regulado pelo SUS",
+      "x": 30,
+      "y": 327,
+      "width": 190,
+      "height": 106.07999999999998,
+      "fontSize": 26,
+      "lineCount": 4
+    },
+    {
+      "tag": "cateterismo-araguaia-2026:deck",
+      "text": "Anúncio de 24 de outubro relata procedimento realizado no dia 21.",
+      "x": 30,
+      "y": 444.08,
+      "width": 190,
+      "height": 30.096000000000004,
+      "fontSize": 13.2,
+      "lineCount": 2
+    },
+    {
+      "tag": "cateterismo-araguaia-2026:source",
+      "text": "Agência Pará / Sespa",
+      "x": 30,
+      "y": 484.176,
+      "width": 190,
+      "height": 9.519999999999982,
+      "fontSize": 8.5,
+      "lineCount": 1
+    },
+    {
+      "tag": "cateterismo-araguaia-2026:paragraph:0",
+      "text": "A Secretaria de Saúde do Pará informou que o primeiro cateterismo cardíaco regulado pelo SUS na Região de Integração do Araguaia ocorreu em 21 de outubro, no Hospital Santa Mônica, em Redenção. O anúncio foi publicado em 24 de outubro, pela Agência Pará.",
+      "x": 30,
+      "y": 506.69599999999997,
+      "width": 190,
+      "height": 93.80000000000001,
+      "fontSize": 11.7,
+      "lineCount": 7
+    },
+    {
+      "tag": "cateterismo-araguaia-2026:paragraph:1",
+      "text": "A oferta decorre de contrato entre o estado e o hospital privado para serviços de hemodinâmica. Segundo a secretaria, o primeiro paciente atendido, morador de São Félix do Xingu, pôde realizar o procedimento na região, em vez de viajar a centros como Belém ou Marabá.",
+      "x": 30,
+      "y": 607.496,
+      "width": 190,
+      "height": 107.20000000000005,
+      "fontSize": 11.7,
+      "lineCount": 8
+    },
+    {
+      "tag": "cateterismo-araguaia-2026:paragraph:2",
+      "text": "O acesso depende de encaminhamento pela Regulação Estadual, e o serviço dispõe de acompanhamento hospitalar e suporte intensivo quando necessário. A proposta é aproximar a assistência especializada dos municípios do interior. O relato descreve o início da oferta: não apresenta uma avaliação independente de redução de filas, complicações ou mortalidade. Esses resultados precisarão ser acompanhados para medir o efeito da expansão.",
+      "x": 30,
+      "y": 721.696,
+      "width": 190,
+      "height": 160.80000000000007,
+      "fontSize": 11.7,
+      "lineCount": 12
+    },
+    {
+      "tag": null,
+      "text": "REGIONALIZAÇÃO DO CUIDADO",
+      "x": 30,
+      "y": 907.4960000000001,
+      "width": 190,
+      "height": 9.183999999999969,
+      "fontSize": 8.2,
+      "lineCount": 1
+    },
+    {
+      "tag": "cateterismo-araguaia-2026:implication",
+      "text": "O caso conecta regulação, regionalização e continuidade do cuidado — além da realização do procedimento.",
+      "x": 30,
+      "y": 925.4960000000001,
+      "width": 190,
+      "height": 60.0,
+      "fontSize": 13,
+      "lineCount": 4
+    },
+    {
+      "tag": null,
+      "text": "SAÚDE PÚBLICA",
+      "x": 30,
+      "y": 1008,
+      "width": 190,
+      "height": 8.960000000000036,
+      "fontSize": 8,
+      "lineCount": 1
+    },
+    {
+      "tag": "sus-utis-conectadas-2026:title",
+      "text": "Contrato prevê expansão de UTIs conectadas no SUS",
+      "x": 30,
+      "y": 1024,
+      "width": 190,
+      "height": 30,
+      "fontSize": 14.4,
+      "lineCount": 2
+    },
+    {
+      "tag": null,
+      "text": "Harvard Medical School, Boston, 2008. Fotografia de contexto.",
+      "x": 260,
+      "y": 635.0,
+      "width": 480,
+      "height": 9.183999999999969,
+      "fontSize": 8.2,
+      "lineCount": 1
+    },
+    {
+      "tag": null,
+      "text": "SA (Drsamir) / Wikimedia Commons · domínio público",
+      "x": 260,
+      "y": 647.0,
+      "width": 480,
+      "height": 8.511999999999944,
+      "fontSize": 7.6,
+      "lineCount": 1
+    },
+    {
+      "tag": "instituicoes-harvard-clerkships:kicker",
+      "text": "INSTITUIÇÕES · GUIA",
+      "x": 260,
+      "y": 674.0,
+      "width": 480,
+      "height": 9.744000000000028,
+      "fontSize": 8.7,
+      "lineCount": 1
+    },
+    {
+      "tag": "instituicoes-harvard-clerkships:title",
+      "text": "Harvard: quem realmente pode candidatar-se a um clerkship",
+      "x": 260,
+      "y": 693.0,
+      "width": 480,
+      "height": 69.36000000000001,
+      "fontSize": 34,
+      "lineCount": 2
+    },
+    {
+      "tag": "instituicoes-harvard-clerkships:deck",
+      "text": "A lista de faculdades elegíveis importa mais que uma candidatura individual.",
+      "x": 260,
+      "y": 773.36,
+      "width": 480,
+      "height": 36.48000000000002,
+      "fontSize": 16,
+      "lineCount": 2
+    },
+    {
+      "tag": "instituicoes-harvard-clerkships:source",
+      "text": "Harvard Medical School",
+      "x": 260,
+      "y": 819.84,
+      "width": 480,
+      "height": 9.519999999999982,
+      "fontSize": 8.5,
+      "lineCount": 1
+    },
+    {
+      "tag": "instituicoes-harvard-clerkships:paragraph:0",
+      "text": "O Visiting Students Program da Harvard Medical School oferece rotações clínicas em hospitais afiliados, não uma matrícula no curso médico de Harvard. O candidato precisa estar no último ano, a até 12 meses da graduação, ter bom desempenho acadêmico, inglês fluente e estágios clínicos básicos compatíveis com os exigidos pela instituição. Quem já possui diploma médico não é elegível.",
+      "x": 260,
+      "y": 842.36,
+      "width": 230,
+      "height": 154.0,
+      "fontSize": 13.4,
+      "lineCount": 10
+    },
+    {
+      "tag": "instituicoes-harvard-clerkships:paragraph:1",
+      "text": "Para estudantes internacionais, há uma restrição decisiva: somente escolas expressamente relacionadas pela HMS podem participar. Na lista consultada, as brasileiras são a Faculdade de Medicina da USP, em São Paulo, e a Faculdade de Ciências Médicas da Santa Casa de São Paulo. Não se trata de acesso geral para estudantes brasileiros.",
+      "x": 510,
+      "y": 842.36,
+      "width": 230,
+      "height": 138.60000000000002,
+      "fontSize": 13.4,
+      "lineCount": 9
+    },
+    {
+      "tag": null,
+      "text": "GUIA DE REFERÊNCIA · ELEGIBILIDADE E PRAZOS EXIGEM CONFIRMAÇÃO",
+      "x": 260,
+      "y": 1013.36,
+      "width": 480,
+      "height": 8.960000000000036,
+      "fontSize": 8,
+      "lineCount": 1
+    },
+    {
+      "tag": "pesquisa-invika-start001:kicker",
+      "text": "PESQUISA · NOTÍCIA",
+      "x": 780,
+      "y": 308,
+      "width": 190,
+      "height": 9.744000000000028,
+      "fontSize": 8.7,
+      "lineCount": 1
+    },
+    {
+      "tag": "pesquisa-invika-start001:title",
+      "text": "Imunoterapia seletiva apresenta sinal inicial em tumores resistentes",
+      "x": 780,
+      "y": 327,
+      "width": 190,
+      "height": 119.85000000000002,
+      "fontSize": 23.5,
+      "lineCount": 5
+    },
+    {
+      "tag": "pesquisa-invika-start001:deck",
+      "text": "Ensaio pequeno identifica atividade do invikafusp alfa, mas ainda não demonstra benefício comparativo de sobrevida.",
+      "x": 780,
+      "y": 457.85,
+      "width": 190,
+      "height": 56.087999999999965,
+      "fontSize": 12.3,
+      "lineCount": 4
+    },
+    {
+      "tag": "pesquisa-invika-start001:source",
+      "text": "NIH / National Cancer Institute",
+      "x": 780,
+      "y": 523.938,
+      "width": 190,
+      "height": 9.519999999999982,
+      "fontSize": 8.5,
+      "lineCount": 1
+    },
+    {
+      "tag": "pesquisa-invika-start001:paragraph:0",
+      "text": "O invikafusp alfa apresentou sinais iniciais de atividade em tumores sólidos avançados, muitos resistentes à imunoterapia. O START-001 avalia segurança, dose e resposta; o artigo reúne 34 participantes na fase 1 e 18 no início da fase 2.",
+      "x": 780,
+      "y": 546.458,
+      "width": 190,
+      "height": 92.39999999999998,
+      "fontSize": 11.5,
+      "lineCount": 7
+    },
+    {
+      "tag": "pesquisa-invika-start001:implication",
+      "text": "O resultado sustenta novos estudos; não estabelece uma alternativa universal para câncer resistente.",
+      "x": 780,
+      "y": 646.858,
+      "width": 190,
+      "height": 40.5,
+      "fontSize": 11.8,
+      "lineCount": 3
+    },
+    {
+      "tag": null,
+      "text": "Aedes aegypti, 2022. CDC / Amy E. Lockwood, MS.",
+      "x": 780,
+      "y": 851.0246666666666,
+      "width": 190,
+      "height": 7.840000000000032,
+      "fontSize": 7,
+      "lineCount": 1
+    },
+    {
+      "tag": null,
+      "text": "PHIL 26041 · domínio público",
+      "x": 780,
+      "y": 869.0246666666666,
+      "width": 190,
+      "height": 7.840000000000032,
+      "fontSize": 7,
+      "lineCount": 1
+    },
+    {
+      "tag": "clinica-dengue-alarme:kicker",
+      "text": "CLÍNICA · GUIA",
+      "x": 780,
+      "y": 891.0246666666666,
+      "width": 190,
+      "height": 9.744000000000028,
+      "fontSize": 8.7,
+      "lineCount": 1
+    },
+    {
+      "tag": "clinica-dengue-alarme:title",
+      "text": "Dengue: a queda da febre não encerra a vigilância",
+      "x": 780,
+      "y": 910.0246666666666,
+      "width": 190,
+      "height": 67.32000000000005,
+      "fontSize": 22,
+      "lineCount": 3
+    },
+    {
+      "tag": "clinica-dengue-alarme:deck",
+      "text": "Sinais de alarme, condições associadas e possibilidade de retorno orientam o local de cuidado.",
+      "x": 780,
+      "y": 988.3446666666666,
+      "width": 190,
+      "height": 40.355999999999995,
+      "fontSize": 11.8,
+      "lineCount": 3
+    },
+    {
+      "tag": "clinica-dengue-alarme:source",
+      "text": "CDC",
+      "x": 780,
+      "y": 1038.7006666666666,
+      "width": 190,
+      "height": 9.519999999999982,
+      "fontSize": 8.5,
+      "lineCount": 1
+    },
+    {
+      "tag": null,
+      "text": "Guia de referência · 15/04/2026",
+      "x": 780,
+      "y": 1056.2206666666666,
+      "width": 190,
+      "height": 8.960000000000036,
+      "fontSize": 8,
+      "lineCount": 1
+    },
+    {
+      "tag": null,
+      "text": "PESQUISA & INOVAÇÃO",
+      "x": 30,
+      "y": 1102,
+      "width": 500,
+      "height": 11.200000000000045,
+      "fontSize": 10,
+      "lineCount": 1
+    },
+    {
+      "tag": "pesquisa-transplante-aplasia:kicker",
+      "text": "PESQUISA · NOTÍCIA",
+      "x": 30,
+      "y": 1140,
+      "width": 450,
+      "height": 9.743999999999915,
+      "fontSize": 8.7,
+      "lineCount": 1
+    },
+    {
+      "tag": "pesquisa-transplante-aplasia:title",
+      "text": "Transplante com doador parcialmente compatível amplia pesquisa em anemia aplástica",
+      "x": 30,
+      "y": 1159,
+      "width": 450,
+      "height": 76.5,
+      "fontSize": 25,
+      "lineCount": 3
+    },
+    {
+      "tag": "pesquisa-transplante-aplasia:deck",
+      "text": "Série pediátrica aponta boa sobrevida, com necessidade de acompanhamento dos efeitos tardios.",
+      "x": 30,
+      "y": 1246.5,
+      "width": 450,
+      "height": 30.551999999999907,
+      "fontSize": 13.4,
+      "lineCount": 2
+    },
+    {
+      "tag": "pesquisa-transplante-aplasia:source",
+      "text": "Johns Hopkins Medicine",
+      "x": 30,
+      "y": 1287.052,
+      "width": 450,
+      "height": 9.519999999999982,
+      "fontSize": 8.5,
+      "lineCount": 1
+    },
+    {
+      "tag": "pesquisa-transplante-aplasia:paragraph:0",
+      "text": "Uma análise da Johns Hopkins acompanhou 31 pacientes de dois a 20 anos submetidos a transplante de medula por anemia aplástica grave entre 2014 e 2024. O comunicado é de 21 de outubro de 2026; o artigo saiu em 3 de agosto.",
+      "x": 30,
+      "y": 1309.572,
+      "width": 215,
+      "height": 84.59999999999991,
+      "fontSize": 12.5,
+      "lineCount": 6
+    },
+    {
+      "tag": "pesquisa-transplante-aplasia:paragraph:2",
+      "text": "Os sobreviventes estavam independentes de transfusões no último acompanhamento. Ainda assim, o estudo é pequeno, de um único centro, e não foi uma comparação randomizada. Problemas renais e alterações hormonais reprodutivas ocorreram em alguns pacientes; efeitos tardios exigem observação prolongada.",
+      "x": 265,
+      "y": 1309.572,
+      "width": 215,
+      "height": 112.79999999999995,
+      "fontSize": 12.5,
+      "lineCount": 8
+    },
+    {
+      "tag": "inovacao-rm-fetal-simetria:kicker",
+      "text": "INOVAÇÃO · NOTÍCIA",
+      "x": 520,
+      "y": 1140,
+      "width": 450,
+      "height": 9.743999999999915,
+      "fontSize": 8.7,
+      "lineCount": 1
+    },
+    {
+      "tag": "inovacao-rm-fetal-simetria:title",
+      "text": "IA usa simetria para acompanhar o cérebro fetal na ressonância",
+      "x": 520,
+      "y": 1159,
+      "width": 450,
+      "height": 51.0,
+      "fontSize": 25,
+      "lineCount": 2
+    },
+    {
+      "tag": "inovacao-rm-fetal-simetria:deck",
+      "text": "E(3)-Pose tenta reduzir falhas provocadas pelo movimento; treinamento ainda se concentra no terceiro trimestre.",
+      "x": 520,
+      "y": 1221.0,
+      "width": 450,
+      "height": 30.551999999999907,
+      "fontSize": 13.4,
+      "lineCount": 2
+    },
+    {
+      "tag": "inovacao-rm-fetal-simetria:source",
+      "text": "MIT Schwarzman College of Computing",
+      "x": 520,
+      "y": 1261.552,
+      "width": 450,
+      "height": 9.519999999999982,
+      "fontSize": 8.5,
+      "lineCount": 1
+    },
+    {
+      "tag": "inovacao-rm-fetal-simetria:paragraph:0",
+      "text": "O movimento fetal pode desalinhavar as imagens que compõem uma ressonância tridimensional. Pesquisadores do MIT, Boston Children’s Hospital e Inria desenvolveram o E(3)-Pose para acompanhar a orientação da cabeça e ajudar a ajustar a aquisição durante o exame. O trabalho foi apresentado na conferência ECCV de 2026.",
+      "x": 520,
+      "y": 1284.072,
+      "width": 215,
+      "height": 126.90000000000009,
+      "fontSize": 12.5,
+      "lineCount": 9
+    },
+    {
+      "tag": "inovacao-rm-fetal-simetria:paragraph:2",
+      "text": "A etapa de desenvolvimento importa: o modelo foi treinado principalmente com fetos do terceiro trimestre. A equipe pretende ampliar seu desempenho para fases anteriores, quando há mais espaço para movimento. A divulgação descreve uma solução técnica promissora, mas não estabelece redução de diagnósticos errados ou de retornos ao hospital na prática cotidiana.",
+      "x": 755,
+      "y": 1284.072,
+      "width": 215,
+      "height": 141.0,
+      "fontSize": 12.5,
+      "lineCount": 10
+    },
+    {
+      "tag": null,
+      "text": "THE MED TIMES",
+      "x": 30,
+      "y": 1450,
+      "width": 200,
+      "height": 9.519999999999982,
+      "fontSize": 8.5,
+      "lineCount": 1
+    },
+    {
+      "tag": null,
+      "text": "Conteúdo educativo. Não substitui avaliação médica.",
+      "x": 340,
+      "y": 1450,
+      "width": 430,
+      "height": 9.29600000000005,
+      "fontSize": 8.3,
+      "lineCount": 1
+    },
+    {
+      "tag": null,
+      "text": "25.10.2026 · 004",
+      "x": 875,
+      "y": 1450,
+      "width": 100,
+      "height": 9.29600000000005,
+      "fontSize": 8.3,
+      "lineCount": 1
+    }
+  ]
+}

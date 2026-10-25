@@ -8,15 +8,17 @@ A dobra `#the-med-times` entra **depois das capacidades (`#partners`) e antes da
 
 **Apoio:** “Pesquisa, prática clínica e inovação no mundo, em português e com as fontes à vista. Um jornal para ampliar seu repertório e entender o contexto por trás das descobertas.”
 
-As seis editorias reproduzem a estrutura real do jornal: Pesquisa, Clínica, Saúde pública, Formação, Inovação e Instituições. O lema “Ciência para ler. Medicina para pensar.” e a assinatura “Uma leitura crítica do mundo da saúde.” vêm da identidade editorial existente. Não há manchetes datadas, edição fictícia, quota diária, disponibilidade às 08h, garantia clínica ou promessa de aprovação.
+As seis editorias reproduzem a estrutura real do jornal: Pesquisa, Clínica, Saúde pública, Formação, Inovação e Instituições. A copy de marketing permanece inalterada. A área branca agora mostra uma capa completa, densa e datada da edição 004 (25/10/2026), com títulos e trechos reais, sem edição fictícia, quota diária, promessa às 08h, garantia clínica ou aprovação.
 
 ## Composição e limites
 
-- Folha clara e plana à esquerda; texto e acesso à direita. Mobile segue a mesma ordem no DOM, em uma coluna.
+- Capa vertical branca completa (1000 × 1480), três chamadas superiores, masthead, data, regras finas, colunas densas e duas fotografias reais. Texto e CTA à direita permanecem exatos. Mobile segue a mesma ordem no DOM, em uma coluna, com a página inteira visível e sem recorte.
 - Masthead horizontal oficial em `assets/the-med-times-masthead.svg`, copiado sem modificação da versão aprovada do jornal. SHA-256: `f6d9bec3d6aad270324e4af2cf0f5794b9aa8c02b3e72f4ffe2a86662e3a1b38`.
-- Vinho `#541919`, creme e tipografias já existentes: Roobert e Innecta Serif. Sem nova fonte, screenshot, biblioteca, feed ou imagem gerada.
+- Copy externa preserva Roobert e a paleta existente. Na capa, preto sobre branco e vinho `#541919` só em metadados. Liberation Serif/Sans 2.1.5 foram convertidas em contornos vetoriais determinísticos; não há fonte adicional carregada pelo navegador. As fontes de geração usam SIL Open Font License 1.1; o texto original é preservado em `scripts/times-frontpage/fonts/FONT-LICENSE.txt`. A licença distingue arquivos de fonte dos documentos produzidos com eles, conforme o [repositório oficial](https://github.com/liberationfonts/liberation-fonts/blob/main/LICENSE). Nenhuma fonte do site principal ou do jornal foi alterada.
 - HTML/CSS estáticos; nenhuma nova animação de rolagem, pin, WebGL, cursor, fetch ou estado persistente. Não modifica hero, lente mobile, saudação de cada reload, globo, galeria, módulos, navegação, guia ou CTA do OS.
-- O desenho é uma **apresentação editorial atemporal**, não uma miniatura da edição vigente.
+- A legenda externa diz **“Prévia da edição 004 · 25/10/2026”**. Trata-se de uma composição editorial estática, não screenshot, capa ao vivo ou atualização automática. Um link acessível abre o jornal para leitura completa.
+- Créditos completos abrem por “Créditos da prévia”. Fonte gratuita CDC/PHIL e aviso de não endosso também aparecem em texto legível fora do SVG. As fotografias Harvard 2008 (SA/Drsamir) e Aedes 2022 (CDC/Amy E. Lockwood) são de domínio público e mantêm o enquadramento integral.
+- Gerador reproduzível e fontes/editorial/arquivos originais: `scripts/times-frontpage/`. Asset servido: `assets/the-med-times-frontpage-004.svg`; nenhum raster duplicado é baixado pela página.
 
 ## Acesso público ativo: uma única configuração
 
@@ -26,7 +28,7 @@ Em `js/times-config.js`:
 export const PUBLIC_TIMES_URL = 'https://themedtimes.vercel.app/';
 ```
 
-O proprietário forneceu o endereço público acima após publicar o jornal; a resposta HTTPS e o conteúdo da primeira página foram conferidos. A dobra agora oferece **“Ler o jornal”**, com aviso de nova aba e `noopener noreferrer`. Esta ativação altera somente a configuração e o estado de acesso; layout, copy editorial, estilos, hero e animações permanecem iguais.
+O proprietário forneceu o endereço público acima após publicar o jornal; a resposta HTTPS e o conteúdo da primeira página foram conferidos. A dobra agora oferece **“Ler o jornal”**, com aviso de nova aba e `noopener noreferrer`. A ativação alterou somente a configuração e o estado de acesso. A revisão posterior substituiu apenas a representação do papel; a copy externa, as seis editorias, a CTA, o hero e as animações permanecem iguais.
 
 Se a configuração ficar vazia ou inválida, a dobra mostra **“Em breve”** e **“Leitura disponível em breve”** como texto não clicável, sem botão desabilitado, `#` ou captura de contato.
 
@@ -43,6 +45,8 @@ A configuração válida gera **“Ler o jornal”** com âncora real, `noopener
 
 - `js/times-editorial.js`: renderização e sanitização da URL.
 - `js/times-config.js`: único ponto de configuração do destino.
+- `js/times-frontpage.js`: imagem integral, data explícita, link de leitura e créditos externos.
+- `tests/times-frontpage.mjs`: preservação exata do restante da dobra, proveniência, tipos vetorizados, data, créditos e regras sem recorte.
 - `css/times-editorial.css`: estilos restritos à nova dobra.
 - `js/templates.js`: import, inclusão home-only e CSS home-only.
 - `tests/times-editorial.mjs`: estados da CTA, sanitização, copy, ordem, semântica, CSS responsivo e preservação.
@@ -51,6 +55,6 @@ A configuração válida gera **“Ler o jornal”** com âncora real, `noopener
 
 ## Verificação
 
-Os testes automatizados de fonte/HTML não substituem uma inspeção real de viewport. O preview Sites suportado está indisponível neste ambiente (`sites-preview` ausente); a revisão visual deve usar **esse caminho suportado** quando disponível. Nenhuma evidência de Safari físico ou teste visual real é reivindicada por este documento.
+As provas PNG são rasterizações nativas do SVG, não screenshots. A capa inteira foi inspecionada em alta resolução e nas larguras de 279/340/497 px, correspondentes matematicamente à área disponível em viewports de 320/390/1440 px. Os testes de fonte e HTML não substituem uma inspeção real de viewport. Não houve validação em navegador real ou Safari físico nesta revisão; quando disponível, a inspeção visual deve usar o preview suportado do ambiente de publicação.
 
-Validação técnica da entrega: **400 testes Node (9 novos), 581 verificações de rotas/HTML/assets, build e sintaxe passaram**. A preservação verifica 147 arquivos anteriores e as 12 páginas geradas. CSS novo: 5.136 bytes; logo oficial: 294.829 bytes (aproximadamente 127 KB com gzip). Nenhum JavaScript adicional é carregado pelo navegador para a dobra.
+Validação técnica do export: **408 testes do projeto e 3 testes de equivalência portátil, 584 verificações de HTML/rotas/assets, build e sintaxe passaram**. A preservação continua cobrindo os 147 arquivos anteriores e as 12 páginas. A nova cobertura verifica conteúdo literal da edição, layout sem sobreposição, tipografia vetorial, créditos, data e preservação exata da copy/CTA. O SVG tem 936.380 bytes (gzip: 424.618 bytes), é lazy-loaded e foi regenerado de forma independente com resultado idêntico. Nenhum JavaScript adicional é carregado pelo navegador para a dobra.

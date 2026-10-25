@@ -1,0 +1,35 @@
+THE MED TIMES — CRÉDITOS DA PRÉVIA
+Edição 004 · 25 de outubro de 2026
+
+A prévia é uma composição editorial estática da edição indicada, não uma capa ao vivo.
+As fotografias abaixo são reais e reproduzidas com enquadramento integral.
+Os textos são títulos e trechos da edição 004 do THE MED TIMES.
+
+FOTOGRAFIAS
+
+Macro de uma fêmea de Aedes aegypti sobre uma superfície verde.
+Fotografia ilustrativa: fêmea adulta de Aedes aegypti em repouso, fotografada em 2022. Fonte gratuita: CDC/PHIL. O uso desta imagem não implica endosso do CDC, HHS ou governo dos Estados Unidos ao THE MED TIMES.
+Crédito: CDC / Amy E. Lockwood, MS · PHIL 26041 · domínio público
+Origem gratuita: https://wwwn.cdc.gov/phil/Details.aspx?pid=26041
+Condições de uso: https://www.cdc.gov/other/agencymaterials.html
+Licença: Domínio público
+Alteração técnica: redimensionamento proporcional e codificação JPEG, sem corte ou retoque.
+
+Quadrângulo da Harvard Medical School, com Gordon Hall ao centro e gramado à frente.
+Fotografia de contexto: quadrângulo da Harvard Medical School, em Boston, em 2008.
+Crédito: SA (Drsamir) / Wikimedia Commons · domínio público
+Origem gratuita: https://commons.wikimedia.org/wiki/File:Hms.jpg
+Condições de uso: https://commons.wikimedia.org/wiki/File:Hms.jpg#Licensing
+Licença: Domínio público
+Alteração técnica: redimensionamento proporcional e codificação JPEG, sem corte ou retoque.
+
+TIPOGRAFIA E MARCA
+Masthead: desenho vetorial oficial do THE MED TIMES, preservado.
+Tipografia da prévia: Liberation Serif e Liberation Sans 2.1.5, convertidas em contornos vetoriais.
+Licença: SIL Open Font License 1.1. Fonte oficial: https://github.com/liberationfonts/liberation-fonts
+Licenças e fontes de geração: scripts/times-frontpage/fonts/FONT-LICENSE.txt no código-fonte.
+Nenhuma fonte adicional é solicitada pelo navegador para exibir a prévia.
+
+LEITURA COMPLETA
+https://themedtimes.vercel.app/
+A publicação do jornal e o arquivo de edições são independentes desta prévia congelada.

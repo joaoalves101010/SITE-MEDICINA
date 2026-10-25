@@ -1,0 +1,79 @@
+{
+  "editionId": "004",
+  "localDate": "2026-10-25",
+  "articleSource": "THE MED TIMES / edi\u00e7\u00e3o 004 / articles.json",
+  "articleSourceSha256": "ddb2e237d50c24c7f6fd5c92169e4928467218ed18e9230d969afe2ebe00bfbc",
+  "copiedFiles": {
+    "PHOTOGRAPH-CREDITS.json": "8aaeafbd4d48dc00329af2569047a8035b045cb36056d2989095937b57de9e4d",
+    "edition-004.json": "e74a646f27a60050df4046a066cce0d3f6fd54e7ff7760d3eb01835d1fbb68a2",
+    "fonts/FONT-LICENSE.txt": "f32df582a2aab128c07b2f7e36e7b928dc5f6bd82657b905c04f91459f9e5cf9",
+    "fonts/LiberationSans-Bold.ttf": "1b5f2da6f4cadce4c05b9ecebe3a6fcd374eb95ae443605e799f4c3287978939",
+    "fonts/LiberationSans-Regular.ttf": "bade59d822652f76e6941aa87b40a87c13d1cc70db98ededb5011127efafd1d3",
+    "fonts/LiberationSerif-Bold.ttf": "443a4dbd694b6e4689925947b456e0532e10b19c90fa32eb39ea6c2cd9db9ebd",
+    "fonts/LiberationSerif-Italic.ttf": "de18fe26337e03241952dca46398d5b66f3c5738d080bfd284f66e67b926f597",
+    "fonts/LiberationSerif-Regular.ttf": "9caef765d2e891c10dd73658894f01e660fe0c1c83e0bda7d6edf561d8f623d4",
+    "photos/aedes-aegypti.webp": "92d44cae7764495ea01d580e80e0bd8a1b8f7afe42240067be05dee5be7bad54",
+    "photos/harvard-medical-school.webp": "a6649d421b501165d61cf5937b12e92577ca94c66b7182003a210e8abe84ca3c"
+  },
+  "officialMastheadSha256": "f6d9bec3d6aad270324e4af2cf0f5794b9aa8c02b3e72f4ffe2a86662e3a1b38",
+  "fontSource": "https://github.com/liberationfonts/liberation-fonts",
+  "fontLicenseSource": "https://github.com/liberationfonts/liberation-fonts/blob/main/LICENSE",
+  "fontLicense": "SIL Open Font License 1.1",
+  "fontMetadata": {
+    "LiberationSans-Bold.ttf": {
+      "version": [
+        "Version 2.1.5"
+      ],
+      "license": [
+        "Licensed under the SIL Open Font License, Version 1.1"
+      ],
+      "copyright": [
+        "Digitized data copyright (c) 2010 Google Corporation.\nCopyright (c) 2012 Red Hat, Inc."
+      ]
+    },
+    "LiberationSans-Regular.ttf": {
+      "version": [
+        "Version 2.1.5"
+      ],
+      "license": [
+        "Licensed under the SIL Open Font License, Version 1.1"
+      ],
+      "copyright": [
+        "Digitized data copyright (c) 2010 Google Corporation. \nCopyright (c) 2012 Red Hat, Inc."
+      ]
+    },
+    "LiberationSerif-Bold.ttf": {
+      "version": [
+        "Version 2.1.5"
+      ],
+      "license": [
+        "Licensed under the SIL Open Font License, Version 1.1"
+      ],
+      "copyright": [
+        "Digitized data copyright (c) 2010 Google Corporation.\nCopyright (c) 2012 Red Hat, Inc."
+      ]
+    },
+    "LiberationSerif-Italic.ttf": {
+      "version": [
+        "Version 2.1.5"
+      ],
+      "license": [
+        "Licensed under the SIL Open Font License, Version 1.1"
+      ],
+      "copyright": [
+        "Digitized data copyright (c) 2010 Google Corporation.\nCopyright (c) 2012 Red Hat, Inc."
+      ]
+    },
+    "LiberationSerif-Regular.ttf": {
+      "version": [
+        "Version 2.1.5"
+      ],
+      "license": [
+        "Licensed under the SIL Open Font License, Version 1.1"
+      ],
+      "copyright": [
+        "Digitized data copyright (c) 2010 Google Corporation.\nCopyright (c) 2012 Red Hat, Inc."
+      ]
+    }
+  }
+}

@@ -31,3 +31,14 @@ Este documento registra proveniência; não concede direitos que o projeto não 
 ## O que não acompanha esta exportação
 
 Nenhum cliente, pessoa, reel ou loop de marca Monopo foi incluído como se pertencesse à the med ou às identidades anteriores do projeto. Também não acompanham credenciais, configuração privada de hospedagem, histórico Git, screenshots de QA, diretórios de trabalho ou dados de autenticação.
+
+
+## Prévia editorial THE MED TIMES — edição 004, 25/10/2026
+
+A capa vetorial `assets/the-med-times-frontpage-004.svg` é uma composição original com títulos e trechos literais da edição 004 do THE MED TIMES. Não reproduz marca, texto ou fotografia do jornal usado como referência visual. O masthead oficial existente permanece inalterado.
+
+- Harvard Medical School, 2008: SA (Drsamir), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hms.jpg), domínio público.
+- Aedes aegypti, 2022: CDC / Amy E. Lockwood, MS, [PHIL 26041 — fonte gratuita](https://wwwn.cdc.gov/phil/Details.aspx?pid=26041), domínio público. O uso não implica endosso do CDC, HHS ou governo dos Estados Unidos ao THE MED TIMES. [Condições de uso do CDC](https://www.cdc.gov/other/agencymaterials.html).
+- Ambas as fotografias conservam o enquadramento integral; o processamento limita-se ao redimensionamento proporcional e à codificação JPEG. Créditos completos acompanham a imagem em `assets/the-med-times-frontpage-004-credits.txt`, com link e aviso legíveis na página.
+- As fontes Liberation Serif/Sans 2.1.5 usadas somente na geração da capa estão sob **SIL Open Font License 1.1**, com arquivos originais e licença em `scripts/times-frontpage/fonts/`. O [texto oficial da licença](https://github.com/liberationfonts/liberation-fonts/blob/main/LICENSE) distingue os arquivos de fonte dos documentos produzidos com eles. Não há webfont adicional carregada para a prévia.
+- Gerador reproduzível, dados editoriais, fotos de entrada e hashes estão em `scripts/times-frontpage/`. Esta entrega não resolve nem modifica as pendências históricas de licença dos demais materiais do site.

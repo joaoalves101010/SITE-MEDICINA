@@ -22,7 +22,7 @@ A dobra `#product-os`, após a ciência e antes das capacidades, apresenta **the
 
 ## Apresentação do jornal — 25/10/2026
 
-A dobra `#the-med-times`, depois das capacidades e antes das experiências internacionais, apresenta **THE MED TIMES** com o masthead oficial, seis editorias e uma composição responsiva em fluxo normal. Não adiciona runtime de navegador, WebGL ou captura de scroll.
+A dobra `#the-med-times`, depois das capacidades e antes das experiências internacionais, apresenta **THE MED TIMES** com uma capa completa e densa da edição 004, de 25/10/2026: masthead oficial, manchetes e trechos reais, colunas e duas fotografias de contexto sem recorte. A legenda identifica a prévia congelada; a capa abre o jornal para leitura completa, e fontes/créditos permanecem acessíveis. Copy, seis editorias e CTA à direita continuam iguais. A composição responsiva usa fluxo normal, sem runtime de navegador adicional, WebGL ou captura de scroll.
 
 O jornal está disponível em [themedtimes.vercel.app](https://themedtimes.vercel.app/), endereço público fornecido pelo proprietário e conferido por HTTPS. `PUBLIC_TIMES_URL` em `js/times-config.js` agora aponta para esse destino; a dobra apresenta **“Ler o jornal”** com abertura em nova aba e `noopener noreferrer`. Caso a configuração seja removida ou inválida, o componente volta ao estado não clicável “Em breve”. Veja [THE-MED-TIMES-FOLD.md](THE-MED-TIMES-FOLD.md). Nenhuma sincronização diária do jornal com GitHub/Vercel é configurada por esta apresentação.
 

@@ -1,6 +1,6 @@
 {
   "project": "the med | Your Medical Journey",
-  "generated_at": "2026-10-25T16:05:43.976217+00:00",
+  "generated_at": "2026-10-25T16:35:53.409677+00:00",
   "scope": "Portable sanitized editable static website, including built dist output. No repository history, hosting credentials, environment secrets or private QA files.",
   "entrypoint": "README.md",
   "context": "CONTEXTO_PROJETO.md",
@@ -8,8 +8,8 @@
   "base_path": "/",
   "github_pages_configured": false,
   "validation": {
-    "structural_assertions": 582,
-    "automated_tests": 403,
+    "structural_assertions": 584,
+    "automated_tests": 411,
     "syntax": "pass",
     "static_build": "pass",
     "private_path_identity_and_credential_pattern_scan": "no findings; heuristic, not a guarantee against every possible secret",
@@ -20,7 +20,10 @@
     "mobile": "New newspaper fold is responsive normal-flow HTML/CSS without browser runtime, pinning or scroll capture. Original touch lens pose, glass/refraction, native Safari scrolling, welcome intro, gallery and OS destination remain protected. Source/HTML regression checks passed; no real-browser or physical Safari visual validation is claimed.",
     "newspaper_fold": "Home-only after capabilities and before international experiences; official masthead and six desks. PUBLIC_TIMES_URL is https://themedtimes.vercel.app/: Ler o jornal is a real HTTPS anchor with noopener noreferrer and new-tab notice. No daily publication or automatic GitHub/Vercel sync claim.",
     "portable_regression_adaptation": "Only the six established portable provenance/build hashes were adapted in the new times baseline; all unrelated fixture content remains independently hash-protected.",
-    "newspaper_cta_activation": "Only the public destination configuration, rendered CTA state and status documentation changed. Editorial copy, renderer, CSS, artwork, runtime behavior, tests and portable provenance remain unchanged; unrelated HTML changes only generated build IDs."
+    "newspaper_cta_activation": "Only the public destination configuration, rendered CTA state and status documentation changed. Editorial copy, renderer, CSS, artwork, runtime behavior, tests and portable provenance remain unchanged; unrelated HTML changes only generated build IDs.",
+    "newspaper_dense_preview": "Only the paper representation is replaced by a complete, densely typeset static edition-004 cover dated 25/10/2026. Nine article records exactly match the published edition; official masthead and two whole-frame public-domain photographs retained. Accessible full-reading link, dated caption, source credits and CDC free-source/no-endorsement notice. No new browser runtime, iframe, nested scroll or change to copy, desks, CTA, placement, hero, OS or mobile touch behavior.",
+    "newspaper_preview_proof": "Independent vector-generator reproduction is byte-exact. SVG and mathematical-width raster proofs reviewed; no real-browser or physical Safari result claimed. Supported browser preview was unavailable.",
+    "newspaper_preview_preservation": "All 12 HTML documents preserve baseline markup after build-ID normalization and replacement of the single approved newspaper figure; all old regression baselines and portable provenance exceptions remain byte-identical."
   },
   "export_adjustments": [
     "README and public handoff/licence/architecture documents",
@@ -37,7 +40,8 @@
     "24/10/2026: added product-os editorial fold between science and capability words, official the med wordmark + contextual OS, three connected phases and exact external product CTA; no new browser JS, GPU, pinning, screenshots or global palette change.",
     "24/10/2026: changed only the product-os CTA destination to https://themed-os.vercel.app/; kept all other URLs, content, styling and behavior intact.",
     "25/10/2026: added the home-only THE MED TIMES editorial fold after capabilities; official horizontal masthead, six desks and non-clickable Em breve while the owner supplies the future public HTTPS URL. Preserved hero glass/refraction, touch pose, native scrolling, intro, animations and OS link. No new browser runtime, WebGL, pinning or automatic newspaper synchronization.",
-    "25/10/2026: activated Ler o jornal for the owner-supplied, HTTPS-checked public URL https://themedtimes.vercel.app/. Configuration-only runtime change; layout, editorial copy, renderer, CSS, original animations and portable provenance unchanged. No newspaper deployment or synchronization configured by this update."
+    "25/10/2026: activated Ler o jornal for the owner-supplied, HTTPS-checked public URL https://themedtimes.vercel.app/. Configuration-only runtime change; layout, editorial copy, renderer, CSS, original animations and portable provenance unchanged. No newspaper deployment or synchronization configured by this update.",
+    "25/10/2026: replaced only the newspaper paper preview with the complete frozen edition-004 front page, official masthead, real edition headlines/excerpts, two uncropped public-domain context photos, outlined Liberation typography (SIL OFL 1.1), accessible dated caption/credits/source/no-endorsement and full-reading link. Right-side copy, six desks, CTA destination and all unrelated runtime/assets preserved. Generator inputs and source licences included."
   ],
   "licensing": "Per-file third-party rights apply. Roobert and reference-derived materials require redistribution review; see FONTES_E_LICENCAS.md.",
   "inventory_excludes": "EXPORT_MANIFEST.json itself (avoid recursive hash)",
@@ -64,13 +68,13 @@
     },
     {
       "path": "CONTEXTO_PROJETO.md",
-      "bytes": 45590,
-      "sha256": "6e058b312db7bc54c186dbb97db80fd59278e0c8bb88d37f198229b444dabc59"
+      "bytes": 45917,
+      "sha256": "dfdc0e3f2e2c6955659946d35006d05f05315d493b91fbe99b4acf65d30afbee"
     },
     {
       "path": "FONTES_E_LICENCAS.md",
-      "bytes": 5219,
-      "sha256": "d91a462582eb797fe26077bf5f85e2d8386fd499f0d9438699630a131134fb5c"
+      "bytes": 6924,
+      "sha256": "2635969bd73b5f1bb3e9cd453b0e966093b2b02a7eab3d05de1e024f65073fac"
     },
     {
       "path": "IMPLEMENTATION.md",
@@ -99,8 +103,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8041,
-      "sha256": "ce4b65c396c7946bfa67f107ad795bf0d1cc619f3117be3fab241ad000d3d144"
+      "bytes": 8343,
+      "sha256": "d0026df31ae14ab17dc87f1b65acf6848cadbe9129c650f1a638b7d657959f1d"
     },
     {
       "path": "REBRAND-INTERNY.md",
@@ -119,8 +123,8 @@
     },
     {
       "path": "THE-MED-TIMES-FOLD.md",
-      "bytes": 4907,
-      "sha256": "b31d88c4472a048b1f25ffb5d0c68ac25c3046cd3342d88aa5f0c04c76e84190"
+      "bytes": 6869,
+      "sha256": "699bc431d2d0a9de20d40df8ddbe12c74de1ac79ade94ad0bfcf4cd3f2571be6"
     },
     {
       "path": "assets/Roobert-Light.woff2",
@@ -478,6 +482,16 @@
       "sha256": "3653572b4a836ab31431c666f87d0001d77bb3c53e2b680339df9c43c94e3454"
     },
     {
+      "path": "assets/the-med-times-frontpage-004-credits.txt",
+      "bytes": 2052,
+      "sha256": "903aceb221e738fcbcda3cb2edb6bde200b0c249cfc9a79fcd21d4ff29aa231f"
+    },
+    {
+      "path": "assets/the-med-times-frontpage-004.svg",
+      "bytes": 936380,
+      "sha256": "1b51d66ece0df3b69ddd78a84dfa7ef20bf77d6e8bfd4a770b0d9781093b3657"
+    },
+    {
       "path": "assets/the-med-times-masthead.svg",
       "bytes": 294829,
       "sha256": "f6d9bec3d6aad270324e4af2cf0f5794b9aa8c02b3e72f4ffe2a86662e3a1b38"
@@ -644,8 +658,8 @@
     },
     {
       "path": "css/times-editorial.css",
-      "bytes": 5136,
-      "sha256": "1a81c4cb7b71ef00bd15440c9a7aac2b0035c5c5a290b3a192181be1f3c4812e"
+      "bytes": 4313,
+      "sha256": "99664aec068741f3773be0ec251fd997b2e5735243985581934c731a324dcf00"
     },
     {
       "path": "css/trajectory.css",
@@ -665,7 +679,7 @@
     {
       "path": "dist/404.html",
       "bytes": 8871,
-      "sha256": "a3a380dae262e1742bb35232ada9b9a7ac55e8612efa0c31ee393797f2a760bd"
+      "sha256": "10eaec687100a63500eec28eae17940cb26d3952e151fb50f06a4719c8bc835a"
     },
     {
       "path": "dist/assets/Roobert-Light.woff2",
@@ -1023,6 +1037,16 @@
       "sha256": "3653572b4a836ab31431c666f87d0001d77bb3c53e2b680339df9c43c94e3454"
     },
     {
+      "path": "dist/assets/the-med-times-frontpage-004-credits.txt",
+      "bytes": 2052,
+      "sha256": "903aceb221e738fcbcda3cb2edb6bde200b0c249cfc9a79fcd21d4ff29aa231f"
+    },
+    {
+      "path": "dist/assets/the-med-times-frontpage-004.svg",
+      "bytes": 936380,
+      "sha256": "1b51d66ece0df3b69ddd78a84dfa7ef20bf77d6e8bfd4a770b0d9781093b3657"
+    },
+    {
       "path": "dist/assets/the-med-times-masthead.svg",
       "bytes": 294829,
       "sha256": "f6d9bec3d6aad270324e4af2cf0f5794b9aa8c02b3e72f4ffe2a86662e3a1b38"
@@ -1095,12 +1119,12 @@
     {
       "path": "dist/build.json",
       "bytes": 425,
-      "sha256": "04349f752c3c49f0bceec94869e2d57d05060af9d2a5ebffdf0aa6d5eee9be08"
+      "sha256": "ff1ed320d8d4407a42470ca52b6a706ae012136b8fad8c19235fd123bf2042ce"
     },
     {
       "path": "dist/comunidade/index.html",
       "bytes": 30120,
-      "sha256": "39f8712b824e5daab0da46c349d4ff05a251e709ac580e2ac89028565e33b9a7"
+      "sha256": "c82bc7e6def9ff219b3d50e95832e359849a3b012b565d12a85abf3e83739657"
     },
     {
       "path": "dist/css/book-fallback.css",
@@ -1164,8 +1188,8 @@
     },
     {
       "path": "dist/css/times-editorial.css",
-      "bytes": 5136,
-      "sha256": "1a81c4cb7b71ef00bd15440c9a7aac2b0035c5c5a290b3a192181be1f3c4812e"
+      "bytes": 4313,
+      "sha256": "99664aec068741f3773be0ec251fd997b2e5735243985581934c731a324dcf00"
     },
     {
       "path": "dist/css/trajectory.css",
@@ -1184,8 +1208,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 93315,
-      "sha256": "8bfdfbcb2e18799943b426773b5f97406779913a7e5c93a846c30544a23e714a"
+      "bytes": 93884,
+      "sha256": "cbd461c9d09b272ae9c388c8b7c7a908aae87d09b8d1ed6cc0bded715ed2c352"
     },
     {
       "path": "dist/js/app.js",
@@ -1454,8 +1478,13 @@
     },
     {
       "path": "dist/js/times-editorial.js",
-      "bytes": 3629,
-      "sha256": "e69131329c3269caa68508ac836952095a491d84f6432ab6c034f17823600fa6"
+      "bytes": 2999,
+      "sha256": "db1a80d7aff754c61032155649f735f2c973c4b5892417523bcc55e09fe454ae"
+    },
+    {
+      "path": "dist/js/times-frontpage.js",
+      "bytes": 1738,
+      "sha256": "92728c78cba2ea66efd3f355344b5e1ade872b2419bee28171f196d8a0f0e08f"
     },
     {
       "path": "dist/js/trajectory-page.js",
@@ -1530,47 +1559,47 @@
     {
       "path": "dist/modulos/acervo/index.html",
       "bytes": 20815,
-      "sha256": "8f8337c03c903d106321706b9c6757cf7d78f7c7ce932abb675ff083659856ab"
+      "sha256": "fcdfdb96993be329fa8cd6e4d0279b636919617307e4da2e7ff5f4eb7ffa4703"
     },
     {
       "path": "dist/modulos/club/index.html",
       "bytes": 20659,
-      "sha256": "3408bfefad30a8e287118377a3661c9e6226b213a648fbfa35806c5d3877e221"
+      "sha256": "e94153a1184f703dab6c4b18736af4d9b4cfa9fdba7bea117586792f3de9591c"
     },
     {
       "path": "dist/modulos/explorar/index.html",
       "bytes": 21905,
-      "sha256": "80f795d9795d71e72c6a0c6e300f156c5deac0fdf620e791eb2e7c5174be5bc6"
+      "sha256": "59dbc45ba0b71baa7103f1f3e0cf2f2ef4abe7369f7db8ce22a67975c5ff9126"
     },
     {
       "path": "dist/modulos/hoje/index.html",
       "bytes": 20906,
-      "sha256": "94fe50f5652263f9211486c25952595d02c30b8ccff420ac4b91ede4300fad3b"
+      "sha256": "5038cf257302dbc0b55edb986949ddad7fd41fdadd1da559fcf382900b3307a5"
     },
     {
       "path": "dist/modulos/ligas/index.html",
       "bytes": 20962,
-      "sha256": "4427650c0e9d89c9db3b71203a61e80cca7cde12ad1562e1cfa7979974018d0a"
+      "sha256": "9e6cfb35c5e888bd3e28740d8695c1df53eb047a8aa7f5ad91bbfe94c72edaa8"
     },
     {
       "path": "dist/modulos/mentor/index.html",
       "bytes": 19780,
-      "sha256": "cf3325f1dd96501bb839183ef97a42512bd8f46ccef8f90114c614a58309bb9d"
+      "sha256": "8c3100ec1f5cdfc1cf68989c751b8eabbdc6920ad2c97d4d9533deca6969adf4"
     },
     {
       "path": "dist/modulos/pesquisa/index.html",
       "bytes": 23303,
-      "sha256": "c02861f435cf8f949e4ace6d1daebe41cb3aaa6dbdf3f17f92c64aa8284edd3c"
+      "sha256": "3d70360ea5a872a518be546e1f54d507d4a640d7614f6184253069962e8d2f62"
     },
     {
       "path": "dist/modulos/trajetoria/index.html",
       "bytes": 31912,
-      "sha256": "614ed475fc70ab3226b591a91f41143b948ecf651685f172378639a8baba56b2"
+      "sha256": "63fca204a9615deafac62f43a63f83e9381a71e3e55aa7b518df739659343136"
     },
     {
       "path": "dist/percursos/index.html",
       "bytes": 11192,
-      "sha256": "321297f58ea7c31dc8dd64ef9ee1252d92f7c170969b0babbfc749e64f79a99b"
+      "sha256": "be9be4c511edc64b09975609b9afa20b03dd9b4fa942544c6f069757d9252998"
     },
     {
       "path": "js/app.js",
@@ -1839,8 +1868,13 @@
     },
     {
       "path": "js/times-editorial.js",
-      "bytes": 3629,
-      "sha256": "e69131329c3269caa68508ac836952095a491d84f6432ab6c034f17823600fa6"
+      "bytes": 2999,
+      "sha256": "db1a80d7aff754c61032155649f735f2c973c4b5892417523bcc55e09fe454ae"
+    },
+    {
+      "path": "js/times-frontpage.js",
+      "bytes": 1738,
+      "sha256": "92728c78cba2ea66efd3f355344b5e1ade872b2419bee28171f196d8a0f0e08f"
     },
     {
       "path": "js/trajectory-page.js",
@@ -1914,13 +1948,83 @@
     },
     {
       "path": "package.json",
-      "bytes": 2925,
-      "sha256": "a9311f9286362991921e74b4e2e6d4ce0cb85cdc5191da9bd444811464538d7b"
+      "bytes": 3004,
+      "sha256": "37d6bf6ee4ae00d121574785e8e7fcfa5fcbde337069eba4d5cdfa84c7e9f9e7"
     },
     {
       "path": "scripts/generate-globe.mjs",
       "bytes": 3858,
       "sha256": "8c2b66dd5fa493b36d809adfcc8400b6d78670c4fbcc2a96227af6d59a9efc3e"
+    },
+    {
+      "path": "scripts/times-frontpage/PHOTOGRAPH-CREDITS.json",
+      "bytes": 1393,
+      "sha256": "8aaeafbd4d48dc00329af2569047a8035b045cb36056d2989095937b57de9e4d"
+    },
+    {
+      "path": "scripts/times-frontpage/README.md",
+      "bytes": 3517,
+      "sha256": "c9490ea20d54eddb93e65c4171aef35f56c5927e9471e55f78b7683d33a84080"
+    },
+    {
+      "path": "scripts/times-frontpage/SOURCE-MANIFEST.json",
+      "bytes": 3181,
+      "sha256": "4a4bbd6781af4f5cb852e198ee3d97de8be31a07ff068ba089d3fe4a3d0660ca"
+    },
+    {
+      "path": "scripts/times-frontpage/edition-004.json",
+      "bytes": 22713,
+      "sha256": "e74a646f27a60050df4046a066cce0d3f6fd54e7ff7760d3eb01835d1fbb68a2"
+    },
+    {
+      "path": "scripts/times-frontpage/fonts/FONT-LICENSE.txt",
+      "bytes": 5756,
+      "sha256": "f32df582a2aab128c07b2f7e36e7b928dc5f6bd82657b905c04f91459f9e5cf9"
+    },
+    {
+      "path": "scripts/times-frontpage/fonts/LiberationSans-Bold.ttf",
+      "bytes": 414568,
+      "sha256": "1b5f2da6f4cadce4c05b9ecebe3a6fcd374eb95ae443605e799f4c3287978939"
+    },
+    {
+      "path": "scripts/times-frontpage/fonts/LiberationSans-Regular.ttf",
+      "bytes": 410820,
+      "sha256": "bade59d822652f76e6941aa87b40a87c13d1cc70db98ededb5011127efafd1d3"
+    },
+    {
+      "path": "scripts/times-frontpage/fonts/LiberationSerif-Bold.ttf",
+      "bytes": 370196,
+      "sha256": "443a4dbd694b6e4689925947b456e0532e10b19c90fa32eb39ea6c2cd9db9ebd"
+    },
+    {
+      "path": "scripts/times-frontpage/fonts/LiberationSerif-Italic.ttf",
+      "bytes": 375760,
+      "sha256": "de18fe26337e03241952dca46398d5b66f3c5738d080bfd284f66e67b926f597"
+    },
+    {
+      "path": "scripts/times-frontpage/fonts/LiberationSerif-Regular.ttf",
+      "bytes": 393692,
+      "sha256": "9caef765d2e891c10dd73658894f01e660fe0c1c83e0bda7d6edf561d8f623d4"
+    },
+    {
+      "path": "scripts/times-frontpage/layout-proof.json",
+      "bytes": 17900,
+      "sha256": "45f7f7886bc2b9d1a0d53c1c2228af6beda6c1587d675ca1e716a1a0c8b2b897"
+    },
+    {
+      "path": "scripts/times-frontpage/photos/aedes-aegypti.webp",
+      "bytes": 119150,
+      "sha256": "92d44cae7764495ea01d580e80e0bd8a1b8f7afe42240067be05dee5be7bad54"
+    },
+    {
+      "path": "scripts/times-frontpage/photos/harvard-medical-school.webp",
+      "bytes": 260094,
+      "sha256": "a6649d421b501165d61cf5937b12e92577ca94c66b7182003a210e8abe84ca3c"
+    },
+    {
+      "path": "scripts/times-frontpage/render.py",
+      "bytes": 10939,
+      "sha256": "010f72248569bbefcb91abad8b482ffbd292b55bf4cd8bd354553740eeaa921b"
     },
     {
       "path": "tests/book-baseline.json",
@@ -2209,8 +2313,18 @@
     },
     {
       "path": "tests/times-editorial.mjs",
-      "bytes": 9008,
-      "sha256": "4c36bb595395c5283a6caa6ac319f8644b826e893d2bcc3d0760e9ebb08c8e2b"
+      "bytes": 9387,
+      "sha256": "23d8acacca45b9cdc20c3fb140ae4f171428d76f7b29fd9f49d72c966701ede1"
+    },
+    {
+      "path": "tests/times-frontpage-baseline.json",
+      "bytes": 9403,
+      "sha256": "e22a45d2a87fd685e9ef1775358c69d996958822db6bbb7b65f78a965ac039a6"
+    },
+    {
+      "path": "tests/times-frontpage.mjs",
+      "bytes": 8681,
+      "sha256": "d1df7184954aab318a95e0c7f12dfdae06825e0ea01c7f59917727c28c0f750d"
     },
     {
       "path": "tests/trajectory-baseline.json",
@@ -2234,8 +2348,8 @@
     },
     {
       "path": "tests/validate.mjs",
-      "bytes": 7059,
-      "sha256": "a21743388538677c01ac39c53d143113ccee870ac3abd21720d366b28ed71150"
+      "bytes": 7151,
+      "sha256": "5e7557e6036e60380bb82412752c63a58fe8143b66b3be0c99107ded4ce27181"
     },
     {
       "path": "tests/wordmark-baseline.json",
