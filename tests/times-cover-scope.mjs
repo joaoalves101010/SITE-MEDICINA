@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {renderDocument} from '../js/templates.js';
+import {renderDocument} from './not-found-legacy-document.mjs';
 import {projects} from '../js/content.js';
 import {restoreTimesCoverSource,restoreTimesCoverHTML,COVER_SOURCE_INSERTION,COVER_HTML_INSERTION} from './times-cover-normalize.mjs';
 const read=path=>readFile(new URL('../'+path,import.meta.url));

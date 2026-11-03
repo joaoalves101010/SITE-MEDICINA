@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {renderDocument,renderHome} from '../js/templates.js';
+import {renderDocument,renderHome} from './not-found-legacy-document.mjs';
 const hash=v=>createHash('sha256').update(v).digest('hex');
 const baseline=JSON.parse(await readFile(new URL('./tiles-baseline.json',import.meta.url)));
 const assets=JSON.parse(await readFile(new URL('../assets/tiles/manifest.json',import.meta.url)));

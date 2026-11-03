@@ -4,7 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {renderHome,renderDocument} from '../js/templates.js';
+import {renderHome,renderDocument} from './not-found-legacy-document.mjs';
 import {renderScienceSection} from '../js/science-content.js';
 const motif=JSON.parse(await readFile(new URL('./brand-motif-baseline.json',import.meta.url)));
 const hash=v=>createHash('sha256').update(v).digest('hex');

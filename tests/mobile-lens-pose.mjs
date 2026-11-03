@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {renderDocument,renderHome} from '../js/templates.js';
+import {renderDocument,renderHome} from './not-found-legacy-document.mjs';
 import {restoreMobileLensPoseSource} from './mobile-lens-pose-normalize.mjs';
 const baseline=JSON.parse(await readFile(new URL('./mobile-lens-pose-baseline.json',import.meta.url),'utf8'));
 const patches=JSON.parse(await readFile(new URL('./mobile-lens-pose-replacements.json',import.meta.url),'utf8'));

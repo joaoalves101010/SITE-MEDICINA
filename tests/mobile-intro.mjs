@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {renderDocument} from '../js/templates.js';
+import {renderDocument} from './not-found-legacy-document.mjs';
 import {bookScrollState} from '../js/book-controller.js';
 import {restoreMobileIntroSource,restoreMobileIntroHTML} from './mobile-intro-normalize.mjs';
 const baseline=JSON.parse(await readFile(new URL('./mobile-intro-baseline.json',import.meta.url),'utf8'));

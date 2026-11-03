@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {renderDocument,renderHome} from '../js/templates.js';
+import {renderDocument,renderHome} from './not-found-legacy-document.mjs';
 import {renderProductOS} from '../js/product-os.js';
 import {WORDMARK_PATH} from '../js/wordmark.js';
 import {restoreProductOSSource,restoreProductOSHTML} from './product-os-normalize.mjs';

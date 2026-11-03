@@ -6,7 +6,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {renderDocument} from '../js/templates.js';
+import {renderDocument} from './not-found-legacy-document.mjs';
 import {projects} from '../js/content.js';
 const closingSymbol=JSON.parse(await readFile(new URL('./footer-closing-symbol-baseline.json',import.meta.url),'utf8'));
 const symbol09=JSON.parse(await readFile(new URL('./favicon-symbol09-baseline.json',import.meta.url),'utf8'));

@@ -7,7 +7,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {renderDocument,arrow} from '../js/templates.js';
+import {renderDocument,arrow} from './not-found-legacy-document.mjs';
 import {projects,productUrl,siteUrl,directoryProfiles} from '../js/content.js';
 import {renderProfileModal} from '../js/pages.js';
 import {bookCover} from '../js/book-editorial.js';

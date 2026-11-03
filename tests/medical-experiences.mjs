@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {renderDocument,renderHome} from '../js/templates.js';
+import {renderDocument,renderHome} from './not-found-legacy-document.mjs';
 import {medicalExperiences} from '../js/medical-experiences.js';
 import {createMedicalExperiences,createExperienceMeta} from '../js/medical-experiences-controller.js';
 import {restoreMedicalExperiences} from './medical-experiences-normalize.mjs';

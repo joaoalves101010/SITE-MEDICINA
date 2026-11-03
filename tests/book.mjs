@@ -4,7 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {renderDocument,renderHome} from '../js/templates.js';
+import {renderDocument,renderHome} from './not-found-legacy-document.mjs';
 import {bookEditorialChapters as profiles} from '../js/book-editorial.js';
 import {bookScrollState,createSpreadCache,createBookController} from '../js/book-controller.js';
 import {bookBaseline,restoreBookTemplate,restoreBookApp} from './book-normalize.mjs';

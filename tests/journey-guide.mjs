@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
-import {renderDocument,renderHome} from '../js/templates.js';
+import {renderDocument,renderHome} from './not-found-legacy-document.mjs';
 import {renderJourneyGuide,journeyIntents} from '../js/journey-guide.js';
 import {restoreJourneyGuideSource,restoreJourneyGuideHTML} from './journey-guide-normalize.mjs';
 const baseline=JSON.parse(await readFile(new URL('./journey-guide-baseline.json',import.meta.url),'utf8'));

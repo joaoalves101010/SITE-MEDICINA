@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {renderHome,renderDocument} from '../js/templates.js';
+import {renderHome,renderDocument} from './not-found-legacy-document.mjs';
 import {principles} from '../js/content.js';
 import {renderPrincipleVisual} from '../js/principle-visuals.js';
 

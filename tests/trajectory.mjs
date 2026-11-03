@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {renderDocument} from '../js/templates.js';
+import {renderDocument} from './not-found-legacy-document.mjs';
 import {projects} from '../js/content.js';
 import {renderWordmark} from '../js/wordmark.js';
 import {restoreModuleRevisionSource,restoreModuleRevisionHTML} from './trajectory-normalize.mjs';

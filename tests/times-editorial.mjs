@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {renderDocument,renderHome} from '../js/templates.js';
+import {renderDocument,renderHome} from './not-found-legacy-document.mjs';
 import {PUBLIC_TIMES_URL} from '../js/times-config.js';
 import {TIMES_SECTIONS,resolvePublicTimesURL,renderTimesEditorial} from '../js/times-editorial.js';
 import {restoreTimesEditorialSource,restoreTimesEditorialHTML} from './times-editorial-normalize.mjs';

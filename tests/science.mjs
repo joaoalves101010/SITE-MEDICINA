@@ -4,7 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { renderDocument } from '../js/templates.js';
+import { renderDocument } from './not-found-legacy-document.mjs';
 import { renderScienceSection, scienceReadings, scienceInstitutions } from '../js/science-content.js';
 const tilesBaseline=JSON.parse(await readFile(new URL('./tiles-baseline.json',import.meta.url)));
 const motif=JSON.parse(await readFile(new URL('./brand-motif-baseline.json',import.meta.url)));
