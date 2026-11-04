@@ -1,0 +1,57 @@
+/* Two independent editorial folds. No new runtime or scroll interception. */
+.eco-section{position:relative;isolation:isolate;margin-top:clamp(84px,10vw,180px);padding:clamp(28px,3vw,50px) 0 0;color:var(--cream);border-top:1px solid #f3eee632;scroll-margin-top:40px}
+.eco-topline{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:clamp(42px,5vw,88px)}
+.eco-brand{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.eco-wordmark{display:block;width:clamp(130px,11vw,175px);aspect-ratio:281/60}
+.eco-suffix{font-size:clamp(27px,2.55vw,43px);font-weight:300;letter-spacing:-.055em;line-height:1}
+.eco-kicker,.eco-overline,.eco-preview-heading,.eco-section-foot{font-size:10px;line-height:1.5;letter-spacing:.1em}
+.eco-kicker{color:#c5aebb;text-align:right}
+.eco-grid{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);align-items:center;gap:clamp(36px,4.3vw,80px)}
+.eco-copy,.eco-preview{min-width:0}
+.eco-overline{color:#caa5b3;margin-bottom:24px;font-size:9px}
+.eco-copy h2{font-size:clamp(34px,3.6vw,64px);font-weight:400;line-height:1.09;letter-spacing:-.055em}
+.eco-copy h2 i{color:#d9adb9}
+.eco-description{font-size:clamp(14px,1.08vw,18px);line-height:1.7;color:#d5c6cd;max-width:43ch;margin-top:26px}
+.eco-features{display:grid;gap:19px;margin:30px 0 0;padding:0;list-style:none}
+.eco-features li{display:grid;grid-template-columns:24px 1fr;gap:12px}
+.eco-features li>span{font-size:10px;line-height:1.8;color:#bd8c9f;font-variant-numeric:tabular-nums}
+.eco-features h3{font-size:15px;line-height:1.4;letter-spacing:-.015em}
+.eco-features p{font-size:12px;line-height:1.6;color:#bba9b2;max-width:36ch;margin-top:4px}
+.eco-button{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-height:54px;padding:15px 22px;margin-top:32px;border:1px solid #ddc7cf;border-radius:999px;font-size:14px;background:#f3eee6;color:#501f30;transition:background .2s ease,transform .2s ease}
+.eco-button svg{width:23px;height:23px;flex:none;transition:transform .2s ease}
+.eco-button:hover{background:#e8d5db;transform:translateY(-2px)}
+.eco-button:hover svg{transform:translateX(3px)}
+.eco-button:focus-visible,.eco-image-link:focus-visible{outline:2px solid #e7b9c9;outline-offset:6px}
+.eco-access{font-size:11px;line-height:1.6;color:#bba9b2;max-width:43ch;margin-top:14px}
+.eco-preview{margin:0;position:relative}
+.eco-atlas-preview:before{content:'';position:absolute;inset:-20% -15%;z-index:-1;background:radial-gradient(ellipse,#84384f4d,transparent 68%);pointer-events:none}
+.eco-preview-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#caa5b3;font-size:8px;margin-bottom:16px}
+.eco-image-link{display:block;border:1px solid #f3eee632;border-radius:5px;overflow:hidden;box-shadow:0 25px 70px #0003}
+.eco-image-link img{width:100%;height:auto;display:block;transition:opacity .25s ease}
+.eco-image-link:hover img{opacity:.93}
+.eco-preview figcaption{display:flex;justify-content:space-between;gap:12px;font-size:10px;line-height:1.6;color:#bba9b2;margin-top:14px}
+.eco-preview figcaption>span:first-child{color:#e4d4db}
+.eco-atlas-index{display:flex;justify-content:space-between;margin-top:32px;padding-top:18px;border-top:1px solid #f3eee627;color:#cfacba;font-size:clamp(15px,1.4vw,23px);font-weight:300;letter-spacing:-.03em}
+.eco-section-foot{display:flex;justify-content:space-between;gap:18px;margin-top:clamp(42px,5vw,84px);padding-top:18px;border-top:1px solid #f3eee627;font-size:8px;color:#a9919c}
+.eco-section-foot>span:last-child{letter-spacing:0;text-align:right;font-size:10px}
+.eco-library{padding:clamp(36px,4vw,70px) clamp(24px,3.2vw,58px) clamp(24px,2.5vw,44px);background:#efe8dd;color:#382531;border-top:0}
+.eco-library .eco-grid{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(30px,3.6vw,65px)}
+.eco-library .eco-copy{grid-column:2;grid-row:1}
+.eco-library .eco-preview{grid-column:1;grid-row:1}
+.eco-library .eco-suffix{font-style:italic;font-weight:400;color:#795362}
+.eco-library .eco-kicker,.eco-library .eco-overline,.eco-library .eco-preview-heading{color:#795362}
+.eco-library .eco-copy h2{font-size:clamp(32px,3.15vw,56px)}
+.eco-library .eco-copy h2 i{color:#8b4a60}
+.eco-library .eco-description{color:#64535c}
+.eco-library .eco-features li>span,.eco-library .eco-features p,.eco-library .eco-access,.eco-library .eco-preview figcaption{color:#75616a}
+.eco-library .eco-preview figcaption>span:first-child{color:#59414c}
+.eco-library .eco-button{background:#501f30;color:#f3eee6;border-color:#501f30}
+.eco-library .eco-button:hover{background:#713147}
+.eco-library .eco-button:focus-visible,.eco-library .eco-image-link:focus-visible{outline-color:#501f30}
+.eco-library .eco-image-link{border-color:#81677433;box-shadow:0 18px 40px #50313d14}
+.eco-library-index{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:30px;font-size:clamp(17px,1.5vw,25px);font-style:italic;letter-spacing:-.04em;color:#987482}
+.eco-library .eco-section-foot{border-color:#50313d30;color:#795f6c}
+@media(min-width:1600px){.eco-library{margin-left:-3.2vw;margin-right:-3.2vw}}
+@media(max-width:1023px){.eco-section{margin-top:80px;padding-top:28px}.eco-topline{margin-bottom:38px;gap:18px;flex-wrap:wrap}.eco-brand{gap:10px}.eco-wordmark{width:135px}.eco-suffix{font-size:30px}.eco-kicker{font-size:8px;text-align:left}.eco-grid,.eco-library .eco-grid{grid-template-columns:1fr;gap:42px}.eco-copy h2,.eco-library .eco-copy h2{font-size:clamp(34px,7.6vw,56px)}.eco-description{max-width:48ch}.eco-library .eco-copy,.eco-library .eco-preview{grid-column:auto;grid-row:auto}.eco-library .eco-copy{order:0}.eco-library .eco-preview{order:1}.eco-preview{max-width:700px;width:100%}.eco-section-foot{margin-top:38px}.eco-library{padding:30px 24px 24px;margin-top:72px}.eco-overline{margin-bottom:19px}.eco-atlas-index{font-size:18px}}
+@media(max-width:479px){.eco-topline{display:grid;gap:16px}.eco-button{width:100%}.eco-preview-heading{font-size:7px;letter-spacing:.07em}.eco-preview figcaption{flex-direction:column;gap:2px;font-size:10px}.eco-library{padding:26px 20px 22px;margin-left:-10px;margin-right:-10px}.eco-library .eco-copy h2{font-size:clamp(31px,7.8vw,38px)}.eco-section-foot{flex-direction:column;gap:7px}.eco-section-foot>span:last-child{text-align:left}.eco-library-index{font-size:18px}.eco-access{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.eco-button,.eco-button svg,.eco-image-link img{transition:none}.eco-button:hover,.eco-button:hover svg{transform:none}}

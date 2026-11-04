@@ -1,3 +1,4 @@
+import {restoreEcosystemHTML} from './ecosystem-normalize.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
@@ -31,7 +32,7 @@ test('one home-only newspaper follows capabilities and precedes the existing int
  assert.equal(home.split(block).length-1,1);
  const ids=['science','product-os','partners','the-med-times','medical-experiences','manifesto'];
  for(let i=1;i<ids.length;i++)assert.ok(home.indexOf(`id="${ids[i-1]}"`)<home.indexOf(`id="${ids[i]}"`),`${ids[i-1]} before ${ids[i]}`);
- assert.ok(home.includes(block+'<section id="medical-experiences"'));
+ assert.ok(restoreEcosystemHTML(home).includes(block+'<section id="medical-experiences"'));
  assert.match(home,/href="https:\/\/themed-os\.vercel\.app\/"/);
  const document=renderDocument({page:'home'});assert.equal((document.match(/href="\/css\/times-editorial.css"/g)||[]).length,1);
  for(const{route}of baseline.routes.filter(row=>row.route.page!=='home'))assert.doesNotMatch(renderDocument(route),/times-editorial|the-med-times-masthead/);

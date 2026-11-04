@@ -1,9 +1,11 @@
+import {restoreEcosystemSource} from './ecosystem-normalize.mjs';
 import {readFileSync} from 'node:fs';
 const fixture=JSON.parse(readFileSync(new URL('./not-found-approved-documents.json',import.meta.url),'utf8'));
 export const NOT_FOUND_IMPORT="import { renderNotFoundDocument } from './not-found-page.js';\n";
 export const NOT_FOUND_GUARD="if(page==='404')return renderNotFoundDocument({build});";
 /** Reverse exactly the two approved integration additions, never their neighbors. */
 export function restoreNotFoundSource(path,value){
+ value=restoreEcosystemSource(path,value);
  if(path!=='js/templates.js')return value;
  const binary=Buffer.isBuffer(value);let source=String(value);
  for(const part of [NOT_FOUND_IMPORT,NOT_FOUND_GUARD])if(source.split(part).length===2)source=source.replace(part,'');

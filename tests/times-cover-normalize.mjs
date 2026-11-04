@@ -1,3 +1,4 @@
+import {restoreEcosystemHTML} from './ecosystem-normalize.mjs';
 import {restoreNotFoundSource} from './not-found-normalize.mjs';
 /** Reverse only the single exact approved, independent home-only module insertion. */
 export const COVER_SOURCE_INSERTION = '${page===\'home\'?\'<script type="module" src="/js/times-cover-live.js"></script>\':\'\'}';
@@ -9,4 +10,4 @@ export function restoreTimesCoverSource(path,value) {
   const restored=removeOnce(String(value),COVER_SOURCE_INSERTION);
   return Buffer.isBuffer(value)?Buffer.from(restored):restored;
 }
-export const restoreTimesCoverHTML = html => removeOnce(html,COVER_HTML_INSERTION);
+export const restoreTimesCoverHTML = html => removeOnce(restoreEcosystemHTML(html),COVER_HTML_INSERTION);
