@@ -49,3 +49,15 @@ test('Library redesign keeps sources, exact product link and Plus/Ultra exclusiv
  assert.match(block,/Texto completo e condições de acesso dependem de cada fonte/);
  assert.doesNotMatch(block,/<video|<iframe|<script/);
 });
+
+test('Library membership is compact and isolated from global desktop/mobile footer styles',()=>{
+ const block=renderEcosystemSections(),css=read('css/ecosystem-sections.css');
+ assert.match(block,/<aside class="eco-library-membership" aria-label="Acesso à Library">/);
+ assert.doesNotMatch(block,/<footer\b/);
+ assert.match(block,/EXCLUSIVO PARA MEMBROS/);assert.match(block,/Club Plus &amp; Ultra/);
+ assert.match(block,/Ativação pelo Club em preparação/);
+ assert.match(css,/\.eco-library-membership\{[^}]*padding:22px 0 0;[^}]*background:transparent;color:#f3eee6/);
+ assert.match(css,/\.eco-library-membership\{display:grid;gap:14px;padding:20px 0 0\}/);
+ assert.match(css,/\.eco-library-access-label strong\{[^}]*color:#f3eee6/);
+ assert.doesNotMatch(css,/\.eco-library-membership\{[^}]*(?:min-height:|height:|padding[^;]*vw)/);
+});
