@@ -31,7 +31,7 @@ test('diagrams use real Innecta concepts and distinguish AI from human accompani
 });
 test('only the homepage reel is removed; shared internal media and player remain',()=>{
   const home=renderHome();
-  assert.ok(!home.includes('<video'));assert.ok(!home.includes('product-reel'));
+  assert.equal((home.match(/<video\b/g)||[]).length,1);assert.ok(home.includes('eco-atlas-video'));assert.ok(!home.includes('product-reel'));
   assert.ok(!home.includes('reel-section'));assert.ok(!home.includes('reel-caption'));
   assert.ok(!home.includes('tour visual sem áudio'));
   assert.ok(home.includes('data-marquee'));assert.ok(home.includes('editorial-cta'));

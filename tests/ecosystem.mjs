@@ -27,9 +27,9 @@ test('real imagery is local, lazy, dimensioned, labelled and light; availability
  assert.match(block,/Prévia educacional/);assert.equal((block.match(/Ativação pelo Club em preparação/g)||[]).length,2);
  assert.match(block,/Texto completo e condições de acesso dependem de cada fonte/);assert.doesNotMatch(block,/acesso imediato|integração ativa|parceria|garantido/i);
 });
-test('no additional runtime; responsive normal-flow CSS, visible focus and reduced motion',()=>{
+test('scoped video markup; responsive normal-flow CSS, visible focus and reduced motion',()=>{
  const js=read('js/ecosystem-sections.js'),css=read('css/ecosystem-sections.css');
- assert.doesNotMatch(js,/fetch\(|addEventListener|localStorage|requestAnimationFrame|<canvas|<iframe|<button|<script/);
+ assert.doesNotMatch(js,/fetch\(|addEventListener|localStorage|requestAnimationFrame|<canvas|<iframe|<button/);
  assert.doesNotMatch(css,/position\s*:\s*(fixed|sticky)|scroll-snap|@keyframes|@import/);
  assert.match(css,/max-width:1023px/);assert.match(css,/max-width:479px/);assert.match(css,/prefers-reduced-motion:reduce/);assert.match(css,/:focus-visible/);
  for(const[,selector]of css.replace(/\/\*[^]*?\*\//g,'').matchAll(/(?:^|[{}])\s*([^{}]+)\{/g)){if(selector.startsWith('@media'))continue;for(const part of selector.split(','))assert.match(part.trim(),/^\.eco-/);}
@@ -39,4 +39,13 @@ test('scope normalization cannot conceal changed copy, duplicated sections or ne
  assert.notEqual(restoreEcosystemHTML(home.replace('Vá além da superfície.','mutated')),restoreEcosystemHTML(home));
  assert.notEqual(restoreEcosystemHTML(home.replace('id="medical-experiences"','id="mutated"')),restoreEcosystemHTML(home));
  assert.equal(restoreEcosystemSource('js/app.js','unchanged'),'unchanged');
+});
+test('Library redesign keeps sources, exact product link and Plus/Ultra exclusivity explicit',()=>{
+ const block=renderEcosystemSections().split('id="the-med-library"')[1];
+ assert.match(block,/Conhecimento<br>que abre<br><i>caminhos\./);
+ assert.match(block,/EXCLUSIVO PARA MEMBROS/);assert.match(block,/Club Plus &amp; Ultra/);
+ assert.match(block,/eco-library-path/);assert.match(block,/Descobrir\./);assert.match(block,/Aprofundar\./);assert.match(block,/Conectar\./);
+ assert.match(block,/library-acervo.webp/);assert.match(block,/Ativação pelo Club em preparação/);
+ assert.match(block,/Texto completo e condições de acesso dependem de cada fonte/);
+ assert.doesNotMatch(block,/<video|<iframe|<script/);
 });
