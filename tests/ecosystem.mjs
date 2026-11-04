@@ -54,10 +54,13 @@ test('Library membership is compact and isolated from global desktop/mobile foot
  const block=renderEcosystemSections(),css=read('css/ecosystem-sections.css');
  assert.match(block,/<aside class="eco-library-membership" aria-label="Acesso à Library">/);
  assert.doesNotMatch(block,/<footer\b/);
+ assert.doesNotMatch(block,/eco-library-access-mark/);
+ const access=block.match(/<aside class="eco-library-membership"[^]*?<\/aside>/)[0];assert.doesNotMatch(access,/<br|<div|<h[1-6]/);
+ assert.match(css,/\.eco-library-access-label strong\{font-size:11px;/);
  assert.match(block,/EXCLUSIVO PARA MEMBROS/);assert.match(block,/Club Plus &amp; Ultra/);
  assert.match(block,/Ativação pelo Club em preparação/);
- assert.match(css,/\.eco-library-membership\{[^}]*padding:22px 0 0;[^}]*background:transparent;color:#f3eee6/);
- assert.match(css,/\.eco-library-membership\{display:grid;gap:14px;padding:20px 0 0\}/);
+ assert.match(css,/\.eco-library-membership\{[^}]*padding:8px 0 0;[^}]*background:transparent;color:#f3eee6/);
+ assert.match(css,/\.eco-library-membership\{display:block;padding:8px 0 0\}/);
  assert.match(css,/\.eco-library-access-label strong\{[^}]*color:#f3eee6/);
  assert.doesNotMatch(css,/\.eco-library-membership\{[^}]*(?:min-height:|height:|padding[^;]*vw)/);
 });
