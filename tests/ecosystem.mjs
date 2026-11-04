@@ -42,9 +42,9 @@ test('scope normalization cannot conceal changed copy, duplicated sections or ne
 });
 test('Library redesign keeps sources, exact product link and Plus/Ultra exclusivity explicit',()=>{
  const block=renderEcosystemSections().split('id="the-med-library"')[1];
- assert.match(block,/Conhecimento<br>que abre<br><i>caminhos\./);
+ assert.match(block,/Conhecimento<br><i>que abre caminhos\./);
  assert.match(block,/EXCLUSIVO PARA MEMBROS/);assert.match(block,/Club Plus &amp; Ultra/);
- assert.match(block,/eco-library-path/);assert.match(block,/Descobrir\./);assert.match(block,/Aprofundar\./);assert.match(block,/Conectar\./);
+ assert.match(block,/eco-library-path/);assert.match(block,/<li>Diretrizes<\/li>/);assert.match(block,/<li>Pesquisa<\/li>/);assert.match(block,/<li>Coleções<\/li>/);
  assert.match(block,/library-acervo.webp/);assert.match(block,/Ativação pelo Club em preparação/);
  assert.match(block,/Texto completo e condições de acesso dependem de cada fonte/);
  assert.doesNotMatch(block,/<video|<iframe|<script/);
@@ -59,8 +59,20 @@ test('Library membership is compact and isolated from global desktop/mobile foot
  assert.match(css,/\.eco-library-access-label strong\{font-size:11px;/);
  assert.match(block,/EXCLUSIVO PARA MEMBROS/);assert.match(block,/Club Plus &amp; Ultra/);
  assert.match(block,/Ativação pelo Club em preparação/);
- assert.match(css,/\.eco-library-membership\{[^}]*padding:8px 0 0;[^}]*background:transparent;color:#f3eee6/);
- assert.match(css,/\.eco-library-membership\{display:block;padding:8px 0 0\}/);
+ assert.match(css,/\.eco-library-membership\{[^}]*padding:10px 0 0;[^}]*background:transparent;color:#f3eee6/);
+ assert.match(css,/\.eco-library-membership\{display:block;padding:10px 0 0;margin-top:16px\}/);
  assert.match(css,/\.eco-library-access-label strong\{[^}]*color:#f3eee6/);
  assert.doesNotMatch(css,/\.eco-library-membership\{[^}]*(?:min-height:|height:|padding[^;]*vw)/);
+});
+
+test('entire Library is compact without hiding content or cropping the product preview',()=>{
+ const library=renderEcosystemSections().split('id="the-med-library"')[1],css=read('css/ecosystem-sections.css');
+ assert.equal((library.match(/<br>/g)||[]).length,1);
+ assert.doesNotMatch(library,/eco-library-eyebrow|eco-library-number|eco-library-margin-note|<h3|<ol/);
+ assert.match(library,/<ul class="eco-library-path"/);
+ assert.match(css,/\.eco-library-path\{display:flex;flex-wrap:wrap/);
+ assert.match(css,/max-width:420px;justify-self:end/);assert.match(css,/max-width:350px;justify-self:center/);
+ assert.match(css,/font-size:clamp\(34px,3\.4vw,50px\)/);assert.match(css,/@media\(max-width:767px\)/);
+ assert.match(css,/\.eco-library \.eco-image-link img\{width:100%;height:auto;object-fit:contain\}/);
+ assert.doesNotMatch(css,/\.eco-library(?:-lead|-preview)?\{[^}]*(?:height:|overflow:hidden|display:none)/);
 });
